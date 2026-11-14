@@ -1,0 +1,2019 @@
+{
+  "seed": 42,
+  "quick": false,
+  "bootstrap": {
+    "alpha": 1000,
+    "omega": 500,
+    "proportions": 2000
+  },
+  "funnel": {
+    "steps": [
+      {
+        "step": "raw",
+        "rows_after": 145828,
+        "removed": 0
+      },
+      {
+        "step": "any fake VCL word",
+        "rows_after": 116543,
+        "removed": 29285
+      },
+      {
+        "step": "straight-lining (all 48 answered, same value)",
+        "rows_after": 116298,
+        "removed": 245
+      },
+      {
+        "step": ">= 5 of 48 items missing",
+        "rows_after": 116042,
+        "removed": 256
+      },
+      {
+        "step": "age < 13 or > 90",
+        "rows_after": 115990,
+        "removed": 52
+      },
+      {
+        "step": "exact duplicate rows",
+        "rows_after": 115990,
+        "removed": 0
+      },
+      {
+        "step": "shared network (uniqueNetworkLocation == 2)",
+        "rows_after": 80096,
+        "removed": 35894
+      },
+      {
+        "step": "scale with < 6 of 8 answered",
+        "rows_after": 80085,
+        "removed": 11
+      }
+    ],
+    "independent_hits": {
+      "any fake VCL word": 29285,
+      "straight-lining (all 48 answered, same value)": 388,
+      ">= 5 of 48 items missing": 361,
+      "age < 13 or > 90": 101,
+      "exact duplicate rows": 0,
+      "shared network": 45101
+    },
+    "final_main": 80085,
+    "final_incl_shared": 115974,
+    "zero_item_cells_raw": 21435,
+    "codebook_fields_in_header": true,
+    "missing_fields": [],
+    "n_raw_columns": 93,
+    "raw_value_ranges_ok": {
+      "items_in_0_5": true,
+      "tipi_in_0_7": true,
+      "vcl_in_0_1": true,
+      "education_in_0_4": true,
+      "urban_in_0_3": true,
+      "gender_in_0_3": true,
+      "engnat_in_0_2": true,
+      "hand_in_0_3": true,
+      "religion_in_0_12": true,
+      "orientation_in_0_5": true,
+      "race_in_0_5": true,
+      "voted_in_0_2": true,
+      "married_in_0_3": true,
+      "source_in_0_2": true,
+      "uniqueNetworkLocation_in_1_2": true
+    },
+    "build_log_rows_after": [
+      145828,
+      116543,
+      116298,
+      116042,
+      115990,
+      115990,
+      80096,
+      80085
+    ],
+    "matches_build_log": true,
+    "processed_main_rows": 80085,
+    "processed_incl_rows": 115974
+  },
+  "major": {
+    "n_unique_raw_values": 10275,
+    "n_unique_normalised_valid": 7445,
+    "raw_nonblank_rows": 55715,
+    "junk_rows": 899,
+    "valid_filled_rows": 54814,
+    "valid_filled_pct": 68.44477742398702,
+    "fill_by_age_band": {
+      "13-17": {
+        "n": 13882,
+        "raw_nonblank_pct": 28.972770494165108,
+        "valid_filled_pct": 25.90404840801037
+      },
+      "18-24": {
+        "n": 30689,
+        "raw_nonblank_pct": 72.06816774740135,
+        "valid_filled_pct": 71.18185669132262
+      },
+      "25+": {
+        "n": 35514,
+        "raw_nonblank_pct": 83.27983330517542,
+        "valid_filled_pct": 82.7082277411725
+      }
+    },
+    "fill_by_education_pct": {
+      "Less than high school": 18.919631093544137,
+      "High school": 48.42092789002785,
+      "University degree": 97.14399999999999,
+      "Graduate degree": 94.61931255239692
+    },
+    "fill_by_gender_pct": {
+      "Male": 68.41444762539707,
+      "Female": 68.7451271579729,
+      "Other": 44.855305466237944
+    },
+    "top50": [
+      {
+        "value": "psychology",
+        "count": 8456,
+        "family": "Psychology"
+      },
+      {
+        "value": "business",
+        "count": 2270,
+        "family": "Business/Management/Marketing"
+      },
+      {
+        "value": "english",
+        "count": 1890,
+        "family": "Languages/Literature"
+      },
+      {
+        "value": "nursing",
+        "count": 1332,
+        "family": "Health/Nursing/Allied health"
+      },
+      {
+        "value": "biology",
+        "count": 1277,
+        "family": "Biology/Life sciences"
+      },
+      {
+        "value": "education",
+        "count": 1191,
+        "family": "Education"
+      },
+      {
+        "value": "engineering",
+        "count": 865,
+        "family": "Engineering"
+      },
+      {
+        "value": "computer science",
+        "count": 829,
+        "family": "CS/IT"
+      },
+      {
+        "value": "accounting",
+        "count": 803,
+        "family": "Accounting/Finance"
+      },
+      {
+        "value": "economics",
+        "count": 766,
+        "family": "Economics"
+      },
+      {
+        "value": "law",
+        "count": 709,
+        "family": "Law/Criminal justice"
+      },
+      {
+        "value": "civil engineering",
+        "count": 617,
+        "family": "Engineering"
+      },
+      {
+        "value": "history",
+        "count": 617,
+        "family": "Humanities (history/philosophy/religion)"
+      },
+      {
+        "value": "marketing",
+        "count": 590,
+        "family": "Business/Management/Marketing"
+      },
+      {
+        "value": "sociology",
+        "count": 587,
+        "family": "Social sciences"
+      },
+      {
+        "value": "management",
+        "count": 559,
+        "family": "Business/Management/Marketing"
+      },
+      {
+        "value": "business administration",
+        "count": 513,
+        "family": "Business/Management/Marketing"
+      },
+      {
+        "value": "medicine",
+        "count": 508,
+        "family": "Medicine/Dentistry/Pharmacy"
+      },
+      {
+        "value": "finance",
+        "count": 497,
+        "family": "Accounting/Finance"
+      },
+      {
+        "value": "mechanical engineering",
+        "count": 471,
+        "family": "Engineering"
+      },
+      {
+        "value": "criminal justice",
+        "count": 470,
+        "family": "Law/Criminal justice"
+      },
+      {
+        "value": "political science",
+        "count": 426,
+        "family": "Social sciences"
+      },
+      {
+        "value": "social work",
+        "count": 415,
+        "family": "Social work/Counselling"
+      },
+      {
+        "value": "business management",
+        "count": 402,
+        "family": "Business/Management/Marketing"
+      },
+      {
+        "value": "chemistry",
+        "count": 386,
+        "family": "Physical/Earth/Environmental sciences"
+      },
+      {
+        "value": "communications",
+        "count": 369,
+        "family": "Communication/Media/Journalism"
+      },
+      {
+        "value": "counseling",
+        "count": 365,
+        "family": "Social work/Counselling"
+      },
+      {
+        "value": "architecture",
+        "count": 359,
+        "family": "Architecture/Planning"
+      },
+      {
+        "value": "science",
+        "count": 351,
+        "family": "Physical/Earth/Environmental sciences"
+      },
+      {
+        "value": "physics",
+        "count": 337,
+        "family": "Physical/Earth/Environmental sciences"
+      },
+      {
+        "value": "electrical engineering",
+        "count": 333,
+        "family": "Engineering"
+      },
+      {
+        "value": "mathematics",
+        "count": 330,
+        "family": "Math/Statistics"
+      },
+      {
+        "value": "communication",
+        "count": 305,
+        "family": "Communication/Media/Journalism"
+      },
+      {
+        "value": "art",
+        "count": 300,
+        "family": "Arts/Design/Performing arts"
+      },
+      {
+        "value": "philosophy",
+        "count": 299,
+        "family": "Humanities (history/philosophy/religion)"
+      },
+      {
+        "value": "music",
+        "count": 286,
+        "family": "Arts/Design/Performing arts"
+      },
+      {
+        "value": "journalism",
+        "count": 250,
+        "family": "Communication/Media/Journalism"
+      },
+      {
+        "value": "chemical engineering",
+        "count": 247,
+        "family": "Engineering"
+      },
+      {
+        "value": "undecided",
+        "count": 221,
+        "family": "Undecided/General studies"
+      },
+      {
+        "value": "design",
+        "count": 215,
+        "family": "Arts/Design/Performing arts"
+      },
+      {
+        "value": "anthropology",
+        "count": 195,
+        "family": "Social sciences"
+      },
+      {
+        "value": "human services",
+        "count": 181,
+        "family": "Social work/Counselling"
+      },
+      {
+        "value": "computer engineering",
+        "count": 180,
+        "family": "CS/IT"
+      },
+      {
+        "value": "pharmacy",
+        "count": 176,
+        "family": "Medicine/Dentistry/Pharmacy"
+      },
+      {
+        "value": "human resources",
+        "count": 176,
+        "family": "Business/Management/Marketing"
+      },
+      {
+        "value": "liberal arts",
+        "count": 175,
+        "family": "Undecided/General studies"
+      },
+      {
+        "value": "information technology",
+        "count": 167,
+        "family": "CS/IT"
+      },
+      {
+        "value": "international relations",
+        "count": 166,
+        "family": "Social sciences"
+      },
+      {
+        "value": "graphic design",
+        "count": 165,
+        "family": "Arts/Design/Performing arts"
+      },
+      {
+        "value": "kinesiology",
+        "count": 163,
+        "family": "Health/Nursing/Allied health"
+      }
+    ],
+    "top_junk_values": {
+      "n/a": 219,
+      "no": 172,
+      "-": 92,
+      "none": 78,
+      "na": 64,
+      "nil": 29,
+      "i dont know": 27,
+      "not sure": 26,
+      "yes": 18,
+      "senior high school": 17,
+      "idk": 14,
+      "not yet": 12,
+      "unknown": 7,
+      "unsure": 7,
+      "no idea": 6,
+      "n.a": 6,
+      "dont know": 5,
+      "?": 4,
+      "i dont know yet": 4,
+      "none yet": 4
+    },
+    "coverage_mapped_pct_of_filled": 97.05002371656876,
+    "n_families": 22,
+    "family_counts": {
+      "Psychology": 9963,
+      "Business/Management/Marketing": 7048,
+      "Engineering": 3905,
+      "Health/Nursing/Allied health": 3239,
+      "Languages/Literature": 3136,
+      "CS/IT": 2334,
+      "Social sciences": 2299,
+      "Arts/Design/Performing arts": 2269,
+      "Education": 2214,
+      "Biology/Life sciences": 1998,
+      "Accounting/Finance": 1838,
+      "Physical/Earth/Environmental sciences": 1808,
+      "Medicine/Dentistry/Pharmacy": 1687,
+      "Communication/Media/Journalism": 1664,
+      "Law/Criminal justice": 1641,
+      "Unmapped": 1617,
+      "Social work/Counselling": 1614,
+      "Humanities (history/philosophy/religion)": 1344,
+      "Economics": 1024,
+      "Undecided/General studies": 805,
+      "Math/Statistics": 659,
+      "Architecture/Planning": 616,
+      "Trades/Vocational": 92
+    },
+    "n_values_for_80pct_of_filled": 308,
+    "family_share_by_gender_pct": {
+      "Female": {
+        "Accounting/Finance": 3.190395464524914,
+        "Architecture/Planning": 1.0810660589722925,
+        "Arts/Design/Performing arts": 4.482672373065059,
+        "Biology/Life sciences": 3.860156184865075,
+        "Business/Management/Marketing": 12.708779145707696,
+        "CS/IT": 2.384459328016008,
+        "Communication/Media/Journalism": 3.332129060945446,
+        "Economics": 1.5118250284856738,
+        "Education": 5.085734930383793,
+        "Engineering": 3.790678931717756,
+        "Health/Nursing/Allied health": 7.384042464497123,
+        "Humanities (history/philosophy/religion)": 1.9981658005169107,
+        "Languages/Literature": 6.61145540949893,
+        "Law/Criminal justice": 3.1792791040213437,
+        "Math/Statistics": 1.0282633465803297,
+        "Medicine/Dentistry/Pharmacy": 3.490537198121335,
+        "Physical/Earth/Environmental sciences": 2.815218297529389,
+        "Psychology": 22.171581024372617,
+        "Social sciences": 4.4187533001695245,
+        "Social work/Counselling": 3.843481644109718,
+        "Trades/Vocational": 0.1139426951616041,
+        "Undecided/General studies": 1.5173832087374595
+      },
+      "Male": {
+        "Accounting/Finance": 4.055894369115993,
+        "Architecture/Planning": 1.314465036414234,
+        "Arts/Design/Performing arts": 3.659186452720706,
+        "Biology/Life sciences": 3.534845165492332,
+        "Business/Management/Marketing": 14.524246551009535,
+        "CS/IT": 8.626916928178103,
+        "Communication/Media/Journalism": 2.7118242643140507,
+        "Economics": 2.8302445378648824,
+        "Education": 2.22630114275564,
+        "Engineering": 14.980164604180235,
+        "Health/Nursing/Allied health": 3.380898809876251,
+        "Humanities (history/philosophy/religion)": 3.6355023980105394,
+        "Languages/Literature": 4.239445793119782,
+        "Law/Criminal justice": 2.9072177156729233,
+        "Math/Statistics": 1.6874888980993545,
+        "Medicine/Dentistry/Pharmacy": 2.4927467582450116,
+        "Physical/Earth/Environmental sciences": 4.6006276274498195,
+        "Psychology": 11.392030315590029,
+        "Social sciences": 4.07957842382616,
+        "Social work/Counselling": 1.3381490911244005,
+        "Trades/Vocational": 0.3019716975546214,
+        "Undecided/General studies": 1.4802534193853987
+      },
+      "Other": {
+        "Accounting/Finance": 1.1152416356877324,
+        "Architecture/Planning": 1.486988847583643,
+        "Arts/Design/Performing arts": 13.382899628252787,
+        "Biology/Life sciences": 3.717472118959108,
+        "Business/Management/Marketing": 7.063197026022305,
+        "CS/IT": 5.947955390334572,
+        "Communication/Media/Journalism": 1.858736059479554,
+        "Economics": 0.7434944237918215,
+        "Education": 1.858736059479554,
+        "Engineering": 1.858736059479554,
+        "Health/Nursing/Allied health": 2.2304832713754648,
+        "Humanities (history/philosophy/religion)": 4.089219330855019,
+        "Languages/Literature": 14.49814126394052,
+        "Law/Criminal justice": 1.486988847583643,
+        "Math/Statistics": 1.486988847583643,
+        "Medicine/Dentistry/Pharmacy": 2.6022304832713754,
+        "Physical/Earth/Environmental sciences": 4.83271375464684,
+        "Psychology": 19.33085501858736,
+        "Social sciences": 5.947955390334572,
+        "Social work/Counselling": 1.486988847583643,
+        "Trades/Vocational": 0.0,
+        "Undecided/General studies": 2.973977695167286
+      }
+    },
+    "top_unmapped": {
+      "stem": 15,
+      "social": 13,
+      "human relations": 7,
+      "ba": 6,
+      "associates degree": 5,
+      "chef": 5,
+      "dms": 5,
+      "industrial relations": 4,
+      "pathology": 4,
+      "comm": 4,
+      "exploratory": 4,
+      "flight attendant": 4,
+      "surgeon": 4,
+      "international trade": 4,
+      "podiatry": 4,
+      "human rights": 4,
+      "policy": 4,
+      "human resouces": 4,
+      "entertainment": 4,
+      "politology": 4,
+      "security": 4,
+      "abm": 4,
+      "multidisciplinary studies": 3,
+      "maritime": 3,
+      "child and youth care": 3,
+      "rhs": 3,
+      "englis": 3,
+      "production": 3,
+      "recording industry": 3,
+      "filipino": 3
+    },
+    "csv_rows_written": 1081,
+    "csv_cum_share_covered": 0.8719305286970482
+  },
+  "main_vs_shared": {
+    "n_main": 80085,
+    "n_shared_only": 35889,
+    "n_incl_shared": 115974,
+    "continuous": {
+      "R": {
+        "main_mean": 2.0719349530409654,
+        "main_sd": 0.8597150753538199,
+        "shared_mean": 2.1097555757235606,
+        "shared_sd": 0.9268478129037555,
+        "incl_mean": 2.083638820523812,
+        "incl_sd": 0.8812059511551094,
+        "smd_main_vs_shared": -0.04230911766311918,
+        "smd_main_vs_incl": -0.013444579786761742,
+        "sd_ratio_main_over_shared": 0.9275687587376259
+      },
+      "I": {
+        "main_mean": 3.009127281430147,
+        "main_sd": 1.0286667682654698,
+        "shared_mean": 2.853722423238849,
+        "shared_sd": 1.058720277991041,
+        "incl_mean": 2.9610361148270505,
+        "incl_sd": 1.0405383158956285,
+        "smd_main_vs_shared": 0.14888350851067622,
+        "smd_main_vs_incl": 0.046481980452612016,
+        "sd_ratio_main_over_shared": 0.9716133615740328
+      },
+      "A": {
+        "main_mean": 2.8964455920346537,
+        "main_sd": 1.0014214407712423,
+        "shared_mean": 2.713903749523995,
+        "shared_sd": 1.0537998843825227,
+        "incl_mean": 2.839956687746925,
+        "incl_sd": 1.021405466356083,
+        "smd_main_vs_shared": 0.17757950199461636,
+        "smd_main_vs_incl": 0.05584872105491704,
+        "sd_ratio_main_over_shared": 0.9502956449440382
+      },
+      "S": {
+        "main_mean": 3.2774368453755978,
+        "main_sd": 0.9023860145013683,
+        "shared_mean": 3.1904110093422973,
+        "shared_sd": 0.9882833037012839,
+        "incl_mean": 3.2505060658094957,
+        "incl_sd": 0.9306813945928313,
+        "smd_main_vs_shared": 0.09196336937004725,
+        "smd_main_vs_incl": 0.029379794296345723,
+        "sd_ratio_main_over_shared": 0.9130843464842358
+      },
+      "E": {
+        "main_mean": 2.5387995492884046,
+        "main_sd": 0.8679051298268722,
+        "shared_mean": 2.6217820754203767,
+        "shared_sd": 0.9157513807932188,
+        "incl_mean": 2.564479097121112,
+        "incl_sd": 0.8838174692015953,
+        "smd_main_vs_shared": -0.09301419398853504,
+        "smd_main_vs_incl": -0.029317984968168447,
+        "sd_ratio_main_over_shared": 0.9477519204776929
+      },
+      "C": {
+        "main_mean": 2.3957026314302956,
+        "main_sd": 0.9655635717572326,
+        "shared_mean": 2.3727430410432166,
+        "shared_sd": 1.007366912676675,
+        "incl_mean": 2.388597618760198,
+        "incl_sd": 0.9787439121598825,
+        "smd_main_vs_shared": 0.023269383735126044,
+        "smd_main_vs_incl": 0.0073083598994534505,
+        "sd_ratio_main_over_shared": 0.9585023685080476
+      },
+      "age": {
+        "main_mean": 27.231166885184493,
+        "main_sd": 11.823414684499589,
+        "shared_mean": 22.020702722282593,
+        "shared_sd": 10.501737561205235,
+        "incl_mean": 25.618750754479453,
+        "incl_sd": 11.681723330451334,
+        "smd_main_vs_shared": 0.4659638821658825,
+        "smd_main_vs_incl": 0.13719441549200695,
+        "sd_ratio_main_over_shared": 1.1258531853030491
+      },
+      "elevation": {
+        "main_mean": 2.6982411421000108,
+        "main_sd": 0.5633042190772047,
+        "shared_mean": 2.6437196457153824,
+        "shared_sd": 0.6483055821527413,
+        "incl_mean": 2.6813690674647654,
+        "incl_sd": 0.5914508101474718,
+        "smd_main_vs_shared": 0.08977777653841477,
+        "smd_main_vs_incl": 0.029213234752803668,
+        "sd_ratio_main_over_shared": 0.8688868869626513
+      },
+      "differentiation": {
+        "main_mean": 2.2592739262153008,
+        "main_sd": 0.7506753457697709,
+        "shared_mean": 2.1731156183948124,
+        "shared_sd": 0.7895051388225818,
+        "incl_mean": 2.232611609580801,
+        "incl_sd": 0.7639382392785087,
+        "smd_main_vs_shared": 0.1118452550550462,
+        "smd_main_vs_incl": 0.03520540782809488,
+        "sd_ratio_main_over_shared": 0.9508175550184269
+      }
+    },
+    "categorical": {
+      "female": {
+        "main": 0.6726602984329151,
+        "shared": 0.6156203850762072,
+        "incl": 0.6550088813009812,
+        "smd_main_vs_shared": 0.11934964591351373,
+        "smd_main_vs_incl": 0.037372223299739306
+      },
+      "male": {
+        "main": 0.31839920084909784,
+        "shared": 0.3771071916186018,
+        "incl": 0.33656681670029487,
+        "smd_main_vs_shared": -0.12350432073814417,
+        "smd_main_vs_incl": -0.038719816866194884
+      },
+      "minor_13_17": {
+        "main": 0.17334082537304116,
+        "shared": 0.46058680932876367,
+        "incl": 0.2622311897494266,
+        "smd_main_vs_shared": -0.6490375011566362,
+        "smd_main_vs_incl": -0.21662549991943278
+      },
+      "US": {
+        "main": 0.4922145220703003,
+        "shared": 0.6141436094625095,
+        "incl": 0.52994636728922,
+        "smd_main_vs_shared": -0.24711419669881782,
+        "smd_main_vs_incl": -0.07553604319016663
+      },
+      "English native": {
+        "main": 0.629655990510083,
+        "shared": 0.719022541725877,
+        "incl": 0.6573111214582579,
+        "smd_main_vs_shared": -0.1915739028043161,
+        "smd_main_vs_incl": -0.057762803614823284
+      },
+      "university degree+": {
+        "main": 0.476006742835737,
+        "shared": 0.23402713923486304,
+        "incl": 0.4011243899494714,
+        "smd_main_vs_shared": 0.5226678046655246,
+        "smd_main_vs_incl": 0.1513395767699912
+      },
+      "major filled": {
+        "main": 0.6844477742398701,
+        "shared": 0.48120594053888377,
+        "incl": 0.621553106730819,
+        "smd_main_vs_shared": 0.4212205815414623,
+        "smd_main_vs_incl": 0.13241659613991294
+      }
+    },
+    "shared_top_countries": {
+      "US": 0.6141436094625095,
+      "SG": 0.06834963359246565,
+      "CA": 0.05622892808381398,
+      "AU": 0.05110200897210845,
+      "MY": 0.043523085067848084,
+      "PH": 0.03134665217754744,
+      "KE": 0.014349800774610604,
+      "NONE": 0.013374571595753573,
+      "IN": 0.010838975730725292,
+      "GB": 0.010838975730725292
+    }
+  },
+  "items": {
+    "R1": {
+      "scale": "R",
+      "mean": 2.5730994883598743,
+      "sd": 1.3010310306051993,
+      "missing_pct": 0.18230629955672098,
+      "item_rest_r": 0.46915866339705625,
+      "floor_pct_1": 29.94783522435857,
+      "ceiling_pct_5": 9.05190207533244
+    },
+    "R2": {
+      "scale": "R",
+      "mean": 2.114792055168271,
+      "sd": 1.2131792306506324,
+      "missing_pct": 0.22975588437285382,
+      "item_rest_r": 0.632562425577068,
+      "floor_pct_1": 44.65275778776236,
+      "ceiling_pct_5": 3.80595987534574
+    },
+    "R3": {
+      "scale": "R",
+      "mean": 1.7283561163687347,
+      "sd": 1.0865510637520448,
+      "missing_pct": 0.2509833302116501,
+      "item_rest_r": 0.5370999790429051,
+      "floor_pct_1": 61.157428270992945,
+      "ceiling_pct_5": 2.7852886685694256
+    },
+    "R4": {
+      "scale": "R",
+      "mean": 2.270021022073177,
+      "sd": 1.3050813745854966,
+      "missing_pct": 0.21102578510332773,
+      "item_rest_r": 0.6461557481843156,
+      "floor_pct_1": 40.08584013213874,
+      "ceiling_pct_5": 7.077431302868011
+    },
+    "R5": {
+      "scale": "R",
+      "mean": 1.718562124248497,
+      "sd": 1.022634231017535,
+      "missing_pct": 0.30592495473559345,
+      "item_rest_r": 0.6814955569834159,
+      "floor_pct_1": 58.359218436873746,
+      "ceiling_pct_5": 2.136773547094188
+    },
+    "R6": {
+      "scale": "R",
+      "mean": 2.221956742015787,
+      "sd": 1.2564468670005948,
+      "missing_pct": 0.18230629955672098,
+      "item_rest_r": 0.691554030566647,
+      "floor_pct_1": 40.82112610865785,
+      "ceiling_pct_5": 5.193960394801036
+    },
+    "R7": {
+      "scale": "R",
+      "mean": 2.0000500700981374,
+      "sd": 1.146934209986507,
+      "missing_pct": 0.24598863707310983,
+      "item_rest_r": 0.6863295087547912,
+      "floor_pct_1": 46.29105748047266,
+      "ceiling_pct_5": 3.5099138794312035
+    },
+    "R8": {
+      "scale": "R",
+      "mean": 1.9472821462535663,
+      "sd": 1.1452531712048948,
+      "missing_pct": 0.21102578510332773,
+      "item_rest_r": 0.6787736170219425,
+      "floor_pct_1": 49.67090444967216,
+      "ceiling_pct_5": 3.090745282546674
+    },
+    "I1": {
+      "scale": "I",
+      "mean": 3.4654594986378746,
+      "sd": 1.3013476977339526,
+      "missing_pct": 0.07866641693200974,
+      "item_rest_r": 0.565970560655088,
+      "floor_pct_1": 11.315638199495138,
+      "ceiling_pct_5": 26.27527429956762
+    },
+    "I2": {
+      "scale": "I",
+      "mean": 3.359687597625742,
+      "sd": 1.3378985053624444,
+      "missing_pct": 0.07492039707810451,
+      "item_rest_r": 0.6297651990249716,
+      "floor_pct_1": 14.10684161199625,
+      "ceiling_pct_5": 23.28272414870353
+    },
+    "I3": {
+      "scale": "I",
+      "mean": 3.110145652309808,
+      "sd": 1.3836647410635694,
+      "missing_pct": 0.12486732846350754,
+      "item_rest_r": 0.7517304346764565,
+      "floor_pct_1": 19.082327936488095,
+      "ceiling_pct_5": 18.623491904732138
+    },
+    "I4": {
+      "scale": "I",
+      "mean": 2.9985753383571403,
+      "sd": 1.3883584816323977,
+      "missing_pct": 0.08241243678591496,
+      "item_rest_r": 0.5959781564428143,
+      "floor_pct_1": 21.0075107162049,
+      "ceiling_pct_5": 17.195915969957138
+    },
+    "I5": {
+      "scale": "I",
+      "mean": 2.8644385561443855,
+      "sd": 1.384739497412835,
+      "missing_pct": 0.09614784291690079,
+      "item_rest_r": 0.7808570742582244,
+      "floor_pct_1": 24.268823117688232,
+      "ceiling_pct_5": 14.213578642135788
+    },
+    "I6": {
+      "scale": "I",
+      "mean": 2.9904147764905833,
+      "sd": 1.3878264436398842,
+      "missing_pct": 0.08241243678591496,
+      "item_rest_r": 0.7126938424357705,
+      "floor_pct_1": 21.486147040077984,
+      "ceiling_pct_5": 16.54732001149727
+    },
+    "I7": {
+      "scale": "I",
+      "mean": 2.7483997599639944,
+      "sd": 1.3696711884536996,
+      "missing_pct": 0.1211213086096023,
+      "item_rest_r": 0.7471584822582598,
+      "floor_pct_1": 26.308946341951295,
+      "ceiling_pct_5": 12.438115717357604
+    },
+    "I8": {
+      "scale": "I",
+      "mean": 2.5371692146151825,
+      "sd": 1.3846076231954767,
+      "missing_pct": 0.10738590247861649,
+      "item_rest_r": 0.5384726315159515,
+      "floor_pct_1": 33.765422067775845,
+      "ceiling_pct_5": 10.345129314116425
+    },
+    "A1": {
+      "scale": "A",
+      "mean": 2.482072211928489,
+      "sd": 1.3599103689854934,
+      "missing_pct": 0.2609727164887307,
+      "item_rest_r": 0.5974071818699508,
+      "floor_pct_1": 34.0340027041915,
+      "ceiling_pct_5": 10.024287645851068
+    },
+    "A2": {
+      "scale": "A",
+      "mean": 2.8395219322945997,
+      "sd": 1.412199717239852,
+      "missing_pct": 0.22476119123431357,
+      "item_rest_r": 0.6709180463516778,
+      "floor_pct_1": 25.504036042800823,
+      "ceiling_pct_5": 15.334459670859145
+    },
+    "A3": {
+      "scale": "A",
+      "mean": 3.0277454622784306,
+      "sd": 1.404113388535352,
+      "missing_pct": 0.17980895298745084,
+      "item_rest_r": 0.5457537288639503,
+      "floor_pct_1": 20.950450957581218,
+      "ceiling_pct_5": 18.29224052738895
+    },
+    "A4": {
+      "scale": "A",
+      "mean": 2.960528784221519,
+      "sd": 1.4278792743469944,
+      "missing_pct": 0.15983018043328964,
+      "item_rest_r": 0.6934658808304076,
+      "floor_pct_1": 23.171204522430806,
+      "ceiling_pct_5": 18.442412796878322
+    },
+    "A5": {
+      "scale": "A",
+      "mean": 3.154705462915473,
+      "sd": 1.4616695041970558,
+      "missing_pct": 0.18230629955672098,
+      "item_rest_r": 0.6334066917807791,
+      "floor_pct_1": 20.884674564355322,
+      "ceiling_pct_5": 23.82941993269868
+    },
+    "A6": {
+      "scale": "A",
+      "mean": 3.2663397057351617,
+      "sd": 1.4235171566592857,
+      "missing_pct": 0.1960417056877068,
+      "item_rest_r": 0.625989466022485,
+      "floor_pct_1": 18.102542288059254,
+      "ceiling_pct_5": 25.042538284456008
+    },
+    "A7": {
+      "scale": "A",
+      "mean": 2.588594220838491,
+      "sd": 1.4266716732388283,
+      "missing_pct": 0.13485671474058814,
+      "item_rest_r": 0.3863410731341247,
+      "floor_pct_1": 33.36334196081373,
+      "ceiling_pct_5": 12.847443640046514
+    },
+    "A8": {
+      "scale": "A",
+      "mean": 2.8558195428485593,
+      "sd": 1.406275020129586,
+      "missing_pct": 0.24848598364237998,
+      "item_rest_r": 0.6621621110437015,
+      "floor_pct_1": 25.183386325513855,
+      "ceiling_pct_5": 14.864932528853616
+    },
+    "S1": {
+      "scale": "S",
+      "mean": 3.490428258830885,
+      "sd": 1.2747091325073927,
+      "missing_pct": 0.13735406130985828,
+      "item_rest_r": 0.4858838684074802,
+      "floor_pct_1": 10.189434198186934,
+      "ceiling_pct_5": 26.115661144107534
+    },
+    "S2": {
+      "scale": "S",
+      "mean": 3.6591823475023113,
+      "sd": 1.2033325215346073,
+      "missing_pct": 0.06368233751638884,
+      "item_rest_r": 0.5135220206497841,
+      "floor_pct_1": 7.811680035984707,
+      "ceiling_pct_5": 28.99892545668091
+    },
+    "S3": {
+      "scale": "S",
+      "mean": 3.2414142171565685,
+      "sd": 1.3370152739383037,
+      "missing_pct": 0.08615845663982019,
+      "item_rest_r": 0.623825577009501,
+      "floor_pct_1": 14.797040591881624,
+      "ceiling_pct_5": 20.842081583683264
+    },
+    "S4": {
+      "scale": "S",
+      "mean": 3.094951186889836,
+      "sd": 1.3263119400762664,
+      "missing_pct": 0.10738590247861649,
+      "item_rest_r": 0.4189917515664237,
+      "floor_pct_1": 16.83271040888011,
+      "ceiling_pct_5": 16.852710658883236
+    },
+    "S5": {
+      "scale": "S",
+      "mean": 3.554005400540054,
+      "sd": 1.2989220600960378,
+      "missing_pct": 0.116126615471062,
+      "item_rest_r": 0.689266355952409,
+      "floor_pct_1": 10.524802480248024,
+      "ceiling_pct_5": 29.002900290029004
+    },
+    "S6": {
+      "scale": "S",
+      "mean": 3.0607090638707337,
+      "sd": 1.3807106328385905,
+      "missing_pct": 0.07991509021664482,
+      "item_rest_r": 0.6042486399606133,
+      "floor_pct_1": 19.52362504842479,
+      "ceiling_pct_5": 18.025268367053652
+    },
+    "S7": {
+      "scale": "S",
+      "mean": 3.2623641134574535,
+      "sd": 1.3380406406375047,
+      "missing_pct": 0.06867703065492914,
+      "item_rest_r": 0.6388741394204415,
+      "floor_pct_1": 14.858178183181307,
+      "ceiling_pct_5": 21.214544545795327
+    },
+    "S8": {
+      "scale": "S",
+      "mean": 2.8555073677369363,
+      "sd": 1.3254195246658842,
+      "missing_pct": 0.09240182306299556,
+      "item_rest_r": 0.6109838612090542,
+      "floor_pct_1": 21.169589181487545,
+      "ceiling_pct_5": 13.091949856894677
+    },
+    "E1": {
+      "scale": "E",
+      "mean": 2.1427014977708763,
+      "sd": 1.1962134241522446,
+      "missing_pct": 0.29094087531997254,
+      "item_rest_r": 0.5626757230036089,
+      "floor_pct_1": 40.980814506837646,
+      "ceiling_pct_5": 4.656113810549517
+    },
+    "E2": {
+      "scale": "E",
+      "mean": 2.3087080478167357,
+      "sd": 1.1911536544424415,
+      "missing_pct": 0.14110008116376352,
+      "item_rest_r": 0.5491658019484122,
+      "floor_pct_1": 33.26914420047016,
+      "ceiling_pct_5": 4.649127194518082
+    },
+    "E3": {
+      "scale": "E",
+      "mean": 2.8202604160152096,
+      "sd": 1.3046246996248376,
+      "missing_pct": 0.16981956671037024,
+      "item_rest_r": 0.616634193764821,
+      "floor_pct_1": 21.656305895008067,
+      "ceiling_pct_5": 11.03203292098713
+    },
+    "E4": {
+      "scale": "E",
+      "mean": 2.3462427962446712,
+      "sd": 1.2742061356125802,
+      "missing_pct": 0.11487794218642691,
+      "item_rest_r": 0.46966199902686284,
+      "floor_pct_1": 34.7905441726151,
+      "ceiling_pct_5": 7.135624367132125
+    },
+    "E5": {
+      "scale": "E",
+      "mean": 3.0075962356710217,
+      "sd": 1.3463699868261525,
+      "missing_pct": 0.22101517138040833,
+      "item_rest_r": 0.523862507381315,
+      "floor_pct_1": 19.41232417279872,
+      "ceiling_pct_5": 15.640486559543476
+    },
+    "E6": {
+      "scale": "E",
+      "mean": 2.607929900876239,
+      "sd": 1.308626805428519,
+      "missing_pct": 0.10488855590934631,
+      "item_rest_r": 0.6870826521932183,
+      "floor_pct_1": 27.150910613617327,
+      "ceiling_pct_5": 9.704878689016386
+    },
+    "E7": {
+      "scale": "E",
+      "mean": 2.411147516382372,
+      "sd": 1.284945491284421,
+      "missing_pct": 0.15108946744084412,
+      "item_rest_r": 0.5355015580084317,
+      "floor_pct_1": 33.49632334550548,
+      "ceiling_pct_5": 7.100695312890801
+    },
+    "E8": {
+      "scale": "E",
+      "mean": 2.6644149215642123,
+      "sd": 1.3348026149078642,
+      "missing_pct": 0.18355497284135605,
+      "item_rest_r": 0.5154712330302087,
+      "floor_pct_1": 27.065976131501916,
+      "ceiling_pct_5": 10.62198203607796
+    },
+    "C1": {
+      "scale": "C",
+      "mean": 2.2899554799659847,
+      "sd": 1.2579529140943113,
+      "missing_pct": 0.15108946744084412,
+      "item_rest_r": 0.7018739349748988,
+      "floor_pct_1": 37.43809714371467,
+      "ceiling_pct_5": 6.1802811265069275
+    },
+    "C2": {
+      "scale": "C",
+      "mean": 2.375311081375136,
+      "sd": 1.2265638414561997,
+      "missing_pct": 0.1523381407254792,
+      "item_rest_r": 0.6269736583581996,
+      "floor_pct_1": 32.36496879806911,
+      "ceiling_pct_5": 5.630103923064418
+    },
+    "C3": {
+      "scale": "C",
+      "mean": 2.392538898956446,
+      "sd": 1.289062072731052,
+      "missing_pct": 0.08740712992445526,
+      "item_rest_r": 0.7576214900756064,
+      "floor_pct_1": 34.00237455477098,
+      "ceiling_pct_5": 7.564831594076111
+    },
+    "C4": {
+      "scale": "C",
+      "mean": 2.493688937815084,
+      "sd": 1.257157277467629,
+      "missing_pct": 0.18230629955672098,
+      "item_rest_r": 0.7022351758476575,
+      "floor_pct_1": 29.293586359599193,
+      "ceiling_pct_5": 7.120429327362113
+    },
+    "C5": {
+      "scale": "C",
+      "mean": 2.5432157411805885,
+      "sd": 1.3573411500416996,
+      "missing_pct": 0.11362926890179184,
+      "item_rest_r": 0.6313405955091466,
+      "floor_pct_1": 32.19741480611046,
+      "ceiling_pct_5": 9.813235992699452
+    },
+    "C6": {
+      "scale": "C",
+      "mean": 2.6458585984872163,
+      "sd": 1.282872376959795,
+      "missing_pct": 0.12486732846350754,
+      "item_rest_r": 0.5979925919637765,
+      "floor_pct_1": 26.282427955241605,
+      "ceiling_pct_5": 9.091704694630245
+    },
+    "C7": {
+      "scale": "C",
+      "mean": 2.17373151493181,
+      "sd": 1.21589161202349,
+      "missing_pct": 0.10988324904788661,
+      "item_rest_r": 0.6865532364608229,
+      "floor_pct_1": 40.2302586346988,
+      "ceiling_pct_5": 5.082690600897533
+    },
+    "C8": {
+      "scale": "C",
+      "mean": 2.2499562729566978,
+      "sd": 1.2236356493798286,
+      "missing_pct": 0.05369295123930824,
+      "item_rest_r": 0.7495891727256064,
+      "floor_pct_1": 37.189225656530326,
+      "ceiling_pct_5": 5.623297768671447
+    }
+  },
+  "max_item_missing_pct": 0.30592495473559345,
+  "reliability": {
+    "R": {
+      "n_complete": 78716,
+      "alpha": 0.8696891324045792,
+      "alpha_ci95": [
+        0.8681477719580388,
+        0.8713001606336078
+      ],
+      "omega": 0.8742095140983784,
+      "omega_ci95": [
+        0.8729765066003491,
+        0.8756374175579034
+      ],
+      "alpha_permuted_baseline": 0.010136827698768336,
+      "omega_permuted_baseline": 0.01780984348579003
+    },
+    "I": {
+      "n_complete": 79492,
+      "alpha": 0.8901707312985385,
+      "alpha_ci95": [
+        0.888951509419131,
+        0.891403527202121
+      ],
+      "omega": 0.8922484008611745,
+      "omega_ci95": [
+        0.8910749188983871,
+        0.8934551464939333
+      ],
+      "alpha_permuted_baseline": 0.007586153641450924,
+      "omega_permuted_baseline": 0.13115169526003223
+    },
+    "A": {
+      "n_complete": 78866,
+      "alpha": 0.8573100345118068,
+      "alpha_ci95": [
+        0.855819099575484,
+        0.8589106732665219
+      ],
+      "omega": 0.8604290771697514,
+      "omega_ci95": [
+        0.8588989051171187,
+        0.8618759550613123
+      ],
+      "alpha_permuted_baseline": -0.0013115293493127312,
+      "omega_permuted_baseline": 0.1307256246088563
+    },
+    "S": {
+      "n_complete": 79496,
+      "alpha": 0.8410650167595886,
+      "alpha_ci95": [
+        0.8392192190892465,
+        0.8428273730380187
+      ],
+      "omega": 0.8435241417552058,
+      "omega_ci95": [
+        0.8419835782100727,
+        0.8453502022917216
+      ],
+      "alpha_permuted_baseline": -0.001563786795240369,
+      "omega_permuted_baseline": 0.015329148197907505
+    },
+    "E": {
+      "n_complete": 79038,
+      "alpha": 0.8311979844427531,
+      "alpha_ci95": [
+        0.8294252538176048,
+        0.8330459431252772
+      ],
+      "omega": 0.8332196251997716,
+      "omega_ci95": [
+        0.8311760608855626,
+        0.8349675862708312
+      ],
+      "alpha_permuted_baseline": -0.011118154426834488,
+      "omega_permuted_baseline": 0.015976572127076916
+    },
+    "C": {
+      "n_complete": 79338,
+      "alpha": 0.8976890041144766,
+      "alpha_ci95": [
+        0.8964703199805919,
+        0.8989986659319855
+      ],
+      "omega": 0.8991607160998932,
+      "omega_ci95": [
+        0.8979492527920443,
+        0.9002891738179478
+      ],
+      "alpha_permuted_baseline": 0.0072712246475867505,
+      "omega_permuted_baseline": 0.012618703086207817
+    }
+  },
+  "reliability_incl_shared": {
+    "R": 0.8753004867038483,
+    "I": 0.8907810203865395,
+    "A": 0.8614102096300214,
+    "S": 0.8483058862495599,
+    "E": 0.8334703717022754,
+    "C": 0.9000764123795736
+  },
+  "reliability_by_subgroup_alpha": {
+    "Male 13-17": {
+      "n": 3997,
+      "R": 0.8672441933052762,
+      "I": 0.9108131880931141,
+      "A": 0.8522276326828097,
+      "S": 0.8675148295724728,
+      "E": 0.8473764547650574,
+      "C": 0.884566826313102
+    },
+    "Male 18-24": {
+      "n": 9416,
+      "R": 0.8632022560433684,
+      "I": 0.8994961505916528,
+      "A": 0.8500879630753555,
+      "S": 0.8536623093733832,
+      "E": 0.8400755809142773,
+      "C": 0.8853254104864609
+    },
+    "Male 25+": {
+      "n": 12086,
+      "R": 0.8572872156797736,
+      "I": 0.8975515368888082,
+      "A": 0.8471284143561802,
+      "S": 0.8469222796298461,
+      "E": 0.8351703588522768,
+      "C": 0.8971902147844899
+    },
+    "Female 13-17": {
+      "n": 9634,
+      "R": 0.8599730974918451,
+      "I": 0.8932070189017665,
+      "A": 0.8624553685451953,
+      "S": 0.8492195579920117,
+      "E": 0.8383714078299911,
+      "C": 0.8952939801744269
+    },
+    "Female 18-24": {
+      "n": 20995,
+      "R": 0.8580121741873898,
+      "I": 0.8829458976742003,
+      "A": 0.8688945562534466,
+      "S": 0.8307092203801576,
+      "E": 0.8345640291146982,
+      "C": 0.8962160120470719
+    },
+    "Female 25+": {
+      "n": 23241,
+      "R": 0.8506648129245442,
+      "I": 0.8851969897763736,
+      "A": 0.8563893021401063,
+      "S": 0.8142153334806717,
+      "E": 0.8268002345818134,
+      "C": 0.9074847435840029
+    },
+    "English native": {
+      "n": 50426,
+      "R": 0.8775354404695741,
+      "I": 0.8903489824135832,
+      "A": 0.8628646886970504,
+      "S": 0.8399260177848482,
+      "E": 0.8307203004985709,
+      "C": 0.9044791438200621
+    },
+    "Not English native": {
+      "n": 29448,
+      "R": 0.8531359874519501,
+      "I": 0.8902982352991615,
+      "A": 0.8441075532473167,
+      "S": 0.8436109397111983,
+      "E": 0.8261154491293043,
+      "C": 0.8834003288491493
+    }
+  },
+  "demographics": {
+    "n": 80085,
+    "age": {
+      "count": 80085.0,
+      "mean": 27.231166885184493,
+      "std": 11.823414684499589,
+      "min": 13.0,
+      "10%": 17.0,
+      "25%": 18.0,
+      "50%": 23.0,
+      "75%": 33.0,
+      "90%": 46.0,
+      "max": 87.0
+    },
+    "age_band_counts": {
+      "13-17": 13882,
+      "18-24": 30689,
+      "25+": 35514
+    },
+    "education": {
+      "High school": {
+        "n": 33754,
+        "pct": 42.147718049572326
+      },
+      "University degree": {
+        "n": 25000,
+        "pct": 31.21683211587688
+      },
+      "Graduate degree": {
+        "n": 13121,
+        "pct": 16.383842167696823
+      },
+      "Less than high school": {
+        "n": 7590,
+        "pct": 9.477430230380222
+      },
+      "No answer": {
+        "n": 620,
+        "pct": 0.7741774364737466
+      }
+    },
+    "urban": {
+      "Urban": {
+        "n": 35661,
+        "pct": 44.528938003371415
+      },
+      "Suburban": {
+        "n": 27407,
+        "pct": 34.22238871199351
+      },
+      "Rural": {
+        "n": 16313,
+        "pct": 20.36960729225198
+      },
+      "No answer": {
+        "n": 704,
+        "pct": 0.8790659923830929
+      }
+    },
+    "gender": {
+      "Female": {
+        "n": 53870,
+        "pct": 67.2660298432915
+      },
+      "Male": {
+        "n": 25499,
+        "pct": 31.83992008490978
+      },
+      "Other": {
+        "n": 622,
+        "pct": 0.7766747830430168
+      },
+      "No answer": {
+        "n": 94,
+        "pct": 0.11737528875569707
+      }
+    },
+    "engnat": {
+      "English native": {
+        "n": 50426,
+        "pct": 62.965599051008304
+      },
+      "Not English native": {
+        "n": 29448,
+        "pct": 36.770930885933694
+      },
+      "No answer": {
+        "n": 211,
+        "pct": 0.26347006305800086
+      }
+    },
+    "hand": {
+      "Right": {
+        "n": 70868,
+        "pct": 88.4909783355185
+      },
+      "Left": {
+        "n": 7599,
+        "pct": 9.488668289941936
+      },
+      "Both": {
+        "n": 1260,
+        "pct": 1.5733283386401948
+      },
+      "No answer": {
+        "n": 358,
+        "pct": 0.44702503589935694
+      }
+    },
+    "religion": {
+      "Christian (Catholic)": {
+        "n": 14265,
+        "pct": 17.812324405319348
+      },
+      "Christian (Other)": {
+        "n": 13262,
+        "pct": 16.559905100830367
+      },
+      "Agnostic": {
+        "n": 10345,
+        "pct": 12.917525129549853
+      },
+      "Atheist": {
+        "n": 10146,
+        "pct": 12.669039145907472
+      },
+      "Christian (Protestant)": {
+        "n": 8301,
+        "pct": 10.36523693575576
+      },
+      "Muslim": {
+        "n": 7368,
+        "pct": 9.200224761191235
+      },
+      "Other": {
+        "n": 7346,
+        "pct": 9.172753948929262
+      },
+      "Buddhist": {
+        "n": 3482,
+        "pct": 4.347880377099332
+      },
+      "Hindu": {
+        "n": 2100,
+        "pct": 2.622213897733658
+      },
+      "No answer": {
+        "n": 1786,
+        "pct": 2.2301304863582443
+      },
+      "Jewish": {
+        "n": 770,
+        "pct": 0.9614784291690079
+      },
+      "Christian (Mormon)": {
+        "n": 767,
+        "pct": 0.9577324093151027
+      },
+      "Sikh": {
+        "n": 147,
+        "pct": 0.18355497284135605
+      }
+    },
+    "orientation": {
+      "Heterosexual": {
+        "n": 61763,
+        "pct": 77.12180807891615
+      },
+      "Bisexual": {
+        "n": 6702,
+        "pct": 8.368608353624275
+      },
+      "Homosexual": {
+        "n": 3536,
+        "pct": 4.415308734469626
+      },
+      "No answer": {
+        "n": 3361,
+        "pct": 4.196790909658488
+      },
+      "Other": {
+        "n": 2909,
+        "pct": 3.6323905850034337
+      },
+      "Asexual": {
+        "n": 1814,
+        "pct": 2.2650933383280263
+      }
+    },
+    "race": {
+      "Indigenous Aus./Native American/White (merged code)": {
+        "n": 43565,
+        "pct": 54.398451645127054
+      },
+      "Asian": {
+        "n": 19959,
+        "pct": 24.922270088031468
+      },
+      "Other": {
+        "n": 8554,
+        "pct": 10.681151276768434
+      },
+      "Black": {
+        "n": 5786,
+        "pct": 7.224823624898545
+      },
+      "No answer": {
+        "n": 1218,
+        "pct": 1.5208840606855216
+      },
+      "Arab": {
+        "n": 1003,
+        "pct": 1.2524193044889804
+      }
+    },
+    "voted": {
+      "No": {
+        "n": 48009,
+        "pct": 59.94755572204533
+      },
+      "Yes": {
+        "n": 31080,
+        "pct": 38.80876568645814
+      },
+      "No answer": {
+        "n": 996,
+        "pct": 1.243678591496535
+      }
+    },
+    "married": {
+      "Never married": {
+        "n": 58850,
+        "pct": 73.48442280077418
+      },
+      "Currently married": {
+        "n": 16131,
+        "pct": 20.1423487544484
+      },
+      "Previously married": {
+        "n": 4476,
+        "pct": 5.5890616220265965
+      },
+      "No answer": {
+        "n": 628,
+        "pct": 0.7841668227508273
+      }
+    },
+    "source": {
+      "Other/undetermined": {
+        "n": 52075,
+        "pct": 65.02466129737154
+      },
+      "Google": {
+        "n": 20318,
+        "pct": 25.370543797215458
+      },
+      "Internal link": {
+        "n": 7692,
+        "pct": 9.604794905412998
+      }
+    },
+    "country_top15": {
+      "US": {
+        "n": 39419,
+        "pct": 49.22145220703003
+      },
+      "MY": {
+        "n": 5586,
+        "pct": 6.97508896797153
+      },
+      "GB": {
+        "n": 3983,
+        "pct": 4.973465692701505
+      },
+      "CA": {
+        "n": 3842,
+        "pct": 4.797402759567959
+      },
+      "PH": {
+        "n": 2985,
+        "pct": 3.7272897546356996
+      },
+      "SG": {
+        "n": 2584,
+        "pct": 3.2265717674970342
+      },
+      "AU": {
+        "n": 2539,
+        "pct": 3.170381469688456
+      },
+      "IN": {
+        "n": 1495,
+        "pct": 1.8667665605294375
+      },
+      "ID": {
+        "n": 1089,
+        "pct": 1.359805206967597
+      },
+      "NZ": {
+        "n": 1080,
+        "pct": 1.3485671474058814
+      },
+      "NONE": {
+        "n": 1001,
+        "pct": 1.2499219579197103
+      },
+      "HK": {
+        "n": 771,
+        "pct": 0.962727102453643
+      },
+      "PT": {
+        "n": 767,
+        "pct": 0.9577324093151027
+      },
+      "DE": {
+        "n": 754,
+        "pct": 0.9414996566148467
+      },
+      "BR": {
+        "n": 656,
+        "pct": 0.8191296747206094
+      }
+    },
+    "n_countries": 183,
+    "gender_x_ageband": {
+      "Female": {
+        "13-17": 9634,
+        "18-24": 20995,
+        "25+": 23241
+      },
+      "Male": {
+        "13-17": 3997,
+        "18-24": 9416,
+        "25+": 12086
+      },
+      "No answer": {
+        "13-17": 23,
+        "18-24": 28,
+        "25+": 43
+      },
+      "Other": {
+        "13-17": 228,
+        "18-24": 250,
+        "25+": 144
+      }
+    },
+    "min_cell_male_female_x_age": 3997,
+    "engnat_x_gender": {
+      "English native Male": 15486,
+      "English native Female": 34439,
+      "Not English native Male": 9938,
+      "Not English native Female": 19300
+    }
+  },
+  "scale_means_by_gender_age": {
+    "Female 13-17": {
+      "R": 1.8237523107644553,
+      "I": 3.0195475844479374,
+      "A": 2.981869148946687,
+      "S": 3.151361868185098,
+      "E": 2.5718931957254565,
+      "C": 2.203787800152239
+    },
+    "Female 18-24": {
+      "R": 1.8550383311219225,
+      "I": 2.913513138048742,
+      "A": 2.8295314077047826,
+      "S": 3.4280449426734254,
+      "E": 2.6126226198981617,
+      "C": 2.342751675569013
+    },
+    "Female 25+": {
+      "R": 1.931631240767035,
+      "I": 2.9962960572551385,
+      "A": 2.9006835211172373,
+      "S": 3.4537455359063722,
+      "E": 2.468297251777954,
+      "C": 2.4322807497423478
+    },
+    "Male 13-17": {
+      "R": 2.420660733645472,
+      "I": 3.0041176715870237,
+      "A": 2.739167470841226,
+      "S": 2.80106061689124,
+      "E": 2.5470025137901047,
+      "C": 2.4998361866638077
+    },
+    "Male 18-24": {
+      "R": 2.4648925840514626,
+      "I": 3.000577790589473,
+      "A": 2.8631205243354776,
+      "S": 3.0554988722336853,
+      "E": 2.6456209289153216,
+      "C": 2.5446226281506656
+    },
+    "Male 25+": {
+      "R": 2.4962500886503864,
+      "I": 3.185833865235652,
+      "A": 2.9941392244470184,
+      "S": 3.1256412377957967,
+      "E": 2.454184002742252,
+      "C": 2.4343967439698035
+    }
+  },
+  "gender_d_male_minus_female": {
+    "R": 0.7069226943805311,
+    "I": 0.1178311985264702,
+    "A": 0.01843599292845434,
+    "S": -0.38079035066425315,
+    "E": -0.004223075075351933,
+    "C": 0.13475157407924726
+  },
+  "gender_d_male_minus_female_by_age": {
+    "13-17": {
+      "R": 0.7166611593820253,
+      "I": -0.014384643897707824,
+      "A": -0.2396872854513158,
+      "S": -0.3705271076460251,
+      "E": -0.02828962973100614,
+      "C": 0.3166138934982912
+    },
+    "18-24": {
+      "R": 0.7341344269087894,
+      "I": 0.08494999492096914,
+      "A": 0.03331860347859994,
+      "S": -0.4142097153027554,
+      "E": 0.03771093287948361,
+      "C": 0.21425958999515973
+    },
+    "25+": {
+      "R": 0.673422286422183,
+      "I": 0.1892551163810548,
+      "A": 0.09661989222635488,
+      "S": -0.3835839558101185,
+      "E": -0.01680066768967006,
+      "C": 0.002178832570447242
+    }
+  },
+  "literature_gender_d_su2009": {
+    "R": 0.84,
+    "I": 0.26,
+    "A": -0.35,
+    "S": -0.68,
+    "C": -0.33,
+    "source": "Su, Rounds & Armstrong 2009 via research/notes/06 (E not listed there)"
+  },
+  "scale_descriptives": {
+    "R": {
+      "mean": 2.0719349530409654,
+      "sd": 0.8597150753538199
+    },
+    "I": {
+      "mean": 3.009127281430147,
+      "sd": 1.0286667682654698
+    },
+    "A": {
+      "mean": 2.8964455920346537,
+      "sd": 1.0014214407712423
+    },
+    "S": {
+      "mean": 3.2774368453755978,
+      "sd": 0.9023860145013683
+    },
+    "E": {
+      "mean": 2.5387995492884046,
+      "sd": 0.8679051298268722
+    },
+    "C": {
+      "mean": 2.3957026314302956,
+      "sd": 0.9655635717572326
+    }
+  },
+  "scale_correlations": {
+    "R": {
+      "R": 1.0,
+      "I": 0.304,
+      "A": 0.186,
+      "S": 0.078,
+      "E": 0.302,
+      "C": 0.468
+    },
+    "I": {
+      "R": 0.304,
+      "I": 1.0,
+      "A": 0.318,
+      "S": 0.183,
+      "E": 0.033,
+      "C": 0.077
+    },
+    "A": {
+      "R": 0.186,
+      "I": 0.318,
+      "A": 1.0,
+      "S": 0.308,
+      "E": 0.283,
+      "C": -0.015
+    },
+    "S": {
+      "R": 0.078,
+      "I": 0.183,
+      "A": 0.308,
+      "S": 1.0,
+      "E": 0.379,
+      "C": 0.154
+    },
+    "E": {
+      "R": 0.302,
+      "I": 0.033,
+      "A": 0.283,
+      "S": 0.379,
+      "E": 1.0,
+      "C": 0.491
+    },
+    "C": {
+      "R": 0.468,
+      "I": 0.077,
+      "A": -0.015,
+      "S": 0.154,
+      "E": 0.491,
+      "C": 1.0
+    }
+  },
+  "profile_shape": {
+    "differentiation": {
+      "count": 80085.0,
+      "mean": 2.2592739262153008,
+      "std": 0.7506753457697709,
+      "min": 0.0,
+      "10%": 1.25,
+      "25%": 1.75,
+      "50%": 2.25,
+      "75%": 2.75,
+      "90%": 3.25,
+      "max": 4.0
+    },
+    "elevation": {
+      "count": 80085.0,
+      "mean": 2.6982411421000108,
+      "std": 0.5633042190772047,
+      "min": 1.0,
+      "10%": 1.9375,
+      "25%": 2.3333333333333335,
+      "50%": 2.7291666666666665,
+      "75%": 3.0833333333333335,
+      "90%": 3.3958333333333335,
+      "max": 5.0
+    },
+    "corr_differentiation_elevation": 0.01595421102363465,
+    "flat_lt_0.5_pct": 0.3770993319597927,
+    "flat_lt_0.5_ci95": [
+      0.33214709371293,
+      0.41830555035275024
+    ],
+    "flat_lt_1.0_pct": 3.9645376787163635,
+    "flat_lt_1.0_ci95": [
+      3.8308984204282948,
+      4.108135106449398
+    ],
+    "flat_lt_1.5_pct": 15.047761753137292,
+    "flat_lt_1.5_ci95": [
+      14.809233938939876,
+      15.302522320034964
+    ],
+    "flat_and_low_elevation_lt2_pct": 1.0376474995317475,
+    "flat_and_low_elevation_lt2_ci95": [
+      0.9714678154460886,
+      1.1075732034713117
+    ],
+    "flat_and_high_elevation_ge3_pct": 1.5658362989323844,
+    "elevation_lt2_pct": 11.274271086970094,
+    "tie_top1_pct": 9.169007929075356,
+    "tie_at_3rd_letter_pct": 12.8550914653181,
+    "by_subgroup": {
+      "Male 13-17": {
+        "n": 3997,
+        "flat_lt_1_pct": 8.631473605203903,
+        "median_differentiation": 1.9821428571428572,
+        "median_elevation": 2.7083333333333335
+      },
+      "Male 18-24": {
+        "n": 9416,
+        "flat_lt_1_pct": 6.860662701784197,
+        "median_differentiation": 2.0,
+        "median_elevation": 2.7916666666666665
+      },
+      "Male 25+": {
+        "n": 12086,
+        "flat_lt_1_pct": 4.947873572728777,
+        "median_differentiation": 2.125,
+        "median_elevation": 2.7916666666666665
+      },
+      "Female 13-17": {
+        "n": 9634,
+        "flat_lt_1_pct": 3.7263857172514014,
+        "median_differentiation": 2.375,
+        "median_elevation": 2.6458333333333335
+      },
+      "Female 18-24": {
+        "n": 20995,
+        "flat_lt_1_pct": 3.0435818051917125,
+        "median_differentiation": 2.375,
+        "median_elevation": 2.6666666666666665
+      },
+      "Female 25+": {
+        "n": 23241,
+        "flat_lt_1_pct": 2.413837614560475,
+        "median_differentiation": 2.375,
+        "median_elevation": 2.7083333333333335
+      },
+      "major filled": {
+        "n": 54814,
+        "flat_lt_1_pct": 3.584850585616813
+      },
+      "major not filled": {
+        "n": 25271,
+        "flat_lt_1_pct": 4.788097028214159
+      }
+    },
+    "flat_lt_1_incl_shared_pct": 4.64500663941918
+  },
+  "onet_comparison": {
+    "person_mean_raw_1to5": {
+      "R": 2.072,
+      "I": 3.009,
+      "A": 2.896,
+      "S": 3.277,
+      "E": 2.539,
+      "C": 2.396
+    },
+    "onet_mean_raw_1to7": {
+      "R": 4.572,
+      "I": 3.361,
+      "A": 1.936,
+      "S": 2.944,
+      "E": 2.825,
+      "C": 4.525
+    },
+    "person_mean_rescaled_to_1to7": {
+      "R": 2.608,
+      "I": 4.014,
+      "A": 3.845,
+      "S": 4.416,
+      "E": 3.308,
+      "C": 3.094
+    },
+    "person_mean_centred": {
+      "R": -0.626,
+      "I": 0.311,
+      "A": 0.198,
+      "S": 0.579,
+      "E": -0.159,
+      "C": -0.303
+    },
+    "onet_mean_centred": {
+      "R": 1.212,
+      "I": 0.001,
+      "A": -1.424,
+      "S": -0.417,
+      "E": -0.536,
+      "C": 1.165
+    },
+    "pearson_mean_centred_profiles": -0.6787719760569635,
+    "person_top_type_pct": {
+      "R": 4.0182306299556725,
+      "I": 28.191296747206096,
+      "A": 19.760254729350066,
+      "S": 33.1185615283761,
+      "E": 6.388212524193045,
+      "C": 8.523443840919024
+    },
+    "onet_top_type_pct": {
+      "R": 42.03683640303358,
+      "I": 12.134344528710725,
+      "A": 3.0335861321776814,
+      "S": 13.976164680390033,
+      "E": 10.834236186348862,
+      "C": 17.984832069339113
+    },
+    "person_elevation_mean": 2.6982411421000108,
+    "onet_elevation_mean": 3.360619357168653,
+    "person_differentiation_median": 2.25,
+    "onet_differentiation_median": 4.95,
+    "note": "Different response scales (people 1-5 Likert 'enjoy'; O*NET OI 1-7 analyst ratings); compare shapes only."
+  },
+  "success_bar": {
+    "criteria": {
+      "i_rows_ge_50k": true,
+      "ii_items_missing_le_2pct": true,
+      "iii_alpha_ge_.80_all": true,
+      "iv_cells_ge_1000": true
+    },
+    "verdict": "proven",
+    "secondary": {
+      "funnel_reproduces_build_log": true,
+      "codebook_fields_in_header": true,
+      "major_coverage_ge_80pct": true
+    }
+  }
+}

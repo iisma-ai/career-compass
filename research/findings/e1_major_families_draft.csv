@@ -1,0 +1,1082 @@
+raw_normalised_value,family,count,cum_share_of_filled
+psychology,Psychology,8456,0.154267158025322
+business,Business/Management/Marketing,2270,0.19567993578282922
+english,Languages/Literature,1890,0.23016017805670083
+nursing,Health/Nursing/Allied health,1332,0.25446053927828655
+biology,Biology/Life sciences,1277,0.2777575072061882
+education,Education,1191,0.2994855328930565
+engineering,Engineering,865,0.31526617287554276
+computer science,CS/IT,829,0.33039004633852664
+accounting,Accounting/Finance,803,0.34503958842631444
+economics,Economics,766,0.3590141204801693
+law,Law/Criminal justice,709,0.3719487722114788
+civil engineering,Engineering,617,0.3832050206151713
+history,Humanities (history/philosophy/religion),617,0.3944612690188638
+marketing,Business/Management/Marketing,590,0.40522494253292957
+sociology,Social sciences,587,0.4159338855037034
+management,Business/Management/Marketing,559,0.42613201007041995
+business administration,Business/Management/Marketing,513,0.43549093297332797
+medicine,Medicine/Dentistry/Pharmacy,508,0.4447586383040829
+finance,Accounting/Finance,497,0.453825664976101
+mechanical engineering,Engineering,471,0.462418360272923
+criminal justice,Law/Criminal justice,470,0.47099281205531435
+political science,Social sciences,426,0.4787645492027584
+social work,Social work/Counselling,415,0.48633560769146567
+business management,Business/Management/Marketing,402,0.4936695004925749
+chemistry,Physical/Earth/Environmental sciences,386,0.5007114970627942
+communications,Communication/Media/Journalism,369,0.5074433538876929
+counseling,Social work/Counselling,365,0.5141022366548692
+architecture,Architecture/Planning,359,0.5206516583354618
+science,Physical/Earth/Environmental sciences,351,0.5270551319006094
+physics,Physical/Earth/Environmental sciences,337,0.5332031962637283
+electrical engineering,Engineering,333,0.5392782865691247
+mathematics,Math/Statistics,330,0.5452986463312293
+communication,Communication/Media/Journalism,305,0.5508629182325683
+art,Arts/Design/Performing arts,300,0.5563359725617543
+philosophy,Humanities (history/philosophy/religion),299,0.5617907833765097
+music,Arts/Design/Performing arts,286,0.567008428503667
+journalism,Communication/Media/Journalism,250,0.5715693071113219
+chemical engineering,Engineering,247,0.576075455175685
+undecided,Undecided/General studies,221,0.580107271864852
+design,Arts/Design/Performing arts,215,0.5840296274674354
+anthropology,Social sciences,195,0.5875871127814062
+human services,Social work/Counselling,181,0.5908891888933484
+computer engineering,CS/IT,180,0.59417302149086
+pharmacy,Medicine/Dentistry/Pharmacy,176,0.5973838800306491
+human resources,Business/Management/Marketing,176,0.6005947385704382
+liberal arts,Undecided/General studies,175,0.6037873535957967
+information technology,CS/IT,167,0.6068340205057102
+international relations,Social sciences,166,0.6098624439011932
+graphic design,Arts/Design/Performing arts,165,0.6128726237822454
+kinesiology,Health/Nursing/Allied health,163,0.6158463166344365
+geography,Social sciences,162,0.6188017659721969
+it,CS/IT,160,0.621720728281096
+medical,Medicine/Dentistry/Pharmacy,159,0.6246214470755647
+biochemistry,Biology/Life sciences,156,0.6274674353267413
+commerce,Business/Management/Marketing,154,0.6302769365490568
+linguistics,Languages/Literature,148,0.6329769766847886
+accountancy,Accounting/Finance,146,0.6356405297916591
+general studies,Undecided/General studies,144,0.6382675958696683
+math,Math/Statistics,141,0.6408399314043858
+social science,Social sciences,126,0.6431386142226438
+politics,Social sciences,121,0.6453460794687489
+arts,Arts/Design/Performing arts,120,0.6475353012004232
+teaching,Education,117,0.6496697923888057
+environmental science,Physical/Earth/Environmental sciences,101,0.6515123873462983
+criminology,Law/Criminal justice,99,0.6533184952749298
+early childhood education,Education,97,0.6550881161746999
+elementary education,Education,97,0.65685773707447
+geology,Physical/Earth/Environmental sciences,95,0.6585908709453789
+neuroscience,Psychology,95,0.6603240048162878
+public health,Health/Nursing/Allied health,94,0.662038895172766
+tourism,Business/Management/Marketing,91,0.6636990549859525
+fine arts,Arts/Design/Performing arts,90,0.6653409712847083
+health science,Health/Nursing/Allied health,89,0.6669646440690334
+literature,Languages/Literature,88,0.668570073338928
+industrial engineering,Engineering,85,0.6701207720655307
+exercise science,Health/Nursing/Allied health,83,0.6716349837632721
+film,Communication/Media/Journalism,83,0.6731491954610136
+software engineering,CS/IT,83,0.6746634071587551
+international business,Business/Management/Marketing,82,0.6761593753420659
+french,Languages/Literature,80,0.6776188564965155
+art history,Arts/Design/Performing arts,79,0.6790600941365345
+hospitality,Business/Management/Marketing,77,0.6804648447476922
+human resource management,Business/Management/Marketing,75,0.6818331083299887
+microbiology,Biology/Life sciences,72,0.6831466413689933
+english literature,Languages/Literature,72,0.684460174407998
+economy,Economics,71,0.6857554639325719
+theology,Humanities (history/philosophy/religion),69,0.6870142664282848
+nutrition,Health/Nursing/Allied health,66,0.6882183383807057
+spanish,Languages/Literature,66,0.6894224103331266
+health,Health/Nursing/Allied health,64,0.6905899952566863
+mba,Business/Management/Marketing,64,0.6917575801802459
+biotechnology,Biology/Life sciences,64,0.6929251651038056
+physical therapy,Health/Nursing/Allied health,64,0.6940927500273653
+electronic engineering,Engineering,63,0.6952420914364943
+fine art,Arts/Design/Performing arts,63,0.6963914328456233
+liberal studies,Undecided/General studies,61,0.6975042872258912
+dentistry,Medicine/Dentistry/Pharmacy,61,0.6986171416061591
+media,Communication/Media/Journalism,60,0.6997117524719962
+biomedical engineering,Engineering,60,0.7008063633378334
+counselling,Social work/Counselling,59,0.70188273068924
+humanities,Humanities (history/philosophy/religion),59,0.7029590980406466
+languages,Languages/Literature,59,0.7040354653920531
+advertising,Business/Management/Marketing,55,0.7050388586857372
+occupational therapy,Health/Nursing/Allied health,53,0.7060057649505601
+theatre,Arts/Design/Performing arts,53,0.706972671215383
+human resource,Business/Management/Marketing,52,0.7079213339657752
+psycology,Psychology,51,0.7088517532017368
+administration,Business/Management/Marketing,51,0.7097821724376984
+interior design,Architecture/Planning,50,0.7106943481592294
+health sciences,Health/Nursing/Allied health,50,0.7116065238807604
+music education,Education,50,0.7125186996022914
+maths,Math/Statistics,49,0.7134126318093917
+statistics,Math/Statistics,48,0.7142883205020615
+archaeology,Humanities (history/philosophy/religion),47,0.7151457656803006
+child development,Social work/Counselling,47,0.7160032108585398
+human development,Social work/Counselling,47,0.716860656036779
+photography,Arts/Design/Performing arts,47,0.7177181012150181
+special education,Education,46,0.7185573028788266
+business admin,Business/Management/Marketing,45,0.7193782610282045
+undeclared,Undecided/General studies,45,0.7201992191775823
+social sciences,Social sciences,44,0.7210019338125296
+biomedical science,Medicine/Dentistry/Pharmacy,44,0.7218046484474769
+hr,Business/Management/Marketing,43,0.7225891195679935
+zoology,Biology/Life sciences,43,0.7233735906885103
+computer,CS/IT,42,0.7241398182945963
+communication studies,Communication/Media/Journalism,42,0.7249060459006823
+international studies,Social sciences,42,0.7256722735067683
+hospitality management,Business/Management/Marketing,42,0.7264385011128544
+aerospace engineering,Engineering,41,0.7271864852045098
+electronics engineering,Engineering,41,0.7279344692961652
+public relations,Business/Management/Marketing,40,0.72866420987339
+physical education,Education,39,0.7293757069361841
+agriculture,Social sciences,39,0.7300872039989784
+medical technology,Medicine/Dentistry/Pharmacy,39,0.7307987010617726
+mass communication,Communication/Media/Journalism,38,0.731491954610136
+german,Languages/Literature,38,0.7321852081584996
+environmental engineering,Engineering,38,0.7328784617068632
+japanese,Languages/Literature,38,0.7335717152552268
+general,Undecided/General studies,37,0.7342467252891597
+physiology,Health/Nursing/Allied health,36,0.734903491808662
+translation,Languages/Literature,36,0.7355602583281643
+medic,Medicine/Dentistry/Pharmacy,36,0.7362170248476666
+animal science,Biology/Life sciences,36,0.736873791367169
+computing,CS/IT,36,0.7375305578866713
+culinary,Business/Management/Marketing,35,0.7381690808917429
+applied science,Physical/Earth/Environmental sciences,35,0.7388076038968147
+environmental studies,Physical/Earth/Environmental sciences,35,0.7394461269018864
+actuarial science,Accounting/Finance,35,0.7400846499069581
+information systems,CS/IT,35,0.7407231729120298
+public administration,Business/Management/Marketing,35,0.7413616959171014
+culinary arts,Business/Management/Marketing,35,0.7420002189221732
+school counseling,Social work/Counselling,34,0.7426204984128142
+dietetics,Health/Nursing/Allied health,34,0.7432407779034553
+fashion design,Arts/Design/Performing arts,33,0.7438428138796658
+religion,Humanities (history/philosophy/religion),33,0.7444448498558762
+doctor,Medicine/Dentistry/Pharmacy,33,0.7450468858320867
+aeronautical engineering,Engineering,33,0.7456489218082971
+mental health counseling,Social work/Counselling,33,0.7462509577845076
+veterinary medicine,Medicine/Dentistry/Pharmacy,32,0.7468347502462874
+fashion merchandising,Business/Management/Marketing,32,0.7474185427080673
+accountant,Accounting/Finance,32,0.7480023351698472
+classics,Languages/Literature,32,0.7485861276316269
+paralegal,Law/Criminal justice,32,0.7491699200934068
+athletic training,Health/Nursing/Allied health,32,0.7497537125551866
+animation,Arts/Design/Performing arts,31,0.7503192615025358
+human resources management,Business/Management/Marketing,31,0.7508848104498851
+economic,Economics,30,0.7514321158828037
+industrial design,Arts/Design/Performing arts,29,0.7519611778012917
+fashion,Arts/Design/Performing arts,29,0.7524902397197796
+clinical psychology,Psychology,29,0.7530193016382676
+creative writing,Arts/Design/Performing arts,29,0.7535483635567556
+mass communications,Communication/Media/Journalism,29,0.7540774254752436
+food science,Physical/Earth/Environmental sciences,29,0.7546064873937315
+general education,Undecided/General studies,29,0.7551355493122195
+language,Languages/Literature,28,0.7556463677162769
+hrm,Business/Management/Marketing,28,0.7561571861203342
+electronics,Engineering,27,0.756649761009961
+drama,Arts/Design/Performing arts,27,0.7571423358995877
+teacher,Education,27,0.7576349107892144
+clinical mental health counseling,Social work/Counselling,27,0.7581274856788411
+accounting and finance,Accounting/Finance,27,0.7586200605684679
+speech pathology,Health/Nursing/Allied health,27,0.7591126354580946
+pyschology,Psychology,27,0.7596052103477214
+cybersecurity,CS/IT,27,0.7600977852373482
+cyber security,CS/IT,27,0.7605903601269749
+chinese,Languages/Literature,27,0.7610829350166016
+bussiness,Business/Management/Marketing,26,0.7615572663917978
+hotel management,Business/Management/Marketing,26,0.7620315977669938
+radiology,Health/Nursing/Allied health,26,0.76250592914219
+engineer,Engineering,25,0.7629620170029554
+dance,Arts/Design/Performing arts,25,0.763418104863721
+rehabilitation services,Health/Nursing/Allied health,25,0.7638741927244864
+aviation,Trades/Vocational,24,0.7643120370708213
+religious studies,Humanities (history/philosophy/religion),24,0.7647498814171562
+architect,Architecture/Planning,24,0.765187725763491
+computer information systems,CS/IT,24,0.7656255701098259
+behavioral science,Psychology,24,0.7660634144561609
+communication disorders,Health/Nursing/Allied health,24,0.7665012588024958
+theater,Arts/Design/Performing arts,24,0.7669391031488306
+studio art,Arts/Design/Performing arts,23,0.7673587039807348
+computers,CS/IT,23,0.7677783048126391
+interdisciplinary studies,Undecided/General studies,23,0.7681979056445434
+media studies,Communication/Media/Journalism,23,0.7686175064764477
+physiotherapy,Health/Nursing/Allied health,23,0.7690371073083518
+electronics and communication engineering,CS/IT,23,0.7694567081402561
+construction management,Architecture/Planning,22,0.7698580654577297
+pre-med,Medicine/Dentistry/Pharmacy,22,0.7702594227752034
+buisness,Business/Management/Marketing,22,0.770660780092677
+biological sciences,Biology/Life sciences,21,0.77104389389572
+medical assistant,Medicine/Dentistry/Pharmacy,21,0.771427007698763
+american studies,Social sciences,21,0.7718101215018061
+food technology,Engineering,21,0.7721932353048492
+psych,Psychology,21,0.7725763491078922
+writing,Languages/Literature,21,0.7729594629109352
+urban planning,Architecture/Planning,21,0.7733425767139782
+human resource development,Business/Management/Marketing,21,0.7737256905170212
+entrepreneurship,Business/Management/Marketing,20,0.7740905608056335
+sport management,Health/Nursing/Allied health,20,0.774455431094246
+legal studies,Law/Criminal justice,20,0.7748203013828584
+astronomy,Physical/Earth/Environmental sciences,19,0.7751669281570401
+family studies,Social work/Counselling,19,0.775513554931222
+account,Accounting/Finance,19,0.7758601817054037
+library science,Humanities (history/philosophy/religion),19,0.7762068084795855
+biomedical sciences,Medicine/Dentistry/Pharmacy,19,0.7765534352537673
+industrial psychology,Psychology,19,0.776900062027949
+management information systems,CS/IT,19,0.7772466888021309
+forensic science,Law/Criminal justice,19,0.7775933155763126
+supply chain management,Business/Management/Marketing,19,0.7779399423504944
+pedagogy,Education,18,0.7782683256102455
+programming,CS/IT,18,0.7785967088699968
+sciences,Physical/Earth/Environmental sciences,18,0.7789250921297479
+english education,Education,18,0.7792534753894991
+healthcare,Health/Nursing/Allied health,18,0.7795818586492502
+dental hygiene,Medicine/Dentistry/Pharmacy,18,0.7799102419090014
+business adminstration,Business/Management/Marketing,18,0.7802386251687525
+tourism management,Business/Management/Marketing,18,0.7805670084285037
+psychology and sociology,Psychology,18,0.7808953916882548
+sport science,Health/Nursing/Allied health,18,0.781223774948006
+sports management,Health/Nursing/Allied health,18,0.7815521582077571
+computer science engineering,CS/IT,18,0.7818805414675083
+leadership,Business/Management/Marketing,17,0.7821906812128289
+visual arts,Arts/Design/Performing arts,17,0.7825008209581493
+educational studies,Education,17,0.7828109607034699
+international affairs,Social sciences,17,0.7831211004487905
+psycholgy,Psychology,17,0.783431240194111
+information management,Business/Management/Marketing,17,0.7837413799394315
+multimedia,CS/IT,17,0.7840515196847521
+bba,Business/Management/Marketing,17,0.7843616594300726
+cognitive science,Psychology,17,0.7846717991753932
+communication arts,Communication/Media/Journalism,17,0.7849819389207137
+marine biology,Biology/Life sciences,17,0.7852920786660342
+informatics,CS/IT,17,0.7856022184113548
+business studies,Business/Management/Marketing,17,0.7859123581566753
+health studies,Health/Nursing/Allied health,16,0.7862042543875652
+social services,Social work/Counselling,16,0.7864961506184551
+forestry,Physical/Earth/Environmental sciences,16,0.7867880468493451
+pharmacist,Medicine/Dentistry/Pharmacy,16,0.787079943080235
+organizational leadership,Business/Management/Marketing,16,0.7873718393111249
+early childhood,Education,16,0.7876637355420149
+ecology,Biology/Life sciences,16,0.7879556317729047
+mathematic,Math/Statistics,16,0.7882475280037946
+illustration,Arts/Design/Performing arts,16,0.7885394242346846
+foreign languages,Languages/Literature,16,0.7888313204655745
+human development and family studies,Social work/Counselling,16,0.7891232166964645
+nurse,Health/Nursing/Allied health,16,0.7894151129273543
+psicologia,Psychology,15,0.7896887656438136
+public policy,Social sciences,15,0.7899624183602729
+forensic psychology,Psychology,15,0.7902360710767322
+health services management,Health/Nursing/Allied health,15,0.7905097237931915
+counseling psychology,Psychology,15,0.7907833765096508
+pschology,Psychology,15,0.7910570292261101
+life science,Biology/Life sciences,15,0.7913306819425694
+technology,Engineering,15,0.7916043346590287
+business and management,Business/Management/Marketing,15,0.791877987375488
+pharmacology,Medicine/Dentistry/Pharmacy,15,0.7921516400919473
+forensics,Law/Criminal justice,15,0.7924252928084066
+stem,Unmapped,15,0.7926989455248659
+molecular biology,Biology/Life sciences,14,0.7929543547268946
+environment,Physical/Earth/Environmental sciences,14,0.7932097639289233
+social psychology,Psychology,14,0.793465173130952
+art and design,Arts/Design/Performing arts,14,0.7937205823329806
+landscape architecture,Architecture/Planning,14,0.7939759915350093
+veterinary,Medicine/Dentistry/Pharmacy,14,0.794231400737038
+mechanical,Engineering,14,0.7944868099390666
+information system,CS/IT,14,0.7947422191410953
+marine engineering,Engineering,14,0.794997628343124
+pre-nursing,Health/Nursing/Allied health,13,0.7952347940307221
+botany,Biology/Life sciences,13,0.7954719597183202
+applied mathematics,Math/Statistics,13,0.7957091254059182
+medical assisting,Medicine/Dentistry/Pharmacy,13,0.7959462910935162
+art education,Education,13,0.7961834567811144
+healthcare management,Health/Nursing/Allied health,13,0.7964206224687124
+construction,Architecture/Planning,13,0.7966577881563104
+environmental management,Business/Management/Marketing,13,0.7968949538439085
+bioengineering,Engineering,13,0.7971321195315065
+environmental sciences,Physical/Earth/Environmental sciences,13,0.7973692852191047
+product design,Arts/Design/Performing arts,13,0.7976064509067027
+horticulture,Social sciences,13,0.7978436165943007
+genetics,Biology/Life sciences,13,0.7980807822818988
+engineering technology,Engineering,13,0.7983179479694968
+social,Unmapped,13,0.7985551136570949
+rehabilitation,Health/Nursing/Allied health,13,0.798792279344693
+rehabilitation counseling,Social work/Counselling,13,0.799029445032291
+digital media,Communication/Media/Journalism,13,0.799266610719889
+secondary education,Education,12,0.7994855328930566
+biological science,Biology/Life sciences,12,0.799704455066224
+banking,Accounting/Finance,12,0.7999233772393914
+accounts,Accounting/Finance,12,0.8001422994125589
+pharmaceutical sciences,Medicine/Dentistry/Pharmacy,12,0.8003612215857263
+petroleum engineering,Engineering,12,0.8005801437588937
+values education,Education,12,0.8007990659320612
+econ,Economics,12,0.8010179881052286
+paralegal studies,Law/Criminal justice,12,0.801236910278396
+mechatronics engineering,Engineering,12,0.8014558324515635
+political sciences,Social sciences,12,0.8016747546247309
+lawyer,Law/Criminal justice,12,0.8018936767978984
+electrical,Engineering,12,0.8021125989710658
+business economics,Economics,12,0.8023315211442332
+geophysics,Physical/Earth/Environmental sciences,12,0.8025504433174007
+theatre arts,Arts/Design/Performing arts,12,0.8027693654905681
+sports,Health/Nursing/Allied health,12,0.8029882876637355
+film production,Communication/Media/Journalism,12,0.803207209836903
+quantity surveying,Architecture/Planning,12,0.8034261320100704
+sport,Health/Nursing/Allied health,12,0.8036450541832378
+computer engineer,CS/IT,11,0.8038457328419747
+russian,Languages/Literature,11,0.8040464115007115
+history of art,Arts/Design/Performing arts,11,0.8042470901594483
+materials engineering,Engineering,11,0.8044477688181851
+philology,Languages/Literature,11,0.804648447476922
+hotel and restaurant management,Business/Management/Marketing,11,0.8048491261356587
+telecommunications,Communication/Media/Journalism,11,0.8050498047943956
+logistics,Business/Management/Marketing,11,0.8052504834531324
+computer sciences,CS/IT,11,0.8054511621118692
+psychology and criminology,Psychology,11,0.805651840770606
+health care,Health/Nursing/Allied health,11,0.8058525194293429
+optometry,Medicine/Dentistry/Pharmacy,11,0.8060531980880797
+psychology and business,Psychology,11,0.8062538767468165
+pre med,Medicine/Dentistry/Pharmacy,11,0.8064545554055533
+biomedical,Medicine/Dentistry/Pharmacy,11,0.8066552340642902
+acting,Arts/Design/Performing arts,11,0.8068559127230269
+cosmetology,Trades/Vocational,11,0.8070565913817638
+marketing management,Business/Management/Marketing,11,0.8072572700405006
+legal,Law/Criminal justice,11,0.8074579486992374
+communication sciences and disorders,Health/Nursing/Allied health,11,0.8076586273579742
+cinema,Communication/Media/Journalism,11,0.8078593060167111
+social studies,Social sciences,11,0.8080599846754479
+art therapy,Health/Nursing/Allied health,11,0.8082606633341847
+performing arts,Arts/Design/Performing arts,11,0.8084613419929215
+management studies,Business/Management/Marketing,11,0.8086620206516584
+information systems management,CS/IT,10,0.8088444557959645
+organizational management,Business/Management/Marketing,10,0.8090268909402707
+european studies,Social sciences,10,0.809209326084577
+global studies,Social sciences,10,0.8093917612288831
+psikologi,Psychology,10,0.8095741963731893
+surveying,Engineering,10,0.8097566315174956
+healthcare administration,Health/Nursing/Allied health,10,0.8099390666618017
+educational psychology,Psychology,10,0.810121501806108
+business marketing,Business/Management/Marketing,10,0.8103039369504141
+recreation,Health/Nursing/Allied health,10,0.8104863720947203
+information science,CS/IT,10,0.8106688072390266
+computer networking,CS/IT,10,0.8108512423833327
+law enforcement,Law/Criminal justice,10,0.8110336775276389
+materials science,Physical/Earth/Environmental sciences,10,0.8112161126719452
+real estate,Architecture/Planning,10,0.8113985478162513
+cs,CS/IT,10,0.8115809829605575
+banking and finance,Accounting/Finance,10,0.8117634181048637
+visual communication,Communication/Media/Journalism,10,0.8119458532491699
+biology and psychology,Psychology,10,0.8121282883934762
+medical science,Medicine/Dentistry/Pharmacy,10,0.8123107235377823
+modern languages,Languages/Literature,10,0.8124931586820885
+speech language pathology,Health/Nursing/Allied health,9,0.8126573503119641
+mental health,Health/Nursing/Allied health,9,0.8128215419418396
+government,Social sciences,9,0.8129857335717152
+recreational therapy,Health/Nursing/Allied health,9,0.8131499252015908
+community health,Social work/Counselling,9,0.8133141168314664
+managment,Business/Management/Marketing,9,0.813478308461342
+medical laboratory science,Medicine/Dentistry/Pharmacy,9,0.8136425000912175
+astrophysics,Physical/Earth/Environmental sciences,9,0.8138066917210931
+tesl,Languages/Literature,9,0.8139708833509687
+linguistic,Languages/Literature,9,0.8141350749808444
+business managment,Business/Management/Marketing,9,0.8142992666107199
+office management,Business/Management/Marketing,9,0.8144634582405955
+communication design,Communication/Media/Journalism,9,0.8146276498704711
+ministry,Humanities (history/philosophy/religion),9,0.8147918415003467
+rehabilitation and human services,Social work/Counselling,9,0.8149560331302222
+international development,Social sciences,9,0.8151202247600978
+audio engineering,Engineering,9,0.8152844163899734
+pre nursing,Health/Nursing/Allied health,9,0.815448608019849
+clinical mental health,Health/Nursing/Allied health,9,0.8156127996497246
+human services and counseling,Social work/Counselling,9,0.8157769912796001
+english lit,Languages/Literature,9,0.8159411829094757
+general business,Business/Management/Marketing,9,0.8161053745393513
+media arts,Communication/Media/Journalism,9,0.8162695661692269
+health education,Health/Nursing/Allied health,9,0.8164337577991024
+health administration,Health/Nursing/Allied health,9,0.816597949428978
+biopsychology,Psychology,9,0.8167621410588536
+mining engineering,Engineering,8,0.8169080891742986
+epidemiology,Health/Nursing/Allied health,8,0.8170540372897435
+english and psychology,Psychology,8,0.8171999854051885
+rehab services,Health/Nursing/Allied health,8,0.8173459335206334
+english language,Languages/Literature,8,0.8174918816360783
+human service,Social work/Counselling,8,0.8176378297515233
+human ecology,Biology/Life sciences,8,0.8177837778669683
+psychology and english,Psychology,8,0.8179297259824132
+meteorology,Physical/Earth/Environmental sciences,8,0.8180756740978582
+agricultural science,Social sciences,8,0.8182216222133032
+mortuary science,Physical/Earth/Environmental sciences,8,0.8183675703287482
+therapy,Health/Nursing/Allied health,8,0.8185135184441931
+computer programming,CS/IT,8,0.8186594665596381
+digital marketing,Business/Management/Marketing,8,0.818805414675083
+earth science,Physical/Earth/Environmental sciences,8,0.8189513627905279
+computer science and engineering,CS/IT,8,0.8190973109059729
+asian studies,Social sciences,8,0.8192432590214179
+social anthropology,Social sciences,8,0.8193892071368628
+mis,CS/IT,8,0.8195351552523078
+child psychology,Psychology,8,0.8196811033677528
+material science,Physical/Earth/Environmental sciences,8,0.8198270514831977
+library and information science,CS/IT,8,0.8199729995986427
+psychology/counseling,Psychology,8,0.8201189477140877
+arts management,Business/Management/Marketing,8,0.8202648958295325
+visual art,Arts/Design/Performing arts,8,0.8204108439449775
+automotive engineering,Engineering,8,0.8205567920604225
+international politics,Social sciences,8,0.8207027401758675
+information studies,Humanities (history/philosophy/religion),8,0.8208486882913124
+higher education,Education,8,0.8209946364067574
+health and wellness,Health/Nursing/Allied health,8,0.8211405845222024
+cultural studies,Social sciences,8,0.8212865326376473
+it engineering,CS/IT,8,0.8214324807530923
+health care management,Health/Nursing/Allied health,8,0.8215784288685373
+manufacturing engineering,Engineering,8,0.8217243769839822
+information tech,CS/IT,8,0.8218703250994271
+game design,CS/IT,8,0.8220162732148721
+software development,CS/IT,8,0.822162221330317
+international business management,Business/Management/Marketing,8,0.822308169445762
+hr management,Business/Management/Marketing,8,0.822454117561207
+human and social services,Social work/Counselling,8,0.822600065676652
+supply chain,Business/Management/Marketing,8,0.8227460137920969
+allied health,Health/Nursing/Allied health,8,0.8228919619075419
+biomedicine,Medicine/Dentistry/Pharmacy,8,0.8230379100229869
+industrial technology,Engineering,8,0.8231838581384318
+dental assisting,Medicine/Dentistry/Pharmacy,7,0.8233115627394462
+adult education,Education,7,0.8234392673404605
+social worker,Social work/Counselling,7,0.8235669719414748
+biological engineering,Engineering,7,0.8236946765424892
+human relations,Unmapped,7,0.8238223811435035
+science computer,CS/IT,7,0.8239500857445178
+psychology and criminal justice,Psychology,7,0.8240777903455322
+italian,Languages/Literature,7,0.8242054949465465
+biology education,Education,7,0.8243331995475608
+phychology,Psychology,7,0.8244609041485752
+music performance,Arts/Design/Performing arts,7,0.8245886087495895
+community development,Social work/Counselling,7,0.8247163133506039
+automotive,Trades/Vocational,7,0.8248440179516182
+marine science,Biology/Life sciences,7,0.8249717225526325
+communication science,Communication/Media/Journalism,7,0.8250994271536469
+guidance and counselling,Social work/Counselling,7,0.8252271317546612
+applied psychology,Psychology,7,0.8253548363556755
+veterinary science,Medicine/Dentistry/Pharmacy,7,0.8254825409566899
+music technology,Arts/Design/Performing arts,7,0.8256102455577042
+english and history,Languages/Literature,7,0.8257379501587185
+it management,CS/IT,7,0.825865654759733
+film studies,Communication/Media/Journalism,7,0.8259933593607472
+textiles,Arts/Design/Performing arts,7,0.8261210639617615
+psychology and biology,Psychology,7,0.826248768562776
+radiography,Health/Nursing/Allied health,7,0.8263764731637903
+speech communication,Health/Nursing/Allied health,7,0.8265041777648046
+international relation,Social sciences,7,0.826631882365819
+health information management,Health/Nursing/Allied health,7,0.8267595869668333
+agronomy,Physical/Earth/Environmental sciences,7,0.8268872915678477
+business education,Education,7,0.827014996168862
+music therapy,Health/Nursing/Allied health,7,0.8271427007698763
+financial management,Accounting/Finance,7,0.8272704053708907
+medical doctor,Medicine/Dentistry/Pharmacy,7,0.827398109971905
+bussines,Business/Management/Marketing,7,0.8275258145729193
+mechanics,Engineering,7,0.8276535191739337
+"english, psychology",Psychology,7,0.827781223774948
+electric engineering,Engineering,7,0.8279089283759623
+civil enginering,Engineering,7,0.8280366329769767
+business communication,Business/Management/Marketing,7,0.828164337577991
+medical school,Medicine/Dentistry/Pharmacy,7,0.8282920421790053
+organizational psychology,Psychology,7,0.8284197467800197
+midwifery,Health/Nursing/Allied health,7,0.828547451381034
+nuclear engineering,Engineering,7,0.8286751559820483
+psychology and education,Psychology,7,0.8288028605830627
+dental,Medicine/Dentistry/Pharmacy,7,0.828930565184077
+counselor education,Social work/Counselling,7,0.8290582697850915
+comunication,Communication/Media/Journalism,7,0.8291859743861058
+justice studies,Law/Criminal justice,7,0.82931367898712
+broadcasting,Communication/Media/Journalism,7,0.8294413835881345
+gerontology,Health/Nursing/Allied health,7,0.8295690881891488
+designer,Arts/Design/Performing arts,7,0.8296967927901631
+medical administration,Medicine/Dentistry/Pharmacy,7,0.8298244973911775
+foreign language,Languages/Literature,6,0.8299339584777612
+psychology and counseling,Psychology,6,0.8300434195643449
+early childhood development,Education,6,0.8301528806509286
+pre-medicine,Medicine/Dentistry/Pharmacy,6,0.8302623417375123
+geological engineering,Engineering,6,0.8303718028240961
+bible,Humanities (history/philosophy/religion),6,0.8304812639106798
+librarianship,Humanities (history/philosophy/religion),6,0.8305907249972635
+forensic,Law/Criminal justice,6,0.8307001860838472
+media and communications,Communication/Media/Journalism,6,0.8308096471704309
+electrical engineer,Engineering,6,0.8309191082570146
+aircraft engineering,Engineering,6,0.8310285693435984
+marriage and family therapy,Health/Nursing/Allied health,6,0.8311380304301821
+history education,Education,6,0.8312474915167658
+veterinarian,Medicine/Dentistry/Pharmacy,6,0.8313569526033495
+fire science,Physical/Earth/Environmental sciences,6,0.8314664136899332
+visual communications,Communication/Media/Journalism,6,0.831575874776517
+development studies,Social sciences,6,0.8316853358631007
+biochem,Biology/Life sciences,6,0.8317947969496844
+computer technology,CS/IT,6,0.8319042580362681
+health care administration,Health/Nursing/Allied health,6,0.8320137191228518
+filmmaking,Communication/Media/Journalism,6,0.8321231802094355
+medicine and surgery,Medicine/Dentistry/Pharmacy,6,0.8322326412960193
+elementary ed,Education,6,0.832342102382603
+physic,Physical/Earth/Environmental sciences,6,0.8324515634691867
+math education,Education,6,0.8325610245557704
+arabic,Languages/Literature,6,0.8326704856423541
+health service management,Health/Nursing/Allied health,6,0.8327799467289378
+biblical studies,Humanities (history/philosophy/religion),6,0.8328894078155216
+human life science,Biology/Life sciences,6,0.8329988689021053
+music production,Arts/Design/Performing arts,6,0.833108329988689
+food engineering,Engineering,6,0.8332177910752727
+pychology,Psychology,6,0.8333272521618564
+ba,Unmapped,6,0.8334367132484402
+logistic,Business/Management/Marketing,6,0.8335461743350239
+administration of justice,Law/Criminal justice,6,0.8336556354216076
+information security,CS/IT,6,0.8337650965081913
+film and television,Communication/Media/Journalism,6,0.833874557594775
+japanese studies,Languages/Literature,6,0.8339840186813587
+software engineer,CS/IT,6,0.8340934797679425
+electrical and electronics engineering,Engineering,6,0.8342029408545262
+kinesology,Health/Nursing/Allied health,6,0.8343124019411099
+comparative literature,Languages/Literature,6,0.8344218630276936
+politcal science,Physical/Earth/Environmental sciences,6,0.8345313241142773
+bs psychology,Psychology,6,0.834640785200861
+finance and economics,Accounting/Finance,6,0.8347502462874448
+accouting,Accounting/Finance,6,0.8348597073740285
+psyc,Psychology,6,0.8349691684606122
+development,Social sciences,6,0.8350786295471959
+cis,CS/IT,6,0.8351880906337797
+mech engineering,Engineering,6,0.8352975517203635
+music composition,Arts/Design/Performing arts,6,0.8354070128069472
+office administration,Business/Management/Marketing,6,0.8355164738935309
+hospitality and tourism,Business/Management/Marketing,6,0.8356259349801146
+respiratory therapy,Health/Nursing/Allied health,6,0.8357353960666983
+i/o psychology,Psychology,6,0.835844857153282
+technical management,Business/Management/Marketing,6,0.8359543182398658
+medical technologist,Medicine/Dentistry/Pharmacy,6,0.8360637793264495
+health promotion,Health/Nursing/Allied health,5,0.8361549968986025
+social working,Social work/Counselling,5,0.8362462144707556
+neurology,Psychology,5,0.8363374320429088
+travel and tourism,Business/Management/Marketing,5,0.8364286496150618
+busines,Business/Management/Marketing,5,0.8365198671872149
+designing,Arts/Design/Performing arts,5,0.8366110847593681
+associate of science,Physical/Earth/Environmental sciences,5,0.8367023023315211
+associates degree,Unmapped,5,0.8367935199036742
+pre-law,Law/Criminal justice,5,0.8368847374758274
+pr,Business/Management/Marketing,5,0.8369759550479804
+chef,Unmapped,5,0.8370671726201335
+psycholoy,Psychology,5,0.8371583901922867
+systems engineering,Engineering,5,0.8372496077644398
+dietetic,Health/Nursing/Allied health,5,0.8373408253365928
+culture studies,Social sciences,5,0.837432042908746
+international management,Business/Management/Marketing,5,0.8375232604808991
+architectural engineering,Engineering,5,0.8376144780530521
+psychology/sociology,Psychology,5,0.8377056956252052
+anthropology and sociology,Social sciences,5,0.8377969131973584
+electronic,Engineering,5,0.8378881307695114
+operations management,Business/Management/Marketing,5,0.8379793483416645
+childhood education,Education,5,0.8380705659138177
+event management,Business/Management/Marketing,5,0.8381617834859707
+biochemical engineering,Engineering,5,0.8382530010581238
+buisness management,Business/Management/Marketing,5,0.838344218630277
+english and education,Education,5,0.83843543620243
+exercise physiology,Health/Nursing/Allied health,5,0.8385266537745831
+industrial organizational psychology,Psychology,5,0.8386178713467363
+"psychology, education",Psychology,5,0.8387090889188893
+associate of arts,Arts/Design/Performing arts,5,0.8388003064910424
+economics and finance,Accounting/Finance,5,0.8388915240631956
+home economics,Economics,5,0.8389827416353486
+"psychology, philosophy",Psychology,5,0.8390739592075017
+mechatronic engineering,Engineering,5,0.8391651767796549
+robotics,Engineering,5,0.8392563943518079
+pre law,Law/Criminal justice,5,0.839347611923961
+psychology and music,Psychology,5,0.8394388294961141
+musical theatre,Arts/Design/Performing arts,5,0.8395300470682673
+youth ministry,Humanities (history/philosophy/religion),5,0.8396212646404203
+finance and accounting,Accounting/Finance,5,0.8397124822125734
+social policy,Social sciences,5,0.8398036997847266
+business mgmt,Business/Management/Marketing,5,0.8398949173568796
+human biology,Biology/Life sciences,5,0.8399861349290327
+life sciences,Biology/Life sciences,5,0.8400773525011859
+associates in arts,Arts/Design/Performing arts,5,0.8401685700733389
+pure science,Physical/Earth/Environmental sciences,5,0.840259787645492
+human resources development,Business/Management/Marketing,5,0.8403510052176452
+"psychology, criminology",Psychology,5,0.8404422227897982
+statistic,Math/Statistics,5,0.8405334403619513
+art & design,Arts/Design/Performing arts,5,0.8406246579341045
+i.t,CS/IT,5,0.8407158755062575
+mechanical engineer,Engineering,5,0.8408070930784106
+"psychology, business",Psychology,5,0.8408983106505638
+electrical and electronic engineering,Engineering,5,0.8409895282227168
+business finance,Accounting/Finance,5,0.8410807457948699
+computer application,CS/IT,5,0.841171963367023
+textile design,Arts/Design/Performing arts,5,0.8412631809391761
+graphic arts,Arts/Design/Performing arts,5,0.8413543985113292
+cultural anthropology,Social sciences,5,0.8414456160834823
+administracao,Business/Management/Marketing,5,0.8415368336556355
+"psychology, sociology",Psychology,5,0.8416280512277885
+therapeutic recreation,Health/Nursing/Allied health,5,0.8417192687999416
+communication and media,Communication/Media/Journalism,5,0.8418104863720948
+human resource managment,Business/Management/Marketing,5,0.8419017039442478
+business psychology,Psychology,5,0.8419929215164009
+professional counseling,Social work/Counselling,5,0.8420841390885541
+automobile engineering,Engineering,5,0.8421753566607071
+career counseling,Social work/Counselling,5,0.8422665742328602
+human resources & personnel management,Business/Management/Marketing,5,0.8423577918050134
+comp sci,CS/IT,5,0.8424490093771664
+aeronautics,Engineering,5,0.8425402269493195
+bioinformatics,CS/IT,5,0.8426314445214727
+clinical counseling,Social work/Counselling,5,0.8427226620936257
+dms,Unmapped,5,0.8428138796657788
+ece,CS/IT,5,0.8429050972379319
+medical administrative assistant,Medicine/Dentistry/Pharmacy,5,0.842996314810085
+material engineering,Engineering,5,0.8430875323822381
+english studies,Languages/Literature,5,0.8431787499543912
+human sciences,Physical/Earth/Environmental sciences,5,0.8432699675265443
+family science,Physical/Earth/Environmental sciences,5,0.8433611850986974
+web design,CS/IT,5,0.8434524026708505
+marketing and management,Business/Management/Marketing,5,0.8435436202430037
+educational leadership,Education,5,0.8436348378151567
+accounting & finance,Accounting/Finance,5,0.8437260553873098
+english and philosophy,Languages/Literature,5,0.843817272959463
+registered nursing,Health/Nursing/Allied health,5,0.843908490531616
+ict,CS/IT,5,0.8439997081037691
+earth sciences,Physical/Earth/Environmental sciences,5,0.8440909256759223
+speech therapy,Health/Nursing/Allied health,5,0.8441821432480753
+environmental biology,Biology/Life sciences,5,0.8442733608202284
+music business,Business/Management/Marketing,5,0.8443645783923815
+pta,Health/Nursing/Allied health,5,0.8444557959645346
+business management & administration,Business/Management/Marketing,5,0.8445470135366877
+informatic engineering,Engineering,5,0.8446382311088408
+laws,Law/Criminal justice,5,0.8447294486809939
+guidance and counseling,Social work/Counselling,5,0.844820666253147
+child and family studies,Social work/Counselling,5,0.8449118838253001
+environmental,Physical/Earth/Environmental sciences,5,0.8450031013974532
+planning,Architecture/Planning,5,0.8450943189696063
+animal sciences,Biology/Life sciences,5,0.8451855365417594
+medtech,Medicine/Dentistry/Pharmacy,5,0.8452767541139125
+mass media,Communication/Media/Journalism,4,0.845349728171635
+physical therapy assistant,Health/Nursing/Allied health,4,0.8454227022293574
+psychiatry,Psychology,4,0.8454956762870799
+gender studies,Social sciences,4,0.8455686503448024
+general arts,Arts/Design/Performing arts,4,0.8456416244025249
+community studies,Social work/Counselling,4,0.8457145984602474
+travel & tourism,Business/Management/Marketing,4,0.8457875725179699
+metallurgical engineering,Engineering,4,0.8458605465756923
+business administation,Business/Management/Marketing,4,0.8459335206334149
+psychology and philosophy,Psychology,4,0.8460064946911373
+international travel and tourism management,Business/Management/Marketing,4,0.8460794687488598
+building,Architecture/Planning,4,0.8461524428065823
+english language teaching,Education,4,0.8462254168643047
+medecine,Medicine/Dentistry/Pharmacy,4,0.8462983909220272
+interior designer,Architecture/Planning,4,0.8463713649797497
+pilot,Trades/Vocational,4,0.8464443390374722
+sports science,Health/Nursing/Allied health,4,0.8465173130951946
+organizational development,Business/Management/Marketing,4,0.8465902871529172
+industrial relations,Unmapped,4,0.8466632612106396
+sound engineering,Engineering,4,0.8467362352683621
+biophysics,Physical/Earth/Environmental sciences,4,0.8468092093260846
+chinese medicine,Medicine/Dentistry/Pharmacy,4,0.846882183383807
+criminal psychology,Psychology,4,0.8469551574415295
+geoscience,Physical/Earth/Environmental sciences,4,0.847028131499252
+human science,Physical/Earth/Environmental sciences,4,0.8471011055569745
+computing science,CS/IT,4,0.8471740796146969
+digital art,Arts/Design/Performing arts,4,0.8472470536724195
+marketing communications,Business/Management/Marketing,4,0.8473200277301419
+screenwriting,Languages/Literature,4,0.8473930017878644
+health services,Health/Nursing/Allied health,4,0.8474659758455869
+medical sciences,Medicine/Dentistry/Pharmacy,4,0.8475389499033094
+psychology and counselling,Psychology,4,0.8476119239610318
+family and consumer science,Physical/Earth/Environmental sciences,4,0.8476848980187544
+human development and family science,Social work/Counselling,4,0.8477578720764768
+psychology english,Psychology,4,0.8478308461341993
+nutrition and dietetics,Health/Nursing/Allied health,4,0.8479038201919218
+computer studies,CS/IT,4,0.8479767942496442
+computer information technology,CS/IT,4,0.8480497683073668
+addiction counseling,Social work/Counselling,4,0.8481227423650892
+electronic engineer,Engineering,4,0.8481957164228117
+civil,Engineering,4,0.8482686904805342
+psychology/nursing,Psychology,4,0.8483416645382567
+criminal justice/psychology,Psychology,4,0.8484146385959791
+interior architecture,Architecture/Planning,4,0.8484876126537017
+ir,Social sciences,4,0.8485605867114241
+applied sciences,Physical/Earth/Environmental sciences,4,0.8486335607691465
+french literature,Languages/Literature,4,0.8487065348268691
+child development and family studies,Social work/Counselling,4,0.8487795088845915
+veternarian,Medicine/Dentistry/Pharmacy,4,0.848852482942314
+pathology,Unmapped,4,0.8489254570000365
+german studies,Languages/Literature,4,0.848998431057759
+litterature,Languages/Literature,4,0.8490714051154814
+textile engineering,Engineering,4,0.849144379173204
+plant science,Physical/Earth/Environmental sciences,4,0.8492173532309264
+ethnic studies,Social sciences,4,0.8492903272886488
+general science,Physical/Earth/Environmental sciences,4,0.8493633013463714
+musicology,Arts/Design/Performing arts,4,0.8494362754040938
+psy,Psychology,4,0.8495092494618163
+information engineering,Engineering,4,0.8495822235195388
+welding,Trades/Vocational,4,0.8496551975772613
+english and french,Languages/Literature,4,0.8497281716349837
+environmental health,Health/Nursing/Allied health,4,0.8498011456927063
+agricultural sciences,Social sciences,4,0.8498741197504287
+socialogy,Social sciences,4,0.8499470938081513
+"psychology, political science",Psychology,4,0.8500200678658737
+technology management,Business/Management/Marketing,4,0.8500930419235961
+business mangement,Business/Management/Marketing,4,0.8501660159813187
+rehabilitative services,Health/Nursing/Allied health,4,0.8502389900390411
+family and human development,Social work/Counselling,4,0.8503119640967636
+medcine,Medicine/Dentistry/Pharmacy,4,0.8503849381544861
+toxicology,Physical/Earth/Environmental sciences,4,0.8504579122122086
+educational,Education,4,0.850530886269931
+media production,Communication/Media/Journalism,4,0.8506038603276536
+system engineering,Engineering,4,0.850676834385376
+emergency management,Business/Management/Marketing,4,0.8507498084430984
+chinese language,Languages/Literature,4,0.850822782500821
+architecture engineering,Engineering,4,0.8508957565585434
+english writing,Languages/Literature,4,0.8509687306162659
+sales,Business/Management/Marketing,4,0.8510417046739884
+mbbs,Medicine/Dentistry/Pharmacy,4,0.8511146787317109
+film and tv,Communication/Media/Journalism,4,0.8511876527894333
+medical field,Medicine/Dentistry/Pharmacy,4,0.8512606268471559
+piano performance,Arts/Design/Performing arts,4,0.8513336009048783
+broadcast journalism,Communication/Media/Journalism,4,0.8514065749626007
+psychotherapy,Psychology,4,0.8514795490203233
+human resourses,Business/Management/Marketing,4,0.8515525230780457
+automotive technology,Trades/Vocational,4,0.8516254971357682
+events management,Business/Management/Marketing,4,0.8516984711934907
+family and consumer sciences,Physical/Earth/Environmental sciences,4,0.8517714452512132
+eduction,Education,4,0.8518444193089356
+hospitality administration,Business/Management/Marketing,4,0.8519173933666582
+applied linguistics,Languages/Literature,4,0.8519903674243806
+phycology,Psychology,4,0.8520633414821032
+aviation management,Trades/Vocational,4,0.8521363155398256
+psyhology,Psychology,4,0.852209289597548
+marine,Biology/Life sciences,4,0.8522822636552706
+town planning,Architecture/Planning,4,0.852355237712993
+business it,CS/IT,4,0.8524282117707155
+global affairs,Social sciences,4,0.852501185828438
+enginering,Engineering,4,0.8525741598861605
+project management,Business/Management/Marketing,4,0.8526471339438829
+health management,Health/Nursing/Allied health,4,0.8527201080016055
+international economics,Economics,4,0.8527930820593279
+homeland security,Law/Criminal justice,4,0.8528660561170504
+culture,Social sciences,4,0.8529390301747729
+business engineering,Engineering,4,0.8530120042324953
+applied chemistry,Physical/Earth/Environmental sciences,4,0.8530849782902178
+criminal justice and psychology,Psychology,4,0.8531579523479403
+natural sciences,Physical/Earth/Environmental sciences,4,0.8532309264056628
+pediatrician,Medicine/Dentistry/Pharmacy,4,0.8533039004633852
+energy engineering,Engineering,4,0.8533768745211078
+asl interpreting,Languages/Literature,4,0.8534498485788302
+general management,Business/Management/Marketing,4,0.8535228226365527
+computer networks and cybersecurity,CS/IT,4,0.8535957966942752
+medical coding,Medicine/Dentistry/Pharmacy,4,0.8536687707519977
+comm,Unmapped,4,0.8537417448097201
+exploratory,Unmapped,4,0.8538147188674426
+management engineering,Engineering,4,0.8538876929251651
+psychlogy,Psychology,4,0.8539606669828875
+instrumentation engineering,Engineering,4,0.8540336410406101
+business administration and management,Business/Management/Marketing,4,0.8541066150983325
+flight attendant,Unmapped,4,0.8541795891560551
+surgeon,Unmapped,4,0.8542525632137775
+human geography,Social sciences,4,0.8543255372715
+economic history,Economics,4,0.8543985113292225
+dentist,Medicine/Dentistry/Pharmacy,4,0.854471485386945
+international trade,Unmapped,4,0.8545444594446674
+painting,Arts/Design/Performing arts,4,0.85461743350239
+podiatry,Unmapped,4,0.8546904075601124
+business science,Business/Management/Marketing,4,0.8547633816178348
+communications and media,Communication/Media/Journalism,4,0.8548363556755574
+recreation management,Health/Nursing/Allied health,4,0.8549093297332798
+human rights,Unmapped,4,0.8549823037910023
+cultural management,Business/Management/Marketing,4,0.8550552778487248
+policy,Unmapped,4,0.8551282519064473
+cell biology,Biology/Life sciences,4,0.8552012259641697
+bio chemistry,Biology/Life sciences,4,0.8552742000218923
+environmental policy,Physical/Earth/Environmental sciences,4,0.8553471740796147
+network engineering,CS/IT,4,0.8554201481373371
+chinese studies,Languages/Literature,4,0.8554931221950597
+"psychology, criminal justice",Psychology,4,0.8555660962527821
+clinical laboratory science,Health/Nursing/Allied health,4,0.8556390703105046
+management and leadership,Business/Management/Marketing,4,0.8557120443682271
+landscape,Architecture/Planning,4,0.8557850184259496
+education and psychology,Psychology,4,0.855857992483672
+music industry,Arts/Design/Performing arts,4,0.8559309665413946
+human resouces,Unmapped,4,0.856003940599117
+sociology and anthropology,Social sciences,4,0.8560769146568394
+entertainment,Unmapped,4,0.856149888714562
+politology,Unmapped,4,0.8562228627722844
+behavioral sciences,Psychology,4,0.856295836830007
+social studies education,Education,4,0.8563688108877294
+sports medicine,Medicine/Dentistry/Pharmacy,4,0.8564417849454519
+pre medical,Medicine/Dentistry/Pharmacy,4,0.8565147590031744
+"english, education",Education,4,0.8565877330608969
+behavioral health,Health/Nursing/Allied health,4,0.8566607071186193
+mechatronics,Engineering,4,0.8567336811763419
+security,Unmapped,4,0.8568066552340643
+physical therapist,Health/Nursing/Allied health,4,0.8568796292917867
+registered nurse,Health/Nursing/Allied health,4,0.8569526033495093
+security technology,Engineering,4,0.8570255774072317
+biotech,Biology/Life sciences,4,0.8570985514649542
+graphic communications,Communication/Media/Journalism,4,0.8571715255226767
+family and child sciences,Physical/Earth/Environmental sciences,4,0.8572444995803992
+project managment,Business/Management/Marketing,4,0.8573174736381216
+integrative biology,Biology/Life sciences,4,0.8573904476958442
+abm,Unmapped,4,0.8574634217535666
+politic,Social sciences,4,0.857536395811289
+architectural studies,Architecture/Planning,3,0.8575911263545809
+mechatronic engineer,Engineering,3,0.8576458568978728
+aa,Undecided/General studies,3,0.8577005874411646
+financial,Accounting/Finance,3,0.8577553179844565
+communications media,Communication/Media/Journalism,3,0.8578100485277483
+finance and marketing,Accounting/Finance,3,0.8578647790710402
+international marketing,Business/Management/Marketing,3,0.857919509614332
+veterinary technology,Medicine/Dentistry/Pharmacy,3,0.8579742401576239
+english major,Languages/Literature,3,0.8580289707009158
+applied social sciences,Social sciences,3,0.8580837012442076
+bio engineering,Engineering,3,0.8581384317874995
+bio-medical engineering,Engineering,3,0.8581931623307913
+engineering and business,Engineering,3,0.8582478928740833
+multidisciplinary studies,Unmapped,3,0.8583026234173752
+retail,Business/Management/Marketing,3,0.858357353960667
+"history, philosophy",Humanities (history/philosophy/religion),3,0.8584120845039589
+translation and interpreting,Languages/Literature,3,0.8584668150472508
+educational administration,Education,3,0.8585215455905426
+fitness,Health/Nursing/Allied health,3,0.8585762761338345
+telecom engineering,Engineering,3,0.8586310066771263
+actuary,Accounting/Finance,3,0.8586857372204182
+nutrition science,Health/Nursing/Allied health,3,0.85874046776371
+maritime,Unmapped,3,0.8587951983070019
+pharmaceutical,Medicine/Dentistry/Pharmacy,3,0.8588499288502938
+enginerring,Engineering,3,0.8589046593935856
+economics and management,Economics,3,0.8589593899368775
+aviation science,Trades/Vocational,3,0.8590141204801693
+christian counseling,Social work/Counselling,3,0.8590688510234612
+child and youth care,Unmapped,3,0.8591235815667531
+psychology and spanish,Psychology,3,0.8591783121100449
+cybernetics,CS/IT,3,0.8592330426533368
+behavioural science,Psychology,3,0.8592877731966286
+recreation administration,Health/Nursing/Allied health,3,0.8593425037399205
+media management,Business/Management/Marketing,3,0.8593972342832124
+food science and technology,Physical/Earth/Environmental sciences,3,0.8594519648265042
+aerospace,Engineering,3,0.8595066953697961
+electronics and instrumentation engineering,Engineering,3,0.8595614259130879
+geographer,Social sciences,3,0.8596161564563798
+urban studies,Social sciences,3,0.8596708869996716
+art or psychology,Psychology,3,0.8597256175429635
+environmental technology,Physical/Earth/Environmental sciences,3,0.8597803480862554
+3d animation,Arts/Design/Performing arts,3,0.8598350786295472
+islamic studies,Humanities (history/philosophy/religion),3,0.8598898091728391
+culture management,Business/Management/Marketing,3,0.8599445397161309
+veterinar,Medicine/Dentistry/Pharmacy,3,0.8599992702594228
+3d design,Arts/Design/Performing arts,3,0.8600540008027147
+outdoor education,Education,3,0.8601087313460065
+medical engineering,Engineering,3,0.8601634618892984
+"psychology, management",Psychology,3,0.8602181924325902
+music industry studies,Arts/Design/Performing arts,3,0.8602729229758821
+rhs,Unmapped,3,0.860327653519174
+englis,Unmapped,3,0.8603823840624658
+pre-physical therapy,Health/Nursing/Allied health,3,0.8604371146057577
+"psychology, economics",Psychology,3,0.8604918451490495
+international business and management,Business/Management/Marketing,3,0.8605465756923414
+nursing and psychology,Psychology,3,0.8606013062356332
+production,Unmapped,3,0.8606560367789251
+production engineering,Engineering,3,0.860710767322217
+massage therapy,Health/Nursing/Allied health,3,0.8607654978655088
+bsn,Health/Nursing/Allied health,3,0.8608202284088007
+industrial management,Business/Management/Marketing,3,0.8608749589520925
+science social,Physical/Earth/Environmental sciences,3,0.8609296894953844
+recording industry,Unmapped,3,0.8609844200386763
+media communications,Communication/Media/Journalism,3,0.8610391505819681
+accountantcy,Accounting/Finance,3,0.86109388112526
+biology and chemistry,Biology/Life sciences,3,0.8611486116685518
+psychologu,Psychology,3,0.8612033422118437
+applied physics,Physical/Earth/Environmental sciences,3,0.8612580727551356
+biological,Biology/Life sciences,3,0.8613128032984274
+production management,Business/Management/Marketing,3,0.8613675338417193
+corporate communication,Communication/Media/Journalism,3,0.8614222643850111
+human nutrition,Health/Nursing/Allied health,3,0.861476994928303
+political economy,Economics,3,0.8615317254715948
+filipino,Unmapped,3,0.8615864560148867
+natural science,Physical/Earth/Environmental sciences,3,0.8616411865581786
+investigative forensics,Law/Criminal justice,3,0.8616959171014704
+medical office,Medicine/Dentistry/Pharmacy,3,0.8617506476447623
+marketing & management,Business/Management/Marketing,3,0.8618053781880541
+businesss,Business/Management/Marketing,3,0.861860108731346
+entrepreneur,Business/Management/Marketing,3,0.8619148392746379
+business/marketing,Business/Management/Marketing,3,0.8619695698179297
+telecommunications engineering,Engineering,3,0.8620243003612216
+sustainability,Physical/Earth/Environmental sciences,3,0.8620790309045134
+eletric engineering,Engineering,3,0.8621337614478053
+design management,Business/Management/Marketing,3,0.8621884919910972
+acounting,Unmapped,3,0.862243222534389
+nursing rn,Health/Nursing/Allied health,3,0.8622979530776809
+hotel,Business/Management/Marketing,3,0.8623526836209727
+social media marketing,Business/Management/Marketing,3,0.8624074141642646
+conservation,Physical/Earth/Environmental sciences,3,0.8624621447075564
+neuropsychology,Psychology,3,0.8625168752508483
+safety,Unmapped,3,0.8625716057941402
+health policy,Health/Nursing/Allied health,3,0.862626336337432
+foreign trade,Unmapped,3,0.8626810668807239
+medicina,Medicine/Dentistry/Pharmacy,3,0.8627357974240157
+theoretical physics,Physical/Earth/Environmental sciences,3,0.8627905279673076
+diesel,Unmapped,3,0.8628452585105995
+journalist,Communication/Media/Journalism,3,0.8628999890538913
+physical therapist assistant,Health/Nursing/Allied health,3,0.8629547195971832
+professional communication,Communication/Media/Journalism,3,0.863009450140475
+"psychology, music",Psychology,3,0.8630641806837669
+music management,Business/Management/Marketing,3,0.8631189112270587
+finances,Accounting/Finance,3,0.8631736417703506
+public admin,Business/Management/Marketing,3,0.8632283723136425
+early education,Education,3,0.8632831028569343
+history and political science,Humanities (history/philosophy/religion),3,0.8633378334002262
+gestao,Unmapped,3,0.863392563943518
+hospitality and tourism management,Business/Management/Marketing,3,0.8634472944868099
+artistic,Unmapped,3,0.8635020250301018
+computer network technology,CS/IT,3,0.8635567555733936
+finance & accounting,Accounting/Finance,3,0.8636114861166855
+french and german,Languages/Literature,3,0.8636662166599773
+management business,Business/Management/Marketing,3,0.8637209472032692
+advertising and public relations,Business/Management/Marketing,3,0.863775677746561
+it and business,CS/IT,3,0.8638304082898529
+business & management,Business/Management/Marketing,3,0.8638851388331448
+educational sciences,Education,3,0.8639398693764366
+english/psychology,Psychology,3,0.8639945999197285
+digital arts,Arts/Design/Performing arts,3,0.8640493304630203
+game development,CS/IT,3,0.8641040610063122
+"criminal justice, psychology",Psychology,3,0.8641587915496041
+economist,Economics,3,0.8642135220928959
+paychology,Unmapped,3,0.8642682526361878
+couseling,Unmapped,3,0.8643229831794796
+japanese language,Languages/Literature,3,0.8643777137227715
+diplomacy,Unmapped,3,0.8644324442660634
+educatiom,Education,3,0.8644871748093552
+strategy,Unmapped,3,0.8645419053526472
+philosphy,Unmapped,3,0.864596635895939
+electronics and communication,CS/IT,3,0.8646513664392309
+financial planning,Accounting/Finance,3,0.8647060969825228
+electrical electronics engineering,Engineering,3,0.8647608275258146
+hotel administration,Business/Management/Marketing,3,0.8648155580691065
+"journalism, education",Education,3,0.8648702886123983
+family studies and human development,Social work/Counselling,3,0.8649250191556902
+family consumer science,Physical/Earth/Environmental sciences,3,0.8649797496989821
+psychology and neuroscience,Psychology,3,0.8650344802422739
+psychology/business,Psychology,3,0.8650892107855658
+networking,CS/IT,3,0.8651439413288576
+risk management,Business/Management/Marketing,3,0.8651986718721495
+mathematics education,Education,3,0.8652534024154414
+nursin,Health/Nursing/Allied health,3,0.8653081329587332
+psycholgoy,Psychology,3,0.8653628635020251
+christian ministries,Unmapped,3,0.8654175940453169
+biomed,Biology/Life sciences,3,0.8654723245886088
+derecho,Unmapped,3,0.8655270551319006
+french studies,Languages/Literature,3,0.8655817856751925
+criminology/criminal justice,Law/Criminal justice,3,0.8656365162184844
+psychology/biology,Psychology,3,0.8656912467617762
+economi,Economics,3,0.8657459773050681
+human development & family studies,Social work/Counselling,3,0.8658007078483599
+paramedicine,Medicine/Dentistry/Pharmacy,3,0.8658554383916518
+counseling and psychology,Psychology,3,0.8659101689349437
+speech and language therapy,Health/Nursing/Allied health,3,0.8659648994782355
+bcom,Business/Management/Marketing,3,0.8660196300215274
+computer information system,CS/IT,3,0.8660743605648192
+music and education,Education,3,0.8661290911081111
+mathematical,Math/Statistics,3,0.866183821651403
+innovation,Unmapped,3,0.8662385521946948
+wildlife biology,Biology/Life sciences,3,0.8662932827379867
+graphic designer,Arts/Design/Performing arts,3,0.8663480132812785
+vet tech,Medicine/Dentistry/Pharmacy,3,0.8664027438245704
+social communication,Communication/Media/Journalism,3,0.8664574743678622
+computer information science,CS/IT,3,0.8665122049111541
+agricultural education,Education,3,0.866566935454446
+history and philosophy,Humanities (history/philosophy/religion),3,0.8666216659977378
+publishing,Unmapped,3,0.8666763965410297
+peace and conflict studies,Unmapped,3,0.8667311270843215
+english and german,Languages/Literature,3,0.8667858576276134
+ot,Unmapped,3,0.8668405881709053
+engineering science,Engineering,3,0.8668953187141971
+agricultural engineering,Engineering,3,0.866950049257489
+american history,Humanities (history/philosophy/religion),3,0.8670047798007808
+oceanography,Physical/Earth/Environmental sciences,3,0.8670595103440727
+drafting,Unmapped,3,0.8671142408873646
+poli sci,Unmapped,3,0.8671689714306564
+media design,Communication/Media/Journalism,3,0.8672237019739483
+bachelor of business administration,Business/Management/Marketing,3,0.8672784325172401
+vocational education,Education,3,0.867333163060532
+hvac,Unmapped,3,0.8673878936038238
+psychology/education,Psychology,3,0.8674426241471157
+social media,Communication/Media/Journalism,3,0.8674973546904076
+communication management,Business/Management/Marketing,3,0.8675520852336994
+vet,Medicine/Dentistry/Pharmacy,3,0.8676068157769913
+civil engineer,Engineering,3,0.8676615463202831
+psuchology,Unmapped,3,0.867716276863575
+cultural heritage,Social sciences,3,0.8677710074068669
+creative media,Communication/Media/Journalism,3,0.8678257379501587
+businesses,Business/Management/Marketing,3,0.8678804684934506
+theater arts,Arts/Design/Performing arts,3,0.8679351990367424
+accounting finance,Accounting/Finance,3,0.8679899295800343
+ota,Unmapped,3,0.8680446601233262
+food and nutrition,Health/Nursing/Allied health,3,0.868099390666618
+radio broadcasting,Communication/Media/Journalism,3,0.8681541212099099
+journalism and mass communication,Communication/Media/Journalism,3,0.8682088517532017
+speech,Health/Nursing/Allied health,3,0.8682635822964936
+hispanic studies,Unmapped,3,0.8683183128397854
+public safety,Unmapped,3,0.8683730433830773
+physchology,Unmapped,3,0.8684277739263692
+logistics and supply chain management,Business/Management/Marketing,3,0.868482504469661
+clinical social work,Social work/Counselling,3,0.8685372350129529
+public communications,Communication/Media/Journalism,3,0.8685919655562447
+rn,Health/Nursing/Allied health,3,0.8686466960995366
+aas,Unmapped,3,0.8687014266428285
+tesol,Education,3,0.8687561571861203
+agriculture science,Social sciences,3,0.8688108877294122
+economics and mathematics,Economics,3,0.868865618272704
+nutritional science,Health/Nursing/Allied health,3,0.8689203488159959
+engish,Unmapped,3,0.8689750793592877
+foundation in science,Undecided/General studies,3,0.8690298099025796
+business and psychology,Psychology,3,0.8690845404458715
+business and commerce,Business/Management/Marketing,3,0.8691392709891633
+criminology and psychology,Psychology,3,0.8691940015324552
+baking,Unmapped,3,0.869248732075747
+dont know yet,Unmapped,3,0.8693034626190389
+"psychology, english",Psychology,3,0.8693581931623308
+psychology and history,Psychology,3,0.8694129237056226
+folklore,Unmapped,3,0.8694676542489145
+travel,Unmapped,3,0.8695223847922063
+psychology and theology,Psychology,3,0.8695771153354982
+other,Unmapped,3,0.86963184587879
+busniess,Unmapped,3,0.8696865764220819
+aircraft maintenance engineering,Engineering,3,0.8697413069653738
+phlebotomy,Unmapped,3,0.8697960375086656
+electronics and telecommunication engineering,Engineering,3,0.8698507680519575
+mental health counselor,Social work/Counselling,3,0.8699054985952493
+counselor,Social work/Counselling,3,0.8699602291385412
+comercial engineering,Engineering,3,0.8700149596818331
+busness,Business/Management/Marketing,3,0.8700696902251249
+general medicine,Medicine/Dentistry/Pharmacy,3,0.8701244207684168
+television,Communication/Media/Journalism,3,0.8701791513117086
+korean,Languages/Literature,3,0.8702338818550005
+beauty,Trades/Vocational,3,0.8702886123982924
+computer systems,CS/IT,3,0.8703433429415842
+electronics technology,Engineering,3,0.8703980734848761
+"education, psychology",Psychology,3,0.8704528040281679
+public safety administration,Business/Management/Marketing,3,0.8705075345714598
+dental medicine,Medicine/Dentistry/Pharmacy,3,0.8705622651147517
+psychology and public health,Psychology,3,0.8706169956580435
+medical reimbursement and coding,Medicine/Dentistry/Pharmacy,3,0.8706717262013354
+neither,Unmapped,3,0.8707264567446272
+medical imaging,Medicine/Dentistry/Pharmacy,3,0.8707811872879191
+addiction studies,Unmapped,3,0.8708359178312111
+lpn,Unmapped,3,0.8708906483745029
+socialwork,Unmapped,3,0.8709453789177948
+currently in college,Unmapped,3,0.8710001094610866
+info tech,Unmapped,3,0.8710548400043785
+international law,Law/Criminal justice,3,0.8711095705476704
+civil law,Law/Criminal justice,3,0.8711643010909622
+property management,Business/Management/Marketing,3,0.8712190316342541
+tourism and hospitality,Business/Management/Marketing,3,0.8712737621775459
+business management and accounting,Accounting/Finance,3,0.8713284927208378
+culinary art,Business/Management/Marketing,3,0.8713832232641296
+geodetic engineering,Engineering,3,0.8714379538074215
+agriculture economics,Economics,3,0.8714926843507134
+electronics and communications engineering,CS/IT,3,0.8715474148940052
+video production,Unmapped,3,0.8716021454372971
+financial engineering,Engineering,3,0.8716568759805889
+electrical and computer engineering,CS/IT,3,0.8717116065238808
+immunology,Biology/Life sciences,3,0.8717663370671727
+bio,Biology/Life sciences,3,0.8718210676104645
+electrical-electronic engineering,Engineering,3,0.8718757981537564
+health & medical administrative services,Medicine/Dentistry/Pharmacy,3,0.8719305286970482
