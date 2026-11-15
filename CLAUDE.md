@@ -31,7 +31,9 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
   Match r is not accuracy.
 - E4 adaptive test: CAT not better than a fixed form → **v1 = fixed 24-item form** (pre-registered bar unreachable)
 - E5 stability: **promising** (full test only about 55% top-10 stable → show an unordered set of families, not a ranking)
-- E6 supervised major prediction: running
+- E6 supervised major prediction: **proven against its bar** (LR on items, top-3 .565 vs majority .40 / centroid .32;
+  beats boosting/MLP). Not user-ready: Psychology over-predicted 2×, small fields nearly invisible, large gender gaps
+  amplified (STEM-core ×1.11, Psychology ×1.65), and items predict gender (AUC .84). Research-only.
 - E7 free-text matching: **not viable as pre-registered**. Retrieval is strong (.95 family / .86 occupation
   Hit@5, rejection threshold works), but gender/name-swap top-10 overlap is .73 < .90. Negation isn't handled.
   E7b with demographic-cue stripping is needed.

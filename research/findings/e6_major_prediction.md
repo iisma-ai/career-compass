@@ -91,3 +91,125 @@ only a `--quick` smoke run on a 15% subsample had been executed, and its numbers
 - Outputs are aggregates only: no model weights and no person-level predictions are saved to `research/findings/`
   (the OpenPsychometrics data has no license and the repo is public).
 - Framing: any output is "what people with similar interests studied", never a probability of success.
+
+**Execution notes (2026-11-15):**
+- The first smoke run was killed by host memory pressure, which happened while other experiments were running.
+- CV parallelism was then lowered from 5 to 2 workers. That change affects runtime only; seeds, metrics and B are unchanged.
+- Deviation: the pre-registration says "21 target families", but the actual count after dropping
+  Trades/Vocational is **20**. That was a counting slip in the text, and no rule changed.
+- The full run took 745 s. All numbers below come from `research/findings/e6_major_prediction.json`
+  (seed 42, test n = 9,800).
+
+## Results
+
+**Sample:** 80,085 clean rows → 66,203 aged 18+ → 51,218 with a valid mapped major → **48,999 analysed**
+(20 families; Psychology 19%, Business 14%, Engineering 7%; Architecture is the smallest at 524). Gender: 67% female, 32% male.
+
+**Headline (test set; 95% bootstrap CIs in the JSON):**
+
+| Model | Features | top-1 | top-3 | top-5 | macro-F1 | bal. acc |
+|---|---|---|---|---|---|---|
+| B0 majority | — | .192 | .401 [.392, .410] | .524 | .016 | .050 |
+| B1 stratified random | — | .087 | .247 | .387 | .052 | .052 |
+| B2 RIASEC centroid (Pearson) | 6 scales | .120 | .318 [.308, .327] | .458 | .097 | .134 |
+| LR unweighted | F1 items | .308 | .561 | .695 | .144 | .153 |
+| LR unweighted | F2 scales + elev/diff | .262 | .497 | .632 | .074 | .100 |
+| **LR unweighted (selected)** | **F3 items + TIPI** | **.309** | **.565 [.555, .574]** | **.697** | .146 | .154 |
+| LR balanced | F1 | .204 | .463 | .614 | .183 | .222 |
+| HGB unweighted | F1 | .307 | .554 | .689 | .152 | .158 |
+| MLP | F1 | .305 | .558 | .691 | .150 | .157 |
+| LR unweighted (analysis only) | F4 = F1 + demographics | .313 | .568 | .705 | .157 | .161 |
+
+- **Selection:** LR-F3 had the best CV top-3 (.565). LR-F1 is practically tied (paired test difference
+  +.004, CI [.0001, .008]), so TIPI adds almost nothing. Gradient boosting and the MLP do **not** beat the linear model.
+- **Paired top-3 differences** for the selected model:
+  - vs majority: **+.164** [.154, .173]
+  - vs centroid: **+.248** [.236, .259]
+  - vs the 6-scale summary (F2): +.069 [.060, .076]
+- **Item-level information matters:** the 48 items beat their 6 scale scores, which in turn beat simple
+  centroid shape matching.
+- **Calibration** is good (ECE .006).
+- **Class weighting:** balanced weighting trades top-3 (.46) for macro-F1 (.18) and balanced accuracy (.22).
+
+**Per-class top-3 recall (selected model):**
+- Psychology .90, Business .85, Engineering .69, Health .67, Arts .55, Biology .54, Languages .53, CS/IT .48,
+  Accounting .45
+- Social work .39, Education .33, Medicine .27, Physical sciences .26, Communication .23, Social sciences .18,
+  Humanities .14, Architecture .13, Economics .11, Law .10, Math/Statistics .09
+- The three smallest classes (secondary metric) are nearly invisible.
+
+**Psychology dominance:**
+- The model's top-1 is Psychology for **41%** of test people (actual 19%), and Psychology is in the top-3 for 68%.
+- The most common confusions are all "→ Psychology" (Social work 71%, Education 47%, Social sciences 46%) or "→ Business"
+  (Accounting 53%, Economics 46%).
+- Confused pairs have very similar centroids: mean r .92, vs .74 for all pairs.
+- On non-Psychology rows: top-3 .486 vs majority .259 and centroid .357.
+- Refit without Psychology: top-3 .545 vs majority .337 and centroid .360. The gain over the baselines holds.
+
+**Robustness:**
+- Shared-network rows not used in training (n = 12,566): top-3 .591 vs majority .433 and centroid .324.
+- A fresh split of the incl-shared table: .570 vs .408 and .310.
+- Same conclusion in both.
+
+**Age:** top-3 is .614 for ages 18–24 and .528 for 25+, both well above their baselines.
+
+**Fairness (selected model; male n = 3,107, female n = 6,641):**
+- **Accuracy:** top-3 is .537 for men and .578 for women.
+- **Share gaps:** overall, the model does **not** amplify the total female–male share gap (ratio of summed |gap|,
+  predicted/actual, = .94). It **amplifies the large gaps** and shrinks the small ones:
+  - Psychology F−M gap: actual +.111, predicted +.182 (×1.65)
+  - Engineering: −.113 vs −.156 (×1.38)
+  - Business: ×1.30
+- **STEM-core:**
+  - The actual M−F share gap is .184 and the predicted gap .205 (**×1.11**; STEM-broad ×1.16).
+  - Women who actually studied a STEM-core major get one in their top-3 only **52%** of the time, vs **80%** for men.
+- **Gender leakage:** the 48 items alone predict gender with **AUC .84** [.83, .85]. Leaving gender out as an input does
+  not remove gender information.
+- **Adding demographics (F4)** makes amplification much worse (total ratio 1.47, STEM-core ×1.54, Psychology ×2.42).
+  Demographics must never be inputs.
+- **Other models:** balanced LR gives STEM-core ×1.26. The centroid baseline *under*-states the gap (×0.58).
+- Gender "Other" (n = 44 in test) is too small to evaluate.
+
+Charts: `e6_results.png`, `e6_confusion.png`, `e6_reliability.png`, `e6_per_class_recall.png`, `e6_coefficients.png`,
+`e6_gender_shares.png`.
+
+## Verdict
+**PROVEN against the pre-registered bar.**
+- The selected interest-only model (LR, items + TIPI) reaches test top-3 **.565** [.555, .574].
+- Its CI is clear of both majority [.392, .410] and centroid [.308, .327], and it is above .50.
+- The result also holds with items only (.561), without Psychology, and out of sample.
+
+**Scope of "proven":**
+- What it shows: interest answers carry real, generalisable information about which broad study field people chose.
+  Top-1 is right about 31% of the time, against a 19% guess-the-mode rate.
+- What it doesn't show: **not** evidence that the predicted field would suit the person or that they would succeed in it.
+- **Not ready for users:**
+  - Small fields are rarely predicted.
+  - Psychology is over-predicted about twofold.
+  - Existing gender gaps in Psychology, Engineering and STEM are **amplified**: women who actually studied STEM see it
+    in their top-3 far less often than men.
+
+## Caveats
+- **Labels:** majors are self-reported free text mapped by regex rules (E1), with no second rater, so the labels are noisy.
+- **Majors are not careers.** "What people with your interests studied" reflects past choices, including the social
+  pressures behind them, and that is exactly what the gender amplification reproduces.
+- **Sample:** self-selected, online, US-heavy (49%), 67% female, young.
+- **Reverse causation:** majors were reported after the fact, so interests may have been shaped by the major studied.
+- **Item coverage:** the I items are almost all biology- or medicine-themed (I1–I7), so CS, Math and Engineering rely on
+  indirect R/C signals. Their low recall (Math .09) fits this.
+- **License:** OpenPsychometrics data has no license, so this is research only. No weights or person-level outputs are saved.
+- **Regulation:** EU AI Act Annex III point 3 covers education systems used to determine access or to steer learners.
+  E6 stays research-only, and any product use needs a high-risk obligations assessment.
+
+## Implications for the design
+- **v3 (universities):** a field-of-study suggestion layer is feasible, but it needs re-scoping:
+  - show "people with similar interests often studied…" next to the O*NET career families, not as a ranking;
+  - apply a de-amplification step before release, then re-run this audit. Examples are post-hoc calibration so that
+    predicted shares by gender don't exceed actual shares, or an exposure floor for small and STEM fields;
+  - never use demographics as inputs, and audit gender with the AUC .84 leakage in mind.
+- **Model choice:** multinomial LR on item responses is as good as gradient boosting or an MLP. It is also calibrated
+  and explainable through per-item coefficients, so prefer it.
+- **Features:** item-level detail beats 6 scale scores (+.07 top-3), so keep item-level features in v1 alongside the
+  RIASEC profile.
+- **Item bank:** add non-biology Investigative items (computing, mathematics, physical science) for CS, Math and
+  Engineering. E2 and E4 already flagged this.
