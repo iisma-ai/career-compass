@@ -1,0 +1,2676 @@
+{
+  "config": {
+    "seed": 42,
+    "quick": false,
+    "models": [
+      "minilm",
+      "mml12"
+    ],
+    "variant": "d",
+    "k": 10,
+    "bootstrap_B": 2000,
+    "rejection_splits": 200
+  },
+  "models_log": {
+    "minilm": {
+      "repo": "sentence-transformers/all-MiniLM-L6-v2",
+      "max_seq_length": 256,
+      "dim": 384,
+      "truncation": {
+        "a": {
+          "share_truncated": 0.0,
+          "median_tokens": 45.0
+        },
+        "d": {
+          "share_truncated": 0.0672,
+          "median_tokens": 188.0
+        },
+        "tasks": {
+          "share_truncated": 0.0,
+          "median_tokens": 19.0
+        }
+      },
+      "license_from_model_card": "apache-2.0",
+      "seconds": 63.4
+    },
+    "mml12": {
+      "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "max_seq_length": 128,
+      "dim": 384,
+      "truncation": {
+        "a": {
+          "share_truncated": 0.0184,
+          "median_tokens": 53.0
+        },
+        "d": {
+          "share_truncated": 0.9913,
+          "median_tokens": 227.0
+        },
+        "tasks": {
+          "share_truncated": 0.0,
+          "median_tokens": 22.0
+        }
+      },
+      "license_from_model_card": "apache-2.0",
+      "seconds": 122.1
+    }
+  },
+  "M5_cue_audit": {
+    "e7_cue_free_statements_changed": 0,
+    "e7_cue_free_statements_n": 65,
+    "offtopic_changed": 0,
+    "cue_types_e7_pairs": {
+      "gender_age": 17,
+      "name": 10,
+      "age": 2,
+      "pronoun": 4,
+      "kinship": 2,
+      "origin": 6
+    },
+    "cue_types_heldout": {
+      "gender_age": 7,
+      "name": 12,
+      "kinship": 6,
+      "pronoun": 6,
+      "age": 6,
+      "origin": 4
+    },
+    "heldout_rows_with_no_cue_found": [
+      "HG03A",
+      "HG03B",
+      "HG04A",
+      "HG04B",
+      "HN01A",
+      "HN01B",
+      "HN04A",
+      "HN04B",
+      "HN06A",
+      "HN06B",
+      "HA03A",
+      "HO02A",
+      "HO02B",
+      "HO03A",
+      "HO03B"
+    ]
+  },
+  "results": {
+    "minilm": {
+      "M1_heldout": {
+        "gated": {
+          "summary": {
+            "raw": {
+              "mean": 0.7389,
+              "lo": 0.6611,
+              "hi": 0.8167,
+              "n": 18
+            },
+            "strip": {
+              "mean": 0.9222,
+              "lo": 0.8389,
+              "hi": 0.9944,
+              "n": 18
+            },
+            "coverage_identical": 0.6667,
+            "strip_vs_content_mean": 0.8389,
+            "raw_a_vs_content_mean": 0.7389,
+            "strip_new_phrasing_True": {
+              "mean": 0.8923,
+              "n": 13
+            },
+            "strip_new_phrasing_False": {
+              "mean": 1.0,
+              "n": 5
+            }
+          },
+          "pairs": [
+            {
+              "pair": "HG01",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'm a person and I really like animals and biology.",
+              "stripped_b": "I'm a person and I really like animals and biology.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG02",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Being a person in tech, I want to build apps that people actually use.",
+              "stripped_b": "Being a person in tech, I want to build apps that people actually use.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG03",
+              "lang": "en",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": false,
+              "stripped_a": "I love cooking, maybe because my mom taught me when I was a little girl.",
+              "stripped_b": "I love cooking, maybe because my mom taught me when I was a little boy.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG04",
+              "lang": "en",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": false,
+              "stripped_a": "I like drawing and, honestly, for a guy I'm pretty into interior design.",
+              "stripped_b": "I like drawing and, honestly, for a girl I'm pretty into interior design.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 1.0,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG05",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to work with cars and engines.",
+              "stripped_b": "I want to work with cars and engines.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG06",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "My sibling is really into coding and they want to make video games.",
+              "stripped_b": "My sibling is really into coding and they want to make video games.",
+              "strip_a_vs_content": 0.8,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG07",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "They have always loved looking after babies and young kids.",
+              "stripped_b": "They have always loved looking after babies and young kids.",
+              "strip_a_vs_content": 0.8,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG08",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Asking for my grandchild: they love plants and wants to be outside all day.",
+              "stripped_b": "Asking for my grandchild: they love plants and wants to be outside all day.",
+              "strip_a_vs_content": 0.8,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG09",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Soy persona de 16 años y me encantan las matemáticas.",
+              "stripped_b": "Soy persona de 16 años y me encantan las matemáticas.",
+              "strip_a_vs_content": 0.6,
+              "strip_b_vs_content": 0.6,
+              "raw_a_vs_content": 0.6,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG10",
+              "lang": "es",
+              "raw": 0.8,
+              "strip": 0.9,
+              "identical_after_strip": false,
+              "stripped_a": "Mi hijo quiere ser enfermera porque le gusta cuidar a la gente.",
+              "stripped_b": "Mi hijo quiere ser enfermero porque le gusta cuidar a la gente.",
+              "strip_a_vs_content": 0.5,
+              "strip_b_vs_content": 0.4,
+              "raw_a_vs_content": 0.5,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN01",
+              "lang": "en",
+              "raw": 0.4,
+              "strip": 0.4,
+              "identical_after_strip": false,
+              "stripped_a": "Hey! Priya here, I love building robots for school competitions.",
+              "stripped_b": "Hey! Tyler here, I love building robots for school competitions.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.6,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN02",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to be a chef.",
+              "stripped_b": "I want to be a chef.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 1.0,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN03",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "And I enjoy organising events for my community.",
+              "stripped_b": "And I enjoy organising events for my community.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.6,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HN04",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 0.6,
+              "identical_after_strip": false,
+              "stripped_a": "I like writing code and solving logic puzzles. - Mei",
+              "stripped_b": "I like writing code and solving logic puzzles. - Jake",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN05",
+              "lang": "en",
+              "raw": 0.4,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Hello, I would like a job helping refugees.",
+              "stripped_b": "Hello, I would like a job helping refugees.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.6,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN06",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 0.7,
+              "identical_after_strip": false,
+              "stripped_a": "Everyone calls me Rosa because I sing all the time, and I want to perform.",
+              "stripped_b": "Everyone calls me Diego because I sing all the time, and I want to perform.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN07",
+              "lang": "es",
+              "raw": 0.6,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Quiero diseñar ropa.",
+              "stripped_b": "Quiero diseñar ropa.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.3,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN08",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Hola, y me gustaría trabajar con animales.",
+              "stripped_b": "Hola, y me gustaría trabajar con animales.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": false
+            }
+          ]
+        },
+        "gender": {
+          "summary": {
+            "raw": {
+              "mean": 0.84,
+              "lo": 0.7797,
+              "hi": 0.9,
+              "n": 10
+            },
+            "strip": {
+              "mean": 0.99,
+              "lo": 0.97,
+              "hi": 1.0,
+              "n": 10
+            },
+            "coverage_identical": 0.7,
+            "strip_vs_content_mean": 0.815,
+            "raw_a_vs_content_mean": 0.79,
+            "strip_new_phrasing_True": {
+              "mean": 0.9857,
+              "n": 7
+            },
+            "strip_new_phrasing_False": {
+              "mean": 1.0,
+              "n": 3
+            }
+          },
+          "pairs": [
+            {
+              "pair": "HG01",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'm a person and I really like animals and biology.",
+              "stripped_b": "I'm a person and I really like animals and biology.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG02",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Being a person in tech, I want to build apps that people actually use.",
+              "stripped_b": "Being a person in tech, I want to build apps that people actually use.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG03",
+              "lang": "en",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": false,
+              "stripped_a": "I love cooking, maybe because my mom taught me when I was a little girl.",
+              "stripped_b": "I love cooking, maybe because my mom taught me when I was a little boy.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG04",
+              "lang": "en",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": false,
+              "stripped_a": "I like drawing and, honestly, for a guy I'm pretty into interior design.",
+              "stripped_b": "I like drawing and, honestly, for a girl I'm pretty into interior design.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 1.0,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG05",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to work with cars and engines.",
+              "stripped_b": "I want to work with cars and engines.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG06",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "My sibling is really into coding and they want to make video games.",
+              "stripped_b": "My sibling is really into coding and they want to make video games.",
+              "strip_a_vs_content": 0.8,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG07",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "They have always loved looking after babies and young kids.",
+              "stripped_b": "They have always loved looking after babies and young kids.",
+              "strip_a_vs_content": 0.8,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG08",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Asking for my grandchild: they love plants and wants to be outside all day.",
+              "stripped_b": "Asking for my grandchild: they love plants and wants to be outside all day.",
+              "strip_a_vs_content": 0.8,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG09",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Soy persona de 16 años y me encantan las matemáticas.",
+              "stripped_b": "Soy persona de 16 años y me encantan las matemáticas.",
+              "strip_a_vs_content": 0.6,
+              "strip_b_vs_content": 0.6,
+              "raw_a_vs_content": 0.6,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG10",
+              "lang": "es",
+              "raw": 0.8,
+              "strip": 0.9,
+              "identical_after_strip": false,
+              "stripped_a": "Mi hijo quiere ser enfermera porque le gusta cuidar a la gente.",
+              "stripped_b": "Mi hijo quiere ser enfermero porque le gusta cuidar a la gente.",
+              "strip_a_vs_content": 0.5,
+              "strip_b_vs_content": 0.4,
+              "raw_a_vs_content": 0.5,
+              "new_phrasing": true
+            }
+          ]
+        },
+        "name": {
+          "summary": {
+            "raw": {
+              "mean": 0.6125,
+              "lo": 0.5,
+              "hi": 0.7125,
+              "n": 8
+            },
+            "strip": {
+              "mean": 0.8375,
+              "lo": 0.675,
+              "hi": 1.0,
+              "n": 8
+            },
+            "coverage_identical": 0.625,
+            "strip_vs_content_mean": 0.8687,
+            "raw_a_vs_content_mean": 0.675,
+            "strip_new_phrasing_True": {
+              "mean": 0.7833,
+              "n": 6
+            },
+            "strip_new_phrasing_False": {
+              "mean": 1.0,
+              "n": 2
+            }
+          },
+          "pairs": [
+            {
+              "pair": "HN01",
+              "lang": "en",
+              "raw": 0.4,
+              "strip": 0.4,
+              "identical_after_strip": false,
+              "stripped_a": "Hey! Priya here, I love building robots for school competitions.",
+              "stripped_b": "Hey! Tyler here, I love building robots for school competitions.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.6,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN02",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to be a chef.",
+              "stripped_b": "I want to be a chef.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 1.0,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN03",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "And I enjoy organising events for my community.",
+              "stripped_b": "And I enjoy organising events for my community.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.6,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HN04",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 0.6,
+              "identical_after_strip": false,
+              "stripped_a": "I like writing code and solving logic puzzles. - Mei",
+              "stripped_b": "I like writing code and solving logic puzzles. - Jake",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN05",
+              "lang": "en",
+              "raw": 0.4,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Hello, I would like a job helping refugees.",
+              "stripped_b": "Hello, I would like a job helping refugees.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.6,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN06",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 0.7,
+              "identical_after_strip": false,
+              "stripped_a": "Everyone calls me Rosa because I sing all the time, and I want to perform.",
+              "stripped_b": "Everyone calls me Diego because I sing all the time, and I want to perform.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN07",
+              "lang": "es",
+              "raw": 0.6,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Quiero diseñar ropa.",
+              "stripped_b": "Quiero diseñar ropa.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.3,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN08",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Hola, y me gustaría trabajar con animales.",
+              "stripped_b": "Hola, y me gustaría trabajar con animales.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": false
+            }
+          ]
+        },
+        "age": {
+          "summary": {
+            "raw": {
+              "mean": 0.65,
+              "lo": 0.475,
+              "hi": 0.775,
+              "n": 4
+            },
+            "strip": {
+              "mean": 0.925,
+              "lo": 0.775,
+              "hi": 1.0,
+              "n": 4
+            },
+            "coverage_identical": 0.75,
+            "strip_vs_content_mean": 0.95,
+            "raw_a_vs_content_mean": 0.675,
+            "strip_new_phrasing_True": {
+              "mean": 0.9,
+              "n": 3
+            },
+            "strip_new_phrasing_False": {
+              "mean": 1.0,
+              "n": 1
+            }
+          },
+          "pairs": [
+            {
+              "pair": "HA01",
+              "lang": "en",
+              "raw": 0.4,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I like taking care of my fish tank and learning about sea life.",
+              "stripped_b": "I like taking care of my fish tank and learning about sea life.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HA02",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'd love to do something with gardens.",
+              "stripped_b": "I'd love to do something with gardens.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HA03",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 0.7,
+              "identical_after_strip": false,
+              "stripped_a": "As a high schooler I like making videos and editing them.",
+              "stripped_b": "As a person citizen I like making videos and editing them.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HA04",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Me gusta reparar ordenadores.",
+              "stripped_b": "Me gusta reparar ordenadores.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.6,
+              "new_phrasing": true
+            }
+          ]
+        },
+        "origin": {
+          "summary": {
+            "raw": {
+              "mean": 0.65,
+              "lo": 0.55,
+              "hi": 0.75,
+              "n": 4
+            },
+            "strip": {
+              "mean": 0.85,
+              "lo": 0.7,
+              "hi": 1.0,
+              "n": 4
+            },
+            "coverage_identical": 0.5,
+            "strip_vs_content_mean": 0.825,
+            "raw_a_vs_content_mean": 0.625,
+            "strip_new_phrasing_True": {
+              "mean": 0.85,
+              "n": 4
+            },
+            "strip_new_phrasing_False": {
+              "mean": null,
+              "n": 0
+            }
+          },
+          "pairs": [
+            {
+              "pair": "HO01",
+              "lang": "en",
+              "raw": 0.5,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to work in tourism.",
+              "stripped_b": "I want to work in tourism.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HO02",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 0.6,
+              "identical_after_strip": false,
+              "stripped_a": "My family moved here from Vietnam and I love working with numbers.",
+              "stripped_b": "My family moved here from Poland and I love working with numbers.",
+              "strip_a_vs_content": 0.6,
+              "strip_b_vs_content": 0.7,
+              "raw_a_vs_content": 0.6,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HO03",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 0.8,
+              "identical_after_strip": false,
+              "stripped_a": "Originally from Ghana, I'd like to become a lawyer.",
+              "stripped_b": "Originally from Ireland, I'd like to become a lawyer.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.6,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HO04",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Me encanta la fotografía.",
+              "stripped_b": "Me encanta la fotografía.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.5,
+              "new_phrasing": true
+            }
+          ]
+        }
+      },
+      "M1_dev_e7": {
+        "gated_dev": {
+          "summary": {
+            "raw": {
+              "mean": 0.7333,
+              "lo": 0.6583,
+              "hi": 0.8083,
+              "n": 12
+            },
+            "strip": {
+              "mean": 1.0,
+              "lo": 1.0,
+              "hi": 1.0,
+              "n": 12
+            },
+            "coverage_identical": 1.0
+          },
+          "pairs": [
+            {
+              "pair": "G01",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "As a person, I love building things.",
+              "stripped_b": "As a person, I love building things."
+            },
+            {
+              "pair": "G02",
+              "lang": "en",
+              "raw": 0.5,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'm a person and I'm interested in engineering and how machines work.",
+              "stripped_b": "I'm a person and I'm interested in engineering and how machines work."
+            },
+            {
+              "pair": "G03",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "As a person, I really enjoy looking after young children.",
+              "stripped_b": "As a person, I really enjoy looking after young children."
+            },
+            {
+              "pair": "G04",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'm a person and I want to become a nurse and care for patients.",
+              "stripped_b": "I'm a person and I want to become a nurse and care for patients."
+            },
+            {
+              "pair": "G05",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "As a person, I love computers and coding.",
+              "stripped_b": "As a person, I love computers and coding."
+            },
+            {
+              "pair": "G06",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'm a person who loves fashion and makeup.",
+              "stripped_b": "I'm a person who loves fashion and makeup."
+            },
+            {
+              "pair": "G07",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Como persona, me encanta construir cosas.",
+              "stripped_b": "Como persona, me encanta construir cosas."
+            },
+            {
+              "pair": "P01",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I like fixing cars.",
+              "stripped_b": "I like fixing cars."
+            },
+            {
+              "pair": "P02",
+              "lang": "en",
+              "raw": 0.5,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I enjoy helping my classmates with their homework.",
+              "stripped_b": "I enjoy helping my classmates with their homework."
+            },
+            {
+              "pair": "P03",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Hi, I want to work in finance.",
+              "stripped_b": "Hi, I want to work in finance."
+            },
+            {
+              "pair": "P04",
+              "lang": "es",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Me gusta la biología.",
+              "stripped_b": "Me gusta la biología."
+            },
+            {
+              "pair": "P05",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I love drawing comics.",
+              "stripped_b": "I love drawing comics."
+            }
+          ]
+        },
+        "pronoun": {
+          "summary": {
+            "raw": {
+              "mean": 0.7667,
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 3
+            },
+            "strip": {
+              "mean": 1.0,
+              "lo": 1.0,
+              "hi": 1.0,
+              "n": 3
+            },
+            "coverage_identical": 1.0
+          },
+          "pairs": [
+            {
+              "pair": "PR01",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "They love repairing engines and working in a garage.",
+              "stripped_b": "They love repairing engines and working in a garage."
+            },
+            {
+              "pair": "PR02",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "They enjoy caring for elderly people and helping them every day.",
+              "stripped_b": "They enjoy caring for elderly people and helping them every day."
+            },
+            {
+              "pair": "PR03",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "My child wants to be a pilot and loves airplanes.",
+              "stripped_b": "My child wants to be a pilot and loves airplanes."
+            }
+          ]
+        },
+        "nationality": {
+          "summary": {
+            "raw": {
+              "mean": 0.6,
+              "lo": 0.5,
+              "hi": 0.7,
+              "n": 3
+            },
+            "strip": {
+              "mean": 1.0,
+              "lo": 1.0,
+              "hi": 1.0,
+              "n": 3
+            },
+            "coverage_identical": 1.0
+          },
+          "pairs": [
+            {
+              "pair": "NA01",
+              "lang": "en",
+              "raw": 0.5,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to work in an office managing projects.",
+              "stripped_b": "I want to work in an office managing projects."
+            },
+            {
+              "pair": "NA02",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "As a person, I love science and want to do research.",
+              "stripped_b": "As a person, I love science and want to do research."
+            },
+            {
+              "pair": "NA03",
+              "lang": "es",
+              "raw": 0.6,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Me gusta cocinar.",
+              "stripped_b": "Me gusta cocinar."
+            }
+          ]
+        },
+        "age": {
+          "summary": {
+            "raw": {
+              "mean": 0.6333,
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 3
+            },
+            "strip": {
+              "mean": 0.9,
+              "lo": 0.7,
+              "hi": 1.0,
+              "n": 3
+            },
+            "coverage_identical": 0.6667
+          },
+          "pairs": [
+            {
+              "pair": "AG01",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I like working with computers.",
+              "stripped_b": "I like working with computers."
+            },
+            {
+              "pair": "AG02",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "As a person, I want to help people in my community.",
+              "stripped_b": "As a person, I want to help people in my community."
+            },
+            {
+              "pair": "AG03",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 0.7,
+              "identical_after_strip": false,
+              "stripped_a": "I'm a student and I love being in nature.",
+              "stripped_b": "I'm a person and I love being in nature."
+            }
+          ]
+        }
+      },
+      "M2_quality": {
+        "n_en_core": 57,
+        "en_core": {
+          "hit_fam80_5": {
+            "raw": {
+              "mean": 0.9474,
+              "lo": 0.8772,
+              "hi": 1.0,
+              "n": 57
+            },
+            "strip": {
+              "mean": 0.9474,
+              "lo": 0.8772,
+              "hi": 1.0,
+              "n": 57
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 57
+            }
+          },
+          "hit_occ5": {
+            "raw": {
+              "mean": 0.8596,
+              "lo": 0.7544,
+              "hi": 0.9474,
+              "n": 57
+            },
+            "strip": {
+              "mean": 0.8596,
+              "lo": 0.7544,
+              "hi": 0.9474,
+              "n": 57
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 57
+            }
+          },
+          "hit_fam90_5": {
+            "raw": {
+              "mean": 0.9123,
+              "lo": 0.8246,
+              "hi": 0.9825,
+              "n": 57
+            },
+            "strip": {
+              "mean": 0.9123,
+              "lo": 0.8246,
+              "hi": 0.9825,
+              "n": 57
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 57
+            }
+          },
+          "riasec_r": {
+            "raw": {
+              "mean": 0.7437,
+              "lo": 0.6852,
+              "hi": 0.7958,
+              "n": 57
+            },
+            "strip": {
+              "mean": 0.739,
+              "lo": 0.6777,
+              "hi": 0.7908,
+              "n": 57
+            },
+            "diff_strip_minus_raw": {
+              "mean": -0.0047,
+              "lo": -0.0139,
+              "hi": 0.003,
+              "n": 57
+            }
+          }
+        },
+        "vague_en": {
+          "hit_fam80_5": {
+            "raw": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "strip": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 6
+            }
+          },
+          "hit_occ5": {
+            "raw": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "strip": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 6
+            }
+          },
+          "hit_fam90_5": {
+            "raw": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "strip": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 6
+            }
+          },
+          "riasec_r": {
+            "raw": {
+              "mean": 0.2393,
+              "lo": -0.0044,
+              "hi": 0.4988,
+              "n": 6
+            },
+            "strip": {
+              "mean": 0.2393,
+              "lo": -0.0021,
+              "hi": 0.4807,
+              "n": 6
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 6
+            }
+          }
+        },
+        "spanish": {
+          "hit_fam80_5": {
+            "raw": {
+              "mean": 0.5,
+              "lo": 0.25,
+              "hi": 0.75,
+              "n": 12
+            },
+            "strip": {
+              "mean": 0.5,
+              "lo": 0.25,
+              "hi": 0.75,
+              "n": 12
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 12
+            }
+          },
+          "hit_occ5": {
+            "raw": {
+              "mean": 0.3333,
+              "lo": 0.0833,
+              "hi": 0.5833,
+              "n": 12
+            },
+            "strip": {
+              "mean": 0.3333,
+              "lo": 0.0833,
+              "hi": 0.5833,
+              "n": 12
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 12
+            }
+          },
+          "hit_fam90_5": {
+            "raw": {
+              "mean": 0.4167,
+              "lo": 0.1667,
+              "hi": 0.6667,
+              "n": 12
+            },
+            "strip": {
+              "mean": 0.4167,
+              "lo": 0.1667,
+              "hi": 0.6667,
+              "n": 12
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 12
+            }
+          },
+          "riasec_r": {
+            "raw": {
+              "mean": 0.4088,
+              "lo": 0.1977,
+              "hi": 0.621,
+              "n": 12
+            },
+            "strip": {
+              "mean": 0.4088,
+              "lo": 0.1984,
+              "hi": 0.6185,
+              "n": 12
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 12
+            }
+          }
+        }
+      },
+      "M3_rejection": {
+        "n_real": 76,
+        "n_off": 27,
+        "raw": {
+          "heldout_frr": 0.043,
+          "heldout_frr_p90": 0.1316,
+          "heldout_offtopic_reject": 0.9075,
+          "threshold_split_mean": 0.2661,
+          "threshold_split_sd": 0.0161,
+          "threshold_all": 0.2619,
+          "insample_frr": 0.0132,
+          "insample_offtopic_reject": 0.9259,
+          "real_median": 0.4046,
+          "off_median": 0.1714,
+          "real_min": 0.2098,
+          "off_max": 0.3475,
+          "auc": 0.9834
+        },
+        "strip": {
+          "heldout_frr": 0.048,
+          "heldout_frr_p90": 0.1053,
+          "heldout_offtopic_reject": 0.9118,
+          "threshold_split_mean": 0.2731,
+          "threshold_split_sd": 0.0195,
+          "threshold_all": 0.2619,
+          "insample_frr": 0.0132,
+          "insample_offtopic_reject": 0.9259,
+          "real_median": 0.4403,
+          "off_median": 0.1714,
+          "real_min": 0.2098,
+          "off_max": 0.3475,
+          "auc": 0.9873
+        }
+      },
+      "M4_traps": {
+        "n": 10,
+        "unchanged_share": 1.0,
+        "mean_top10_overlap_raw_vs_strip": 1.0,
+        "changed": {}
+      }
+    },
+    "mml12": {
+      "M1_heldout": {
+        "gated": {
+          "summary": {
+            "raw": {
+              "mean": 0.8389,
+              "lo": 0.7833,
+              "hi": 0.8889,
+              "n": 18
+            },
+            "strip": {
+              "mean": 0.9444,
+              "lo": 0.8944,
+              "hi": 0.9833,
+              "n": 18
+            },
+            "coverage_identical": 0.6667,
+            "strip_vs_content_mean": 0.8222,
+            "raw_a_vs_content_mean": 0.75,
+            "strip_new_phrasing_True": {
+              "mean": 0.9231,
+              "n": 13
+            },
+            "strip_new_phrasing_False": {
+              "mean": 1.0,
+              "n": 5
+            }
+          },
+          "pairs": [
+            {
+              "pair": "HG01",
+              "lang": "en",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'm a person and I really like animals and biology.",
+              "stripped_b": "I'm a person and I really like animals and biology.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 1.0,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG02",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Being a person in tech, I want to build apps that people actually use.",
+              "stripped_b": "Being a person in tech, I want to build apps that people actually use.",
+              "strip_a_vs_content": 0.6,
+              "strip_b_vs_content": 0.6,
+              "raw_a_vs_content": 0.6,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG03",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 0.9,
+              "identical_after_strip": false,
+              "stripped_a": "I love cooking, maybe because my mom taught me when I was a little girl.",
+              "stripped_b": "I love cooking, maybe because my mom taught me when I was a little boy.",
+              "strip_a_vs_content": 0.8,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG04",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 0.9,
+              "identical_after_strip": false,
+              "stripped_a": "I like drawing and, honestly, for a guy I'm pretty into interior design.",
+              "stripped_b": "I like drawing and, honestly, for a girl I'm pretty into interior design.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG05",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to work with cars and engines.",
+              "stripped_b": "I want to work with cars and engines.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG06",
+              "lang": "en",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "My sibling is really into coding and they want to make video games.",
+              "stripped_b": "My sibling is really into coding and they want to make video games.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG07",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "They have always loved looking after babies and young kids.",
+              "stripped_b": "They have always loved looking after babies and young kids.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG08",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Asking for my grandchild: they love plants and wants to be outside all day.",
+              "stripped_b": "Asking for my grandchild: they love plants and wants to be outside all day.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG09",
+              "lang": "es",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Soy persona de 16 años y me encantan las matemáticas.",
+              "stripped_b": "Soy persona de 16 años y me encantan las matemáticas.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.7,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG10",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 0.9,
+              "identical_after_strip": false,
+              "stripped_a": "Mi hijo quiere ser enfermera porque le gusta cuidar a la gente.",
+              "stripped_b": "Mi hijo quiere ser enfermero porque le gusta cuidar a la gente.",
+              "strip_a_vs_content": 0.1,
+              "strip_b_vs_content": 0.2,
+              "raw_a_vs_content": 0.1,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN01",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 0.7,
+              "identical_after_strip": false,
+              "stripped_a": "Hey! Priya here, I love building robots for school competitions.",
+              "stripped_b": "Hey! Tyler here, I love building robots for school competitions.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.6,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN02",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to be a chef.",
+              "stripped_b": "I want to be a chef.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN03",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "And I enjoy organising events for my community.",
+              "stripped_b": "And I enjoy organising events for my community.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HN04",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 0.9,
+              "identical_after_strip": false,
+              "stripped_a": "I like writing code and solving logic puzzles. - Mei",
+              "stripped_b": "I like writing code and solving logic puzzles. - Jake",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.7,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN05",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Hello, I would like a job helping refugees.",
+              "stripped_b": "Hello, I would like a job helping refugees.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN06",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 0.7,
+              "identical_after_strip": false,
+              "stripped_a": "Everyone calls me Rosa because I sing all the time, and I want to perform.",
+              "stripped_b": "Everyone calls me Diego because I sing all the time, and I want to perform.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.6,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN07",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Quiero diseñar ropa.",
+              "stripped_b": "Quiero diseñar ropa.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.5,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN08",
+              "lang": "es",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Hola, y me gustaría trabajar con animales.",
+              "stripped_b": "Hola, y me gustaría trabajar con animales.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 1.0,
+              "new_phrasing": false
+            }
+          ]
+        },
+        "gender": {
+          "summary": {
+            "raw": {
+              "mean": 0.89,
+              "lo": 0.84,
+              "hi": 0.94,
+              "n": 10
+            },
+            "strip": {
+              "mean": 0.97,
+              "lo": 0.94,
+              "hi": 1.0,
+              "n": 10
+            },
+            "coverage_identical": 0.7,
+            "strip_vs_content_mean": 0.78,
+            "raw_a_vs_content_mean": 0.75,
+            "strip_new_phrasing_True": {
+              "mean": 0.9571,
+              "n": 7
+            },
+            "strip_new_phrasing_False": {
+              "mean": 1.0,
+              "n": 3
+            }
+          },
+          "pairs": [
+            {
+              "pair": "HG01",
+              "lang": "en",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'm a person and I really like animals and biology.",
+              "stripped_b": "I'm a person and I really like animals and biology.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 1.0,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG02",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Being a person in tech, I want to build apps that people actually use.",
+              "stripped_b": "Being a person in tech, I want to build apps that people actually use.",
+              "strip_a_vs_content": 0.6,
+              "strip_b_vs_content": 0.6,
+              "raw_a_vs_content": 0.6,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG03",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 0.9,
+              "identical_after_strip": false,
+              "stripped_a": "I love cooking, maybe because my mom taught me when I was a little girl.",
+              "stripped_b": "I love cooking, maybe because my mom taught me when I was a little boy.",
+              "strip_a_vs_content": 0.8,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG04",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 0.9,
+              "identical_after_strip": false,
+              "stripped_a": "I like drawing and, honestly, for a guy I'm pretty into interior design.",
+              "stripped_b": "I like drawing and, honestly, for a girl I'm pretty into interior design.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG05",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to work with cars and engines.",
+              "stripped_b": "I want to work with cars and engines.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG06",
+              "lang": "en",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "My sibling is really into coding and they want to make video games.",
+              "stripped_b": "My sibling is really into coding and they want to make video games.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG07",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "They have always loved looking after babies and young kids.",
+              "stripped_b": "They have always loved looking after babies and young kids.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HG08",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Asking for my grandchild: they love plants and wants to be outside all day.",
+              "stripped_b": "Asking for my grandchild: they love plants and wants to be outside all day.",
+              "strip_a_vs_content": 0.9,
+              "strip_b_vs_content": 0.9,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG09",
+              "lang": "es",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Soy persona de 16 años y me encantan las matemáticas.",
+              "stripped_b": "Soy persona de 16 años y me encantan las matemáticas.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.7,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HG10",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 0.9,
+              "identical_after_strip": false,
+              "stripped_a": "Mi hijo quiere ser enfermera porque le gusta cuidar a la gente.",
+              "stripped_b": "Mi hijo quiere ser enfermero porque le gusta cuidar a la gente.",
+              "strip_a_vs_content": 0.1,
+              "strip_b_vs_content": 0.2,
+              "raw_a_vs_content": 0.1,
+              "new_phrasing": true
+            }
+          ]
+        },
+        "name": {
+          "summary": {
+            "raw": {
+              "mean": 0.775,
+              "lo": 0.7,
+              "hi": 0.8625,
+              "n": 8
+            },
+            "strip": {
+              "mean": 0.9125,
+              "lo": 0.8125,
+              "hi": 0.9875,
+              "n": 8
+            },
+            "coverage_identical": 0.625,
+            "strip_vs_content_mean": 0.875,
+            "raw_a_vs_content_mean": 0.75,
+            "strip_new_phrasing_True": {
+              "mean": 0.8833,
+              "n": 6
+            },
+            "strip_new_phrasing_False": {
+              "mean": 1.0,
+              "n": 2
+            }
+          },
+          "pairs": [
+            {
+              "pair": "HN01",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 0.7,
+              "identical_after_strip": false,
+              "stripped_a": "Hey! Priya here, I love building robots for school competitions.",
+              "stripped_b": "Hey! Tyler here, I love building robots for school competitions.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.6,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN02",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to be a chef.",
+              "stripped_b": "I want to be a chef.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN03",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "And I enjoy organising events for my community.",
+              "stripped_b": "And I enjoy organising events for my community.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HN04",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 0.9,
+              "identical_after_strip": false,
+              "stripped_a": "I like writing code and solving logic puzzles. - Mei",
+              "stripped_b": "I like writing code and solving logic puzzles. - Jake",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.7,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN05",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Hello, I would like a job helping refugees.",
+              "stripped_b": "Hello, I would like a job helping refugees.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN06",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 0.7,
+              "identical_after_strip": false,
+              "stripped_a": "Everyone calls me Rosa because I sing all the time, and I want to perform.",
+              "stripped_b": "Everyone calls me Diego because I sing all the time, and I want to perform.",
+              "strip_a_vs_content": 0.7,
+              "strip_b_vs_content": 0.6,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN07",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Quiero diseñar ropa.",
+              "stripped_b": "Quiero diseñar ropa.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.5,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HN08",
+              "lang": "es",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Hola, y me gustaría trabajar con animales.",
+              "stripped_b": "Hola, y me gustaría trabajar con animales.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 1.0,
+              "new_phrasing": false
+            }
+          ]
+        },
+        "age": {
+          "summary": {
+            "raw": {
+              "mean": 0.7,
+              "lo": 0.475,
+              "hi": 0.925,
+              "n": 4
+            },
+            "strip": {
+              "mean": 0.85,
+              "lo": 0.55,
+              "hi": 1.0,
+              "n": 4
+            },
+            "coverage_identical": 0.75,
+            "strip_vs_content_mean": 0.8875,
+            "raw_a_vs_content_mean": 0.675,
+            "strip_new_phrasing_True": {
+              "mean": 0.8,
+              "n": 3
+            },
+            "strip_new_phrasing_False": {
+              "mean": 1.0,
+              "n": 1
+            }
+          },
+          "pairs": [
+            {
+              "pair": "HA01",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I like taking care of my fish tank and learning about sea life.",
+              "stripped_b": "I like taking care of my fish tank and learning about sea life.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": false
+            },
+            {
+              "pair": "HA02",
+              "lang": "en",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'd love to do something with gardens.",
+              "stripped_b": "I'd love to do something with gardens.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HA03",
+              "lang": "en",
+              "raw": 0.4,
+              "strip": 0.4,
+              "identical_after_strip": false,
+              "stripped_a": "As a high schooler I like making videos and editing them.",
+              "stripped_b": "As a person citizen I like making videos and editing them.",
+              "strip_a_vs_content": 0.4,
+              "strip_b_vs_content": 0.7,
+              "raw_a_vs_content": 0.4,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HA04",
+              "lang": "es",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Me gusta reparar ordenadores.",
+              "stripped_b": "Me gusta reparar ordenadores.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.7,
+              "new_phrasing": true
+            }
+          ]
+        },
+        "origin": {
+          "summary": {
+            "raw": {
+              "mean": 0.65,
+              "lo": 0.55,
+              "hi": 0.75,
+              "n": 4
+            },
+            "strip": {
+              "mean": 0.775,
+              "lo": 0.55,
+              "hi": 1.0,
+              "n": 4
+            },
+            "coverage_identical": 0.5,
+            "strip_vs_content_mean": 0.75,
+            "raw_a_vs_content_mean": 0.675,
+            "strip_new_phrasing_True": {
+              "mean": 0.775,
+              "n": 4
+            },
+            "strip_new_phrasing_False": {
+              "mean": null,
+              "n": 0
+            }
+          },
+          "pairs": [
+            {
+              "pair": "HO01",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to work in tourism.",
+              "stripped_b": "I want to work in tourism.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.9,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HO02",
+              "lang": "en",
+              "raw": 0.5,
+              "strip": 0.5,
+              "identical_after_strip": false,
+              "stripped_a": "My family moved here from Vietnam and I love working with numbers.",
+              "stripped_b": "My family moved here from Poland and I love working with numbers.",
+              "strip_a_vs_content": 0.4,
+              "strip_b_vs_content": 0.2,
+              "raw_a_vs_content": 0.4,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HO03",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 0.6,
+              "identical_after_strip": false,
+              "stripped_a": "Originally from Ghana, I'd like to become a lawyer.",
+              "stripped_b": "Originally from Ireland, I'd like to become a lawyer.",
+              "strip_a_vs_content": 0.6,
+              "strip_b_vs_content": 0.8,
+              "raw_a_vs_content": 0.6,
+              "new_phrasing": true
+            },
+            {
+              "pair": "HO04",
+              "lang": "es",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Me encanta la fotografía.",
+              "stripped_b": "Me encanta la fotografía.",
+              "strip_a_vs_content": 1.0,
+              "strip_b_vs_content": 1.0,
+              "raw_a_vs_content": 0.8,
+              "new_phrasing": true
+            }
+          ]
+        }
+      },
+      "M1_dev_e7": {
+        "gated_dev": {
+          "summary": {
+            "raw": {
+              "mean": 0.7667,
+              "lo": 0.7167,
+              "hi": 0.825,
+              "n": 12
+            },
+            "strip": {
+              "mean": 1.0,
+              "lo": 1.0,
+              "hi": 1.0,
+              "n": 12
+            },
+            "coverage_identical": 1.0
+          },
+          "pairs": [
+            {
+              "pair": "G01",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "As a person, I love building things.",
+              "stripped_b": "As a person, I love building things."
+            },
+            {
+              "pair": "G02",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'm a person and I'm interested in engineering and how machines work.",
+              "stripped_b": "I'm a person and I'm interested in engineering and how machines work."
+            },
+            {
+              "pair": "G03",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "As a person, I really enjoy looking after young children.",
+              "stripped_b": "As a person, I really enjoy looking after young children."
+            },
+            {
+              "pair": "G04",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'm a person and I want to become a nurse and care for patients.",
+              "stripped_b": "I'm a person and I want to become a nurse and care for patients."
+            },
+            {
+              "pair": "G05",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "As a person, I love computers and coding.",
+              "stripped_b": "As a person, I love computers and coding."
+            },
+            {
+              "pair": "G06",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I'm a person who loves fashion and makeup.",
+              "stripped_b": "I'm a person who loves fashion and makeup."
+            },
+            {
+              "pair": "G07",
+              "lang": "es",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Como persona, me encanta construir cosas.",
+              "stripped_b": "Como persona, me encanta construir cosas."
+            },
+            {
+              "pair": "P01",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I like fixing cars.",
+              "stripped_b": "I like fixing cars."
+            },
+            {
+              "pair": "P02",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I enjoy helping my classmates with their homework.",
+              "stripped_b": "I enjoy helping my classmates with their homework."
+            },
+            {
+              "pair": "P03",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Hi, I want to work in finance.",
+              "stripped_b": "Hi, I want to work in finance."
+            },
+            {
+              "pair": "P04",
+              "lang": "es",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Me gusta la biología.",
+              "stripped_b": "Me gusta la biología."
+            },
+            {
+              "pair": "P05",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I love drawing comics.",
+              "stripped_b": "I love drawing comics."
+            }
+          ]
+        },
+        "pronoun": {
+          "summary": {
+            "raw": {
+              "mean": 0.8333,
+              "lo": 0.7,
+              "hi": 1.0,
+              "n": 3
+            },
+            "strip": {
+              "mean": 1.0,
+              "lo": 1.0,
+              "hi": 1.0,
+              "n": 3
+            },
+            "coverage_identical": 1.0
+          },
+          "pairs": [
+            {
+              "pair": "PR01",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "They love repairing engines and working in a garage.",
+              "stripped_b": "They love repairing engines and working in a garage."
+            },
+            {
+              "pair": "PR02",
+              "lang": "en",
+              "raw": 0.7,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "They enjoy caring for elderly people and helping them every day.",
+              "stripped_b": "They enjoy caring for elderly people and helping them every day."
+            },
+            {
+              "pair": "PR03",
+              "lang": "en",
+              "raw": 1.0,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "My child wants to be a pilot and loves airplanes.",
+              "stripped_b": "My child wants to be a pilot and loves airplanes."
+            }
+          ]
+        },
+        "nationality": {
+          "summary": {
+            "raw": {
+              "mean": 0.8333,
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 3
+            },
+            "strip": {
+              "mean": 1.0,
+              "lo": 1.0,
+              "hi": 1.0,
+              "n": 3
+            },
+            "coverage_identical": 1.0
+          },
+          "pairs": [
+            {
+              "pair": "NA01",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I want to work in an office managing projects.",
+              "stripped_b": "I want to work in an office managing projects."
+            },
+            {
+              "pair": "NA02",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "As a person, I love science and want to do research.",
+              "stripped_b": "As a person, I love science and want to do research."
+            },
+            {
+              "pair": "NA03",
+              "lang": "es",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "Me gusta cocinar.",
+              "stripped_b": "Me gusta cocinar."
+            }
+          ]
+        },
+        "age": {
+          "summary": {
+            "raw": {
+              "mean": 0.7667,
+              "lo": 0.6,
+              "hi": 0.9,
+              "n": 3
+            },
+            "strip": {
+              "mean": 0.9,
+              "lo": 0.7,
+              "hi": 1.0,
+              "n": 3
+            },
+            "coverage_identical": 0.6667
+          },
+          "pairs": [
+            {
+              "pair": "AG01",
+              "lang": "en",
+              "raw": 0.9,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "I like working with computers.",
+              "stripped_b": "I like working with computers."
+            },
+            {
+              "pair": "AG02",
+              "lang": "en",
+              "raw": 0.6,
+              "strip": 1.0,
+              "identical_after_strip": true,
+              "stripped_a": "As a person, I want to help people in my community.",
+              "stripped_b": "As a person, I want to help people in my community."
+            },
+            {
+              "pair": "AG03",
+              "lang": "en",
+              "raw": 0.8,
+              "strip": 0.7,
+              "identical_after_strip": false,
+              "stripped_a": "I'm a student and I love being in nature.",
+              "stripped_b": "I'm a person and I love being in nature."
+            }
+          ]
+        }
+      },
+      "M2_quality": {
+        "n_en_core": 57,
+        "en_core": {
+          "hit_fam80_5": {
+            "raw": {
+              "mean": 0.9123,
+              "lo": 0.8246,
+              "hi": 0.9825,
+              "n": 57
+            },
+            "strip": {
+              "mean": 0.9123,
+              "lo": 0.8246,
+              "hi": 0.9825,
+              "n": 57
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 57
+            }
+          },
+          "hit_occ5": {
+            "raw": {
+              "mean": 0.7544,
+              "lo": 0.6316,
+              "hi": 0.8596,
+              "n": 57
+            },
+            "strip": {
+              "mean": 0.7719,
+              "lo": 0.6667,
+              "hi": 0.8772,
+              "n": 57
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0175,
+              "lo": 0.0,
+              "hi": 0.0526,
+              "n": 57
+            }
+          },
+          "hit_fam90_5": {
+            "raw": {
+              "mean": 0.8947,
+              "lo": 0.807,
+              "hi": 0.9649,
+              "n": 57
+            },
+            "strip": {
+              "mean": 0.9123,
+              "lo": 0.8246,
+              "hi": 0.9825,
+              "n": 57
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0175,
+              "lo": 0.0,
+              "hi": 0.0526,
+              "n": 57
+            }
+          },
+          "riasec_r": {
+            "raw": {
+              "mean": 0.748,
+              "lo": 0.6915,
+              "hi": 0.7948,
+              "n": 57
+            },
+            "strip": {
+              "mean": 0.75,
+              "lo": 0.6946,
+              "hi": 0.8016,
+              "n": 57
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.002,
+              "lo": -0.0037,
+              "hi": 0.0105,
+              "n": 57
+            }
+          }
+        },
+        "vague_en": {
+          "hit_fam80_5": {
+            "raw": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "strip": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 6
+            }
+          },
+          "hit_occ5": {
+            "raw": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "strip": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 6
+            }
+          },
+          "hit_fam90_5": {
+            "raw": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "strip": {
+              "mean": 0.8333,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 6
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 6
+            }
+          },
+          "riasec_r": {
+            "raw": {
+              "mean": 0.1399,
+              "lo": -0.1933,
+              "hi": 0.4423,
+              "n": 6
+            },
+            "strip": {
+              "mean": 0.1399,
+              "lo": -0.2195,
+              "hi": 0.4442,
+              "n": 6
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 6
+            }
+          }
+        },
+        "spanish": {
+          "hit_fam80_5": {
+            "raw": {
+              "mean": 0.9167,
+              "lo": 0.75,
+              "hi": 1.0,
+              "n": 12
+            },
+            "strip": {
+              "mean": 0.9167,
+              "lo": 0.75,
+              "hi": 1.0,
+              "n": 12
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 12
+            }
+          },
+          "hit_occ5": {
+            "raw": {
+              "mean": 0.75,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 12
+            },
+            "strip": {
+              "mean": 0.75,
+              "lo": 0.5,
+              "hi": 1.0,
+              "n": 12
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 12
+            }
+          },
+          "hit_fam90_5": {
+            "raw": {
+              "mean": 0.9167,
+              "lo": 0.75,
+              "hi": 1.0,
+              "n": 12
+            },
+            "strip": {
+              "mean": 0.9167,
+              "lo": 0.75,
+              "hi": 1.0,
+              "n": 12
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 12
+            }
+          },
+          "riasec_r": {
+            "raw": {
+              "mean": 0.7912,
+              "lo": 0.6977,
+              "hi": 0.8532,
+              "n": 12
+            },
+            "strip": {
+              "mean": 0.7912,
+              "lo": 0.7023,
+              "hi": 0.8543,
+              "n": 12
+            },
+            "diff_strip_minus_raw": {
+              "mean": 0.0,
+              "lo": 0.0,
+              "hi": 0.0,
+              "n": 12
+            }
+          }
+        }
+      },
+      "M3_rejection": {
+        "n_real": 76,
+        "n_off": 27,
+        "raw": {
+          "heldout_frr": 0.0568,
+          "heldout_frr_p90": 0.0789,
+          "heldout_offtopic_reject": 0.9261,
+          "threshold_split_mean": 0.3297,
+          "threshold_split_sd": 0.0099,
+          "threshold_all": 0.3315,
+          "insample_frr": 0.0526,
+          "insample_offtopic_reject": 0.963,
+          "real_median": 0.4422,
+          "off_median": 0.2614,
+          "real_min": 0.2183,
+          "off_max": 0.3698,
+          "auc": 0.9732
+        },
+        "strip": {
+          "heldout_frr": 0.0576,
+          "heldout_frr_p90": 0.0789,
+          "heldout_offtopic_reject": 0.9261,
+          "threshold_split_mean": 0.3299,
+          "threshold_split_sd": 0.0102,
+          "threshold_all": 0.3315,
+          "insample_frr": 0.0526,
+          "insample_offtopic_reject": 0.963,
+          "real_median": 0.4466,
+          "off_median": 0.2614,
+          "real_min": 0.2183,
+          "off_max": 0.3698,
+          "auc": 0.9732
+        }
+      },
+      "M4_traps": {
+        "n": 10,
+        "unchanged_share": 1.0,
+        "mean_top10_overlap_raw_vs_strip": 1.0,
+        "changed": {}
+      }
+    }
+  },
+  "verdict": {
+    "values": {
+      "overlap": 0.9222,
+      "fam": 0.9474,
+      "occ": 0.8596,
+      "frr": 0.048,
+      "off": 0.9118,
+      "trap": 1.0
+    },
+    "proven_criteria": {
+      "(1) overlap": true,
+      "(2) quality": true,
+      "(3) rejection": true,
+      "(4) traps": true
+    },
+    "promising_criteria": {
+      "(1) overlap": true,
+      "(2) quality": true,
+      "(3) rejection": true,
+      "(4) traps": true
+    },
+    "verdict": "PROVEN"
+  },
+  "seconds_total": 195.6
+}

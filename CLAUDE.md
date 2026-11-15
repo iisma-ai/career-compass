@@ -36,7 +36,9 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
   amplified (STEM-core ×1.11, Psychology ×1.65), and items predict gender (AUC .84). Research-only.
 - E7 free-text matching: **not viable as pre-registered**. Retrieval is strong (.95 family / .86 occupation
   Hit@5, rejection threshold works), but gender/name-swap top-10 overlap is .73 < .90. Negation isn't handled.
-  E7b with demographic-cue stripping is needed.
+  E7b: rule-based demographic-cue stripping (`src/carrier_helper/text_cues.py`) is **proven against its bar**
+  (held-out gated overlap .74 → .92 with no quality or rejection loss), but names only reach .84, rule coverage of new
+  phrasings is 67%, and the test set isn't independent. Strip before embedding. Free text is still not user-facing (E7c next).
 - Ethics review (2026-11-15): release blockers are attribution (done: README), privacy/legal design + DPIA,
   re-audited DIF on the final item set, a validated lost-user flow, and permission before shipping anything
   derived from OpenPsychometrics. Never quote r or match scores as accuracy.
