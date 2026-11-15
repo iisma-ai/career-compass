@@ -18,3 +18,18 @@ __pycache__/
 Thumbs.db
 .vscode/
 .idea/
+
+# Secrets and model artefacts (never commit)
+.env
+*.env
+*.pem
+*.key
+models/
+*.pkl
+*.joblib
+*.pt
+*.safetensors
+*.parquet
+
+# Value-level lists from free-text fields of unlicensed data (aggregates only in findings)
+research/findings/e1_major_families_draft.csv

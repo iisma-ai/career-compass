@@ -60,8 +60,17 @@ from other rating files.
 - Serves Interest Profiler questions (Mini-IP 30 items, Short Form 60) and scoring, plus career reports.
 - For research, prefer the **bulk downloads** (reproducible, offline). Use the API only for the product.
 
-## Attribution text (put it in README and the website footer)
-> This site incorporates information from O*NET OnLine (onetonline.org) by the U.S. Department of
-> Labor, Employment and Training Administration (USDOL/ETA). Used under the CC BY 4.0 license.
-
-Check the exact current wording on onetcenter.org before publishing.
+## Attribution (README, website footer, any public output)
+We use the O*NET **database** (not O*NET OnLine), so follow the database license at
+https://www.onetcenter.org/license_db.html. **Copy the exact wording from that page.** Don't paraphrase it.
+- Name the **specific database version** (31.0, and separately 30.2 for Work Values).
+- Because we **modify** the data (families, centred profiles, match scores), add the required
+  statement that we modified it and that USDOL/ETA has not approved, endorsed or tested the modifications.
+- Follow the trademark guidance: show the ® mark, and use "O*NET" only as an adjective followed by a generic
+  noun, never possessive or plural. "with O*NET data", "formulated from O*NET data" and "includes information
+  from the O*NET database" are acceptable; bare "includes O*NET" is not.
+- The approved text is already in the root `README.md`. Reuse it.
+- **The Interest Profiler and other Career Exploration Tools have a different license**
+  (https://www.onetcenter.org/license_tools.html). Read it before using any IP items.
+The ethics review (2026-11-15) found the earlier wording in this skill was wrong (it cited O*NET OnLine,
+with no version and no modification notice).

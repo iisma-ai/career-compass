@@ -1,0 +1,31 @@
+rating_id,rating,note
+B01,partly,only timing-device assembly is near model building
+B02,not,nothing about cars
+B03,sensible,all finance
+B04,sensible,childcare/nannies/bus monitor/pediatrician; sonographer off
+B05,sensible,game design and programming
+B06,sensible,all records/clerical
+B07,sensible,teachers
+B08,sensible,crop farmworkers and agri technicians/scientists
+B09,sensible,all quantitative
+B10,not,nothing helping-oriented
+B11,not,nothing creative; gambling supervisor contradicts
+B12,sensible,music and audio
+B13,sensible,community health/health education/probation
+B14,sensible,carpentry/iron/model making/architecture
+B15,sensible,all nursing
+B16,partly,only social work teacher and maybe sales
+B17,sensible,recreation work
+B18,sensible,clerical desk jobs
+B19,sensible,social work and counselling
+B20,sensible,coaching and fitness
+B21,sensible,art
+B22,partly,repairers and grinding; dishwashing/dining weak
+B23,not,nothing electronic
+B24,sensible,animal care
+B25,not,cleaning/janitorial contradicts the statement
+B26,sensible,solitary machine/computer work
+B27,sensible,sales and business management
+B28,partly,machine operators but no engineering
+B29,not,school-related jobs with no nature
+B30,sensible,performing music

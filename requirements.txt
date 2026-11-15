@@ -7,3 +7,4 @@ factor_analyzer
 matplotlib
 statsmodels
 girth
+sentence-transformers

@@ -23,12 +23,22 @@ Produce an evidence-backed research dossier that doubles as the project blueprin
 | `research/findings/eN_*.md` (+ charts) | Experiment results cited by the docs |
 
 Feasibility experiments (details in the `feasibility-experiment` skill; results in `research/findings/`):
-- E1 data audit: **proven** (80k clean rows, α .83–.90)
-- E2 structure: hexagon and group structure **proven**, archetypes soft (not for user-facing labels)
-- E3 occupation space: **proven** (Pearson matching; about 100–170 distinct profiles; thin A/S/I catalogue)
-- E4 adaptive test: CAT not better than a fixed form → **v1 = fixed 24-item form**, results shown as families
-- E5 stability: **promising** (full test only about 55% top-10 stable → show the top-3 occupation families)
-- E6 supervised major prediction: todo · E7 free-text matching: todo
+- E1 data audit: **proven** (80k clean rows, α .83–.90; sample young, 67% female, 49% US, no license)
+- E2 structure: hexagon holds and loadings are invariant across gender and age, but **scalar invariance fails** and
+  CFA fit is poor (CFI about .80); archetypes are soft (never user-facing labels)
+- E3 occupation space: **proven against a lenient reach bar**. Pearson matching works, but exposure is
+  concentrated (Gini .77), the A/S/I catalogue is thin, and results skew to high-prep careers (open problems).
+  Match r is not accuracy.
+- E4 adaptive test: CAT not better than a fixed form → **v1 = fixed 24-item form** (pre-registered bar unreachable)
+- E5 stability: **promising** (full test only about 55% top-10 stable → show an unordered set of families, not a ranking)
+- E6 supervised major prediction: running
+- E7 free-text matching: **not viable as pre-registered**. Retrieval is strong (.95 family / .86 occupation
+  Hit@5, rejection threshold works), but gender/name-swap top-10 overlap is .73 < .90. Negation isn't handled.
+  E7b with demographic-cue stripping is needed.
+- Ethics review (2026-11-15): release blockers are attribution (done: README), privacy/legal design + DPIA,
+  re-audited DIF on the final item set, a validated lost-user flow, and permission before shipping anything
+  derived from OpenPsychometrics. Never quote r or match scores as accuracy.
+- Process rule: commit each pre-registration on its own **before** running the experiment.
 
 _Update this section whenever the phase changes._
 
