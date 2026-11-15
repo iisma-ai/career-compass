@@ -1,0 +1,35 @@
+[project]
+name = "carrier-helper"
+version = "0.0.1"
+description = "v0 research: RIASEC interest profiling and O*NET career matching"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+# Lower bounds = the versions E1–E7 were run with (docs/environment/pre-uv-freeze-2026-11-15.txt).
+# Exact versions are pinned in uv.lock.
+dependencies = [
+    "pandas>=3.1.1",
+    "pyarrow>=26.0.1",
+    "numpy>=2.5.4",
+    "scipy>=1.18.1",
+    "scikit-learn>=1.9.1",
+    "factor_analyzer>=0.5.1",
+    "matplotlib>=3.11.2",
+    "statsmodels>=0.15.0",
+    "girth>=0.8.0",
+    "sentence-transformers>=6.3.0",
+]
+
+[dependency-groups]
+dev = ["ruff"]
+
+[build-system]
+requires = ["uv_build>=0.10,<0.11"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "carrier_helper"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"

@@ -47,6 +47,8 @@ _Update this section whenever the phase changes._
 ## Repo layout
 ```
 CLAUDE.md
+pyproject.toml, uv.lock   dependencies (uv)
+docs/                project journal: decisions/ (ADRs), log/ (dated steps), environment/
 research/            docs, notes/, feasibility/ (scripts), findings/ (results)
 data/raw/<source>/   untouched downloads + SOURCE.md   (git-ignored, untrusted)
 data/processed/      derived parquet/CSV tables        (git-ignored)
@@ -74,7 +76,7 @@ notebooks/           exploration only — never the source of truth
    `research/findings/` file. Anything uncited is marked `[UNVERIFIED]`. Never invent numbers,
    papers or dataset fields. (See the `evidence-and-citations` skill.)
 2. **Untrusted data:** each download goes into its own new `data/raw/<source>/`. Never run code
-   from inside it; scripts live in `research/feasibility/` or `src/` and run with `python -I`.
+   from inside it; scripts live in `research/feasibility/` or `src/` and run with `uv run python -I`.
    Never modify raw files. (See the `safe-dataset-download` skill.)
 3. **Reproducibility:** fixed seeds, one command re-runs an experiment, outputs go to
    `research/findings/`. Success thresholds are written **before** running an experiment.
@@ -82,9 +84,21 @@ notebooks/           exploration only — never the source of truth
 5. **Privacy:** no real user data is collected until a privacy design exists (GDPR, users under 16).
 6. **Honesty:** state limits plainly (US-centric data, sample bias, interests ≠ satisfaction).
 7. **Fairness:** check recommendations for gender/cultural bias before any user-facing release.
+8. **Document everything in `docs/`** (required, not optional). See `docs/README.md` for the format.
+   - Every **decision** (method, threshold, dataset, tool, scope, design choice, reversal) gets an ADR in
+     `docs/decisions/NNNN-<slug>.md`: context, options considered, decision, consequences, evidence links.
+     Never edit an accepted ADR's decision; supersede it with a new ADR and mark the old one `Superseded by NNNN`.
+   - Every **work step** (experiment run, data download, refactor, environment change, review, doc update) gets an
+     entry in the day's log `docs/log/YYYY-MM-DD.md`: what was done, why, commands run, files changed, outcome,
+     and open follow-ups. Write it as part of the same change, before committing — not afterwards.
+   - Keep `docs/README.md` (index of ADRs + logs) and `docs/STATUS.md` (current state and next steps) up to date.
+   - `docs/` records *how and why*; `research/` holds the evidence and dossier. Link, don't duplicate numbers.
+   - Subagents must report their decisions and steps so they get logged; the main session writes the entries.
 
 ## Tech conventions
-- Python 3.11+, virtualenv in `.venv/`, dependencies in `requirements.txt`.
+- Python 3.12+ managed with **uv**: dependencies in `pyproject.toml`, exact versions in `uv.lock`
+  (both committed), environment in `.venv/` (created by `uv sync`, never edited by hand).
+  Add packages with `uv add <pkg>` (dev tools: `uv add --dev <pkg>`), never with pip, and log it in `docs/`.
 - Core libs: pandas, numpy, scipy, scikit-learn, factor_analyzer, girth (IRT),
   sentence-transformers, matplotlib.
 - Use `pathlib` with paths relative to the repo root; no hard-coded absolute paths.
@@ -93,10 +107,10 @@ notebooks/           exploration only — never the source of truth
 
 ## Commands
 ```
-python -m venv .venv
-.venv\Scripts\activate                      # PowerShell   (Git Bash: source .venv/Scripts/activate)
-python -m pip install -r requirements.txt
-python -I research/feasibility/e4_cat_simulation.py   # run one experiment
+uv sync                                                     # create/update .venv from uv.lock
+uv run python -I research/feasibility/e4_cat_simulation.py  # run one experiment
+uv run ruff check .                                         # lint (format: uv run ruff format <file>)
+uv add <package>                                            # add a dependency (pyproject + lock), then log it in docs/
 ```
 
 ## Who does what

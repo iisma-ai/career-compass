@@ -2,7 +2,7 @@
 
 Retrieved 2026-11-14. Raw files live in `data/raw/<slug>/` (git-ignored, untrusted) with a `SOURCE.md`
 (URL, date, SHA-256, license). Derived tables are in `data/processed/` (git-ignored).
-All scripts run with `python -I` from the repo root using `.venv` (pandas, pyarrow, numpy).
+All scripts run with `python -I` from the repo root using the uv environment (`uv run python -I ...`; pandas, pyarrow, numpy).
 
 ## 1. openpsych_riasec_2018 - OpenPsychometrics RIASEC test
 

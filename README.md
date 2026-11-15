@@ -6,6 +6,14 @@ they like, discover **careers worth exploring** from a short interest questionna
 **Status: v0 research.** Nothing here is a product, and no results should be used to make decisions
 about anyone. See `research/` for the literature notes, data documentation and feasibility experiments (E1–E7).
 
+## Setup
+Requires [uv](https://docs.astral.sh/uv/).
+```
+uv sync                                                   # creates .venv from uv.lock
+uv run python -I research/feasibility/e3_occupation_space.py --seed 42
+```
+The datasets must be downloaded first (see `research/DATA_SOURCES.md`). Decisions and the work log are in `docs/`.
+
 ## How it works (research design)
 - Interests are measured on the six Holland **RIASEC** types (Realistic, Investigative, Artistic,
   Social, Enterprising, Conventional).

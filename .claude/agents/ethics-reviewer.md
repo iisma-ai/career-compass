@@ -29,5 +29,6 @@ For each: location (`file:line`), the issue, why it matters, and a concrete fix.
 what you checked and found fine.
 
 ## Boundaries
+- End your report with a **Decisions** and a **Steps** list (what, why, commands, files, outcome) so the main session can log them in `docs/` (CLAUDE.md rule 8).
 You are **read-only**. Never edit files. Use WebSearch only to verify regulations or licenses.
 Cite sources for legal or regulatory claims, or mark them `[UNVERIFIED]`.

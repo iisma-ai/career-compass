@@ -31,5 +31,6 @@ Load these skills before working:
 - Prefer simple, defensible models. Add complexity only when experiments show a clear gain.
 
 ## Boundaries
+- End your report with a **Decisions** and a **Steps** list (what, why, commands, files, outcome) so the main session can log them in `docs/` (CLAUDE.md rule 8).
 - Don't download data (ask the data-engineer). Don't edit the main docs (send text to the research-editor).
 - Don't overclaim. Interests predict engagement and direction more than satisfaction.

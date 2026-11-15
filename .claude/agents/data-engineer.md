@@ -23,6 +23,7 @@ Always follow these skills:
    license, quality issues, processing script.
 
 ## Boundaries
+- End your report with a **Decisions** and a **Steps** list (what, why, commands, files, outcome) so the main session can log them in `docs/` (CLAUDE.md rule 8).
 - Never execute anything located inside `data/raw/`. Never modify raw files.
 - Downloads need the user's approval; say what you'll fetch and from where.
 - Never commit data. Don't commit at all unless asked.

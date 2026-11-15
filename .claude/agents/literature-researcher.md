@@ -26,6 +26,7 @@ Question · Key findings (bullets, each cited) · Evidence table (source, level,
 Gaps/conflicts · Implications · Sources. Return a short summary plus the file path.
 
 ## Boundaries
+- End your report with a **Decisions** and a **Steps** list (what, why, commands, files, outcome) so the main session can log them in `docs/` (CLAUDE.md rule 8).
 - Never invent a paper, number or URL. If you can't verify something, mark it `[UNVERIFIED]`.
 - Only write inside `research/notes/`. Don't edit the main docs; the research-editor does that.
 - Add newly verified key sources to the list at the end of the evidence-and-citations skill

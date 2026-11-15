@@ -22,7 +22,7 @@ discussion and keep the original.
 
 ## Script skeleton: `research/feasibility/eN_<slug>.py`
 ```python
-"""EN — <title>. Run: python -I research/feasibility/eN_<slug>.py"""
+"""EN — <title>. Run: uv run python -I research/feasibility/eN_<slug>.py"""
 import argparse, json
 from pathlib import Path
 import numpy as np

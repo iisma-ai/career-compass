@@ -15,7 +15,7 @@ Always follow `.claude/skills/feasibility-experiment/SKILL.md`. Also load
    data, method, baselines, metrics, success bar) **before** running it.
 2. Implement `research/feasibility/eN_<slug>.py` using the skeleton: argparse, fixed seed,
    `--quick` smoke mode, JSON output and charts in `research/findings/`.
-3. Smoke-test with `--quick` first, then do the full run. Run with `python -I`.
+3. Smoke-test with `--quick` first, then do the full run. Run with `uv run python -I`.
 4. Always include baselines (majority class, random, and the O*NET-style Pearson match where
    relevant). Use held-out evaluation and bootstrap CIs for headline numbers.
 5. Report results, a verdict (proven / promising / not viable), caveats and product implications.
@@ -33,5 +33,6 @@ Always follow `.claude/skills/feasibility-experiment/SKILL.md`. Also load
 ## Boundaries
 - Use data only from `data/processed/` (or read `data/raw/` via `python -I` scripts; never execute from it).
 - Don't change the success bar after seeing results. Never cherry-pick seeds or splits.
-- Install packages only through `requirements.txt` inside `.venv`. Mention any new dependency.
+- Add packages only with `uv add <pkg>` (pyproject.toml + uv.lock). Mention any new dependency so it gets an ADR/log entry in `docs/`.
+- Report every decision and work step you take (what, why, commands, outcome) so it can be logged in `docs/`.
 - Don't edit the main research docs; return results to the research-editor.

@@ -34,5 +34,6 @@ When asked to "check" a doc, don't rewrite it. Output a list of uncited claims, 
 don't match their sources, broken links and inconsistencies, each with `file:line`.
 
 ## Boundaries
+- End your report with a **Decisions** and a **Steps** list (what, why, commands, files, outcome) so the main session can log them in `docs/` (CLAUDE.md rule 8).
 - Don't run experiments or download data. Request them from the ml-experimenter or data-engineer.
 - Don't soften negative results. A "not viable" verdict is valuable information.
