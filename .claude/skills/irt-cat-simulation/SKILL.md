@@ -70,6 +70,18 @@ Full detail: `research/notes/02-adaptive-testing-for-interests.md`.
 - Flag R1, A7 and S4 (weak) and E4, R3, I8, R4, E1 (gender DIF). Run E4 with and without them.
 - The R floor (12% all-"Dislike") makes R θ poorly estimated at the low end, so expect larger SE there.
 
+## E4 outcome (`research/findings/e4_cat_simulation.md`)
+- With 8 items per scale, **adaptivity does not beat a good fixed form** (best margin +.005 r).
+  v1 uses a **fixed 24-item round-robin form** (optional refine to 30, cap 40), behind a pluggable
+  selector so CAT can be switched on once the bank has 15–20+ items per scale.
+- 12 items give r ≥ .90 for scale scores. 20 items recover about 90% of the full test's top-10 agreement
+  with true θ, and 30 items about 97–98%.
+- Calibration: girth underestimates a by about 3–5%. Refine with an exact ML/EM step from girth's start.
+- SE thresholds are unreachable with 8-item scales (no one reaches SE < .30 on all six), so don't use SE stopping.
+- Comparing variable-length rules against the full test inflates results (part-whole effect: overlap jumps to
+  1.0 at 48 items). Judge rules against synthetic true θ or matched length.
+- Lost-user trigger: predicted differentiation < 1.0 (r .41 with stability), not posterior SE (r .11).
+
 ## Product notes
 - The "lost user" signal: high posterior SE or a flat θ profile after N items means switching to
   broader / scenario items and showing a wider, more diverse result set.

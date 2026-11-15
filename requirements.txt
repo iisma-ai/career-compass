@@ -6,3 +6,4 @@ scikit-learn
 factor_analyzer
 matplotlib
 statsmodels
+girth

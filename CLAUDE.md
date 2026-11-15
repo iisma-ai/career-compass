@@ -22,10 +22,13 @@ Produce an evidence-backed research dossier that doubles as the project blueprin
 | `research/feasibility/eN_*.py` | Reproducible experiments on real data |
 | `research/findings/eN_*.md` (+ charts) | Experiment results cited by the docs |
 
-Feasibility experiments (details in the `feasibility-experiment` skill):
-E1 data audit · E2 factor/hexagon structure + archetype clustering · E3 occupation space ·
-**E4 adaptive-test simulation (priority: "how many questions do we need?")** ·
-E5 recommendation stability · E6 supervised major prediction · E7 free-text matching.
+Feasibility experiments (details in the `feasibility-experiment` skill; results in `research/findings/`):
+- E1 data audit: **proven** (80k clean rows, α .83–.90)
+- E2 structure: hexagon and group structure **proven**, archetypes soft (not for user-facing labels)
+- E3 occupation space: **proven** (Pearson matching; about 100–170 distinct profiles; thin A/S/I catalogue)
+- E4 adaptive test: CAT not better than a fixed form → **v1 = fixed 24-item form**, results shown as families
+- E5 stability: **promising** (full test only about 55% top-10 stable → show the top-3 occupation families)
+- E6 supervised major prediction: todo · E7 free-text matching: todo
 
 _Update this section whenever the phase changes._
 
@@ -35,7 +38,7 @@ CLAUDE.md
 research/            docs, notes/, feasibility/ (scripts), findings/ (results)
 data/raw/<source>/   untouched downloads + SOURCE.md   (git-ignored, untrusted)
 data/processed/      derived parquet/CSV tables        (git-ignored)
-src/carrier_helper/  (later) scoring, CAT and matching package
+src/carrier_helper/  package: data/ (build scripts), matching.py (person↔occupation matching; reuse it)
 notebooks/           exploration only — never the source of truth
 .claude/agents/      project subagents
 .claude/skills/      project skills
