@@ -42,6 +42,8 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
 - Ethics review (2026-11-15): release blockers are attribution (done: README), privacy/legal design + DPIA,
   re-audited DIF on the final item set, a validated lost-user flow, and permission before shipping anything
   derived from OpenPsychometrics. Never quote r or match scores as accuracy.
+- Dossier assembled 2026-11-16: `research/RESEARCH.md` (verdict: feasible with constraints), `MODELS.md`, `ROADMAP.md`.
+  v1 = closed English pilot, questionnaire → families only (ADR 0013). Next: ethics review of the dossier.
 - Process rule: commit each pre-registration on its own **before** running the experiment.
 
 _Update this section whenever the phase changes._

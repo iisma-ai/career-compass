@@ -1,6 +1,7 @@
-# Status — updated 2026-11-15
+# Status — updated 2026-11-16
 
-**Phase:** v0, research & feasibility (see CLAUDE.md "Current phase").
+**Phase:** v0, research & feasibility, wrapping up. All four dossier docs exist (`research/RESEARCH.md`, `DATA_SOURCES.md`,
+`MODELS.md`, `ROADMAP.md`). The v1 scope is fixed in ADR 0013.
 
 ## Experiments
 | ID | Verdict | Decision |
@@ -22,7 +23,8 @@
 - [ ] Permission from OpenPsychometrics, or our own calibration data (0002)
 
 ## Next steps
-1. Assemble the missing dossier docs: `research/RESEARCH.md`, `MODELS.md`, `ROADMAP.md` (research-editor).
+1. Ethics review of the dossier (ethics-reviewer, read-only), then fix what it finds.
+1b. Primary-source checks of the `[UNVERIFIED]` items in RESEARCH.md §10.
 2. E7c: name coverage (NER or broader rules) plus a held-out set written blind to the rules (ADR 0012).
 3. Negation handling for free text.
 4. Behaviour-neutral lint cleanup of the old scripts (135 ruff findings).
