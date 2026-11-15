@@ -12,7 +12,7 @@
 | E5 stability | promising | 0006 |
 | E6 major prediction | proven, research-only | 0008 |
 | E7 free text | not viable (bias bar) | 0007 |
-| E7b cue stripping | planned | — |
+| E7b cue stripping | pre-registered | 0011 |
 
 ## Release blockers (ethics review 2026-11-15)
 - [x] O\*NET attribution (README)

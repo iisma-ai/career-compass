@@ -56,6 +56,7 @@ Entries dated before 2026-11-15 22:00 were filled in afterwards from the git his
 | [0008](decisions/0008-major-prediction-research-only.md) | Field-of-study prediction (E6) stays research-only | Accepted |
 | [0009](decisions/0009-uv-environment.md) | Manage the Python environment with uv | Accepted |
 | [0010](decisions/0010-docs-journal.md) | Keep a decisions + log journal in `docs/` | Accepted |
+| [0011](decisions/0011-e7b-rule-based-cue-stripping.md) | E7b: rule-based demographic-cue stripping, frozen before the held-out test | Accepted |
 
 ## Index of logs
 - [2026-11-14](log/2026-11-14.md) *(backfilled)*: scaffolding, data pipeline, E1–E2
