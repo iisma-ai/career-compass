@@ -51,3 +51,38 @@ def test_cue_types_are_reported():
 def test_capitalised_non_names_are_kept():
     text = "I'm Interested in boats."
     assert strip(text)[0] == text
+
+
+# --- E7c (v2) name coverage; development cases written by the rule author
+V2_PAIRS = [
+    ("my name is sam and i like fixing cars.", "my name is jo and i like fixing cars."),
+    ("Hey, i'm priya, I want to code games.", "Hey, i'm tom, I want to code games."),
+    ("They call me 李明 and I love chemistry.", "They call me Alex and I love chemistry."),
+    ("I love painting murals. Thanks, Maria", "I love painting murals. Thanks, Peter"),
+    ("I love painting murals - Sam", "I love painting murals - Aiko"),
+    ("My friend Emma loves drawing. Emma wants to design clothes.",
+     "My friend Omar loves drawing. Omar wants to design clothes."),
+    ("me llamo pepe y me gusta cocinar.", "me llamo ana y me gusta cocinar."),
+    ("I go by Ade, I enjoy teaching.", "I go by Kim, I enjoy teaching."),
+]
+
+
+@pytest.mark.parametrize("a,b", V2_PAIRS)
+def test_v2_name_pairs_collapse(a, b):
+    assert strip(a)[0] == strip(b)[0]
+
+
+@pytest.mark.parametrize("text", [
+    "Hi, I'm tired of office work and want to be outside.",
+    "I love history. Thanks in advance!",
+    "I want to be a nurse, best regards.",
+    "I like building things - especially furniture.",
+    "I want a job helping people - nurse maybe",
+])
+def test_v2_non_names_kept(text):
+    assert strip(text)[0] == text
+
+
+def test_non_latin_tokens_removed():
+    out, cues = strip("I'm 李明 and I love chemistry.")
+    assert out == "I love chemistry." and "name_script" in {t for t, _ in cues}

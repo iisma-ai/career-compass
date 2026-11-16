@@ -61,6 +61,7 @@ Entries dated before 2026-11-15 22:00 were filled in afterwards from the git his
 | [0013](decisions/0013-v1-scope-closed-pilot.md) | v1 scope: closed English pilot, questionnaire only | Accepted (data part superseded by 0014) |
 | [0014](decisions/0014-product-vs-research-data-tiers.md) | Product stores nothing; research studies are a separate consented, 18+ tier | Accepted |
 | [0015](decisions/0015-gender-blind-design.md) | Gender-blind design: gender is never an input or adjustment; used only for audits | Accepted |
+| [0016](decisions/0016-e7c-names-and-negation-design.md) | E7c: name rules v2 + clause-level negation; held-out set written blind to the rules | Accepted |
 
 ## Index of logs
 - [2026-11-14](log/2026-11-14.md) *(backfilled)*: scaffolding, data pipeline, E1–E2
