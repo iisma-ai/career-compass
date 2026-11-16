@@ -43,6 +43,8 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
   negation is **not viable** (4 of 12 on blind text, idioms misread). Negation cues trigger a follow-up question (E7d next).
 - E8 pilot power (ADR 0018): the item pilot needs at least 300 adults per self-reported gender group (plan 400); items
   are cleared only when the 90% CI of gender DIF is inside ±.30. Teen age DIF can't be screened in the 18+ tier.
+- E9 study sizes (ADR 0019): 1.6 fairness audit 2,052 per group (parity alone ≈ 580), 1.5 176 per arm, 1.7 90. Men's
+  24-item results agree less with the full test (gap .044 vs a .05 bar), so a gender-blind mitigation (E10) is needed first.
 - Ethics review (2026-11-15): release blockers are attribution (done: README), privacy/legal design + DPIA,
   re-audited DIF on the final item set, a validated lost-user flow, and permission before shipping anything
   derived from OpenPsychometrics. Never quote r or match scores as accuracy.

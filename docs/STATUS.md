@@ -16,6 +16,7 @@
 | E7b cue stripping | proven (held-out overlap .92; names .84; coverage 67%) | 0011, 0012 |
 | E7c names v2 + negation | not viable (negation 4/12); names .906 met on blind set | 0016, 0017 |
 | E8 pilot DIF power | min 300 per gender group; plan 400 | 0018 |
+| E9 study power | 1.6: 2,052/group; 1.5: 176/arm; 1.7: 90; gender agreement gap .044 | 0019 |
 
 ## Release blockers (ethics review 2026-11-15)
 - [x] O\*NET attribution (README)
@@ -36,4 +37,6 @@
 4. A human-written held-out set for name and gender invariance (ROADMAP 2.4).
 6. Item bank: 26 drafts in `research/items/candidate_items_v1.md`. Pilot size done (E8, ADR 0018: plan 400 adults per
    gender group, floor 300; items cleared by 90% CI inside ±.30). Next: psychometrician + counsellor review of the
-   drafts; a study protocol for milestone 1.0 using E8; power analyses for milestones 1.6 and 1.7.
+   drafts.
+7. Sample sizes done (E9, ADR 0019). Owner decision: run 1.6 at 2,052 per group, or ~1,000 with a relaxed S-top
+   precision bar. Next experiment: E10, a gender-blind mitigation for the 24-item agreement gap (.044).

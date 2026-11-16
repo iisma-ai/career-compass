@@ -64,8 +64,9 @@ Entries dated before 2026-11-15 22:00 were filled in afterwards from the git his
 | [0016](decisions/0016-e7c-names-and-negation-design.md) | E7c: name rules v2 + clause-level negation; held-out set written blind to the rules | Accepted |
 | [0017](decisions/0017-adopt-names-v2-reject-rule-negation.md) | Adopt name rules v2; no rule-based negation; negation triggers a follow-up | Accepted |
 | [0018](decisions/0018-ci-based-dif-clearance-and-pilot-size.md) | Clear pilot items by a 90% CI inside ±.30; plan 400 adults per gender group (floor 300) | Accepted |
+| [0019](decisions/0019-v1-study-sample-sizes.md) | Sample sizes for the v1 studies; gender-blind mitigation for the agreement gap first | Accepted |
 
 ## Index of logs
 - [2026-11-14](log/2026-11-14.md) *(backfilled)*: scaffolding, data pipeline, E1–E2
 - [2026-11-15](log/2026-11-15.md): E3–E7, ethics review, E6, uv migration, docs journal, E7b
-- [2026-11-16](log/2026-11-16.md): research dossier (RESEARCH, MODELS, ROADMAP), ethics review, rename to Career Compass, ADR 0015, E7c, item drafts, E8
+- [2026-11-16](log/2026-11-16.md): research dossier (RESEARCH, MODELS, ROADMAP), ethics review, rename to Career Compass, ADR 0015, E7c, item drafts, E8, E9, study protocol draft, v1 engine

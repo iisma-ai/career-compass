@@ -34,6 +34,8 @@ def rnd(x, k=4):
         return [rnd(v, k) for v in x]
     if isinstance(x, (np.floating, float)):
         return None if not np.isfinite(x) else round(float(x), k)
+    if isinstance(x, np.bool_):
+        return bool(x)
     if isinstance(x, np.integer):
         return int(x)
     return x
