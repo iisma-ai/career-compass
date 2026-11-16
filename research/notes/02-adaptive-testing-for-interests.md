@@ -55,7 +55,7 @@ How many items do we need to estimate a RIASEC profile well, what adaptive machi
 - Simulation-vs-live gap (.91-.97 vs .73-.91).
 - Interest inventories disagree with each other on high-point codes (Chu et al. 2022), so "accuracy vs full form" is bounded by test-retest/inter-form agreement; use test-retest ceiling as the benchmark, not 1.0.
 
-## Implications for Carrier_helper (recommendations; our interpretation, to be tested in E4)
+## Implications for Career Compass (recommendations; our interpretation, to be tested in E4)
 1. **Item bank:** start from the CC BY O*NET IP (180 items; Short Form 60) and/or the 48-item OpenPsychometrics RIASEC set, calibrate a multidimensional GRM (6 correlated traits; use graded responses, Strongly dislike-Strongly like, plus "Not sure"). Check licence per item before reuse.
 2. **Length:** target median about 24-30 items (about 4-5 per dimension), hard cap about 40, floor about 12. Rationale: Mini-IP is 30 items (5/scale), Turkish CATs reached usable precision at about 4/area (SE .50) and about 59 items for 17+ areas; MCAT borrows strength across correlated dimensions. Test candidate rules in E4 against full-bank scores and against retest-bounded targets.
 3. **Estimator:** EAP (multivariate normal prior using the empirical RIASEC correlation matrix) for scoring; it is stable at short lengths and gives posterior covariance for free. MAP/WLE are alternatives; compare in E4.

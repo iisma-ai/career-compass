@@ -29,7 +29,7 @@ Method:        Noise models, 50 replicates each:
                difference has error variance SEM^2, which approximates true-score vs observed
                agreement, i.e. the E4 setting (CAT estimate vs full test). SECONDARY = replicate 2j
                vs 2j+1 (25 pairs; error variance 2*SEM^2, approximates test-retest with parallel forms).
-               Methods: pearson, cosine_centered, euclid_z, hexagon (src/carrier_helper/matching.py).
+               Methods: pearson, cosine_centered, euclid_z, hexagon (src/career_compass/matching.py).
                Metrics per person (averaged over replicates):
                  - top-10 overlap |A & B| / 10 and top-3 overlap / 3; top-1 occupation agreement;
                  - Kendall tau-b between original and perturbed scores of the original top-20;

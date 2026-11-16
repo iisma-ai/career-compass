@@ -40,7 +40,7 @@ sys.path.insert(0, str(ROOT / "src"))  # -I drops the script dir; matching.py li
 import girth  # noqa: E402
 
 try:
-    from carrier_helper import matching as M  # noqa: E402
+    from career_compass import matching as M  # noqa: E402
 
     HAVE_MATCHING = True
 except Exception:  # pragma: no cover - fallback documented in the findings

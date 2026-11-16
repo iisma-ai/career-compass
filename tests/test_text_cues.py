@@ -1,10 +1,10 @@
-"""Unit tests for carrier_helper.text_cues. Development cases come from the E7 pairs (ADR 0011).
+"""Unit tests for career_compass.text_cues. Development cases come from the E7 pairs (ADR 0011).
 
 Run: uv run pytest -q
 """
 import pytest
 
-from carrier_helper.text_cues import strip_demographic_cues as strip
+from career_compass.text_cues import strip_demographic_cues as strip
 
 PAIRS = [
     ("As a girl, I love building things.", "As a boy, I love building things."),

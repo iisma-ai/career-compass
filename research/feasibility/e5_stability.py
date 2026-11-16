@@ -22,7 +22,7 @@ import pandas as pd  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))  # python -I does not add the script dir or PYTHONPATH
-from carrier_helper import matching as M  # noqa: E402
+from career_compass import matching as M  # noqa: E402
 
 FINDINGS = ROOT / "research" / "findings"
 DATA_MAIN = ROOT / "data" / "processed" / "riasec_people.parquet"

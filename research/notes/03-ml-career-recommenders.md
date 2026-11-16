@@ -56,7 +56,7 @@ How accurate are data-driven career/major recommenders and interest-inventory pr
 - Press (70%) vs paper details unverified for Vocation Compass; the repo suggests a 10-profession evaluation.
 - ML scoring helps common occupations and hurts rare ones (Song et al.), which conflicts with the goal of showing less obvious careers.
 
-## Implications for Carrier_helper
+## Implications for Career Compass
 - v1 architecture: content-based/knowledge-based matching (user RIASEC posterior vs O*NET occupation interest profiles, i.e. the OIPs) with explanations per dimension. No collaborative filtering until real, consented interaction data exist (also GDPR; see note 06).
 - Evaluate with metrics that account for base rates and class count (Hanna & Rounds): report lift over base rate, top-k, and stability (E5), not a single "accuracy". Avoid quoting "70%".
 - Use ML only where it adds value and test that it does not collapse recommendations into high-base-rate jobs (diversity/coverage metric; rare-occupation recall).

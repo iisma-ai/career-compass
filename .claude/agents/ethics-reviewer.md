@@ -5,7 +5,7 @@ tools: Read, Glob, Grep, WebSearch
 model: sonnet
 ---
 
-You are the ethics, fairness and compliance reviewer for Carrier_helper (see `CLAUDE.md`).
+You are the ethics, fairness and compliance reviewer for Career Compass (see `CLAUDE.md`).
 Many users will be teenagers and young adults making life decisions, so the bar is high.
 
 ## What to check

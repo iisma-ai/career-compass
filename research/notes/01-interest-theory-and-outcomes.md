@@ -4,7 +4,7 @@ Researched Nov 2026. Evidence levels per `.claude/skills/evidence-and-citations/
 Method note: most publisher PDFs were paywalled or unreadable by the fetch tool, so many numbers come from publisher/university abstract pages or from search-engine summaries of abstracts. Each item says which. Anything not seen on a primary abstract is `[UNVERIFIED]`.
 
 ## Question
-How valid is Holland's RIASEC model as the backbone of Carrier_helper? Specifically: (a) hexagon/circumplex structure and Prediger's dimensions, (b) stability of interests across age, (c) do interests/congruence predict performance, satisfaction, persistence, turnover, (d) link to Big Five, (e) work values.
+How valid is Holland's RIASEC model as the backbone of Career Compass? Specifically: (a) hexagon/circumplex structure and Prediger's dimensions, (b) stability of interests across age, (c) do interests/congruence predict performance, satisfaction, persistence, turnover, (d) link to Big Five, (e) work values.
 
 ## Key findings
 
@@ -66,7 +66,7 @@ How valid is Holland's RIASEC model as the backbone of Carrier_helper? Specifica
 - Interest-performance correlations are modest (.14-.32); interest-based advice is one input, not a prediction of success.
 - Most studies are U.S., adult/college samples; adolescent (14-17) evidence is thinner and interests are less stable before about 18 (Low et al.).
 
-## Implications for Carrier_helper
+## Implications for Career Compass
 - Treat RIASEC as a profile with uncertainty, not a 3-letter label: interests stabilise around 18-22, so for teens show "current interest profile" and invite retesting. Show profile shape (all six scores) and not only top-3 code.
 - Compute and display Prediger-style 2-D coordinates (People-Things, Data-Ideas) because they are robust cross-culturally (supported by Su et al. note 06); verify weights with E2 factor analysis on OpenPsychometrics data (E, to do).
 - Check hexagon fit on our own data (E2) and by gender/language before relying on circumplex-based congruence.

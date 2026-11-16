@@ -1,7 +1,7 @@
 # E3 — Occupation space: distribution, effective resolution and per-person coverage
 
 Pre-registered 2026-11-15, before running `research/feasibility/e3_occupation_space.py`.
-Disclosure: while building and testing `src/carrier_helper/matching.py`, I saw (i) the pure-type
+Disclosure: while building and testing `src/career_compass/matching.py`, I saw (i) the pure-type
 self-check top-5 lists per method and (ii) the number of complete-linkage families (101 / 123 / 172 / 286 at
 r >= .80 / .85 / .90 / .95). I have looked at no person-level matching outcome (coverage, top-1 r, reach) yet.
 
@@ -26,7 +26,7 @@ Data:          data/processed/onet_occupations.parquet (923 occupations, OI 1-7,
                oi_domain_source); data/processed/riasec_people.parquet (80,085 people, raw 1-5
                scale means); robustness: data/processed/riasec_people_incl_shared_network.parquet
                (115,974); data/raw/onet_31_0/db_31_0_csv/related_occupations.csv (read only).
-Method:        Matching uses src/carrier_helper/matching.py (methods pearson, cosine_centered,
+Method:        Matching uses src/career_compass/matching.py (methods pearson, cosine_centered,
                euclid_z, hexagon; definitions in the module docstring).
                Q1 Distribution: top-letter and top-2-letter Holland code counts (argmax of OI;
                   ties reported). Prediger angle projection on the self-centred profile
@@ -90,7 +90,7 @@ reproduced every number). Smoke run first with `--quick` (8,000 people). Raw res
 `research/findings/e3_occupation_space.json`. Families: `research/findings/e3_families.csv` (code, title, family id at
 r_min = .80/.85/.90/.95, label = most central member). n = 923 occupations and 80,085 people (main table). The person
 sample is self-selected (E1: median age 23, 67% female, 49% US), so all person-level numbers are evidence level E for
-this sample only. Matching code: `src/carrier_helper/matching.py`.
+this sample only. Matching code: `src/career_compass/matching.py`.
 
 ### Q1: Distribution of the 923 occupations (`e3_holland_distribution.png`, `e3_prediger_scatter.png`, `e3_angle_hist.png`)
 

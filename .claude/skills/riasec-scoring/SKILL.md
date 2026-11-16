@@ -35,7 +35,7 @@ description: Scoring, cleaning and comparing RIASEC (Holland) interest profiles,
 - factor_analyzer 0.5.x crashes with scikit-learn 1.9 (`force_all_finite`). Use the in-process
   shim from `research/feasibility/e1_data_audit.py` until the environment is pinned.
 
-**Ready-made tables** (built by `src/carrier_helper/data/build_riasec_people.py`):
+**Ready-made tables** (built by `src/career_compass/data/build_riasec_people.py`):
 - `data/processed/riasec_people.parquet`: 80,085 rows (all filters, including the shared-network drop);
   13,882 minors flagged in `minor_13_17`.
 - `data/processed/riasec_people_incl_shared_network.parquet`: 115,974 rows with a `shared_network`
@@ -79,7 +79,7 @@ Counts are from the 2026-11-14 build, applied in order.
 | Hexagon-aware (circular) distance | Uses the hexagon structure; good for explanations |
 
 **Decided by E3/E5:** the default is **Pearson** (median top-1 r .93, most stable), implemented in
-`src/carrier_helper/matching.py`. Use the hexagon kernel for explanations only. `euclid_z` is not viable,
+`src/career_compass/matching.py`. Use the hexagon kernel for explanations only. `euclid_z` is not viable,
 since it pushes flat and low-elevation people to R / job-zone-2 jobs. Self-centred cosine is identical to Pearson.
 Match r is **not** a confidence measure (flat profiles still get r ≈ .93), so use profile differentiation
 instead: < 1.0 → lost-user flow, < 1.5 → broad families only.

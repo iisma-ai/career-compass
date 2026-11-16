@@ -1,6 +1,6 @@
 # O*NET loader reference (31.0 CSV release)
 
-The canonical implementation is `src/carrier_helper/data/build_onet_occupations.py`. Reuse it.
+The canonical implementation is `src/career_compass/data/build_onet_occupations.py`. Reuse it.
 The pattern below is for building **other** occupation-level tables (skills, work styles…).
 
 ```python

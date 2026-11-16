@@ -1,5 +1,5 @@
 [project]
-name = "carrier-helper"
+name = "career-compass"
 version = "0.0.1"
 description = "v0 research: RIASEC interest profiling and O*NET career matching"
 readme = "README.md"
@@ -31,7 +31,7 @@ requires = ["uv_build>=0.10,<0.11"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
-module-name = "carrier_helper"
+module-name = "career_compass"
 
 [tool.ruff]
 line-length = 120

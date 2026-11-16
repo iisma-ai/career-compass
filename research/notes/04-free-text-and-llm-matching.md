@@ -50,7 +50,7 @@ Which embedding/LLM methods can map a user's free-text description of interests 
 - Bias studies use English/other prompts and simplified profiles; effect on our structured (non-chat) pipeline is unknown.
 - ESCO and O*NET overlap conceptually with near-duplicate occupations; crosswalk quality not assessed here.
 
-## Implications for Carrier_helper
+## Implications for Career Compass
 - Use LLMs/embeddings only as an optional input channel ("lost user" mode), not as the judge of careers: map free text to the same RIASEC latent space (e.g. embed text, similarity to item/activity descriptors and O*NET task/activity statements; calibrate against questionnaire scores in E7) and show the user how their text moved the profile.
 - Prefer retrieval over generation: ground every recommendation in O*NET fields (tasks, interests, job zone); use an LLM only to write explanations from retrieved facts, with a rejection threshold for out-of-taxonomy input (model-card heuristic).
 - Evaluate first with E7 (text -> top-k O*NET occupations vs questionnaire-based ranking; report recall@k with confidence intervals) before any user-facing claim.

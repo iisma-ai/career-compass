@@ -58,7 +58,7 @@ Method note: GDPR Art. 8 text (gdpr-info.eu) and Spanish LOPDGDD Art. 7 (BOE) we
 - Evidence for indecision interventions is mostly counselor-led; online self-help effects uncertain.
 - Spanish/EU public bodies' policies for minors in online career tools not checked.
 
-## Implications for Carrier_helper
+## Implications for Career Compass
 - Fairness audit before any release (CLAUDE.md rule 7): counterfactual gender/language tests on the pipeline; report per-group coverage of top-k lists; include a "broaden my options" control and show how many recommendations come from each RIASEC type. Do not use demographic inputs.
 - Report Prediger axes and let the user see which axis drives gender-typical results; avoid labelling any career as "for men/women".
 - Validate hexagon and loadings by gender and language (ES/EN) in E2 (configural/metric/scalar invariance) before comparing scores across groups.

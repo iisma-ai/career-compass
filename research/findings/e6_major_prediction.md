@@ -41,7 +41,7 @@ Models:        B0 majority: constant ranking by train class prior.
                   proportional to train priors (Gumbel trick, seed 42).
                B2 RIASEC centroid (knowledge-based): each family's mean 6-scale profile on train; rank
                   families by Pearson r between a person's 6-vector and each centroid (the O*NET-style
-                  shape match from src/carrier_helper/matching.py, applied to family centroids).
+                  shape match from src/career_compass/matching.py, applied to family centroids).
                M1 multinomial logistic regression, L2, StandardScaler, C tuned over
                   {0.001, 0.01, 0.1, 1, 10}; unweighted and class_weight="balanced" variants.
                M2 HistGradientBoostingClassifier; grid {learning_rate 0.05, 0.1} x {max_leaf_nodes 15, 31},

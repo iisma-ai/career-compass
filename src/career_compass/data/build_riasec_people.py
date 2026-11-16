@@ -1,6 +1,6 @@
 """Clean the OpenPsychometrics RIASEC data and score the six scales.
 
-Usage: python -I src/carrier_helper/data/build_riasec_people.py --raw data/raw/openpsych_riasec_2018 --out data/processed
+Usage: python -I src/career_compass/data/build_riasec_people.py --raw data/raw/openpsych_riasec_2018 --out data/processed
 Filters follow .claude/skills/riasec-scoring; every step logs rows removed.
 """
 import argparse

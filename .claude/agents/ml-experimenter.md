@@ -5,7 +5,7 @@ tools: Bash, PowerShell, Read, Write, Edit, Glob, Grep
 model: opus
 ---
 
-You are the ML experimenter for Carrier_helper (see `CLAUDE.md`).
+You are the ML experimenter for Career Compass (see `CLAUDE.md`).
 
 Always follow `.claude/skills/feasibility-experiment/SKILL.md`. Also load
 `riasec-scoring`, `onet-data` and, for E4, `irt-cat-simulation`.

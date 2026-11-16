@@ -1,4 +1,4 @@
-# Carrier_helper — Research dossier (v0)
+# Career Compass — Research dossier (v0)
 
 Status: v0 feasibility, assembled 2026-11-16 from `research/notes/01–06` and `research/findings/e1–e7b`.
 Companion docs: [DATA_SOURCES.md](DATA_SOURCES.md) (datasets), [MODELS.md](MODELS.md) (model layers),
@@ -31,7 +31,7 @@ the product is valid or accurate for users.
 | What to show users | An **unordered set of about 3 career families** with 2–3 example jobs each. No ranks or match percentages. | E3, E5 |
 | Can free text help? | Retrieval works well (top-5 family hit .95). Stripping names, gender and age cues before matching raised counterfactual overlap from .74 to .92, but on a small (18-pair) test set written by the same author as the rules. Names (.84) and unseen phrasings are still weak, and negation is not handled. Free text stays research-only. | E7, E7b |
 | Can it predict a university major? | Better than baselines (top-3 .565 vs .40), but it **amplifies gender gaps**, so it stays research-only (v3). | E6 |
-| Is it fair? | Not yet shown. Interests themselves differ by gender (Things–People d = .93 in the literature, .67 here). Matching faithfully passes that difference into the results. Some items show gender DIF. | A + E |
+| Is it fair? | Not yet shown. The design is gender-blind (ADR 0015): gender is never an input, and identical answers give identical results. Answers themselves differ by gender (Things–People d = .93 in the literature, .67 here), and those answer-driven differences remain in the results. Some items show gender DIF and must be replaced. | A + E |
 
 What makes the project different (*interpretation*, from note 05): it is free and short (24 items vs 250 for the SDS),
 publishes its evidence and uncertainty, explains why each family fits, and has a dedicated path for users who don't
@@ -242,7 +242,8 @@ The ethics review (2026-11-15) is summarised in CLAUDE.md and in E7 Addendum A. 
 
 Other risks:
 - **Gender steering.** Faithful matching passes interest differences into results (E3), and supervised models amplify them (E6).
-  Mitigations: DIF-screened items, a "careers you might not have considered" option (an ethics decision), and per-group monitoring.
+  Mitigations (gender-blind, ADR 0015): no gender input or gender-conditioned adjustment, DIF-screened items, cue stripping
+  for free text, de-amplification for field of study, and offline per-group audits.
 - **US-centric catalogue.** EU users would see US job titles and preparation levels. ESCO mapping is planned for v2.
 - **Overclaiming.** Copy must say "worth exploring". Never percentages, ranks or "your perfect career".
 - **Free text.** It can contain sensitive disclosures (self-harm, abuse), so it needs a signposting response. Process it in
@@ -266,9 +267,9 @@ Other risks:
 2. Does the hexagon/RIASEC structure hold in Spanish and for Spanish/EU users? (Untested; Rounds & Tracey 1996.)
 3. Exact numbers that still need a primary source: Hoff et al. 2020 ρ; O\*NET Mini-IP / Short Form reliability; Prediger
    weights; the Morris 2016 correction; Vocation Compass accuracy definition (notes 01–03, 05, 06).
-4. Should the product counter gender differences in results (e.g. a "careers you might not have considered" slot), or only
-   remove measurement bias? This values question must be decided in an ADR **before v1 copy is written**. Minimum rule
-   already in force: women and men with the same answers get identical results, and any broadening applies to everyone.
+4. ~~Should the product counter gender differences in results, or only remove measurement bias?~~ **Resolved
+   2026-11-16 (ADR 0015):** gender-blind design. Gender is never an input or an adjustment. Measurement bias is removed
+   (DIF), and gender is used only in offline fairness audits.
 5. What lost-user flow improves career decision self-efficacy? (No direct evidence found.)
 6. Can permission be obtained from OpenPsychometrics, or do we need our own calibration sample (size, consent)?
 7. ESCO ↔ O\*NET crosswalk quality for EU users (note 04).

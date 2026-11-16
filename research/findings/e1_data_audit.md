@@ -4,7 +4,7 @@ _Pre-registered 2026-11-14, before running `research/feasibility/e1_data_audit.p
 
 ```
 Question:      Is the OpenPsychometrics RIASEC 2018 dataset (after the documented cleaning) fit for
-               Carrier_helper's v0 experiments (E2-E6), and what are its biases and limits?
+               Career Compass's v0 experiments (E2-E6), and what are its biases and limits?
 Hypothesis:    Yes for structure/IRT/CAT work: the 8-item scales of this inventory should be internally
                consistent (alpha >= .80 each) and the cleaned table has ~80k rows. Expected limits (from
                research/DATA_SOURCES.md): young (median ~21-23), ~65-67% female, ~55% US, self-selected,
@@ -214,7 +214,7 @@ Because the scales differ, only the shapes are comparable. The level comparison 
 | Secondary: major-family coverage >= 80% | | 97.1% | yes |
 
 "Fit for purpose" applies to the v0 experiments: structure, IRT/CAT simulation, stability and major prediction.
-It does **not** mean the data represents Carrier_helper's target users (see Caveats).
+It does **not** mean the data represents Career Compass's target users (see Caveats).
 
 ## Caveats
 - **Sample bias.** Respondents are self-selected visitors to a free online test who also opted into a survey. Median age is 23,

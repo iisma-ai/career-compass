@@ -2,7 +2,7 @@
 
 Pre-registered 2026-11-15, before writing `research/feasibility/e7b_cue_stripping.py` and before the held-out set exists.
 Order of events, each verifiable in git (ADR 0003, ADR 0011):
-1. **This commit:** pre-registration + frozen stripper `src/carrier_helper/text_cues.py` + unit tests. The stripper was
+1. **This commit:** pre-registration + frozen stripper `src/career_compass/text_cues.py` + unit tests. The stripper was
    developed on the **text** of E7's counterfactual pairs only (they collapse to identical strings, and E7's cue-free
    statements and off-topic inputs are untouched). No retrieval was run with the stripper.
 2. **Next commit:** the held-out set `research/findings/e7b_heldout_pairs.csv`, written after the stripper is frozen.

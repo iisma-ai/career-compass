@@ -16,7 +16,7 @@ Option 2.
 - `uv.lock` pins every package, and `.python-version` is 3.14 (the interpreter used so far).
 - `requires-python >= 3.12`, because numpy ≥ 2.5 needs 3.12. CLAUDE.md previously said 3.11+.
 - `ruff` is a dev dependency.
-- The package `carrier_helper` is installed in editable mode (`uv_build` backend). The `sys.path` lines in the scripts are kept, so
+- The package `career_compass` is installed in editable mode (`uv_build` backend). The `sys.path` lines in the scripts are kept, so
   they still work under `python -I`.
 - Run everything with `uv run python -I ...`. Add packages with `uv add`, never pip.
 

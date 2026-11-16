@@ -1,6 +1,6 @@
 """Build occupation x RIASEC table (+title, job_zone) from O*NET 31.0 CSV.
 
-Usage: python -I src/carrier_helper/data/build_onet_occupations.py --raw data/raw/onet_31_0 --out data/processed [--workvalues data/raw/onet_30_2_workvalues]
+Usage: python -I src/career_compass/data/build_onet_occupations.py --raw data/raw/onet_31_0 --out data/processed [--workvalues data/raw/onet_30_2_workvalues]
 NOTE: in 31.0 the Interests file is career_interest_types.csv (snake_case CSV names).
 """
 import argparse

@@ -60,8 +60,9 @@ Entries dated before 2026-11-15 22:00 were filled in afterwards from the git his
 | [0012](decisions/0012-adopt-cue-stripping-in-free-text-pipeline.md) | Adopt cue stripping in the free-text pipeline; free text still not user-facing | Accepted |
 | [0013](decisions/0013-v1-scope-closed-pilot.md) | v1 scope: closed English pilot, questionnaire only | Accepted (data part superseded by 0014) |
 | [0014](decisions/0014-product-vs-research-data-tiers.md) | Product stores nothing; research studies are a separate consented, 18+ tier | Accepted |
+| [0015](decisions/0015-gender-blind-design.md) | Gender-blind design: gender is never an input or adjustment; used only for audits | Accepted |
 
 ## Index of logs
 - [2026-11-14](log/2026-11-14.md) *(backfilled)*: scaffolding, data pipeline, E1–E2
 - [2026-11-15](log/2026-11-15.md): E3–E7, ethics review, E6, uv migration, docs journal, E7b
-- [2026-11-16](log/2026-11-16.md): research dossier (RESEARCH, MODELS, ROADMAP)
+- [2026-11-16](log/2026-11-16.md): research dossier (RESEARCH, MODELS, ROADMAP), ethics review, rename to Career Compass, ADR 0015

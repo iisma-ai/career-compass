@@ -4,7 +4,7 @@ Researched Nov 2026. Levels: A official docs/meta, B large study, C small, D ven
 Method note: vendor pages were fetched directly where possible (what the vendor says = level D for validity claims, A only for factual product specs like price/length as stated by the owner). Prices change; reseller prices are not official. Everything below was true on the day fetched (Nov 2026).
 
 ## Question
-What do existing career-interest tools offer (length, method, evidence, price), and where can Carrier_helper credibly differentiate (adaptive length, explanations, "lost user" mode, free text)?
+What do existing career-interest tools offer (length, method, evidence, price), and where can Career Compass credibly differentiate (adaptive length, explanations, "lost user" mode, free text)?
 
 ## Key findings (per tool)
 
@@ -39,7 +39,7 @@ What do existing career-interest tools offer (length, method, evidence, price), 
 - Competitor "accuracy" claims are vendor-reported and not comparable to peer-reviewed hit rates.
 - Spain/EU: no authoritative list of public tests; need a targeted look at SEPE/Educaweb/regional orientation services and EU tools (e.g. Euroguidance/ESCO-based tools).
 
-## Implications: where Carrier_helper can differentiate (our interpretation)
+## Implications: where Career Compass can differentiate (our interpretation)
 1. **Adaptive length:** every free competitor uses a fixed form (30-60 items for validated ones, about 30 min for CareerExplorer). A CAT that gets to a stable top-k in about 20-30 items would be shorter than the SDS (250) and Strong (244) with documented precision (see note 02). Must be demonstrated in E4/E5.
 2. **Explanations:** vendor pages show scores and lists; explaining each match in terms of the user's own dimension scores and O*NET tasks is a clear gap. Needs user testing.
 3. **"Lost user" mode:** none of the tools reviewed advertises a path for people with no idea what they like (concrete-activity items, "don't know", exploration prompts). Hypothesis, no direct evidence in this review.

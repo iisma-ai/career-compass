@@ -26,7 +26,6 @@
 - [ ] Research-ethics approval before any research-mode study (0014)
 
 ## Next steps
-1. Decide faithful vs broadened results by gender (RESEARCH §10 Q4). This is a values decision for the project owner, and an ADR is needed before v1 copy.
 2. Primary-source checks of the `[UNVERIFIED]` items (RESEARCH §10, AI Act).
 3. E7c: name coverage (NER or broader rules) plus a held-out set written blind to the rules (ADR 0012).
 4. Negation handling for free text.

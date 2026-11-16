@@ -1,4 +1,4 @@
-# Carrier_helper — project memory
+# Career Compass — project memory
 
 ## Mission
 Help people find careers that fit their interests and passions — including people who are
@@ -36,7 +36,7 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
   amplified (STEM-core ×1.11, Psychology ×1.65), and items predict gender (AUC .84). Research-only.
 - E7 free-text matching: **not viable as pre-registered**. Retrieval is strong (.95 family / .86 occupation
   Hit@5, rejection threshold works), but gender/name-swap top-10 overlap is .73 < .90. Negation isn't handled.
-  E7b: rule-based demographic-cue stripping (`src/carrier_helper/text_cues.py`) is **proven against its bar**
+  E7b: rule-based demographic-cue stripping (`src/career_compass/text_cues.py`) is **proven against its bar**
   (held-out gated overlap .74 → .92 with no quality or rejection loss), but names only reach .84, rule coverage of new
   phrasings is 67%, and the test set isn't independent. Strip before embedding. Free text is still not user-facing (E7c next).
 - Ethics review (2026-11-15): release blockers are attribution (done: README), privacy/legal design + DPIA,
@@ -46,8 +46,9 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
   v1 = closed English pilot, questionnaire → families only (ADR 0013). The product stores nothing; pilot studies are a
   separate consented, pseudonymous, 18+ research tier (ADR 0014).
 - Ethics review of the dossier (2026-11-16): fixes applied. Added release blockers: AI Act Annex III(3) legal assessment,
-  counsellor-reviewed human-help signposting, and research-ethics approval before any study. Open values decision:
-  faithful vs broadened results by gender (RESEARCH §10 Q4), to be settled in an ADR before v1 copy is written.
+  counsellor-reviewed human-help signposting, and research-ethics approval before any study.
+- **Gender-blind design (ADR 0015, owner's decision):** gender is never an input, never inferred, never used to adjust
+  results; identical answers give identical results. Gender DIF items are replaced; gender is used only in offline audits.
 - Process rule: commit each pre-registration on its own **before** running the experiment.
 
 _Update this section whenever the phase changes._
@@ -60,7 +61,7 @@ docs/                project journal: decisions/ (ADRs), log/ (dated steps), env
 research/            docs, notes/, feasibility/ (scripts), findings/ (results)
 data/raw/<source>/   untouched downloads + SOURCE.md   (git-ignored, untrusted)
 data/processed/      derived parquet/CSV tables        (git-ignored)
-src/carrier_helper/  package: data/ (build scripts), matching.py (person↔occupation matching; reuse it)
+src/career_compass/  package: data/ (build scripts), matching.py (person↔occupation matching; reuse it)
 notebooks/           exploration only — never the source of truth
 .claude/agents/      project subagents
 .claude/skills/      project skills
@@ -91,7 +92,8 @@ notebooks/           exploration only — never the source of truth
 4. **Licensing:** record every source's license. O*NET is CC BY 4.0 and requires attribution.
 5. **Privacy:** no real user data is collected until a privacy design exists (GDPR, users under 16).
 6. **Honesty:** state limits plainly (US-centric data, sample bias, interests ≠ satisfaction).
-7. **Fairness:** check recommendations for gender/cultural bias before any user-facing release.
+7. **Fairness:** check recommendations for gender/cultural bias before any user-facing release. Design is gender-blind
+   (ADR 0015): no demographic inputs or demographic-conditioned logic anywhere in the product.
 8. **Document everything in `docs/`** (required, not optional). See `docs/README.md` for the format.
    - Every **decision** (method, threshold, dataset, tool, scope, design choice, reversal) gets an ADR in
      `docs/decisions/NNNN-<slug>.md`: context, options considered, decision, consequences, evidence links.

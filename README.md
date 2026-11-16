@@ -49,7 +49,7 @@ No raw or person-level data is stored in this repository. Each dataset is downlo
 > endorsed, or tested these modifications.
 
 Changes made to O\*NET data, such as derived occupation families, centred profiles and match scores, are
-documented in `research/DATA_SOURCES.md` and the scripts in `src/carrier_helper/data/` and
+documented in `research/DATA_SOURCES.md` and the scripts in `src/career_compass/data/` and
 `research/feasibility/`.
 License text source: https://www.onetcenter.org/license_db.html
 

@@ -37,7 +37,7 @@ All scripts run with `python -I` from the repo root using the uv environment (`u
   - Large elapse-time outliers; `familysize` also has absurd values (set to NaN outside 0-30 in the processed file).
   - 17.3% (13,882) of the kept rows are minors (13-17); privacy and GDPR rules apply to any product use.
   - Test is 48 items at one page, 8 per scale; scale means differ (R lowest ~2.1, S highest ~3.3).
-- **Processing script:** `src/carrier_helper/data/build_riasec_people.py` -> `data/processed/riasec_people.parquet`
+- **Processing script:** `src/career_compass/data/build_riasec_people.py` -> `data/processed/riasec_people.parquet`
   (80,085 rows; shared-network rows dropped as per skill) and `riasec_people_incl_shared_network.parquet` (115,974 rows;
   adds flag `shared_network`). Exploration script: `research/feasibility/explore_openpsych.py`.
   Added columns: `R I A S E C` (mean of 8 items, >= 6 answered), `n_missing_items`, `minor_13_17`, `vcl_real_words_checked`, `major_clean`, `shared_network`, `row_id` (raw row position).
@@ -86,7 +86,7 @@ Cleaning log (sequential):
   - Job Zone 1 no longer exists as its own value; zone 2 is labelled "Job Zone 1-2". No occupation has zone 1.
   - OI distribution is very non-uniform: many 1.0 and 7.0 values (rescaled), mean R 4.57, C 4.53 vs A 1.94.
   - US occupations only; no wages (BLS join needed).
-- **Processing script:** `src/carrier_helper/data/build_onet_occupations.py` -> `data/processed/onet_occupations.parquet`
+- **Processing script:** `src/career_compass/data/build_onet_occupations.py` -> `data/processed/onet_occupations.parquet`
   (923 rows; columns `onet_soc_code, title, R, I, A, S, E, C, job_zone, holland_code (from IH), oi_domain_source, description`).
 - **Sanity checks:** no NaN in R-C or job_zone; ranges R/I/A/S/E 1.00-7.00, C 1.61-7.00; no duplicate codes; first letter of IH code equals argmax of OI in 99.9% rows.
   Spot checks: Biochemists and Biophysicists = I (7.0), Actors = A (7.0), Accountants and Auditors = C (7.0), Registered Nurses = S (top), Electricians = R, Sales Managers = E.

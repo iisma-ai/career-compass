@@ -3,7 +3,7 @@
 Run: uv run python -I research/feasibility/e7b_cue_stripping.py --seed 42     (smoke: --quick)
 
 Fixed configuration from E7 (no reselection): all-MiniLM-L6-v2, index variant (d), cosine, top-10. Every query goes
-through carrier_helper.text_cues.strip_demographic_cues() before embedding; "raw" is the E7 behaviour, computed in
+through career_compass.text_cues.strip_demographic_cues() before embedding; "raw" is the E7 behaviour, computed in
 the same run. Reuses E7's loaders, metrics and rejection procedure unchanged.
 Output: research/findings/e7b_cue_stripping.json and e7b_*.png
 """
@@ -24,7 +24,7 @@ sys.path.insert(0, str(ROOT / "research" / "feasibility"))  # python -I drops th
 sys.path.insert(0, str(ROOT / "src"))
 import e7_free_text_matching as E
 
-from carrier_helper.text_cues import strip_demographic_cues
+from career_compass.text_cues import strip_demographic_cues
 
 FINDINGS = ROOT / "research" / "findings"
 HELDOUT = FINDINGS / "e7b_heldout_pairs.csv"

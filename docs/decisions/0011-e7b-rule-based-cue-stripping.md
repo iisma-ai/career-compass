@@ -17,7 +17,7 @@ gender, age or origin, so they can be removed from free text before matching.
    Rejected for privacy (minors).
 
 ## Decision
-Option 1, implemented in `src/carrier_helper/text_cues.py`. Gendered self-descriptions are mapped to a neutral noun
+Option 1, implemented in `src/career_compass/text_cues.py`. Gendered self-descriptions are mapped to a neutral noun
 ("person" / "persona") instead of being deleted, so both members of a pair become identical without fragile grammar
 surgery. Name, age and origin introductions are deleted. Third-person pronouns become they/their/them. The stripper
 was developed on the **text** of E7's pairs only and **frozen in the pre-registration commit**. The held-out set is

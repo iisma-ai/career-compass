@@ -1,4 +1,4 @@
-# Carrier_helper — Roadmap (v0 → v3)
+# Career Compass — Roadmap (v0 → v3)
 
 Assembled 2026-11-16. Phases follow CLAUDE.md:
 - v1 covers careers only.
@@ -73,7 +73,7 @@ The full specification is in [MODELS.md](MODELS.md).
 | 1.3 | Live vs simulated check | Live top-3 family agreement no more than .05 below the replay value. This is a lenient target: one CAT study saw a drop of up to .18 from simulated to live (note 02, C) | .63–.64 in replay (E4) |
 | 1.4 | Family labels and explanations | Counsellor review: ≥ 80% of family labels judged accurate | Not done |
 | 1.5 | Lost-user flow | Gated users: the usual broad-families flow vs the new flow. No arm is one already known to be worse (no ranked-list arm for gated users). The new flow increases career decision self-efficacy by a pre-registered effect size | Design only |
-| 1.6 | Fairness audit of outputs | Pre-registered: (a) per-group top-10 and family agreement within .05, with n per cell from a power analysis, and a named mitigation for any gap (e.g. the differentiation gate); (b) R-top and S-top family exposure by gender, reported with CIs; (c) lost-user gate rate by group. The product decision (faithful vs broadened results; RESEARCH §10 Q4) is recorded in an ADR before release | Boys 13–17 top-10 .46 vs .55 overall (gap .09, E5); R-top share 1.7% vs 8.9% (E3) |
+| 1.6 | Fairness audit of outputs | Pre-registered: (a) per-group top-10 and family agreement within .05, with n per cell from a power analysis, and a named mitigation for any gap (e.g. the differentiation gate); (b) R-top and S-top family exposure by gender, reported with CIs; (c) lost-user gate rate by group. (d) gender-blind check (ADR 0015): product inputs contain no demographic field and no code path reads one; any mitigation is gender-blind (item changes, the gate), never gender-conditioned | Boys 13–17 top-10 .46 vs .55 overall (gap .09, E5); R-top share 1.7% vs 8.9% (E3) |
 | 1.7 | Usability pilot (n set by a power analysis) | Median completion ≤ 6 min. Usefulness is judged by the rating gap between real families and a **shuffled-families control** (to guard against the Barnum effect), not by an absolute percentage. Never reported as accuracy | Not done |
 
 **Not in v1:** CAT, free text, field-of-study suggestions, accounts, feedback learning.

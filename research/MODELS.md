@@ -1,4 +1,4 @@
-# Carrier_helper — Model specification (v0 → v1)
+# Career Compass — Model specification (v0 → v1)
 
 Assembled 2026-11-16. This document specifies each model layer: its inputs, outputs, maths, how it was validated, and its
 status. The evidence for each choice is in `research/findings/` (level E unless noted), and the decisions are in
@@ -15,8 +15,8 @@ Status labels:
 | L1 | Item bank and questionnaire form | Specified (items need replacing before release) | — | E1, E2, E4 |
 | L2 | User model: GRM + EAP profile estimate | Specified | `research/feasibility/e4_cat_simulation.py` (research) | E4 |
 | L3 | Lost-user detection and flow | Trigger specified, flow is design only | — | E1, E4, E5 |
-| L4 | Matching, families and re-ranking | Specified | `src/carrier_helper/matching.py` | E3, E5 |
-| L5 | Free-text layer | Research-only | `src/carrier_helper/text_cues.py`, `research/feasibility/e7*.py` | E7, E7b |
+| L4 | Matching, families and re-ranking | Specified | `src/career_compass/matching.py` | E3, E5 |
+| L5 | Free-text layer | Research-only | `src/career_compass/text_cues.py`, `research/feasibility/e7*.py` | E7, E7b |
 | L6 | Explanations | Design | — | E2, E3 |
 | L7 | Feedback learning | Not started (blocked by privacy design) | — | — |
 | L8 | Field-of-study prediction | Research-only (v3) | `research/feasibility/e6_major_prediction.py` | E6 |
@@ -193,7 +193,8 @@ People–Things = 2R + I − A − 2S − E + C and Data–Ideas = 1.73(E + C �
 ([Strong supplement](https://strongsupplement.themyersbriggs.com/chapter4.html), D; [e2](findings/e2_structure.md)).
 These are vendor formulas `[UNVERIFIED against Prediger's original weights]`. The product uses the angle projection, so it
 doesn't depend on them.
-Things–People is the axis carrying the gender gap (d = .67), so explanations must not frame any career by gender.
+Things–People is the axis carrying the gender gap (d = .67), so explanations must not frame any career by gender or
+mention the user's gender (ADR 0015).
 Status: no user testing yet. Copy must follow the honesty rules in RESEARCH.md §9.
 
 ## L7 — Feedback learning (not started)

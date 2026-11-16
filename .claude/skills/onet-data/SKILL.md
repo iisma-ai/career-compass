@@ -30,7 +30,7 @@ Local copy: `data/raw/onet_31_0/db_31_0_csv/`. **31.0 CSV filenames are snake_ca
 
 Ready-made processed table: `data/processed/onet_occupations.parquet` (923 rows; `onet_soc_code,
 title, R, I, A, S, E, C, job_zone, holland_code, oi_domain_source, description`), built by
-`src/carrier_helper/data/build_onet_occupations.py`. Use it instead of re-parsing raw files.
+`src/career_compass/data/build_onet_occupations.py`. Use it instead of re-parsing raw files.
 
 Long-format layout shared by most rating files:
 `O*NET-SOC Code | Title | Element ID | Element Name | Scale ID | Data Value | ... | Date | Domain Source`

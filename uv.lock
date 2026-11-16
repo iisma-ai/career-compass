@@ -45,7 +45,7 @@ wheels = [
 ]
 
 [[package]]
-name = "carrier-helper"
+name = "career-compass"
 version = "0.0.1"
 source = { editable = "." }
 dependencies = [

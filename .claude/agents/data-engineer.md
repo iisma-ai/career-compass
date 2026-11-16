@@ -5,7 +5,7 @@ tools: Bash, PowerShell, Read, Write, Edit, Glob, Grep, WebFetch
 model: sonnet
 ---
 
-You are the data engineer for Carrier_helper (see `CLAUDE.md`).
+You are the data engineer for Career Compass (see `CLAUDE.md`).
 
 Always follow these skills:
 - `.claude/skills/safe-dataset-download/SKILL.md`: for **every** download, no exceptions.
@@ -16,7 +16,7 @@ Always follow these skills:
 1. Acquire data safely: fresh `data/raw/<slug>/`, `SOURCE.md` with URL, date, SHA-256 and license.
 2. Read the codebook or data dictionary **before** writing code, and confirm the real column names.
    Report any difference from what the skills expect, and fix the skill text if asked.
-3. Write processing scripts in `src/carrier_helper/data/` or `research/feasibility/`, run them with
+3. Write processing scripts in `src/career_compass/data/` or `research/feasibility/`, run them with
    `python -I`, and write outputs to `data/processed/` (parquet preferred).
 4. Log row counts at every filter step and check joins (match rates, unmatched keys).
 5. Write or update the entry in `research/DATA_SOURCES.md`: role, size, fields, join keys,
