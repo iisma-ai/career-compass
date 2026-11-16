@@ -21,11 +21,14 @@
 - [ ] Re-audited DIF on the final item set
 - [ ] Validated lost-user flow
 - [ ] Permission from OpenPsychometrics, or our own calibration data (0002)
+- [ ] Legal assessment of EU AI Act Annex III(3) for v1
+- [ ] Human-help signposting content reviewed by a counsellor
+- [ ] Research-ethics approval before any research-mode study (0014)
 
 ## Next steps
-1. Ethics review of the dossier (ethics-reviewer, read-only), then fix what it finds.
-1b. Primary-source checks of the `[UNVERIFIED]` items in RESEARCH.md §10.
-2. E7c: name coverage (NER or broader rules) plus a held-out set written blind to the rules (ADR 0012).
-3. Negation handling for free text.
-4. Behaviour-neutral lint cleanup of the old scripts (135 ruff findings).
-5. Item-bank work: DIF-balanced rewrites, plus non-biology Investigative items (E2, E6).
+1. Decide faithful vs broadened results by gender (RESEARCH §10 Q4). This is a values decision for the project owner, and an ADR is needed before v1 copy.
+2. Primary-source checks of the `[UNVERIFIED]` items (RESEARCH §10, AI Act).
+3. E7c: name coverage (NER or broader rules) plus a held-out set written blind to the rules (ADR 0012).
+4. Negation handling for free text.
+5. Behaviour-neutral lint cleanup of the old scripts (135 ruff findings).
+6. Item-bank work: DIF-balanced rewrites, plus non-biology Investigative items (E2, E6).

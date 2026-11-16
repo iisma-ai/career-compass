@@ -13,18 +13,23 @@ checked against a primary source. Lines that start with *Interpretation:* are ou
 
 ## 1. Executive summary
 
-**Verdict: feasible, with constraints that change the product design.** A short questionnaire can estimate a RIASEC interest
-profile and match it to O\*NET occupations well enough to suggest **career families worth exploring**. It cannot produce a
-precise ranked list of jobs. Before anything reaches users, several release blockers must be cleared (section 9).
+**Verdict: feasible as an exploration aid at the level of career families, with constraints that change the product
+design. Not validated against career outcomes or with real users.** A short questionnaire can estimate a RIASEC interest
+profile and match it to O\*NET occupations, giving family-level results about as stable as the full test's own (E4, E5).
+That is enough to suggest **career families worth exploring**. It cannot produce a precise ranked list of jobs. Before
+anything reaches users, several release blockers must be cleared (section 9).
+
+In this document, "proven" or "bar met" means a pre-registered feasibility bar was met in our own data. It does not mean
+the product is valid or accurate for users.
 
 | Question | Answer | Evidence |
 |---|---|---|
-| Is the model (Holland RIASEC) sound? | Yes as a structure. The hexagon order holds in our data (E2). Its link to outcomes is modest: congruence r = .32 with performance, and only ρ ≈ .08–.20 with satisfaction. | A + E |
+| Is the model (Holland RIASEC) sound? | Partly. The hexagon order holds **in this sample** (E2), but absolute CFA fit is poor (CFI ≈ .80), scalar invariance fails, and cross-cultural fit is weak in the literature. Its link to outcomes is modest: congruence r = .32 with performance, and only ρ ≈ .08–.20 with satisfaction. | A + E |
 | Is there usable data? | Yes for research: 80,085 clean questionnaire rows (α .83–.90), and O\*NET 31.0 for 923 occupations. The questionnaire data has **no license**, so it is research-only. | E1, DATA_SOURCES |
-| How many questions? | About 12 items give scale scores at r ≥ .90 with the full test. **24 items** give family-level results about as stable as the full 48-item test. An adaptive test (CAT) adds nothing with this item bank. | E4 |
-| How precise are results? | Not precise at the job level. Even the full test reproduces only about 55% of its own top-10 jobs under answer noise. Families are more stable (top-10 family hit about .70). | E5 |
+| How many questions? | About 12 items give scale scores at r ≥ .90 with the full test. **24 items** agree with the full 48-item test on the top-3 families .63–.64 of the time. That is about the same as the full test's agreement with itself under answer noise (about .60), though the two are different measures. An adaptive test (CAT) adds nothing with this item bank. | E4, E5 |
+| How precise are results? | Not precise at the job level. Even the full test reproduces only about 55% of its own top-10 jobs under answer noise. Families are more stable: the top-10 family hit rate is .74 for the r ≥ .80 families we show users, and .697 for the finer r ≥ .90 families. | E5 |
 | What to show users | An **unordered set of about 3 career families** with 2–3 example jobs each. No ranks or match percentages. | E3, E5 |
-| Can free text help? | Retrieval works well (top-5 family hit .95), and removing names, gender and age from the text before matching fixes most of the bias in our tests. Negation is not handled, so free text stays optional and research-only. | E7, E7b |
+| Can free text help? | Retrieval works well (top-5 family hit .95). Stripping names, gender and age cues before matching raised counterfactual overlap from .74 to .92, but on a small (18-pair) test set written by the same author as the rules. Names (.84) and unseen phrasings are still weak, and negation is not handled. Free text stays research-only. | E7, E7b |
 | Can it predict a university major? | Better than baselines (top-3 .565 vs .40), but it **amplifies gender gaps**, so it stays research-only (v3). | E6 |
 | Is it fair? | Not yet shown. Interests themselves differ by gender (Things–People d = .93 in the literature, .67 here). Matching faithfully passes that difference into the results. Some items show gender DIF. | A + E |
 
@@ -147,12 +152,12 @@ judged mis-specified. The original verdict stands, and the discussion explains w
 |---|---|---|---|---|
 | E1 | Is the questionnaire data usable? | **Proven** | 80,085 clean rows; α .831–.898; every gender × age cell n ≥ 3,997 | [e1](findings/e1_data_audit.md) |
 | E2 | Do 6 factors and the hexagon hold? | Factors promising, hexagon **proven**, archetypes proven but soft | Metric invariance holds, scalar fails; 8 items flagged (3 weak, 5 gender DIF) | [e2](findings/e2_structure.md) |
-| E3 | How differentiated is the occupation space? | **Proven** (lenient bar) | Pearson median top-1 r .928; only about 100–170 distinct profiles; exposure Gini .77; 28 A-top occupations | [e3](findings/e3_occupation_space.md) |
+| E3 | How differentiated is the occupation space? | Bar met (lenient bar) | Pearson median top-1 r .928; only about 100–170 distinct profiles; exposure Gini .77; 28 A-top occupations | [e3](findings/e3_occupation_space.md) |
 | E4 | How few questions are enough? | **Not viable** as written (bar unreachable for any test) | 12 items → r .915; 24 items → r .965–.968, top-3 family .63–.64; CAT gain ≤ +.005 r | [e4](findings/e4_cat_simulation.md) |
 | E5 | How stable are recommendations? | **Promising** | Top-10 overlap .553, family hit .697; retest-like .42; flat profiles .17 | [e5](findings/e5_stability.md) |
-| E6 | Can answers predict major family? | **Proven** (research-only) | Top-3 .565 vs majority .40, centroid .32; Psychology gap ×1.65; items predict gender (AUC .84) | [e6](findings/e6_major_prediction.md) |
+| E6 | Can answers predict major family? | Bar met (research-only) | Top-3 .565 vs majority .40, centroid .32; Psychology gap ×1.65; items predict gender (AUC .84) | [e6](findings/e6_major_prediction.md) |
 | E7 | Free text → occupations? | **Not viable** (bias bar) | Family Hit@5 .95, occupation .86; +21 points over TF-IDF; rejection FRR 3.9%; gender/name overlap .733 < .90 | [e7](findings/e7_free_text_matching.md) |
-| E7b | Does stripping demographic cues fix E7's bias? | **Proven** (not independent) | Held-out overlap .739 → .922 with no quality loss; names .838; rule coverage 67% | [e7b](findings/e7b_cue_stripping.md) |
+| E7b | Does stripping demographic cues fix E7's bias? | Bar met (non-independent test set) | Held-out overlap .739 → .922 [CI .84, .99] with no quality loss. It is 1.0 by construction wherever a rule fired (67% of pairs). Names .838 | [e7b](findings/e7b_cue_stripping.md) |
 
 What this adds up to (*interpretation*):
 1. **Measurement is adequate.** Scales are reliable, the hexagon holds and 24 items track the full test closely (E1, E2, E4).
@@ -227,7 +232,10 @@ The ethics review (2026-11-15) is summarised in CLAUDE.md and in E7 Addendum A. 
 | Blocker | Status | Why |
 |---|---|---|
 | O\*NET attribution | Done (README) | CC BY 4.0 |
-| Privacy/legal design + DPIA | Open | Profiling of minors. GDPR Art. 8: consent age 16 by default, 13 minimum ([GDPR Art. 8](https://gdpr-info.eu/art-8-gdpr/), A). Spain: 14 ([LOPDGDD Art. 7](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673), A). Art. 22, DPIA and the AI Act are `[UNVERIFIED]` and need a lawyer or DPO. |
+| Privacy/legal design + DPIA | Open | Profiling of minors. GDPR Art. 8: consent age 16 by default, 13 minimum ([GDPR Art. 8](https://gdpr-info.eu/art-8-gdpr/), A). Spain: 14 ([LOPDGDD Art. 7](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673), A). Art. 8 applies only where consent is the legal basis. Open DPIA items: the legal basis (consent vs legitimate interest), child-friendly transparency (Art. 12 / Recital 58 `[UNVERIFIED]`), consent ages by user country, age assurance, and Art. 22 `[UNVERIFIED]`. "Processed in memory" is still processing of personal data. A lawyer or DPO is needed. |
+| Legal assessment: EU AI Act | Open | Annex III(3) (education and vocational training) may apply to v1 as well as v3. `[UNVERIFIED: secondary sources only; legal review needed]` |
+| Research-ethics approval for any pilot study | Open | Pilot milestones need consented, pseudonymous research data, a separate tier from the product (ADR 0014) |
+| Signposting content reviewed by a counsellor | Open | Lost-user and low-elevation results must link to vetted human help (MODELS L3) |
 | Re-audited DIF on the final item set | Open | E2 found gender DIF; replacement items aren't written yet |
 | Validated lost-user flow | Open | Design only. Indecision is linked to low self-efficacy, not just missing information ([Udayar et al. 2020](https://serval.unil.ch/fr/notice/serval:BIB_AF059FD4623A), A) |
 | Permission for OpenPsychometrics-derived parameters | Open | No license (ADR 0002). Alternatively, use our own calibration sample |
@@ -240,7 +248,15 @@ Other risks:
 - **Free text.** It can contain sensitive disclosures (self-harm, abuse), so it needs a signposting response. Process it in
   memory only, with no logging (E7 Implications 7).
 - **Minors' interests change** (Low et al. 2005). Present results as a snapshot and invite a retest.
-- **AI Act.** Steering learners in education may be high-risk (Annex III point 3, cited in E6). This is why E6 stays research-only.
+- **AI Act.** EU AI Act Annex III(3) (education and vocational training) may apply. This would cover E6 and possibly the v1
+  career tool for students. `[UNVERIFIED: secondary sources only; legal review needed for v1 as well as v3]`. Secondary sources
+  also report a deferral of Annex III obligations (the "Digital Omnibus") `[UNVERIFIED]`.
+- **Cue stripping is not fairness.** E7b shows invariance only for explicit gender, name, age and origin cues in English and a
+  few Spanish phrasings. It does not cover lower-case or non-Latin names, ethnicity, religion, disability or dialect. The
+  interest content itself still carries gender signal (the items predict gender at AUC .84, E6). Users are not told their text was
+  altered, so if free text ever ships, it must say that names and gender or age words are ignored.
+- **Wellbeing.** Low elevation (11%) can reflect disengagement or low mood, not only indecision. Results must link to human
+  help, and "lost" is never a user-facing label (MODELS L3).
 
 ---
 
@@ -250,8 +266,9 @@ Other risks:
 2. Does the hexagon/RIASEC structure hold in Spanish and for Spanish/EU users? (Untested; Rounds & Tracey 1996.)
 3. Exact numbers that still need a primary source: Hoff et al. 2020 ρ; O\*NET Mini-IP / Short Form reliability; Prediger
    weights; the Morris 2016 correction; Vocation Compass accuracy definition (notes 01–03, 05, 06).
-4. Should the product counter gender differences in results (e.g. a counter-stereotypic slot), or only remove measurement
-   bias? (Values question for the ethics review.)
+4. Should the product counter gender differences in results (e.g. a "careers you might not have considered" slot), or only
+   remove measurement bias? This values question must be decided in an ADR **before v1 copy is written**. Minimum rule
+   already in force: women and men with the same answers get identical results, and any broadening applies to everyone.
 5. What lost-user flow improves career decision self-efficacy? (No direct evidence found.)
 6. Can permission be obtained from OpenPsychometrics, or do we need our own calibration sample (size, consent)?
 7. ESCO ↔ O\*NET crosswalk quality for EU users (note 04).

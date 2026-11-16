@@ -1,5 +1,5 @@
 # 0013 — v1 scope: closed English pilot, questionnaire only, no stored data
-Date: 2026-11-16        Status: Accepted
+Date: 2026-11-16        Status: Accepted. Data-handling part superseded by 0014 (the product stores nothing; research studies are a separate consented tier)
 
 ## Context
 When assembling the dossier we had to decide what v1 contains. The evidence supports the questionnaire → families pipeline

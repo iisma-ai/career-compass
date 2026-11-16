@@ -43,7 +43,11 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
   re-audited DIF on the final item set, a validated lost-user flow, and permission before shipping anything
   derived from OpenPsychometrics. Never quote r or match scores as accuracy.
 - Dossier assembled 2026-11-16: `research/RESEARCH.md` (verdict: feasible with constraints), `MODELS.md`, `ROADMAP.md`.
-  v1 = closed English pilot, questionnaire → families only (ADR 0013). Next: ethics review of the dossier.
+  v1 = closed English pilot, questionnaire → families only (ADR 0013). The product stores nothing; pilot studies are a
+  separate consented, pseudonymous, 18+ research tier (ADR 0014).
+- Ethics review of the dossier (2026-11-16): fixes applied. Added release blockers: AI Act Annex III(3) legal assessment,
+  counsellor-reviewed human-help signposting, and research-ethics approval before any study. Open values decision:
+  faithful vs broadened results by gender (RESEARCH §10 Q4), to be settled in an ADR before v1 copy is written.
 - Process rule: commit each pre-registration on its own **before** running the experiment.
 
 _Update this section whenever the phase changes._

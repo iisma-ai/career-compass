@@ -24,7 +24,9 @@ Status labels:
 ---
 
 ## L1 — Item bank and questionnaire form
-- **Bank:** OpenPsychometrics 48-item RIASEC (8 per scale, 5-point Likert). Only research use is allowed (ADR 0002).
+- **Bank:** OpenPsychometrics 48-item RIASEC (8 per scale, 5-point Likert). Only research use is allowed (ADR 0002). The item
+  order, GRM parameters (L2) and families (L4) below are all derived from this data. **None of them can ship until release
+  blocker 2 is cleared** (permission, or our own calibration).
 - **Form (v1):** a **fixed 24-item form**, 4 items per scale, in content-balanced round-robin order (R-I-A-S-E-C), ordered by
   discrimination over the 40 retained items. The starter items are R5, I5, A4, S5, E6, C8. The full order is `best_fixed_order` in
   `research/findings/e4_cat_simulation.json`. An optional "refine" step extends the form to 30 items. The cap is 40 items. ([e4](findings/e4_cat_simulation.md), ADR 0005)
@@ -63,7 +65,8 @@ full-scale raw profile* p ∈ [1,5]^6 (used for matching), elevation and differe
   | 24 | .965–.968 | .63–.64 | .83 |
   | 30 | .98 | .68 | — |
 
-  The full test's own ceiling under SEM noise is about .60 for top-3 families (E5). These numbers are replay, not live
+  The full test's own ceiling under SEM noise is about .60 for top-3 families (E5). That is a different quantity
+  (stability under noise, not agreement with the full test), so it is not an upper bound for the column above. These numbers are replay, not live
   administration, so expect lower live agreement (note 02: .73–.91 live vs .91–.97 simulated, C).
 - **Why not CAT:** with 8 items per scale, adaptive selection beat the best fixed order by at most +.005 r. SE-based stopping
   doesn't work with this bank: SE .30 is never reached, and SE .40 is not reached for 54% of people. Keep the selector interface,
@@ -87,7 +90,12 @@ full-scale raw profile* p ∈ [1,5]^6 (used for matching), elevation and differe
   - a wider and more diverse set of families;
   - explicit uncertainty wording;
   - concrete next steps (try-outs, activities);
-  - a written summary for a counsellor.
+  - a written summary for a counsellor;
+  - **human-help signposting (required):** every result page links to a vetted list of human help (school or career
+    counsellor, national youth helpline), localised by country. When elevation is low, add a non-diagnostic line such as
+    "Feeling uninterested in everything can be worth talking to someone about." This content must be reviewed by a
+    counsellor before release.
+  - "Lost" is an internal name only and is never shown to users.
 
   Rationale: indecision relates most strongly to low process self-efficacy, not only to missing information
   ([Udayar et al. 2020](https://serval.unil.ch/fr/notice/serval:BIB_AF059FD4623A), A).
@@ -108,13 +116,16 @@ full-scale raw profile* p ∈ [1,5]^6 (used for matching), elevation and differe
 
   ([e3](findings/e3_occupation_space.md), ADR 0004)
 - **Families:** complete-linkage clusters in which every within-family pair of occupations has r ≥ .80. This gives 101 families
-  (`research/findings/e3_families.csv`, column `family_r80`). They are the most stable useful granularity: top-10 family hit .74,
-  top-3 overlap .60. Families at r ≥ .90 (172) are too fine, and at r ≥ .50 (36) too broad. Family names need hand-written
+  (`research/findings/e3_families.csv`, column `family_r80`). They are the most stable useful granularity: top-10 family hit .74 and
+  top-3 overlap .60 at r ≥ .80 (E5 family-granularity table). The .697 quoted elsewhere is the family hit rate for the finer
+  r ≥ .90 families. Families at r ≥ .90 (172) are too fine, and at r ≥ .50 (36) too broad. Family names need hand-written
   user-facing labels. ([e5](findings/e5_stability.md))
 - **Diversity:** cap the number of occupations per family in a list at 2. This takes a top-10 from 5.3 to 6.6 families at a
   cost of about −.01 r. It doesn't fix catalogue exposure (Gini .77), which needs catalogue work (ESCO, O\*NET specific interest areas).
 - **Job-zone filter (user-visible):** shape is confounded with preparation (V = .45). Without a filter, S/I users only see job
   zone ≈ 4.2 careers. Offer "less / more preparation" and match within the chosen range. ([e3](findings/e3_occupation_space.md))
+  - The **default is all job zones**, and the user can narrow it.
+  - High-preparation careers are never labelled "not for you". Show the preparation needed and the pathways to it.
 - **Ordering within a family:** by criteria the user can see (preparation, wages, outlook), not by small r differences (E5).
 - **Thin pools:**
   - A-top users have only 28 A-top occupations, in 11 families. Broaden the pool with the second letter and explain why.
@@ -128,7 +139,8 @@ full-scale raw profile* p ∈ [1,5]^6 (used for matching), elevation and differe
 1. **Cue stripping:** `strip_demographic_cues(text)` is a deterministic regex pipeline. It removes name, age and origin
    introductions, maps gendered and age self-descriptions to "person", and rewrites she/he → they and kinship nouns → neutral
    nouns. The input is never stored. ([e7b](findings/e7b_cue_stripping.md), ADR 0011/0012)
-2. **Retrieval:** embed the text with `sentence-transformers/all-MiniLM-L6-v2` (Apache-2.0, local inference). Rank by cosine
+2. **Retrieval:** embed the text with `sentence-transformers/all-MiniLM-L6-v2` (Apache-2.0 per its model card, checked
+   2026-11-15; training-data provenance not reviewed; local inference). Rank by cosine
    against the index text "title. Also called: <≤10 reported titles>. description. Tasks: <top-5 tasks by importance>" (variant d).
    Take the top 10. For Spanish, use `paraphrase-multilingual-MiniLM-L12-v2`.
 3. **Rejection:** if the top-1 cosine is below 0.262 (MiniLM; 0.332 for the multilingual model), return "no good match". This must be
@@ -147,7 +159,18 @@ full-scale raw profile* p ∈ [1,5]^6 (used for matching), elevation and differe
 | Gain over TF-IDF | +21 points |
 | Held-out FRR / off-topic rejection | 4.8% / 91.2% |
 | Counterfactual overlap, gender + name | .922 (names .838) |
-| Blind-rated sensible lists | 85% |
+| Lists rated "sensible" (rater = the experimenter, not independent) | 85% |
+
+How to read these numbers:
+- Overlap is 1.0 by construction wherever a rule fires (67% of held-out pairs). The CI's lower bound is .84.
+- The test set was written by the same author as the rules, and covers explicit cues only.
+
+Known limits of the stripper (E7b; `text_cues.py`):
+- Names are recognised only if capitalised (lower-case names typed by teens are missed).
+- It does not cover non-Latin scripts, multi-part names, ethnicity, religion, disability or dialect.
+- Spanish handling is partial: no noun or adjective gender agreement (enfermera/enfermero).
+- It removes identity words silently. If shipped, tell users that names and gender or age words are ignored, and test name
+  handling by script and case.
 
 **Blockers before users:**
 - Negation reduces the negated type but almost never reverses it (E7 M4).
@@ -160,11 +183,16 @@ full-scale raw profile* p ∈ [1,5]^6 (used for matching), elevation and differe
 For each family shown, the explanation:
 1. names the user's two strongest types and where they sit on the hexagon / Prediger map;
 2. names the family's typical tasks (O\*NET task statements) and preparation level;
-3. says what the match does **not** mean (not ability, not guaranteed satisfaction).
+3. says what the match does **not** mean: not ability, and not guaranteed satisfaction (the interest–satisfaction link is
+   weak, ρ ≈ .08–.20; RESEARCH §2.2).
+4. carries the required data copy: "based on US occupational data (O\*NET)" and "occupation interest ratings are estimated".
+   Include the O\*NET attribution on the site and on any derived files (family labels, example lists).
 
 Prediger axes are computed as the angle projection on the hexagon. This is equivalent (|r| = 1.00) to the vendor formulas
 People–Things = 2R + I − A − 2S − E + C and Data–Ideas = 1.73(E + C − I − A)
 ([Strong supplement](https://strongsupplement.themyersbriggs.com/chapter4.html), D; [e2](findings/e2_structure.md)).
+These are vendor formulas `[UNVERIFIED against Prediger's original weights]`. The product uses the angle projection, so it
+doesn't depend on them.
 Things–People is the axis carrying the gender gap (d = .67), so explanations must not frame any career by gender.
 Status: no user testing yet. Copy must follow the honesty rules in RESEARCH.md §9.
 
@@ -187,7 +215,7 @@ data; note 03). If it is ever used, it must be audited for popularity bias, beca
   - The items alone predict gender at AUC .84.
 
   Adding demographics makes all of this worse, so demographics are never inputs. Any product use requires de-amplification,
-  a re-audit and an AI Act high-risk assessment. ([e6](findings/e6_major_prediction.md), ADR 0008)
+  a re-audit and a legal assessment under EU AI Act Annex III(3) `[UNVERIFIED: secondary sources only]`. ([e6](findings/e6_major_prediction.md), ADR 0008)
 
 ---
 
