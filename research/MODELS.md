@@ -12,10 +12,10 @@ Status labels:
 
 | # | Layer | Status | Code | Evidence |
 |---|---|---|---|---|
-| L1 | Item bank and questionnaire form | Specified (items need replacing before release) | — | E1, E2, E4 |
-| L2 | User model: GRM + EAP profile estimate | Specified | `research/feasibility/e4_cat_simulation.py` (research) | E4 |
-| L3 | Lost-user detection and flow | Trigger specified, flow is design only | — | E1, E4, E5 |
-| L4 | Matching, families and re-ranking | Specified | `src/career_compass/matching.py` | E3, E5 |
+| L1 | Item bank and questionnaire form | Specified (items need replacing before release) | `src/career_compass/engine.py` (`build_fixed_form`) | E1, E2, E4 |
+| L2 | User model: GRM + EAP profile estimate | Specified | `src/career_compass/engine.py` (v1; ADR 0020/0021), `research/feasibility/e4_cat_simulation.py` (research) | E4 |
+| L3 | Lost-user detection and flow | Trigger specified, flow is design only | `engine.gate` (trigger only) | E1, E4, E5 |
+| L4 | Matching, families and re-ranking | Specified | `src/career_compass/matching.py`, `engine.recommend` | E3, E5 |
 | L5 | Free-text layer | Research-only | `src/career_compass/text_cues.py` (v2), `research/feasibility/e7*.py` | E7, E7b, E7c |
 | L6 | Explanations | Design | — | E2, E3 |
 | L7 | Feedback learning | Not started (blocked by privacy design) | — | — |
@@ -29,7 +29,10 @@ Status labels:
   blocker 2 is cleared** (permission, or our own calibration).
 - **Form (v1):** a **fixed 24-item form**, 4 items per scale, in content-balanced round-robin order (R-I-A-S-E-C), ordered by
   discrimination over the 40 retained items. The starter items are R5, I5, A4, S5, E6, C8. The full order is `best_fixed_order` in
-  `research/findings/e4_cat_simulation.json`. An optional "refine" step extends the form to 30 items. The cap is 40 items. ([e4](findings/e4_cat_simulation.md), ADR 0005)
+  `research/findings/e4_cat_simulation.json`.
+  **Exact v1 form (ADR 0020):** R5 I5 A4 S5 E6 C8 / R8 I7 A2 S3 E3 C3 / R6 I3 A5 S7 E2 C1 / R7 I6 A8 S8 E7 C4 (4 per
+  scale). E4's replay form, the filtered order, had 5 R and 3 E (R2 in, E7 out). The balanced form scores slightly
+  better: r_raw .949 vs .944 and top-3 families .647 vs .636 on 5,000 adults (ADR 0021). An optional "refine" step extends the form to 30 items. The cap is 40 items. ([e4](findings/e4_cat_simulation.md), ADR 0005)
 - **Excluded items (8):** R1, A7 and S4 are weak; E4, R3, I8, R4 and E1 show gender DIF. Excluding them had no measurable cost
   (r −.001 at k = 20). ([e2](findings/e2_structure.md), [e4](findings/e4_cat_simulation.md))
 - **Known gaps:**

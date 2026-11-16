@@ -39,4 +39,8 @@
    gender group, floor 300; items cleared by 90% CI inside ±.30). Next: psychometrician + counsellor review of the
    drafts.
 7. Sample sizes done (E9, ADR 0019). Owner decision: run 1.6 at 2,052 per group, or ~1,000 with a relaxed S-top
-   precision bar. Next experiment: E10, a gender-blind mitigation for the 24-item agreement gap (.044).
+   precision bar. Next experiment: E10, a gender-blind mitigation for the 24-item agreement gap (.044), using the v1 form.
+8. v1 engine built (`src/career_compass/engine.py`, ADR 0020/0021): form, GRM-EAP, gate, unordered families; reproduces
+   E4. Research-only parameters. Missing: diversity cap, thin-pool broadening, refine-to-30, explanation copy, lost-user
+   flow, UI, hand-written family labels (1.4).
+9. Study protocol draft for the ethics committee: `research/protocol/v1_study_protocol_draft.md` (owner decisions in §10).

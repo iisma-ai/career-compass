@@ -114,6 +114,9 @@ Planning result: **1.6: 2,052 per group; 1.5: 176 per arm (screen about 2,640 ad
   doing the shuffled-control ratings.
 
 ## Caveats
+- **Found after the run (ADR 0020):** the proxy form, the first 24 of E4's unfiltered `best_fixed_order`, includes
+  E1, a gender-DIF item, and isn't the v1 form. The v1 form replaces E1 with E7. This may slightly inflate or deflate
+  the gender agreement gap; re-check it in E10 with the real v1 form.
 - Proxy scoring (raw means); real GRM-EAP agreement is higher, so true gaps may differ.
 - Self-selected online sample; real pilot shares may differ.
 - The effect sizes for 1.5 and 1.7 are our choices; the literature has no estimate for this flow or tool.

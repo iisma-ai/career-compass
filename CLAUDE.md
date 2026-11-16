@@ -45,6 +45,8 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
   are cleared only when the 90% CI of gender DIF is inside ±.30. Teen age DIF can't be screened in the 18+ tier.
 - E9 study sizes (ADR 0019): 1.6 fairness audit 2,052 per group (parity alone ≈ 580), 1.5 176 per arm, 1.7 90. Men's
   24-item results agree less with the full test (gap .044 vs a .05 bar), so a gender-blind mitigation (E10) is needed first.
+- v1 engine `src/career_compass/engine.py` (ADR 0020/0021): balanced 4-per-scale form, GRM-EAP, gate, unordered
+  families; reproduces E4 (r_raw .949). Research-only parameters until blocker 2 clears. Protocol draft in `research/protocol/`.
 - Ethics review (2026-11-15): release blockers are attribution (done: README), privacy/legal design + DPIA,
   re-audited DIF on the final item set, a validated lost-user flow, and permission before shipping anything
   derived from OpenPsychometrics. Never quote r or match scores as accuracy.
@@ -67,7 +69,7 @@ docs/                project journal: decisions/ (ADRs), log/ (dated steps), env
 research/            docs, notes/, feasibility/ (scripts), findings/ (results)
 data/raw/<source>/   untouched downloads + SOURCE.md   (git-ignored, untrusted)
 data/processed/      derived parquet/CSV tables        (git-ignored)
-src/career_compass/  package: data/ (build scripts), matching.py (person↔occupation matching; reuse it)
+src/career_compass/  package: data/ (build scripts), matching.py (person↔occupation matching; reuse it), engine.py (v1 pipeline)
 notebooks/           exploration only — never the source of truth
 .claude/agents/      project subagents
 .claude/skills/      project skills
