@@ -38,7 +38,9 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
   Hit@5, rejection threshold works), but gender/name-swap top-10 overlap is .73 < .90. Negation isn't handled.
   E7b: rule-based demographic-cue stripping (`src/career_compass/text_cues.py`) is **proven against its bar**
   (held-out gated overlap .74 → .92 with no quality or rejection loss), but names only reach .84, rule coverage of new
-  phrasings is 67%, and the test set isn't independent. Strip before embedding. Free text is still not user-facing (E7c next).
+  phrasings is 67%, and the test set isn't independent. Strip before embedding. Free text is still not user-facing.
+  E7c (ADR 0017): name rules v2 pass on a blind, model-written set (overlap .93, names .91) and are adopted; rule-based
+  negation is **not viable** (4 of 12 on blind text, idioms misread). Negation cues trigger a follow-up question (E7d next).
 - Ethics review (2026-11-15): release blockers are attribution (done: README), privacy/legal design + DPIA,
   re-audited DIF on the final item set, a validated lost-user flow, and permission before shipping anything
   derived from OpenPsychometrics. Never quote r or match scores as accuracy.

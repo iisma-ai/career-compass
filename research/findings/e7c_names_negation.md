@@ -119,3 +119,98 @@ The writer gets this text only.
 > - `name_trap`: 6 statements where a capitalised proper noun is part of the interest itself (a brand, an
 >   organisation, a place, a famous person). Fill `intended_riasec`.
 > Use ids like `GN01A`, `GN01B`, `GN01C` (content), `GG01A`, `NM01`, `NO01`, `NT01`, `PT01`. Leave unused cells empty.
+
+---
+
+## Results
+
+Run: `uv run python -I research/feasibility/e7c_names_negation.py --seed 42` (75 s on CPU), after a `--quick` smoke run
+(same verdict). Full output is in `e7c_names_negation.json`; the chart is `e7c_heldout.png`. Held-out set:
+`e7c_heldout.csv` (102 rows, commit aef76dc). No code changed after the freeze (commit afb7535).
+
+### N1: name and gender invariance (held-out, written blind to the rules)
+| Set | Raw top-10 overlap [95% CI] | E7c pipeline [95% CI] | Identical after strip | Overlap with content row |
+|---|---|---|---|---|
+| Gated (24 pairs) | .808 [.74, .86] | **.929** [.86, .98] | 71% | .867 |
+| Names (16) | .775 [.69, .86] | **.906** [.83, .98] | 69% | .884 |
+| Gender (8) | .875 [.81, .93] | .975 [.93, 1.00] | 75% | .831 |
+
+Names by writer tag (E7c pipeline, n per tag 3–7):
+| Tag | Overlap |
+|---|---|
+| Sign-off | 1.00 |
+| Spanish | 1.00 |
+| Introduction | .97 |
+| Greeting | .96 |
+| Non-Latin | .90 |
+| Lower-case | .88 |
+| Third person | .80 |
+
+Pairs below 1.0:
+- **GN14 (.5):** "Everyone *at school* calls me Mo". The rule only covers "everyone calls me".
+- **GN12 (.6):** a Devanagari name leaves combining vowel marks behind (they aren't letters to `\w`). This is a bug.
+- **GN15 (.6):** a lower-case relative's name ("my little sibling diego"). The relation rule needs a capital letter.
+- **GN10 (.9):** "I, Olumide Adeyemi, am…" has no rule.
+- **GN11 (.9):** "its sofia here" with no apostrophe and not at the start.
+- **GG04 (.8):** Spanish adjective agreement ("creativa/creativo"), a known gap.
+
+### N2: negation
+| Set | Negated letter < 0, raw | E7c (α = 0) | α = 0.5 (reported only) | Intended letter on top, raw → E7c |
+|---|---|---|---|---|
+| Held-out mixed (12) | 5 | **4** | 6 | .33 → .67 |
+| E7 development (6) | 1 | 5 | 6 | .67 → 1.00 |
+
+The rules overfit the development data: 5 of 6 on E7, 4 of 12 on the blind set. Failure modes on the held-out set
+(`split_audit_heldout_mixed`):
+- **Over-extended inherited polarity:** a list after a negated clause ("…in an office. Painting, photography,
+  film…", "lo mío es ordenar archivos…") was treated as rejected. In NM04, NM09 and NM11 the user's actual preference
+  ended up in the rejected part.
+- **Over-wide connector scope:** "Rather than designing or drawing…, I'd like to manage a team" sent the whole
+  sentence to the rejected part (NM07).
+- **Missing cues:**
+  - "Anything but sales": `but` splits the clause before the cue is seen (NM02).
+  - Not covered: "sounds boring" (NM12), "not keen", "…are out", "done with".
+  - The negated content was misidentified in "not really a people person, so teaching… are out" (NM03).
+- **Neg-only (reported):** follow-up was triggered for 1 of 4 statements (expected 4 of 4).
+
+### N3–N5
+- **N3 quality (E7 EN-core, n = 57):**
+  - family Hit@5 .947, raw .947 (difference 0 [−.05, .05]);
+  - occupation Hit@5 .877, raw .860 (+.018 [0, .05]).
+- **N4 rejection:**
+  - E7c: held-out FRR 4.2%, off-topic rejection 91.9%, AUC .988;
+  - raw: 4.3%, 90.8%, AUC .983.
+- **N5 traps (14):** mean top-10 overlap with raw .643. Name traps 1.00 (6 of 6 unchanged): brands, places and famous
+  people were kept. Negation traps .375: "Nothing beats…", "No better feeling than…", "I never miss a chance…",
+  "No joke…", "Can't imagine a life without…" and "No hay nada que me guste más…" were all read as rejection, and in
+  5 of 8 statements the positive part was emptied.
+- **N6:** the E7 cue-free rows are unchanged by stripping (0 of 59). Negation fired on 2 E7 Spanish rows, ES09 and ES10.
+  The off-topic inputs are unchanged.
+
+## Verdict: NOT VIABLE (as pre-registered)
+| Criterion | Value | Bar (proven) | Met |
+|---|---|---|---|
+| (1) Invariance: gated / names | .929 / .906 | ≥ .90 / ≥ .90 | yes |
+| (2) Negation: held-out / dev | 4 of 12 (.33) / 5 of 6 | ≥ .83 / ≥ 5 | **no** (not even PROMISING, which needs ≥ .67) |
+| (3) Quality: family / occupation | .947 / .877 | ≥ .92 / ≥ .83 | yes |
+| (4) Rejection: FRR / off-topic | 4.2% / 91.9% | ≤ 10% / ≥ 80% | yes |
+| (5) Traps | .643 | ≥ .90 | **no** (PROMISING needs ≥ .80) |
+
+The failures (2) and (5) come entirely from the negation module. The name-trap half of (5) scored 1.00.
+
+**Interpretation** (ours; the separate criteria were pre-registered, but splitting the verdict is a post-hoc reading):
+- **Names v2 works on text written blind to the rules.** Criterion 1 passes, with no quality, rejection or name-trap
+  cost. This is the first evidence for name invariance from a set the rule author didn't write. The CI is still wide
+  (.83–.98), and the writer was a model, not a human.
+- **Rule-based clause negation doesn't generalise.** It helped the positive part surface (intended letter on top .33 →
+  .67) but broke on idioms and scope. Keyword rules can't separate "nothing beats X" from "nothing to do with X".
+  A next attempt needs a learned model (e.g. NLI or a fine-tuned polarity classifier), or a product design that
+  doesn't rely on free-text negation: ask "What would you rather do?" whenever any negation cue appears.
+
+## Caveats
+- The blind writer is a language model, not a human, and n is small: 24 pairs, 12 negations, 14 traps.
+- The tag subsets have 3–7 pairs each.
+- α = 0.5 did better on negation (6 of 12) but was not the frozen value. Choosing it now would be post-hoc selection,
+  so it doesn't count.
+- Known bug, found by this run: Devanagari combining marks are left behind (GN12). It is not fixed here; any fix is a
+  new experiment.

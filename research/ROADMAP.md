@@ -84,7 +84,7 @@ The full specification is in [MODELS.md](MODELS.md).
 | 2.1 | Grow the item bank to 15–20 calibrated items per scale; re-run E4 | CAT beats the best fixed form by ≥ .03 r or 5 points of top-3 family agreement at equal length (E4's secondary bar) | CAT ≤ +.005 r with 8 items per scale (E4) |
 | 2.2 | Spanish version | Configural and metric invariance ES vs EN; family agreement within .05 | Untested; hexagon fit varies by culture (Rounds & Tracey 1996, A) |
 | 2.3 | EU catalogue (ESCO crosswalk), finer A/S/I occupations | Exposure Gini below .77; A-top pool at least doubled | Gini .77; 28 A-top occupations (E3) |
-| 2.4 | Free text as optional evidence (E7c → product) | Negation handled (negated letter < 0 in ≥ 5 of 6 pairs); counterfactual overlap ≥ .90 on an **independent** held-out set, written by people who haven't seen the rules and covering lower-case and non-Latin names; name subset ≥ .90 | Negation 1 of 6; overlap .922, names .838, not independent (E7, E7b) |
+| 2.4 | Free text as optional evidence (E7c → product) | Negation handled (negated letter < 0 in ≥ 5 of 6 pairs); counterfactual overlap ≥ .90 on an **independent** held-out set, written by people who haven't seen the rules and covering lower-case and non-Latin names; name subset ≥ .90 | Negation: rules fail on blind text, 4 of 12 (E7c). Overlap .929, names .906 on a blind but model-written set (E7c) |
 | 2.5 | Opt-in feedback (after a DPIA) | Consent rate and data minimisation reviewed; no demographic inputs to models | Not started |
 | 2.6 | Outcome study design | Pre-registered follow-up (e.g. 12 months) on exploration actions and satisfaction. Research mode only: it needs contact identifiers, so it requires its own consent, DPIA and ethics approval | Not started |
 

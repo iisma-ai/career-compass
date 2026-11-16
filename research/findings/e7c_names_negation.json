@@ -1,0 +1,1336 @@
+{
+  "config": {
+    "seed": 42,
+    "quick": false,
+    "model": "minilm",
+    "variant": "d",
+    "k": 10,
+    "alpha": 0.0,
+    "alpha_secondary": 0.5,
+    "bootstrap_B": 2000,
+    "rejection_splits": 200
+  },
+  "models_log": {
+    "minilm": {
+      "repo": "sentence-transformers/all-MiniLM-L6-v2",
+      "max_seq_length": 256,
+      "dim": 384,
+      "truncation": {
+        "a": {
+          "share_truncated": 0.0,
+          "median_tokens": 45.0
+        },
+        "d": {
+          "share_truncated": 0.0672,
+          "median_tokens": 188.0
+        },
+        "tasks": {
+          "share_truncated": 0.0,
+          "median_tokens": 19.0
+        }
+      },
+      "license_from_model_card": "apache-2.0",
+      "seconds": 65.1
+    }
+  },
+  "N1_invariance": {
+    "gated": {
+      "summary": {
+        "raw": {
+          "mean": 0.8083,
+          "lo": 0.7417,
+          "hi": 0.8625,
+          "n": 24
+        },
+        "full": {
+          "mean": 0.9292,
+          "lo": 0.8625,
+          "hi": 0.9792,
+          "n": 24
+        },
+        "coverage_identical": 0.7083,
+        "full_vs_content_mean": 0.8667
+      },
+      "pairs": [
+        {
+          "pair": "GG01",
+          "lang": "en",
+          "tags": "",
+          "identical_after_strip": true,
+          "stripped_a": "As a person who loves engines, I want to become a car mechanic.",
+          "stripped_b": "As a person who loves engines, I want to become a car mechanic.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GG02",
+          "lang": "en",
+          "tags": "",
+          "identical_after_strip": true,
+          "stripped_a": "I'm a person of two and I'd like to retrain as a primary school teacher.",
+          "stripped_b": "I'm a person of two and I'd like to retrain as a primary school teacher.",
+          "raw": 1.0,
+          "full": 1.0,
+          "full_vs_content": 0.8
+        },
+        {
+          "pair": "GG03",
+          "lang": "en",
+          "tags": "third_person",
+          "identical_after_strip": true,
+          "stripped_a": "My child loves coding and they spend hours building little games on their computer. They'd love a job in tech.",
+          "stripped_b": "My child loves coding and they spend hours building little games on their computer. They'd love a job in tech.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 0.9
+        },
+        {
+          "pair": "GG04",
+          "lang": "es",
+          "tags": "",
+          "identical_after_strip": false,
+          "stripped_a": "Soy persona muy creativa, me gusta diseñar ropa y coser mis propias prendas.",
+          "stripped_b": "Soy persona muy creativo, me gusta diseñar ropa y coser mis propias prendas.",
+          "raw": 0.8,
+          "full": 0.8,
+          "full_vs_content": 0.65
+        },
+        {
+          "pair": "GG05",
+          "lang": "en",
+          "tags": "third_person",
+          "identical_after_strip": true,
+          "stripped_a": "They's great with numbers and keeps all the club's paperwork in order; their coach thinks they should look into accounting.",
+          "stripped_b": "They's great with numbers and keeps all the club's paperwork in order; their coach thinks they should look into accounting.",
+          "raw": 0.7,
+          "full": 1.0,
+          "full_vs_content": 0.9
+        },
+        {
+          "pair": "GG06",
+          "lang": "es",
+          "tags": "third_person",
+          "identical_after_strip": false,
+          "stripped_a": "Mi hermano quiere ser ingeniera porque le encanta resolver problemas de física.",
+          "stripped_b": "Mi hermano quiere ser ingeniero porque le encanta resolver problemas de física.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 0.6
+        },
+        {
+          "pair": "GG07",
+          "lang": "en",
+          "tags": "",
+          "identical_after_strip": true,
+          "stripped_a": "I'm a person and I want to run my own business selling sneakers online.",
+          "stripped_b": "I'm a person and I want to run my own business selling sneakers online.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 0.8
+        },
+        {
+          "pair": "GG08",
+          "lang": "en",
+          "tags": "",
+          "identical_after_strip": true,
+          "stripped_a": "As a person in my late twenties, I'm looking to move into counselling or social work where I can support people through hard times.",
+          "stripped_b": "As a person in my late twenties, I'm looking to move into counselling or social work where I can support people through hard times.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN01",
+          "lang": "en",
+          "tags": "greeting;intro",
+          "identical_after_strip": true,
+          "stripped_a": "I love fixing bikes and anything with an engine. I'd like to work in a garage someday.",
+          "stripped_b": "I love fixing bikes and anything with an engine. I'd like to work in a garage someday.",
+          "raw": 0.8,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN02",
+          "lang": "en",
+          "tags": "lower;intro",
+          "identical_after_strip": true,
+          "stripped_a": "I really like doing experiments in chem lab and figuring out why stuff reacts the way it does",
+          "stripped_b": "I really like doing experiments in chem lab and figuring out why stuff reacts the way it does",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN03",
+          "lang": "en",
+          "tags": "nonlatin;intro",
+          "identical_after_strip": true,
+          "stripped_a": "I spend all my free time drawing comics and designing characters.",
+          "stripped_b": "I spend all my free time drawing comics and designing characters.",
+          "raw": 0.8,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN04",
+          "lang": "en",
+          "tags": "signoff",
+          "identical_after_strip": true,
+          "stripped_a": "I'd love a job where I help little kids learn to read, I already volunteer at the library on Saturdays.",
+          "stripped_b": "I'd love a job where I help little kids learn to read, I already volunteer at the library on Saturdays.",
+          "raw": 0.8,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN05",
+          "lang": "es",
+          "tags": "greeting;intro",
+          "identical_after_strip": true,
+          "stripped_a": "Me encanta organizar eventos y vender cosas en el mercadillo del barrio.",
+          "stripped_b": "Me encanta organizar eventos y vender cosas en el mercadillo del barrio.",
+          "raw": 0.4,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN06",
+          "lang": "en",
+          "tags": "third_person",
+          "identical_after_strip": true,
+          "stripped_a": "My friend says I should be a nurse because I'm always the one looking after people when they're sick.",
+          "stripped_b": "My friend says I should be a nurse because I'm always the one looking after people when they're sick.",
+          "raw": 1.0,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN07",
+          "lang": "en",
+          "tags": "lower",
+          "identical_after_strip": true,
+          "stripped_a": "Honestly spreadsheets calm me down lol. My mates they all come to me to sort out their budgets. Accounting maybe?",
+          "stripped_b": "Honestly spreadsheets calm me down lol. My mates they all come to me to sort out their budgets. Accounting maybe?",
+          "raw": 0.8,
+          "full": 1.0,
+          "full_vs_content": 0.8
+        },
+        {
+          "pair": "GN08",
+          "lang": "en",
+          "tags": "nonlatin;signoff",
+          "identical_after_strip": true,
+          "stripped_a": "I want to start my own coffee brand one day and handle the marketing myself. —",
+          "stripped_b": "I want to start my own coffee brand one day and handle the marketing myself. —",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 0.9
+        },
+        {
+          "pair": "GN09",
+          "lang": "es",
+          "tags": "third_person",
+          "identical_after_strip": true,
+          "stripped_a": "Mi primo trabaja de electricista y yo quiero hacer lo mismo, me gusta trabajar con las manos y montar instalaciones.",
+          "stripped_b": "Mi primo trabaja de electricista y yo quiero hacer lo mismo, me gusta trabajar con las manos y montar instalaciones.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN10",
+          "lang": "en",
+          "tags": "greeting;intro",
+          "identical_after_strip": false,
+          "stripped_a": "Good afternoon. As a final-year student, I, Olumide Adeyemi, am interested in data analysis and statistical research roles.",
+          "stripped_b": "Good afternoon. As a final-year student, I, Siobhán O'Connor, am interested in data analysis and statistical research roles.",
+          "raw": 0.9,
+          "full": 0.9,
+          "full_vs_content": 0.8
+        },
+        {
+          "pair": "GN11",
+          "lang": "en",
+          "tags": "lower;greeting;intro",
+          "identical_after_strip": false,
+          "stripped_a": "hey!! its sofia here. i make music on my laptop every night and i wanna produce beats for real",
+          "stripped_b": "hey!! its yusuf here. i make music on my laptop every night and i wanna produce beats for real",
+          "raw": 0.9,
+          "full": 0.9,
+          "full_vs_content": 0.75
+        },
+        {
+          "pair": "GN12",
+          "lang": "en",
+          "tags": "nonlatin;third_person",
+          "identical_after_strip": false,
+          "stripped_a": "My sibling ्िा and I run a small baking stall and I'm the one who does all the stock lists and keeps the accounts tidy.",
+          "stripped_b": "My sibling and I run a small baking stall and I'm the one who does all the stock lists and keeps the accounts tidy.",
+          "raw": 0.9,
+          "full": 0.6,
+          "full_vs_content": 0.8
+        },
+        {
+          "pair": "GN13",
+          "lang": "es",
+          "tags": "signoff",
+          "identical_after_strip": true,
+          "stripped_a": "Quiero estudiar algo relacionado con la biología marina, me fascina investigar el comportamiento de los delfines.",
+          "stripped_b": "Quiero estudiar algo relacionado con la biología marina, me fascina investigar el comportamiento de los delfines.",
+          "raw": 0.8,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN14",
+          "lang": "en",
+          "tags": "",
+          "identical_after_strip": false,
+          "stripped_a": "Everyone at school calls me Mo because I'm always building stuff in the workshop, right now I'm making a wooden kayak.",
+          "stripped_b": "Everyone at school calls me Sven because I'm always building stuff in the workshop, right now I'm making a wooden kayak.",
+          "raw": 0.5,
+          "full": 0.5,
+          "full_vs_content": 0.4
+        },
+        {
+          "pair": "GN15",
+          "lang": "en",
+          "tags": "lower;third_person",
+          "identical_after_strip": false,
+          "stripped_a": "My little sibling diego wants to be a firefighter but me i wanna be a teacher, i love explaining stuff to people",
+          "stripped_b": "My little sibling arjun wants to be a firefighter but me i wanna be a teacher, i love explaining stuff to people",
+          "raw": 0.6,
+          "full": 0.6,
+          "full_vs_content": 0.7
+        },
+        {
+          "pair": "GN16",
+          "lang": "en",
+          "tags": "nonlatin;greeting;intro",
+          "identical_after_strip": true,
+          "stripped_a": "Hi there I like debating and I'm president of the student council, maybe law or politics?",
+          "stripped_b": "Hi there I like debating and I'm president of the student council, maybe law or politics?",
+          "raw": 0.5,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        }
+      ]
+    },
+    "name": {
+      "summary": {
+        "raw": {
+          "mean": 0.775,
+          "lo": 0.6875,
+          "hi": 0.8562,
+          "n": 16
+        },
+        "full": {
+          "mean": 0.9062,
+          "lo": 0.825,
+          "hi": 0.9812,
+          "n": 16
+        },
+        "coverage_identical": 0.6875,
+        "full_vs_content_mean": 0.8844,
+        "tag_lower": {
+          "mean": 0.875,
+          "n": 4
+        },
+        "tag_nonlatin": {
+          "mean": 0.9,
+          "n": 4
+        },
+        "tag_signoff": {
+          "mean": 1.0,
+          "n": 3
+        },
+        "tag_third_person": {
+          "mean": 0.8,
+          "n": 4
+        },
+        "tag_intro": {
+          "mean": 0.9714,
+          "n": 7
+        },
+        "tag_greeting": {
+          "mean": 0.96,
+          "n": 5
+        },
+        "spanish": {
+          "mean": 1.0,
+          "n": 3
+        }
+      },
+      "pairs": [
+        {
+          "pair": "GN01",
+          "lang": "en",
+          "tags": "greeting;intro",
+          "identical_after_strip": true,
+          "stripped_a": "I love fixing bikes and anything with an engine. I'd like to work in a garage someday.",
+          "stripped_b": "I love fixing bikes and anything with an engine. I'd like to work in a garage someday.",
+          "raw": 0.8,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN02",
+          "lang": "en",
+          "tags": "lower;intro",
+          "identical_after_strip": true,
+          "stripped_a": "I really like doing experiments in chem lab and figuring out why stuff reacts the way it does",
+          "stripped_b": "I really like doing experiments in chem lab and figuring out why stuff reacts the way it does",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN03",
+          "lang": "en",
+          "tags": "nonlatin;intro",
+          "identical_after_strip": true,
+          "stripped_a": "I spend all my free time drawing comics and designing characters.",
+          "stripped_b": "I spend all my free time drawing comics and designing characters.",
+          "raw": 0.8,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN04",
+          "lang": "en",
+          "tags": "signoff",
+          "identical_after_strip": true,
+          "stripped_a": "I'd love a job where I help little kids learn to read, I already volunteer at the library on Saturdays.",
+          "stripped_b": "I'd love a job where I help little kids learn to read, I already volunteer at the library on Saturdays.",
+          "raw": 0.8,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN05",
+          "lang": "es",
+          "tags": "greeting;intro",
+          "identical_after_strip": true,
+          "stripped_a": "Me encanta organizar eventos y vender cosas en el mercadillo del barrio.",
+          "stripped_b": "Me encanta organizar eventos y vender cosas en el mercadillo del barrio.",
+          "raw": 0.4,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN06",
+          "lang": "en",
+          "tags": "third_person",
+          "identical_after_strip": true,
+          "stripped_a": "My friend says I should be a nurse because I'm always the one looking after people when they're sick.",
+          "stripped_b": "My friend says I should be a nurse because I'm always the one looking after people when they're sick.",
+          "raw": 1.0,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN07",
+          "lang": "en",
+          "tags": "lower",
+          "identical_after_strip": true,
+          "stripped_a": "Honestly spreadsheets calm me down lol. My mates they all come to me to sort out their budgets. Accounting maybe?",
+          "stripped_b": "Honestly spreadsheets calm me down lol. My mates they all come to me to sort out their budgets. Accounting maybe?",
+          "raw": 0.8,
+          "full": 1.0,
+          "full_vs_content": 0.8
+        },
+        {
+          "pair": "GN08",
+          "lang": "en",
+          "tags": "nonlatin;signoff",
+          "identical_after_strip": true,
+          "stripped_a": "I want to start my own coffee brand one day and handle the marketing myself. —",
+          "stripped_b": "I want to start my own coffee brand one day and handle the marketing myself. —",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 0.9
+        },
+        {
+          "pair": "GN09",
+          "lang": "es",
+          "tags": "third_person",
+          "identical_after_strip": true,
+          "stripped_a": "Mi primo trabaja de electricista y yo quiero hacer lo mismo, me gusta trabajar con las manos y montar instalaciones.",
+          "stripped_b": "Mi primo trabaja de electricista y yo quiero hacer lo mismo, me gusta trabajar con las manos y montar instalaciones.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN10",
+          "lang": "en",
+          "tags": "greeting;intro",
+          "identical_after_strip": false,
+          "stripped_a": "Good afternoon. As a final-year student, I, Olumide Adeyemi, am interested in data analysis and statistical research roles.",
+          "stripped_b": "Good afternoon. As a final-year student, I, Siobhán O'Connor, am interested in data analysis and statistical research roles.",
+          "raw": 0.9,
+          "full": 0.9,
+          "full_vs_content": 0.8
+        },
+        {
+          "pair": "GN11",
+          "lang": "en",
+          "tags": "lower;greeting;intro",
+          "identical_after_strip": false,
+          "stripped_a": "hey!! its sofia here. i make music on my laptop every night and i wanna produce beats for real",
+          "stripped_b": "hey!! its yusuf here. i make music on my laptop every night and i wanna produce beats for real",
+          "raw": 0.9,
+          "full": 0.9,
+          "full_vs_content": 0.75
+        },
+        {
+          "pair": "GN12",
+          "lang": "en",
+          "tags": "nonlatin;third_person",
+          "identical_after_strip": false,
+          "stripped_a": "My sibling ्िा and I run a small baking stall and I'm the one who does all the stock lists and keeps the accounts tidy.",
+          "stripped_b": "My sibling and I run a small baking stall and I'm the one who does all the stock lists and keeps the accounts tidy.",
+          "raw": 0.9,
+          "full": 0.6,
+          "full_vs_content": 0.8
+        },
+        {
+          "pair": "GN13",
+          "lang": "es",
+          "tags": "signoff",
+          "identical_after_strip": true,
+          "stripped_a": "Quiero estudiar algo relacionado con la biología marina, me fascina investigar el comportamiento de los delfines.",
+          "stripped_b": "Quiero estudiar algo relacionado con la biología marina, me fascina investigar el comportamiento de los delfines.",
+          "raw": 0.8,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GN14",
+          "lang": "en",
+          "tags": "",
+          "identical_after_strip": false,
+          "stripped_a": "Everyone at school calls me Mo because I'm always building stuff in the workshop, right now I'm making a wooden kayak.",
+          "stripped_b": "Everyone at school calls me Sven because I'm always building stuff in the workshop, right now I'm making a wooden kayak.",
+          "raw": 0.5,
+          "full": 0.5,
+          "full_vs_content": 0.4
+        },
+        {
+          "pair": "GN15",
+          "lang": "en",
+          "tags": "lower;third_person",
+          "identical_after_strip": false,
+          "stripped_a": "My little sibling diego wants to be a firefighter but me i wanna be a teacher, i love explaining stuff to people",
+          "stripped_b": "My little sibling arjun wants to be a firefighter but me i wanna be a teacher, i love explaining stuff to people",
+          "raw": 0.6,
+          "full": 0.6,
+          "full_vs_content": 0.7
+        },
+        {
+          "pair": "GN16",
+          "lang": "en",
+          "tags": "nonlatin;greeting;intro",
+          "identical_after_strip": true,
+          "stripped_a": "Hi there I like debating and I'm president of the student council, maybe law or politics?",
+          "stripped_b": "Hi there I like debating and I'm president of the student council, maybe law or politics?",
+          "raw": 0.5,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        }
+      ]
+    },
+    "gender": {
+      "summary": {
+        "raw": {
+          "mean": 0.875,
+          "lo": 0.8125,
+          "hi": 0.925,
+          "n": 8
+        },
+        "full": {
+          "mean": 0.975,
+          "lo": 0.925,
+          "hi": 1.0,
+          "n": 8
+        },
+        "coverage_identical": 0.75,
+        "full_vs_content_mean": 0.8312
+      },
+      "pairs": [
+        {
+          "pair": "GG01",
+          "lang": "en",
+          "tags": "",
+          "identical_after_strip": true,
+          "stripped_a": "As a person who loves engines, I want to become a car mechanic.",
+          "stripped_b": "As a person who loves engines, I want to become a car mechanic.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        },
+        {
+          "pair": "GG02",
+          "lang": "en",
+          "tags": "",
+          "identical_after_strip": true,
+          "stripped_a": "I'm a person of two and I'd like to retrain as a primary school teacher.",
+          "stripped_b": "I'm a person of two and I'd like to retrain as a primary school teacher.",
+          "raw": 1.0,
+          "full": 1.0,
+          "full_vs_content": 0.8
+        },
+        {
+          "pair": "GG03",
+          "lang": "en",
+          "tags": "third_person",
+          "identical_after_strip": true,
+          "stripped_a": "My child loves coding and they spend hours building little games on their computer. They'd love a job in tech.",
+          "stripped_b": "My child loves coding and they spend hours building little games on their computer. They'd love a job in tech.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 0.9
+        },
+        {
+          "pair": "GG04",
+          "lang": "es",
+          "tags": "",
+          "identical_after_strip": false,
+          "stripped_a": "Soy persona muy creativa, me gusta diseñar ropa y coser mis propias prendas.",
+          "stripped_b": "Soy persona muy creativo, me gusta diseñar ropa y coser mis propias prendas.",
+          "raw": 0.8,
+          "full": 0.8,
+          "full_vs_content": 0.65
+        },
+        {
+          "pair": "GG05",
+          "lang": "en",
+          "tags": "third_person",
+          "identical_after_strip": true,
+          "stripped_a": "They's great with numbers and keeps all the club's paperwork in order; their coach thinks they should look into accounting.",
+          "stripped_b": "They's great with numbers and keeps all the club's paperwork in order; their coach thinks they should look into accounting.",
+          "raw": 0.7,
+          "full": 1.0,
+          "full_vs_content": 0.9
+        },
+        {
+          "pair": "GG06",
+          "lang": "es",
+          "tags": "third_person",
+          "identical_after_strip": false,
+          "stripped_a": "Mi hermano quiere ser ingeniera porque le encanta resolver problemas de física.",
+          "stripped_b": "Mi hermano quiere ser ingeniero porque le encanta resolver problemas de física.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 0.6
+        },
+        {
+          "pair": "GG07",
+          "lang": "en",
+          "tags": "",
+          "identical_after_strip": true,
+          "stripped_a": "I'm a person and I want to run my own business selling sneakers online.",
+          "stripped_b": "I'm a person and I want to run my own business selling sneakers online.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 0.8
+        },
+        {
+          "pair": "GG08",
+          "lang": "en",
+          "tags": "",
+          "identical_after_strip": true,
+          "stripped_a": "As a person in my late twenties, I'm looking to move into counselling or social work where I can support people through hard times.",
+          "stripped_b": "As a person in my late twenties, I'm looking to move into counselling or social work where I can support people through hard times.",
+          "raw": 0.9,
+          "full": 1.0,
+          "full_vs_content": 1.0
+        }
+      ]
+    }
+  },
+  "N2_negation": {
+    "heldout_mixed": {
+      "raw": {
+        "share_below_zero": 0.4167,
+        "n_below_zero": 5,
+        "n": 12,
+        "intended_top_in": 0.3333,
+        "items": [
+          {
+            "id": "NM01",
+            "neg_letter_score": 1.2527,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM02",
+            "neg_letter_score": -1.5838,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM03",
+            "neg_letter_score": 0.0112,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM04",
+            "neg_letter_score": 2.1497,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM05",
+            "neg_letter_score": -0.203,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM06",
+            "neg_letter_score": 1.9103,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM07",
+            "neg_letter_score": 1.5993,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM08",
+            "neg_letter_score": 1.3493,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM09",
+            "neg_letter_score": -0.7272,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM10",
+            "neg_letter_score": -0.969,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM11",
+            "neg_letter_score": -0.4707,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM12",
+            "neg_letter_score": 2.4395,
+            "followup": false,
+            "intended_top_in": false
+          }
+        ]
+      },
+      "full": {
+        "share_below_zero": 0.3333,
+        "n_below_zero": 4,
+        "n": 12,
+        "intended_top_in": 0.6667,
+        "items": [
+          {
+            "id": "NM01",
+            "neg_letter_score": 0.58,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM02",
+            "neg_letter_score": -1.5838,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM03",
+            "neg_letter_score": 0.3115,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM04",
+            "neg_letter_score": 1.0492,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM05",
+            "neg_letter_score": 0.5437,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM06",
+            "neg_letter_score": 0.4453,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM07",
+            "neg_letter_score": -1.2248,
+            "followup": true,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM08",
+            "neg_letter_score": 0.2857,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM09",
+            "neg_letter_score": 3.1682,
+            "followup": true,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM10",
+            "neg_letter_score": -0.8933,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM11",
+            "neg_letter_score": -1.6163,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM12",
+            "neg_letter_score": 2.4395,
+            "followup": false,
+            "intended_top_in": false
+          }
+        ]
+      },
+      "full_a05": {
+        "share_below_zero": 0.5,
+        "n_below_zero": 6,
+        "n": 12,
+        "intended_top_in": 0.4167,
+        "items": [
+          {
+            "id": "NM01",
+            "neg_letter_score": 0.4187,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM02",
+            "neg_letter_score": -1.5838,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM03",
+            "neg_letter_score": 1.3422,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM04",
+            "neg_letter_score": 0.5608,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM05",
+            "neg_letter_score": 0.626,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM06",
+            "neg_letter_score": -0.8533,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM07",
+            "neg_letter_score": -1.5,
+            "followup": true,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM08",
+            "neg_letter_score": 0.809,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM09",
+            "neg_letter_score": -0.7207,
+            "followup": true,
+            "intended_top_in": false
+          },
+          {
+            "id": "NM10",
+            "neg_letter_score": -0.9523,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM11",
+            "neg_letter_score": -1.7523,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "NM12",
+            "neg_letter_score": 2.4395,
+            "followup": false,
+            "intended_top_in": false
+          }
+        ]
+      }
+    },
+    "e7_dev": {
+      "raw": {
+        "share_below_zero": 0.1667,
+        "n_below_zero": 1,
+        "n": 6,
+        "intended_top_in": 0.6667,
+        "items": [
+          {
+            "id": "N01",
+            "neg_letter_score": 0.9263,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N02",
+            "neg_letter_score": -1.2398,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N03",
+            "neg_letter_score": 0.4337,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N04",
+            "neg_letter_score": 0.5118,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N05",
+            "neg_letter_score": 1.568,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "N06",
+            "neg_letter_score": 3.2238,
+            "followup": false,
+            "intended_top_in": false
+          }
+        ]
+      },
+      "full": {
+        "share_below_zero": 0.8333,
+        "n_below_zero": 5,
+        "n": 6,
+        "intended_top_in": 1.0,
+        "items": [
+          {
+            "id": "N01",
+            "neg_letter_score": -0.5472,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N02",
+            "neg_letter_score": -1.5598,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N03",
+            "neg_letter_score": -0.6812,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N04",
+            "neg_letter_score": -0.9207,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N05",
+            "neg_letter_score": -1.1467,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N06",
+            "neg_letter_score": 1.773,
+            "followup": false,
+            "intended_top_in": true
+          }
+        ]
+      },
+      "full_a05": {
+        "share_below_zero": 1.0,
+        "n_below_zero": 6,
+        "n": 6,
+        "intended_top_in": 0.8333,
+        "items": [
+          {
+            "id": "N01",
+            "neg_letter_score": -0.4138,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N02",
+            "neg_letter_score": -1.7093,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N03",
+            "neg_letter_score": -0.6962,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N04",
+            "neg_letter_score": -0.717,
+            "followup": false,
+            "intended_top_in": false
+          },
+          {
+            "id": "N05",
+            "neg_letter_score": -1.4317,
+            "followup": false,
+            "intended_top_in": true
+          },
+          {
+            "id": "N06",
+            "neg_letter_score": -0.0778,
+            "followup": false,
+            "intended_top_in": true
+          }
+        ]
+      }
+    },
+    "split_audit_heldout_mixed": [
+      {
+        "id": "NM01",
+        "positive": "I'd rather be outdoors working on a farm or building things",
+        "rejected": [
+          "stuck behind a desk all day doing paperwork"
+        ]
+      },
+      {
+        "id": "NM02",
+        "positive": "Anything but sales lol. I like lab work and testing hypotheses.",
+        "rejected": []
+      },
+      {
+        "id": "NM03",
+        "positive": "so teaching or caring jobs are out. I could spend all day fixing computers and wiring stuff",
+        "rejected": [
+          "a people person tbh"
+        ]
+      },
+      {
+        "id": "NM04",
+        "positive": "that's what I want",
+        "rejected": [
+          "the idea of crunching numbers in an office",
+          "Painting",
+          "photography",
+          "film"
+        ]
+      },
+      {
+        "id": "NM05",
+        "positive": "I'm done with science after school. I want to work with people and help them directly. like in social work",
+        "rejected": [
+          "again lab coats"
+        ]
+      },
+      {
+        "id": "NM06",
+        "positive": "my back can't take it. I'd prefer something with analysing data or doing research",
+        "rejected": [
+          "Physical labour"
+        ]
+      },
+      {
+        "id": "NM07",
+        "positive": "",
+        "rejected": [
+          "designing or drawing, which terrible at, manage a team and make the big decisions"
+        ]
+      },
+      {
+        "id": "NM08",
+        "positive": "prefiero algo creativo como escribir o diseñar",
+        "rejected": [
+          "me veo trabajando en una fábrica ni con máquinas"
+        ]
+      },
+      {
+        "id": "NM09",
+        "positive": "",
+        "rejected": [
+          "vender y tener que convencer a gente",
+          "lo mío es ordenar archivos",
+          "llevar registros y que todo cuadre"
+        ]
+      },
+      {
+        "id": "NM10",
+        "positive": "I just want to help sick kids. maybe as a pediatric nurse",
+        "rejected": [
+          "wanted to a boss or a businessman"
+        ]
+      },
+      {
+        "id": "NM11",
+        "positive": "like logistics or admin",
+        "rejected": [
+          "the whole creative arts thing and keen on dealing with customers either",
+          "give me a structured job with clear procedures"
+        ]
+      },
+      {
+        "id": "NM12",
+        "positive": "Working with my hands sounds boring to me. What excites me is pitching ideas and starting companies.",
+        "rejected": []
+      }
+    ]
+  },
+  "N3_quality": {
+    "n_en_core": 57,
+    "hit_fam80_5": {
+      "raw": {
+        "mean": 0.9474,
+        "lo": 0.8772,
+        "hi": 1.0,
+        "n": 57
+      },
+      "full": {
+        "mean": 0.9474,
+        "lo": 0.8772,
+        "hi": 1.0,
+        "n": 57
+      },
+      "full_a05": {
+        "mean": 0.9649,
+        "lo": 0.9123,
+        "hi": 1.0,
+        "n": 57
+      },
+      "diff_full_minus_raw": {
+        "mean": 0.0,
+        "lo": -0.0526,
+        "hi": 0.0526,
+        "n": 57
+      }
+    },
+    "hit_occ5": {
+      "raw": {
+        "mean": 0.8596,
+        "lo": 0.7544,
+        "hi": 0.9474,
+        "n": 57
+      },
+      "full": {
+        "mean": 0.8772,
+        "lo": 0.7895,
+        "hi": 0.9474,
+        "n": 57
+      },
+      "full_a05": {
+        "mean": 0.8772,
+        "lo": 0.7895,
+        "hi": 0.9474,
+        "n": 57
+      },
+      "diff_full_minus_raw": {
+        "mean": 0.0175,
+        "lo": 0.0,
+        "hi": 0.0526,
+        "n": 57
+      }
+    }
+  },
+  "N4_rejection": {
+    "n_real": 76,
+    "n_off": 27,
+    "raw": {
+      "heldout_frr": 0.043,
+      "heldout_frr_p90": 0.1316,
+      "heldout_offtopic_reject": 0.9075,
+      "threshold_split_mean": 0.2661,
+      "threshold_split_sd": 0.0161,
+      "threshold_all": 0.2619,
+      "insample_frr": 0.0132,
+      "insample_offtopic_reject": 0.9259,
+      "real_median": 0.4046,
+      "off_median": 0.1714,
+      "real_min": 0.2098,
+      "off_max": 0.3475,
+      "auc": 0.9834
+    },
+    "full": {
+      "heldout_frr": 0.0418,
+      "heldout_frr_p90": 0.1053,
+      "heldout_offtopic_reject": 0.9193,
+      "threshold_split_mean": 0.2785,
+      "threshold_split_sd": 0.0174,
+      "threshold_all": 0.268,
+      "insample_frr": 0.0132,
+      "insample_offtopic_reject": 0.9259,
+      "real_median": 0.4416,
+      "off_median": 0.1714,
+      "real_min": 0.2098,
+      "off_max": 0.3475,
+      "auc": 0.9878
+    }
+  },
+  "N5_traps": {
+    "n": 14,
+    "mean_top10_overlap_full_vs_raw": 0.6429,
+    "by_set": {
+      "neg_trap": 0.375,
+      "name_trap": 1.0
+    },
+    "unchanged_share": 0.5714,
+    "changed": {
+      "NT02": {
+        "stripped": "Nothing beats the feeling of fixing an engine that wouldn't start.",
+        "positive": "",
+        "rejected": [
+          "Nothing beats the feeling of fixing an engine that start"
+        ]
+      },
+      "NT03": {
+        "stripped": "I never miss a chance to volunteer at the shelter, helping people is everything to me.",
+        "positive": "",
+        "rejected": [
+          "miss a chance to volunteer at the shelter",
+          "helping people everything to me"
+        ]
+      },
+      "NT04": {
+        "stripped": "No joke, I could organise files and calendars all day and not get tired.",
+        "positive": "",
+        "rejected": [
+          "joke",
+          "could organise files and calendars all day and get tired"
+        ]
+      },
+      "NT06": {
+        "stripped": "Can't imagine a life without drawing. Don't tell my parents but I want to go to art school.",
+        "positive": "Can't imagine a life without drawing. I want to go to art school",
+        "rejected": [
+          "tell my parents"
+        ]
+      },
+      "NT07": {
+        "stripped": "There's no better feeling than finally solving a hard maths problem after hours of trying.",
+        "positive": "",
+        "rejected": [
+          "There's better feeling than finally solving a hard maths problem after hours of trying"
+        ]
+      },
+      "NT08": {
+        "stripped": "No hay nada que me guste más que enseñar a los niños pequeños.",
+        "positive": "",
+        "rejected": [
+          "hay nada que me guste más que enseñar a niños pequeños"
+        ]
+      }
+    }
+  },
+  "N6_reported": {
+    "neg_only_followup": {
+      "NO01": false,
+      "NO02": false,
+      "NO03": true,
+      "NO04": false
+    },
+    "neg_only_followup_rate": 0.25,
+    "e7_cue_free_rows_changed_by_strip": 0,
+    "e7_cue_free_rows_negation_triggered": [
+      "ES09",
+      "ES10"
+    ],
+    "e7_cue_free_n": 59,
+    "offtopic_changed": 0,
+    "cue_types_heldout": {
+      "name": 16,
+      "name_script": 10,
+      "kinship": 10,
+      "gender_age": 10,
+      "pronoun": 12,
+      "age": 1
+    },
+    "neg_cues_heldout": {
+      "don't": 4,
+      "not": 7,
+      "hate": 1,
+      "inherited": 7,
+      "never": 3,
+      "rather than": 1,
+      "no": 4,
+      "odio": 1,
+      "wouldn't": 1
+    },
+    "heldout_pair_rows_no_cue": [
+      "GN10A",
+      "GN10B",
+      "GN11A",
+      "GN11B",
+      "GN14A",
+      "GN14B"
+    ]
+  },
+  "verdict": {
+    "values": {
+      "overlap": 0.9292,
+      "names": 0.9062,
+      "neg": 0.3333,
+      "dev": 5,
+      "fam": 0.9474,
+      "occ": 0.8772,
+      "frr": 0.0418,
+      "off": 0.9193,
+      "trap": 0.6429
+    },
+    "proven_criteria": {
+      "(1) invariance": true,
+      "(2) negation": false,
+      "(3) quality": true,
+      "(4) rejection": true,
+      "(5) traps": false
+    },
+    "promising_criteria": {
+      "(1) invariance": true,
+      "(2) negation": false,
+      "(3) quality": true,
+      "(4) rejection": true,
+      "(5) traps": false
+    },
+    "verdict": "NOT VIABLE"
+  },
+  "seconds_total": 74.9
+}

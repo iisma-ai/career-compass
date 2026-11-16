@@ -14,6 +14,7 @@
 | E6 major prediction | proven, research-only | 0008 |
 | E7 free text | not viable (bias bar) | 0007 |
 | E7b cue stripping | proven (held-out overlap .92; names .84; coverage 67%) | 0011, 0012 |
+| E7c names v2 + negation | not viable (negation 4/12); names .906 met on blind set | 0016, 0017 |
 
 ## Release blockers (ethics review 2026-11-15)
 - [x] O\*NET attribution (README)
@@ -29,6 +30,7 @@
 2. Primary-source checks of the `[UNVERIFIED]` items (RESEARCH §10). The AI Omnibus timing is verified (Annex III applies from
    2 Dec 2027). Still open: whether Annex III(3) covers v1 (needs a legal review), Hoff 2020 ρ (paywalled), Mini-IP/Short Form
    reliability, Prediger weights, the Morris 2016 correction, Strong item count/alphas. These need a human with library access.
-3. E7c: name coverage (NER or broader rules) plus a held-out set written blind to the rules (ADR 0012).
-4. Negation handling for free text.
+3. E7d: learned negation (NLI or a polarity classifier) with a human-written held-out set; fix the Devanagari
+   combining-mark bug in names (ADR 0017).
+4. A human-written held-out set for name and gender invariance (ROADMAP 2.4).
 6. Item-bank work: DIF-balanced rewrites, plus non-biology Investigative items (E2, E6).
