@@ -318,7 +318,7 @@ class MultiGroupCFA:
     def fit_indices(self):
         N = self.n.sum()
         moments = self.G * self.p * (self.p + 1) / 2 + (self.G * self.p if self.level == "scalar" else 0)
-        n_par = self.k + (0 if self.level == "scalar" else 0)
+        n_par = self.k  # all free parameters; scalar adds shared intercepts (p) and latent means (6 per non-ref group)
         df = moments - n_par
         chi2 = N * self.res.fun
         chi2_0 = sum(n * (np.log(np.diag(S)).sum() - self.logdetS(g)) for g, (n, S) in enumerate(zip(self.n, self.S)))

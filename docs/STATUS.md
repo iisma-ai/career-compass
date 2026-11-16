@@ -21,7 +21,7 @@
 - [ ] Re-audited DIF on the final item set
 - [ ] Validated lost-user flow
 - [ ] Permission from OpenPsychometrics, or our own calibration data (0002)
-- [ ] Legal assessment of EU AI Act Annex III(3) for v1
+- [ ] Legal assessment of EU AI Act Annex III(3) for v1 (brief ready: `docs/legal/ai-act-v1-brief.md`; needs a lawyer/DPO)
 - [ ] Human-help signposting content reviewed by a counsellor
 - [ ] Research-ethics approval before any research-mode study (0014)
 
@@ -31,5 +31,4 @@
    reliability, Prediger weights, the Morris 2016 correction, Strong item count/alphas. These need a human with library access.
 3. E7c: name coverage (NER or broader rules) plus a held-out set written blind to the rules (ADR 0012).
 4. Negation handling for free text.
-5. Check the E2 scalar-model parameter count (RUF034 note in log 2026-11-16) — psychometrician.
 6. Item-bank work: DIF-balanced rewrites, plus non-biology Investigative items (E2, E6).
