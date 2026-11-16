@@ -17,19 +17,19 @@ from pathlib import Path
 import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
-from joblib import Parallel, delayed  # noqa: E402
-from scipy.stats import spearmanr  # noqa: E402
-from sklearn.ensemble import HistGradientBoostingClassifier  # noqa: E402
-from sklearn.impute import SimpleImputer  # noqa: E402
-from sklearn.linear_model import LogisticRegression  # noqa: E402
-from sklearn.metrics import log_loss, roc_auc_score  # noqa: E402
-from sklearn.model_selection import StratifiedKFold, train_test_split  # noqa: E402
-from sklearn.neural_network import MLPClassifier  # noqa: E402
-from sklearn.pipeline import make_pipeline  # noqa: E402
-from sklearn.preprocessing import StandardScaler  # noqa: E402
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from joblib import Parallel, delayed
+from scipy.stats import spearmanr
+from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.impute import SimpleImputer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import log_loss, roc_auc_score
+from sklearn.model_selection import StratifiedKFold, train_test_split
+from sklearn.neural_network import MLPClassifier
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -86,12 +86,12 @@ def major_family(major: pd.Series) -> pd.Series:
 
 def load(path: Path, log: dict, classes=None) -> pd.DataFrame:
     d = pd.read_parquet(path)
-    log["rows"] = int(len(d))
+    log["rows"] = len(d)
     d = d.assign(family=major_family(d["major"]))
     d = d[d.age >= 18]
-    log["age_ge_18"] = int(len(d))
+    log["age_ge_18"] = len(d)
     d = d[d.family.notna()]
-    log["valid_major"] = int(len(d))
+    log["valid_major"] = len(d)
     log["excluded_target_sizes"] = {k: int((d.family == k).sum()) for k in EXCLUDED_TARGETS}
     d = d[~d.family.isin(EXCLUDED_TARGETS)]
     counts = d.family.value_counts()
@@ -102,7 +102,7 @@ def load(path: Path, log: dict, classes=None) -> pd.DataFrame:
     else:
         log["rows_outside_classes"] = int((~d.family.isin(classes)).sum())
         d = d[d.family.isin(classes)]
-    log["analysis_rows"] = int(len(d))
+    log["analysis_rows"] = len(d)
     log["class_counts"] = {k: int(v) for k, v in d.family.value_counts().items()}
     log["gender_counts"] = {str(k): int(v) for k, v in d.gender.value_counts(dropna=False).items()}
     return d.reset_index(drop=True)
@@ -110,7 +110,7 @@ def load(path: Path, log: dict, classes=None) -> pd.DataFrame:
 
 def big5(d: pd.DataFrame) -> np.ndarray:
     t = d[TIPI].astype(float).where(d[TIPI] > 0)  # 0 = missing
-    r = lambda c: 8 - t[c]  # noqa: E731
+    r = lambda c: 8 - t[c]
     cols = [(t.TIPI1 + r("TIPI6")) / 2, (r("TIPI2") + t.TIPI7) / 2, (t.TIPI3 + r("TIPI8")) / 2,
             (r("TIPI4") + t.TIPI9) / 2, (t.TIPI5 + r("TIPI10")) / 2]
     return np.column_stack(cols)
@@ -234,7 +234,7 @@ def evaluate(y, S, K, P=None, boot_idx=None):
     c = {k: topk_correct(y, S, k) for k in (1, 3, 5)}
     f1, bal = macro_f1_bal(y, pred, K)
     out = {f"top{k}": float(v.mean()) for k, v in c.items()}
-    out.update(macro_f1=float(f1), balanced_acc=float(bal), n=int(len(y)))
+    out.update(macro_f1=float(f1), balanced_acc=float(bal), n=len(y))
     if P is not None:
         out["log_loss"] = float(log_loss(y, np.clip(P, 1e-12, 1), labels=np.arange(K)))
         out["ece"], out["reliability"] = ece(y, P)
@@ -338,14 +338,14 @@ def main(seed: int, quick: bool) -> dict:
     d = load(PROC / "riasec_people.parquet", log)
     if quick:
         d = d.groupby("family", group_keys=False).sample(frac=0.15, random_state=seed).reset_index(drop=True)
-        log["quick_subsample_rows"] = int(len(d))
+        log["quick_subsample_rows"] = len(d)
     res["sample"] = log
     names = d.family.value_counts().index.tolist()  # class order = frequency
     K = len(names)
     y_all = d.family.map({n: i for i, n in enumerate(names)}).to_numpy()
     idx_tr, idx_te = train_test_split(np.arange(len(d)), test_size=0.2, stratify=y_all, random_state=seed)
     ytr, yte = y_all[idx_tr], y_all[idx_te]
-    res["split"] = {"train": int(len(idx_tr)), "test": int(len(idx_te)), "classes": names}
+    res["split"] = {"train": len(idx_tr), "test": len(idx_te), "classes": names}
     prior_te = np.bincount(yte, minlength=K) / len(yte)
     X = {fs: features(d, fs) for fs in ("F1", "F2", "F3", "F4")}
     P6 = d[TYPES].to_numpy(float)
@@ -573,7 +573,7 @@ def main(seed: int, quick: bool) -> dict:
         rob["a_shared_only_trained_on_main"][nm] = ev
     itr, ite = train_test_split(np.arange(len(w)), test_size=0.2, stratify=yw, random_state=seed)
     bw = rng.integers(0, len(ite), size=(B, len(ite)))
-    rob["b_fresh_split_incl_shared"] = {"train": int(len(itr)), "test": int(len(ite))}
+    rob["b_fresh_split_incl_shared"] = {"train": len(itr), "test": len(ite)}
     sets = {"B0_majority": Majority().fit(None, yw[itr], K).scores(P6w[ite]),
             "B2_centroid_pearson": Centroid().fit(P6w[itr], yw[itr], K).scores(P6w[ite])}
     for nm in dict.fromkeys(["lr_unw_F1", best_name]):

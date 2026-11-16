@@ -36,3 +36,8 @@ module-name = "career_compass"
 [tool.ruff]
 line-length = 120
 target-version = "py312"
+
+[tool.ruff.lint.per-file-ignores]
+# Frozen v0 experiment scripts (their findings are cited). These rules are style-only here, or were checked by hand and
+# are false positives (B023: the closures run inside the same loop iteration). See docs/log/2026-11-16.md.
+"research/feasibility/e[1-7]*.py" = ["B023", "BLE001", "RUF059", "RUF046", "PLC0206", "FURB192", "C408", "RUF034"]

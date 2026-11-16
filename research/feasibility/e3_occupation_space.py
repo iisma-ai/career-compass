@@ -16,16 +16,16 @@ from pathlib import Path
 import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
-from scipy import stats  # noqa: E402
-from scipy.sparse import csr_matrix  # noqa: E402
-from scipy.sparse.csgraph import connected_components  # noqa: E402
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from scipy import stats
+from scipy.sparse import csr_matrix
+from scipy.sparse.csgraph import connected_components
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))  # python -I does not add the script dir or PYTHONPATH
-from career_compass import matching as M  # noqa: E402
+from career_compass import matching as M
 
 FINDINGS = ROOT / "research" / "findings"
 DATA_MAIN = ROOT / "data" / "processed" / "riasec_people.parquet"
@@ -151,7 +151,7 @@ def coverage_block(P, occ, O, groups, rng, B_med, B_reach, label):
     """Q3 core: per method top-10s, quality, exposure. Returns (results, per-method top-10 arrays)."""
     m = len(occ)
     n = len(P)
-    tt_unique, tt_first = groups["top_type_unique"], groups["top_type_first"]
+    tt_unique = groups["top_type_unique"]
     res, tops = {}, {}
     occ_top = O.argmax(1)
     for method in METHODS:
@@ -201,7 +201,7 @@ def coverage_block(P, occ, O, groups, rng, B_med, B_reach, label):
                 "median_10th_r": float(np.median(r[msk, -1])),
                 "p10_p90_top1_r": [float(np.percentile(r[msk, 0], 10)), float(np.percentile(r[msk, 0], 90))],
                 "p10_p90_10th_r": [float(np.percentile(r[msk, -1], 10)), float(np.percentile(r[msk, -1], 90))],
-                "group_reach_n_occ": int(len(np.unique(gi))),
+                "group_reach_n_occ": len(np.unique(gi)),
                 "share_top10_same_top_letter": float((occ_top[gi] == j).mean()) if j >= 0 else None,
             }
         d["by_top_type"] = by_type
@@ -252,7 +252,7 @@ def baselines(P, O, groups, rng, m, n):
     out["holland_first_letter_random10"] = {
         "median_best_of_10_r": float(np.median(r.max(1))),
         "median_mean_top10_r": float(np.median(r.mean(1))), "exposure": ex,
-        "pool_size_by_letter": {SCALES[j]: int(len(pools[j])) for j in range(6)}}
+        "pool_size_by_letter": {SCALES[j]: len(pools[j]) for j in range(6)}}
     return out
 
 
@@ -292,7 +292,7 @@ def main(seed: int, quick: bool) -> dict:
         "top_letter_counts": pd.Series(top1).value_counts().reindex(SCALES).fillna(0).astype(int).to_dict(),
         "n_tied_top_letter": int(tied_top.sum()),
         "top2_code_counts_top20": pd.Series(code2).value_counts().head(20).to_dict(),
-        "n_distinct_top2_codes": int(len(set(code2))),
+        "n_distinct_top2_codes": len(set(code2)),
         "n_distinct_top3_codes_holland_code_col": int(occ["holland_code"].nunique()),
         "share_values_clipped_1_or_7": float(np.isin(O, [1.0, 7.0]).mean()),
         "share_occ_with_any_clipped": float(np.isin(O, [1.0, 7.0]).any(1).mean()),
@@ -312,7 +312,7 @@ def main(seed: int, quick: bool) -> dict:
     Rmat = ov @ ov.T
     iu = np.triu_indices(m, 1)
     rpairs = Rmat[iu]
-    q2 = {"n_pairs": int(len(rpairs)), "pair_r_median": float(np.median(rpairs)),
+    q2 = {"n_pairs": len(rpairs), "pair_r_median": float(np.median(rpairs)),
           "pair_r_quantiles": {q: float(np.quantile(rpairs, q)) for q in (0.05, 0.25, 0.75, 0.95, 0.99)}}
     for thr in (0.95, 0.98):
         A = (Rmat > thr) & ~np.eye(m, dtype=bool)
@@ -328,7 +328,7 @@ def main(seed: int, quick: bool) -> dict:
     q2["families"] = {}
     for r, f in fams.items():
         sizes = np.bincount(f)
-        q2["families"][str(r)] = {"n_families": int(len(sizes)), "n_singletons": int((sizes == 1).sum()),
+        q2["families"][str(r)] = {"n_families": len(sizes), "n_singletons": int((sizes == 1).sum()),
                                   "median_size": float(np.median(sizes)), "max_size": int(sizes.max()),
                                   "share_occ_in_families_ge5": float(sizes[f][sizes[f] >= 5].size / m)}
     # family labels: most central member (max mean r to the other members)
@@ -358,7 +358,7 @@ def main(seed: int, quick: bool) -> dict:
     rr = Rmat[a, b]
     chance_same = float(((sizes * (sizes - 1)).sum()) / (m * (m - 1)))
     q2["related_occupations"] = {
-        "n_pairs_both_rated": int(len(rr)),
+        "n_pairs_both_rated": len(rr),
         "tiers": rel["Relatedness Tier"].value_counts().to_dict(),
         "mean_profile_r_related": float(rr.mean()),
         "mean_profile_r_all_pairs": float(rpairs.mean()),

@@ -22,7 +22,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "research" / "feasibility"))
 sys.path.insert(0, str(ROOT / "src"))
-import e7_free_text_matching as E  # noqa: E402
+import e7_free_text_matching as E
 
 # (content without cue, female/first cue version, male/second cue version, same-gender control of the first)
 PAIRS = {

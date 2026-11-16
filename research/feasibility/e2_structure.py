@@ -17,17 +17,16 @@ from pathlib import Path
 import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
-from factor_analyzer import FactorAnalyzer  # noqa: E402
-from scipy.optimize import linear_sum_assignment, minimize  # noqa: E402
-from sklearn.manifold import MDS  # noqa: E402
-from sklearn.metrics import adjusted_rand_score  # noqa: E402
-from sklearn.mixture import GaussianMixture  # noqa: E402
-
-import factor_analyzer.factor_analyzer as _fa_mod  # noqa: E402
-from sklearn.utils import check_array as _sk_check_array  # noqa: E402
+import factor_analyzer.factor_analyzer as _fa_mod
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from factor_analyzer import FactorAnalyzer
+from scipy.optimize import linear_sum_assignment, minimize
+from sklearn.manifold import MDS
+from sklearn.metrics import adjusted_rand_score
+from sklearn.mixture import GaussianMixture
+from sklearn.utils import check_array as _sk_check_array
 
 
 def _check_array_compat(*args, force_all_finite=None, **kw):
@@ -374,7 +373,6 @@ def run_cfa_ladder(dfs: list[pd.DataFrame], names: list[str]) -> dict:
     ns = [len(d) for d in dfs]
     lam0, psi0, phi0 = cfa_start(dfs)
     out, prev = {}, None
-    th_prev = None
     for level in ("configural", "metric", "scalar"):
         m = MultiGroupCFA(covs, means, ns, level)
         if level == "configural":
@@ -403,7 +401,7 @@ def run_cfa_ladder(dfs: list[pd.DataFrame], names: list[str]) -> dict:
                                                  for g, n in enumerate(names)}
             fi["latent_means_note"] = "in reference-group latent SD units (unstandardised kappa / ref sd = 1)"
         out[level] = fi
-        prev, th_prev = m, m.th
+        prev = m
     return out
 
 
@@ -707,7 +705,7 @@ def plot_loadings(L, phi, n, path):
                 ax[0].text(j, i, f"{L[i, j]:.2f}", ha="center", va="center", fontsize=6)
     ax[0].set_title(f"EFA oblimin loadings, half A (n = {n:,})")
     fig.colorbar(im, ax=ax[0], shrink=.5)
-    im2 = ax[1].imshow(phi, cmap="RdBu_r", vmin=-1, vmax=1)
+    ax[1].imshow(phi, cmap="RdBu_r", vmin=-1, vmax=1)
     for i in range(6):
         for j in range(6):
             ax[1].text(j, i, f"{phi[i, j]:.2f}", ha="center", va="center", fontsize=9)

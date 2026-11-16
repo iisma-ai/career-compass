@@ -37,10 +37,10 @@ ROOT = Path(__file__).resolve().parents[2]
 FINDINGS = ROOT / "research" / "findings"
 sys.path.insert(0, str(ROOT / "src"))  # -I drops the script dir; matching.py lives in src/
 
-import girth  # noqa: E402
+import girth
 
 try:
-    from career_compass import matching as M  # noqa: E402
+    from career_compass import matching as M
 
     HAVE_MATCHING = True
 except Exception:  # pragma: no cover - fallback documented in the findings
@@ -86,7 +86,7 @@ def strat_split(g, band, seed, frac_cal=0.7):
     rng = np.random.default_rng(seed)
     strata = pd.Series(g + "|" + band)
     cal = np.zeros(len(g), bool)
-    for _, idx in strata.groupby(strata).groups.items():
+    for idx in strata.groupby(strata).groups.values():
         idx = np.asarray(idx)
         rng.shuffle(idx)
         cal[idx[: int(round(frac_cal * len(idx)))]] = True
@@ -526,7 +526,7 @@ def main(seed: int, quick: bool, table: str) -> dict:
     df, resp, g, band, raw_full = load_people(table, quick, seed)
     cal = strat_split(g, band, seed)
     sim = ~cal
-    out["meta"].update(n=int(len(df)), n_cal=int(cal.sum()), n_sim=int(sim.sum()),
+    out["meta"].update(n=len(df), n_cal=int(cal.sum()), n_sim=int(sim.sum()),
                        missing_cells_sim=int((resp[sim] < 0).sum()))
     log("n", len(df), "cal", cal.sum(), "sim", sim.sum())
     headline_only = table != "main"
@@ -591,7 +591,7 @@ def main(seed: int, quick: bool, table: str) -> dict:
         fcsv = pd.read_csv(FINDINGS / "e3_families.csv").set_index("code")
         for r in ("r80", "r90"):
             fams[r] = fcsv.loc[occ["code"], f"family_{r}"].to_numpy().astype(int)
-        out["meta"]["n_families"] = {r: int(len(np.unique(v))) for r, v in fams.items()}
+        out["meta"]["n_families"] = {r: len(np.unique(v)) for r, v in fams.items()}
     rankers = {m: Ranker(occ, m, fams if m == "pearson" else None) for m in methods}
     ref = {"theta_full": theta_full, "raw_full": raw_sim}
     for m, rk in rankers.items():

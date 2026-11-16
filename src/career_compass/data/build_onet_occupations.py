@@ -5,6 +5,7 @@ NOTE: in 31.0 the Interests file is career_interest_types.csv (snake_case CSV na
 """
 import argparse
 from pathlib import Path
+
 import pandas as pd
 
 IDS = {"1.B.1.a": "R", "1.B.1.b": "I", "1.B.1.c": "A", "1.B.1.d": "S", "1.B.1.e": "E", "1.B.1.f": "C"}

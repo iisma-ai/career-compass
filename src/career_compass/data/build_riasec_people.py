@@ -5,6 +5,7 @@ Filters follow .claude/skills/riasec-scoring; every step logs rows removed.
 """
 import argparse
 from pathlib import Path
+
 import numpy as np
 import pandas as pd
 

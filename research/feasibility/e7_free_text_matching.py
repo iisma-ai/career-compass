@@ -24,16 +24,16 @@ from pathlib import Path
 os.environ.setdefault("HF_HUB_DISABLE_TELEMETRY", "1")
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 
-import matplotlib  # noqa: E402
+import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))  # python -I does not add the script dir or PYTHONPATH
-from career_compass import matching as M  # noqa: E402
+from career_compass import matching as M
 
 FINDINGS = ROOT / "research" / "findings"
 RAW = ROOT / "data" / "raw" / "onet_31_0" / "db_31_0_csv"
@@ -137,9 +137,9 @@ def model_license(repo: str) -> str | None:
 
         p = try_to_load_from_cache(repo, "README.md")
         if isinstance(p, str):
-            m = re.search(r"^license:\s*(\S+)", Path(p).read_text(encoding="utf-8"), re.M)
+            m = re.search(r"^license:\s*(\S+)", Path(p).read_text(encoding="utf-8"), re.MULTILINE)
             return m.group(1) if m else None
-    except Exception:  # noqa: BLE001
+    except Exception:
         return None
     return None
 
@@ -149,7 +149,7 @@ def embed_scores(name, repo, occ, tasks, text_a, text_d, queries, log):
 
     t0 = time.time()
     model = SentenceTransformer(repo, device="cpu")
-    enc = lambda xs: model.encode(list(xs), batch_size=64, normalize_embeddings=True,  # noqa: E731
+    enc = lambda xs: model.encode(list(xs), batch_size=64, normalize_embeddings=True,
                                   convert_to_numpy=True, show_progress_bar=False)
     msl = model.max_seq_length
     tok = model.tokenizer
@@ -243,7 +243,7 @@ def boot_mean(x, rng, B):
         return {"mean": None, "lo": None, "hi": None, "n": 0}
     bs = rng.choice(x, size=(B, len(x)), replace=True).mean(axis=1)
     return {"mean": float(x.mean()), "lo": float(np.percentile(bs, 2.5)), "hi": float(np.percentile(bs, 97.5)),
-            "n": int(len(x))}
+            "n": len(x)}
 
 
 def boot_diff(x, y, rng, B):
@@ -662,7 +662,7 @@ def score_blind() -> dict:
     out = {}
     for kind, g in rt.groupby("kind"):
         vc = g.rating.value_counts()
-        out[kind] = {"n": int(len(g)), **{lab: int(vc.get(lab, 0)) for lab in ("sensible", "partly", "not")},
+        out[kind] = {"n": len(g), **{lab: int(vc.get(lab, 0)) for lab in ("sensible", "partly", "not")},
                      "share_sensible": float((g.rating == "sensible").mean()),
                      "share_sensible_or_partly": float(g.rating.isin(["sensible", "partly"]).mean())}
     b = out.get("best", {})

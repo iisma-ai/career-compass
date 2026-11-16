@@ -23,7 +23,7 @@ from scipy.special import expit
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-import e4_cat_simulation as E  # noqa: E402
+import e4_cat_simulation as E
 
 
 def stable3_mask(rec, ranker, T):

@@ -15,11 +15,11 @@ from pathlib import Path
 import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
-import factor_analyzer.factor_analyzer as _fa_mod  # noqa: E402
-from factor_analyzer import FactorAnalyzer  # noqa: E402
+import factor_analyzer.factor_analyzer as _fa_mod
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from factor_analyzer import FactorAnalyzer
 
 # Compatibility shim: factor_analyzer 0.5.x passes `force_all_finite`, which scikit-learn >= 1.8
 # removed (renamed `ensure_all_finite`). Translate the kwarg instead of pinning/installing packages.
@@ -212,68 +212,68 @@ JUNK_PATTERNS = [r"^[^a-z]*$", r"\bhigh ?school\b", r"\bdid ?n['o]?t\b.*\b(atten
 
 # Ordered rules: first match wins. (family, regex). Keep specific patterns before generic ones.
 FAMILY_RULES = [
-    ("Undecided/General studies", r"undecided|^general$|undeclared|general (studies|education|ed)\b|liberal (arts|studies)|"
+    ("Undecided/General studies", (r"undecided|^general$|undeclared|general (studies|education|ed)\b|liberal (arts|studies)|"
                                   r"interdisciplinary|^ge$|^aa$|^as$|^foundation|pre-?u|a-?levels?\b|"
-                                  r"matric|^ib$|\bstpm\b|\bspm\b"),
-    ("Psychology", r"ps[iy]c|psyh|pysc|psyk|phsyc|phych|physcol|pschy|pshyc|sychol|phycol|pyschol|psycol|"
-                   r"^psy$|psychology|psik|pscho|pycho|behavio(u)?ral science|cognitive science|neuroscience|neuro"),
-    ("CS/IT", r"comput|software|information tech|information sys|\bit\b|^i\.t|\bcs\b|\bcis\b|\bmis\b|\bict\b|"
+                                  r"matric|^ib$|\bstpm\b|\bspm\b")),
+    ("Psychology", (r"ps[iy]c|psyh|pysc|psyk|phsyc|phych|physcol|pschy|pshyc|sychol|phycol|pyschol|psycol|"
+                   r"^psy$|psychology|psik|pscho|pycho|behavio(u)?ral science|cognitive science|neuroscience|neuro")),
+    ("CS/IT", (r"comput|software|information tech|information sys|\bit\b|^i\.t|\bcs\b|\bcis\b|\bmis\b|\bict\b|"
               r"programm|data science|cyber|web (design|dev)|informatics|\binformation science|network|"
               r"game (design|dev)|\bbsit\b|\bbscs\b|computing|multimedia|^ece$|electronics and comm|"
-              r"information security|comp sci"),
-    ("Engineering", r"engin|mechatronic|aerospace|aeronaut|\bmech\b|electrical|electronic|\bece\b|robotic|"
-                    r"\beee\b|\bbeng\b|\bb\.?tech\b|mechanic|^civil$|^(land )?surveying$"),
-    ("Architecture/Planning", r"architect|urban plan|town plan|interior design|landscape|construction|"
-                              r"quantity survey|real estate|built environment|^planning$|^building$"),
-    ("Medicine/Dentistry/Pharmacy", r"medic|\bmbbs\b|\bmd\b|pre[- ]?med|dentist|dental|pharma|surgery|"
-                                    r"veterin|veter|\bvet\b|optometr|doctor|pediatric|med[e]?cine|medtech"),
-    ("Social work/Counselling", r"social work|counsel|\bmsw\b|\bbsw\b|human services|family studies|"
+              r"information security|comp sci")),
+    ("Engineering", (r"engin|mechatronic|aerospace|aeronaut|\bmech\b|electrical|electronic|\bece\b|robotic|"
+                    r"\beee\b|\bbeng\b|\bb\.?tech\b|mechanic|^civil$|^(land )?surveying$")),
+    ("Architecture/Planning", (r"architect|urban plan|town plan|interior design|landscape|construction|"
+                              r"quantity survey|real estate|built environment|^planning$|^building$")),
+    ("Medicine/Dentistry/Pharmacy", (r"medic|\bmbbs\b|\bmd\b|pre[- ]?med|dentist|dental|pharma|surgery|"
+                                    r"veterin|veter|\bvet\b|optometr|doctor|pediatric|med[e]?cine|medtech")),
+    ("Social work/Counselling", (r"social work|counsel|\bmsw\b|\bbsw\b|human services|family studies|"
                                 r"child development|human development|youth work|social care|social services|"
-                                r"human (and social )?service|community"),
-    ("Health/Nursing/Allied health", r"nurs|\bbsn\b|\brn\b|health|physio|physical therap|occupational therap|"
+                                r"human (and social )?service|community")),
+    ("Health/Nursing/Allied health", (r"nurs|\bbsn\b|\brn\b|health|physio|physical therap|occupational therap|"
                                      r"speech|kinesiol|exercise|sport|nutrition|dietetic|radiograph|radiolog|"
                                      r"midwif|paramedic|\bemt\b|respiratory|athletic train|\bpta\b|public health|"
                                      r"\bmph\b|chiropract|audiolog|massage|fitness|biomedical science|"
                                      r"medical lab|lab science|clinical|dental hyg|disorders|rehab|recreation|therap|"
-                                     r"gerontolog|epidemiolog|kinesol"),
-    ("Education", r"educat|eduction|teach|pedagog|\bb\.?ed\b|\bm\.ed\b|tesol|tefl|elementary|special ed|"
-                  r"montessori|instruction|early childhood"),
-    ("Law/Criminal justice", r"\blaws?\b|lawyer|homeland security|legal|\bllb\b|\bjd\b|juris|crimin|justice|forensic|police|paralegal|"
-                             r"security stud"),
+                                     r"gerontolog|epidemiolog|kinesol")),
+    ("Education", (r"educat|eduction|teach|pedagog|\bb\.?ed\b|\bm\.ed\b|tesol|tefl|elementary|special ed|"
+                  r"montessori|instruction|early childhood")),
+    ("Law/Criminal justice", (r"\blaws?\b|lawyer|homeland security|legal|\bllb\b|\bjd\b|juris|crimin|justice|forensic|police|paralegal|"
+                             r"security stud")),
     ("Accounting/Finance", r"account|accou|financ|bank|actuar|\bcpa\b|audit|tax|insurance|\bacca\b"),
     ("Economics", r"econom|^econ\b"),
-    ("Trades/Vocational", r"cosmetolog|weld|automotive|carpent|plumb|electrician|barber|hairdress|beauty|"
-                          r"aviation|pilot"),
-    ("Business/Management/Marketing", r"business|\bbu[is]{1,3}n[ei]s|leadership|human resour|manag|market|\bmba\b|\bbba\b|\bhr\b|\bhrm\b|human resource|"
+    ("Trades/Vocational", (r"cosmetolog|weld|automotive|carpent|plumb|electrician|barber|hairdress|beauty|"
+                          r"aviation|pilot")),
+    ("Business/Management/Marketing", (r"business|\bbu[is]{1,3}n[ei]s|leadership|human resour|manag|market|\bmba\b|\bbba\b|\bhr\b|\bhrm\b|human resource|"
                                       r"commerce|entrepreneur|admin|logistic|supply chain|advertis|retail|"
                                       r"hospitality|hotel|tourism|culinary|event|\bbsba\b|\bbcom\b|"
                                       r"public relations|\bpr\b|international business|sales|fashion merch|"
-                                      r"office|secretar|aviation|organizational"),
-    ("Communication/Media/Journalism", r"communicat|comunica|journalis|\bmedia\b|mass comm|broadcast|film|cinema|"
-                                       r"radio|television|\btv\b|public relations"),
-    ("Arts/Design/Performing arts", r"\bart\b|\barts\b|fine art|design|music|theat|drama|danc|perform|paint|"
+                                      r"office|secretar|aviation|organizational")),
+    ("Communication/Media/Journalism", (r"communicat|comunica|journalis|\bmedia\b|mass comm|broadcast|film|cinema|"
+                                       r"radio|television|\btv\b|public relations")),
+    ("Arts/Design/Performing arts", (r"\bart\b|\barts\b|fine art|design|music|theat|drama|danc|perform|paint|"
                                     r"photograph|animat|illustrat|graphic|fashion|studio|sculpt|acting|"
                                     r"creative writing|visual|ceramic|art history|\bbfa\b|\bmfa\b|vocal|"
-                                    r"piano|guitar|composition|choral|opera|textile"),
-    ("Languages/Literature", r"english|literat|litterat|interpret|\basl\b|sign language|linguist|language|spanish|french|german|japanese|chinese|"
+                                    r"piano|guitar|composition|choral|opera|textile")),
+    ("Languages/Literature", (r"english|literat|litterat|interpret|\basl\b|sign language|linguist|language|spanish|french|german|japanese|chinese|"
                              r"italian|russian|arabic|korean|translat|writing|\btesl\b|comparative lit|"
-                             r"classics|latin|greek|philolog|mandarin|portuguese"),
-    ("Humanities (history/philosophy/religion)", r"histor|philosoph|theolog|religio|divinity|bible|biblical|"
+                             r"classics|latin|greek|philolog|mandarin|portuguese")),
+    ("Humanities (history/philosophy/religion)", (r"histor|philosoph|theolog|religio|divinity|bible|biblical|"
                                                  r"ministry|humanities|archaeolog|islamic|jewish stud|"
-                                                 r"museum|librar|information stud"),
-    ("Social sciences", r"sociolog|anthropolog|politic|government|international (relations|studies|affairs)|"
+                                                 r"museum|librar|information stud")),
+    ("Social sciences", (r"sociolog|anthropolog|politic|government|international (relations|studies|affairs)|"
                         r"\bir\b|geograph|social science|gender stud|women'?s stud|ethnic stud|"
                         r"african american|american stud|public (policy|admin)|development stud|area stud|"
                         r"global stud|asian stud|cultur|demograph|urban stud|social stud|european stud|"
-                        r"international (development|relation)|global affairs|^development$|social policy|socialog"),
+                        r"international (development|relation)|global affairs|^development$|social policy|socialog")),
     ("Math/Statistics", r"\bmath|statist|applied math|mathemat"),
-    ("Biology/Life sciences", r"biolog|\bbio\b|biochem|microbio|zoolog|botan|genetic|ecolog|marine|"
+    ("Biology/Life sciences", (r"biolog|\bbio\b|biochem|microbio|zoolog|botan|genetic|ecolog|marine|"
                               r"life science|molecular|animal science|biotech|physiolog|anatomy|"
-                              r"immunolog|wildlife|entomolog|neurobio|cell bio|biomed"),
-    ("Physical/Earth/Environmental sciences", r"chemi|physic|geolog|earth science|environment|astronom|"
+                              r"immunolog|wildlife|entomolog|neurobio|cell bio|biomed")),
+    ("Physical/Earth/Environmental sciences", (r"chemi|physic|geolog|earth science|environment|astronom|"
                                               r"astrophys|meteorolog|atmospher|ocean|material|"
                                               r"natural science|\bscience\b|sciences|agricult|forestry|"
-                                              r"horticult|food science|conservation|sustainab|agronom|geoscien|toxicolog"),
+                                              r"horticult|food science|conservation|sustainab|agronom|geoscien|toxicolog")),
     ("Engineering", r"technolog"),  # fallback for e.g. "engineering technology"-like values
 ]
 FAMILY_RE = [(f, re.compile(p)) for f, p in FAMILY_RULES]
@@ -330,7 +330,7 @@ def major_analysis(main: pd.DataFrame) -> tuple:
         "top50": [{"value": v, "count": int(c), "family": map_family(v)} for v, c in vc.head(50).items()],
         "top_junk_values": {k: int(v) for k, v in norm[junk].value_counts().head(20).items()},
         "coverage_mapped_pct_of_filled": float(100 * mapped.sum() / filled.sum()),
-        "n_families": int(len([f for f in fam_counts.index if f != "Unmapped"])),
+        "n_families": len([f for f in fam_counts.index if f != "Unmapped"]),
         "family_counts": {k: int(v) for k, v in fam_counts.items()},
         "n_values_for_80pct_of_filled": int((tab.cum_share_of_filled < 0.80).sum() + 1),
         "family_share_by_gender_pct": {g: {f: float(v) for f, v in fam_gender[g].items()} for g in fam_gender.columns},
@@ -392,7 +392,7 @@ def main(seed: int, quick: bool) -> dict:
     for t in TYPES:
         x = main_df[ITEMS[t]].dropna().to_numpy()
         perm = np.column_stack([rng.permutation(x[:, j]) for j in range(x.shape[1])])
-        rel[t] = {"n_complete": int(len(x)), "alpha": cronbach_alpha(x), "alpha_ci95": boot_ci(x, cronbach_alpha, b_alpha, rng),
+        rel[t] = {"n_complete": len(x), "alpha": cronbach_alpha(x), "alpha_ci95": boot_ci(x, cronbach_alpha, b_alpha, rng),
                   "omega": omega_1f(x), "omega_ci95": boot_ci(x, omega_1f, b_omega, rng),
                   "alpha_permuted_baseline": cronbach_alpha(perm), "omega_permuted_baseline": omega_1f(perm)}
         print(f"{t}: alpha={rel[t]['alpha']:.3f} omega={rel[t]['omega']:.3f}")
@@ -527,7 +527,7 @@ def main(seed: int, quick: bool) -> dict:
     keep = major_tab[(major_tab["count"] >= 3) | (major_tab.cum_share_of_filled <= 0.80)]
     keep[["value", "family", "count", "cum_share_of_filled"]].rename(columns={"value": "raw_normalised_value"}).to_csv(
         FINDINGS / f"e1_major_families_draft{suffix}.csv", index=False)
-    res["major"]["csv_rows_written"] = int(len(keep))
+    res["major"]["csv_rows_written"] = len(keep)
     res["major"]["csv_cum_share_covered"] = float(keep["count"].sum() / major_tab["count"].sum())
     make_charts(main_df, res, n, suffix)
     return res

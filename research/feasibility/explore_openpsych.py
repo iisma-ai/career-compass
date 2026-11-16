@@ -1,6 +1,7 @@
 """Codebook verification for the OpenPsychometrics RIASEC file (read-only). Usage: python -I script --raw DIR"""
 import argparse
 from pathlib import Path
+
 import pandas as pd
 
 ap = argparse.ArgumentParser(); ap.add_argument("--raw", required=True)
