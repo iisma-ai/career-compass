@@ -33,4 +33,4 @@
 3. E7d: learned negation (NLI or a polarity classifier) with a human-written held-out set; fix the Devanagari
    combining-mark bug in names (ADR 0017).
 4. A human-written held-out set for name and gender invariance (ROADMAP 2.4).
-6. Item-bank work: DIF-balanced rewrites, plus non-biology Investigative items (E2, E6).
+6. Item bank: 26 drafts in `research/items/candidate_items_v1.md`. Next: psychometrician + counsellor review, pilot power analysis (needs milestone 1.0).
