@@ -250,8 +250,12 @@ Other risks:
   memory only, with no logging (E7 Implications 7).
 - **Minors' interests change** (Low et al. 2005). Present results as a snapshot and invite a retest.
 - **AI Act.** EU AI Act Annex III(3) (education and vocational training) may apply. This would cover E6 and possibly the v1
-  career tool for students. `[UNVERIFIED: secondary sources only; legal review needed for v1 as well as v3]`. Secondary sources
-  also report a deferral of Annex III obligations (the "Digital Omnibus") `[UNVERIFIED]`.
+  career tool for students. `[UNVERIFIED: secondary sources only; legal review needed for v1 as well as v3]`.
+  **Timing (verified 2026-11-16, A):** the AI Omnibus entered into force on 27 July 2026, and the Annex III high-risk rules
+  apply from **2 December 2027** ([European Commission](https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force);
+  [AI Act policy page](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)). The regulation number
+  and the final text (Official Journal reference L_202601744) were not read: [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202601744)
+  could not be fetched. The deferral changes only *when* obligations apply, not *whether* v1 is in scope.
 - **Cue stripping is not fairness.** E7b shows invariance only for explicit gender, name, age and origin cues in English and a
   few Spanish phrasings. It does not cover lower-case or non-Latin names, ethnicity, religion, disability or dialect. The
   interest content itself still carries gender signal (the items predict gender at AUC .84, E6). Users are not told their text was
@@ -279,13 +283,17 @@ Other risks:
 
 ## Sources
 
+Regulation:
+- European Commission (2026). AI Omnibus enters into force. https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force
+- European Commission. Regulatory framework on AI (AI Act, Regulation (EU) 2024/1689). https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
+
 Literature (details and levels in `research/notes/`):
 - Allen, J., & Robbins, S. (2010). J Counseling Psychology 57(1), 23-35. https://bvbvf1.bib-bvb.de/vufind/PrimoRecord/cdi_proquest_miscellaneous_816531011
 - Alkan, V., & Deniz, K. Z. (2023). CAT form of the Occupational Field Interest Inventory. https://dergipark.org.tr/en/pub/epod/issue/76343/1153713
 - Chu, Russell, Hoff, Phan & Rounds (2022). What do interest inventories measure? J Career Assessment 30(4). https://experts.illinois.edu/en/publications/what-do-interest-inventories-measure-the-convergence-and-content-/
 - Forcada Rodriguez, E., et al. (2025). arXiv 2505.02456. https://arxiv.org/abs/2505.02456
 - Hanna, G., & Rounds, J. (2020). How accurate are interest inventories? Psychological Bulletin. https://www.ideals.illinois.edu/items/109885
-- Hoff, K. A., et al. (2020). Interest fit and job satisfaction (summary). https://sciencedaily.com/releases/2020/11/201111144353.htm
+- Hoff, K. A., Song, Q. C., Wee, C. J. M., Phan, W. M. J., & Rounds, J. (2020). Interest fit and job satisfaction: A systematic review and meta-analysis. J Vocational Behavior 123, 103503. https://doi.org/10.1016/j.jvb.2020.103503 (abstract not retrievable, publisher 403; ρ still `[UNVERIFIED]`). Summary: https://sciencedaily.com/releases/2020/11/201111144353.htm
 - Kern, M. L., et al. (2019) / UNSW press release (D). https://www.unsw.edu.au/newsroom/news/2019/12/new-map-reveals-the-hidden-personality-profiles-of-jobs ; https://github.com/behavioral-ds/VocationMap
 - Low, K. S. D., Yoon, M., Roberts, B. W., & Rounds, J. (2005). Psychological Bulletin 131(5), 713-737. https://doi.org/10.1037/0033-2909.131.5.713
 - Nghiem, H., et al. (2024). arXiv 2406.12232. https://arxiv.org/abs/2406.12232

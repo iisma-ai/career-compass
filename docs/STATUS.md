@@ -26,7 +26,9 @@
 - [ ] Research-ethics approval before any research-mode study (0014)
 
 ## Next steps
-2. Primary-source checks of the `[UNVERIFIED]` items (RESEARCH §10, AI Act).
+2. Primary-source checks of the `[UNVERIFIED]` items (RESEARCH §10). The AI Omnibus timing is verified (Annex III applies from
+   2 Dec 2027). Still open: whether Annex III(3) covers v1 (needs a legal review), Hoff 2020 ρ (paywalled), Mini-IP/Short Form
+   reliability, Prediger weights, the Morris 2016 correction, Strong item count/alphas. These need a human with library access.
 3. E7c: name coverage (NER or broader rules) plus a held-out set written blind to the rules (ADR 0012).
 4. Negation handling for free text.
 5. Behaviour-neutral lint cleanup of the old scripts (135 ruff findings).
