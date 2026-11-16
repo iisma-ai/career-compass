@@ -56,3 +56,64 @@ Verdict:       This is a planning result, not a feasibility test: "recommended n
   DIF groups. The total recruitment target therefore depends on a disclosure rate we don't know yet.
 - This covers gender DIF only. The milestone 1.6 fairness audit and the 1.7 usability pilot need their own power
   analyses.
+
+## Run notes (disclosed)
+- The first `--quick` smoke run crashed when writing the JSON (`numpy.bool_` isn't JSON-serialisable). Fix after the
+  pre-registration commit: `e2_check` now returns `float(...)` and `bool(...)`. No computation changed. The smoke
+  outputs were deleted; the full run used the fixed script unchanged otherwise.
+- The E2 reproduction check passed: max difference .001 at 3 decimals over 48 items (rounding).
+- Full run: 62,089 complete adult rows (41,742 female, 20,347 male), B = 300, seed 42, 21 s.
+
+## Results
+Adult "true" DIF (full adult sample): 31 clean items (|DIF| ≤ .15), 5 flagged (R3 −.38, A7 −.35, I8 −.34, E1 −.31,
+E4 +.42), 12 near the flag. R4 is −.295 among adults (−.32 on all ages in E2), so it counts as near the flag here.
+
+| n per group | M1 clean items with P(cleared) ≥ .80 | M2 max P(cleared), flagged | M3 90% CI coverage | M4 median CI half-width |
+|---|---|---|---|---|
+| 100 | .129 | .040 | .898 | .186 |
+| 150 | .516 | .057 | .903 | .151 |
+| 200 | .774 | .043 | .904 | .131 |
+| **300** | **.935** | **.047** | .901 | .107 |
+| 400 | 1.000 | .047 | .903 | .092 |
+| 500 | 1.000 | .047 | .899 | .083 |
+| 750 | 1.000 | .050 | .904 | .067 |
+| 1000 | 1.000 | .010 | .909 | .058 |
+| 1500 | 1.000 | .023 | .905 | .048 |
+
+![E8 clearance curves](e8_pilot_power.png)
+
+- **M2 is set by E1 (true −.31),** cleared 4–5% of the time at every n. That is what a 90% CI does to an item just
+  over the flag (about 5% one-sided), so M2 ≤ .05 holds at almost any n and adds little.
+- **Near-flag items are rarely cleared.** At n = 300: A3 (.24) .24, S4 (−.23) .25, E5 (−.24) .20, E6 (.24) .29,
+  S2 (.28) .15, C4 (.29) .04. The pilot will leave items like these **inconclusive**, not cleared.
+- At n = 300 the weakest clean item is cleared with P = .74 (2 of 31 clean items fall under .80). At n = 400 every
+  clean item is ≥ .86.
+- M5: at n = 300 per group (600 pooled), the 95% interval for per-scale α (8-item scales) is .03–.05 wide (median α
+  .83–.89), enough to check the α ≥ .80 bar of milestone 1.2.
+
+## Verdict
+**Recommended n = 300 per gender group** (pre-registered rule: smallest n with M1 ≥ .90 and M2 ≤ .05; CI coverage
+.90 at every n, so the CI is calibrated).
+
+## Interpretation (ours, not part of the rule)
+- 300 is the **minimum**. It just meets M1 (.935) and leaves two clean items below .80. **400 per group** gives a
+  margin (all clean items ≥ .86) for about a third more recruitment, and also covers the new items behaving a little
+  worse than the old ones. We suggest the protocol plans 400 and treats 300 as the floor below which the DIF screen
+  isn't run.
+- The rule clears items, it doesn't just fail to flag them. Under it, an item with real DIF of about .20–.25 usually ends up
+  inconclusive at pilot scale. The retention bar therefore needs three outcomes (cleared, flagged, inconclusive).
+  Inconclusive items aren't retained unless they're needed for content coverage, and if so they're named in the
+  re-audit (ADR 0018).
+- Only respondents who report male or female count towards these 300–400 per group. Total recruitment = 2 × n_group
+  plus everyone else, divided by the disclosure rate, which is unknown until the pilot.
+
+## Caveats
+- The new items are assumed to behave like the 48 old ones (see "Known limits" above); the pilot form is longer (74 items).
+- Equal-group resampling from a self-selected online sample; real pilot recruitment may not reach balanced groups.
+- Teen age DIF is not covered (18+ tier). Gender DIF only; milestones 1.6 and 1.7 need separate power analyses.
+- Uniform DIF only, as in E2; non-uniform DIF is not estimated.
+
+## Implications
+- Pilot protocol (milestone 1.0): at least 300, planned 400, adults per self-reported gender group, plus a recruitment
+  margin for non-disclosure.
+- Retention bar (milestone 1.1): a candidate is cleared only when its 90% CI for gender DIF lies inside ±.30 (ADR 0018).

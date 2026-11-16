@@ -41,6 +41,8 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
   phrasings is 67%, and the test set isn't independent. Strip before embedding. Free text is still not user-facing.
   E7c (ADR 0017): name rules v2 pass on a blind, model-written set (overlap .93, names .91) and are adopted; rule-based
   negation is **not viable** (4 of 12 on blind text, idioms misread). Negation cues trigger a follow-up question (E7d next).
+- E8 pilot power (ADR 0018): the item pilot needs at least 300 adults per self-reported gender group (plan 400); items
+  are cleared only when the 90% CI of gender DIF is inside ±.30. Teen age DIF can't be screened in the 18+ tier.
 - Ethics review (2026-11-15): release blockers are attribution (done: README), privacy/legal design + DPIA,
   re-audited DIF on the final item set, a validated lost-user flow, and permission before shipping anything
   derived from OpenPsychometrics. Never quote r or match scores as accuracy.

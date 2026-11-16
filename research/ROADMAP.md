@@ -24,7 +24,7 @@ our choices, not evidence.
 | Literature notes 01–06 | Done |
 | E1–E7 feasibility experiments, plus E7b | Done ([RESEARCH.md §5](RESEARCH.md)) |
 | DATA_SOURCES, RESEARCH, MODELS, ROADMAP | Done, as of 2026-11-16 |
-| Ethics review of the dossier | To do (ethics-reviewer, read-only) |
+| Ethics review of the dossier | Done 2026-11-16 (fixes applied) |
 | Primary-source checks of the `[UNVERIFIED]` items in RESEARCH.md §10 | To do |
 
 **Exit criteria:**
@@ -67,8 +67,8 @@ The full specification is in [MODELS.md](MODELS.md).
 **Milestones:**
 | # | Milestone | Proposed success criterion | Today |
 |---|---|---|---|
-| 1.0 | Research-ethics approval and study protocol (prerequisite for 1.2, 1.3, 1.5, 1.7) | Approval obtained; protocol, consent forms, retention and deletion route documented | Not started |
-| 1.1 | Write and DIF-screen new items (non-biology I, non-sales E, and R/S items with gender-neutral settings, as a DIF-neutral content choice, not to push results) | Every retained item has \|DIF\| below the E2 flag threshold for gender and age | 8 of 48 items flagged (E2) |
+| 1.0 | Research-ethics approval and study protocol (prerequisite for 1.2, 1.3, 1.5, 1.7) | Approval obtained; protocol, consent forms, retention and deletion route documented | Not started. Item-pilot size set: plan 400 adults per self-reported gender group, floor 300 ([E8](findings/e8_pilot_power.md), ADR 0018) |
+| 1.1 | Write and DIF-screen new items (non-biology I, non-sales E, and R/S items with gender-neutral settings, as a DIF-neutral content choice, not to push results) | Every retained item is cleared: 90% CI for gender DIF inside ±.30 (ADR 0018); age DIF 18–24 vs 25+ by the same rule; teen age DIF listed as unscreened | 8 of 48 items flagged (E2); 26 drafts, unscreened |
 | 1.2 | Calibrate the final form on a consented pilot sample | Per-scale α ≥ .80; 24-item vs 40-item profile r ≥ .95 | α .83–.90; r .965–.968 in replay (E1, E4) |
 | 1.3 | Live vs simulated check | Live top-3 family agreement no more than .05 below the replay value. This is a lenient target: one CAT study saw a drop of up to .18 from simulated to live (note 02, C) | .63–.64 in replay (E4) |
 | 1.4 | Family labels and explanations | Counsellor review: ≥ 80% of family labels judged accurate | Not done |

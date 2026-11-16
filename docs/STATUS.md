@@ -15,6 +15,7 @@
 | E7 free text | not viable (bias bar) | 0007 |
 | E7b cue stripping | proven (held-out overlap .92; names .84; coverage 67%) | 0011, 0012 |
 | E7c names v2 + negation | not viable (negation 4/12); names .906 met on blind set | 0016, 0017 |
+| E8 pilot DIF power | min 300 per gender group; plan 400 | 0018 |
 
 ## Release blockers (ethics review 2026-11-15)
 - [x] O\*NET attribution (README)
@@ -33,4 +34,6 @@
 3. E7d: learned negation (NLI or a polarity classifier) with a human-written held-out set; fix the Devanagari
    combining-mark bug in names (ADR 0017).
 4. A human-written held-out set for name and gender invariance (ROADMAP 2.4).
-6. Item bank: 26 drafts in `research/items/candidate_items_v1.md`. Next: psychometrician + counsellor review, pilot power analysis (needs milestone 1.0).
+6. Item bank: 26 drafts in `research/items/candidate_items_v1.md`. Pilot size done (E8, ADR 0018: plan 400 adults per
+   gender group, floor 300; items cleared by 90% CI inside ±.30). Next: psychometrician + counsellor review of the
+   drafts; a study protocol for milestone 1.0 using E8; power analyses for milestones 1.6 and 1.7.

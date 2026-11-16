@@ -62,11 +62,13 @@ There are 26 candidates: 6 R, 6 I, 3 A, 4 S, 5 E and 2 C. Extra candidates are d
 1. **Expert review:** the psychometrician agent and at least one human counsellor rate each item for clarity,
    scale fit, reading level and stereotype risk. Revise or drop items before any data is collected.
 2. **Pilot (research mode, after milestone 1.0):** administer the 48 current items plus all candidates in random order,
-   with an optional self-reported gender question used only for the audit (ADR 0015). The sample size is set by a
-   power analysis for detecting |DIF| ≥ .30 with the E2 method.
+   with an optional self-reported gender question used only for the audit (ADR 0015). Sample size from E8
+   ([e8](../findings/e8_pilot_power.md)): plan 400 adults per self-reported gender group, with a floor of 300.
 3. **Retention bar (milestone 1.1):**
-   - |gender DIF| and |age DIF| below the E2 flag of .30. Among items that pass, prefer the smallest gender DIF
-     (ADR 0015).
+   - Gender DIF **cleared**: its 90% CI lies inside ±.30 (ADR 0018, from E8). Items that are flagged are dropped.
+     Inconclusive items are used only if a scale can't reach 4 items otherwise, and they are named in the re-audit.
+     Among cleared items, prefer the smallest gender DIF (ADR 0015). Age DIF uses the same rule, 18–24 vs 25+ only;
+     teen age DIF stays unscreened until research with minors is approved.
    - Item-rest correlation ≥ .40 on its own scale, with no cross-loading above .30 on another.
    - The final 24-item form keeps 4 items per scale, and per-scale α ≥ .80 (milestone 1.2).
 4. **Re-audit:** re-run DIF on the final item set (release blocker 3) and re-run E4 and E5 on the new form.

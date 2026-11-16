@@ -88,7 +88,7 @@ def e2_check(df: pd.DataFrame) -> dict:
         est, _ = dif_one(sub[it].to_numpy(), sub[cols].sum(1).to_numpy(), (sub.sex == "female").to_numpy(float))
         diffs[it] = abs(round(est, 3) - round(ref[it], 3))
     worst = max(diffs.values())
-    return {"max_abs_diff_3dp": worst, "ok": worst <= 0.0015}
+    return {"max_abs_diff_3dp": float(worst), "ok": bool(worst <= 0.0015)}
 
 
 def alpha(block: np.ndarray) -> float:

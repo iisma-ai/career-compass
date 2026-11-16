@@ -159,6 +159,7 @@ judged mis-specified. The original verdict stands, and the discussion explains w
 | E7 | Free text → occupations? | **Not viable** (bias bar) | Family Hit@5 .95, occupation .86; +21 points over TF-IDF; rejection FRR 3.9%; gender/name overlap .733 < .90 | [e7](findings/e7_free_text_matching.md) |
 | E7b | Does stripping demographic cues fix E7's bias? | Bar met (non-independent test set) | Held-out overlap .739 → .922 [CI .84, .99] with no quality loss. It is 1.0 by construction wherever a rule fired (67% of pairs). Names .838 | [e7b](findings/e7b_cue_stripping.md) |
 | E7c | Do broader name rules and rule-based negation generalise to a set written blind to the rules? | Not viable (negation); names criterion met | Name/gender overlap .808 → .929 [.86, .98], names .906; negation 4 of 12 (dev 5 of 6), negation traps .375 | [e7c](findings/e7c_names_negation.md), ADR 0017 |
+| E8 | How many pilot respondents does the gender-DIF screen need? | Planning result | Minimum 300 per gender group (clean items cleared: 93.5%; CI coverage .90); 400 planned for margin | [e8](findings/e8_pilot_power.md), ADR 0018 |
 
 What this adds up to (*interpretation*):
 1. **Measurement is adequate.** Scales are reliable, the hexagon holds and 24 items track the full test closely (E1, E2, E4).
