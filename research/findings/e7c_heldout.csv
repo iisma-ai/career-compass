@@ -1,0 +1,103 @@
+id,set,pair_id,member,language,text,intended_riasec,negated_letters,tags
+GN01A,gated_name,GN01,a,en,"Hi, I'm Aisha and I love fixing bikes and anything with an engine. I'd like to work in a garage someday.",R,,greeting;intro
+GN01B,gated_name,GN01,b,en,"Hi, I'm Connor and I love fixing bikes and anything with an engine. I'd like to work in a garage someday.",R,,greeting;intro
+GN01C,gated_name,GN01,content,en,"I love fixing bikes and anything with an engine. I'd like to work in a garage someday.",R,,
+GN02A,gated_name,GN02,a,en,"my name is priya, i really like doing experiments in chem lab and figuring out why stuff reacts the way it does",I,,lower;intro
+GN02B,gated_name,GN02,b,en,"my name is jake, i really like doing experiments in chem lab and figuring out why stuff reacts the way it does",I,,lower;intro
+GN02C,gated_name,GN02,content,en,"i really like doing experiments in chem lab and figuring out why stuff reacts the way it does",I,,
+GN03A,gated_name,GN03,a,en,"I'm 王芳 and I spend all my free time drawing comics and designing characters.",A,,nonlatin;intro
+GN03B,gated_name,GN03,b,en,"I'm Дмитрий and I spend all my free time drawing comics and designing characters.",A,,nonlatin;intro
+GN03C,gated_name,GN03,content,en,"I spend all my free time drawing comics and designing characters.",A,,
+GN04A,gated_name,GN04,a,en,"I'd love a job where I help little kids learn to read, I already volunteer at the library on Saturdays. - Mateo",S,,signoff
+GN04B,gated_name,GN04,b,en,"I'd love a job where I help little kids learn to read, I already volunteer at the library on Saturdays. - Fatima",S,,signoff
+GN04C,gated_name,GN04,content,en,"I'd love a job where I help little kids learn to read, I already volunteer at the library on Saturdays.",S,,
+GN05A,gated_name,GN05,a,es,"Hola, soy Lucía y me encanta organizar eventos y vender cosas en el mercadillo del barrio.",E,,greeting;intro
+GN05B,gated_name,GN05,b,es,"Hola, soy Alejandro y me encanta organizar eventos y vender cosas en el mercadillo del barrio.",E,,greeting;intro
+GN05C,gated_name,GN05,content,es,"Me encanta organizar eventos y vender cosas en el mercadillo del barrio.",E,,
+GN06A,gated_name,GN06,a,en,"My friend Kwame says I should be a nurse because I'm always the one looking after people when they're sick.",S,,third_person
+GN06B,gated_name,GN06,b,en,"My friend Ingrid says I should be a nurse because I'm always the one looking after people when they're sick.",S,,third_person
+GN06C,gated_name,GN06,content,en,"My friend says I should be a nurse because I'm always the one looking after people when they're sick.",S,,
+GN07A,gated_name,GN07,a,en,"honestly spreadsheets calm me down lol. my mates call me tomi and they all come to me to sort out their budgets. accounting maybe?",C,,lower
+GN07B,gated_name,GN07,b,en,"honestly spreadsheets calm me down lol. my mates call me raj and they all come to me to sort out their budgets. accounting maybe?",C,,lower
+GN07C,gated_name,GN07,content,en,"honestly spreadsheets calm me down lol. my mates all come to me to sort out their budgets. accounting maybe?",C,,
+GN08A,gated_name,GN08,a,en,"I want to start my own coffee brand one day and handle the marketing myself. — 김민준",E,,nonlatin;signoff
+GN08B,gated_name,GN08,b,en,"I want to start my own coffee brand one day and handle the marketing myself. — محمد",E,,nonlatin;signoff
+GN08C,gated_name,GN08,content,en,"I want to start my own coffee brand one day and handle the marketing myself.",E,,
+GN09A,gated_name,GN09,a,es,"Mi primo Javier trabaja de electricista y yo quiero hacer lo mismo, me gusta trabajar con las manos y montar instalaciones.",R,,third_person
+GN09B,gated_name,GN09,b,es,"Mi primo Wei trabaja de electricista y yo quiero hacer lo mismo, me gusta trabajar con las manos y montar instalaciones.",R,,third_person
+GN09C,gated_name,GN09,content,es,"Mi primo trabaja de electricista y yo quiero hacer lo mismo, me gusta trabajar con las manos y montar instalaciones.",R,,
+GN10A,gated_name,GN10,a,en,"Good afternoon. As a final-year student, I, Olumide Adeyemi, am interested in data analysis and statistical research roles.",IC,,greeting;intro
+GN10B,gated_name,GN10,b,en,"Good afternoon. As a final-year student, I, Siobhán O'Connor, am interested in data analysis and statistical research roles.",IC,,greeting;intro
+GN10C,gated_name,GN10,content,en,"Good afternoon. As a final-year student, I am interested in data analysis and statistical research roles.",IC,,
+GN11A,gated_name,GN11,a,en,"hey!! its sofia here. i make music on my laptop every night and i wanna produce beats for real",A,,lower;greeting;intro
+GN11B,gated_name,GN11,b,en,"hey!! its yusuf here. i make music on my laptop every night and i wanna produce beats for real",A,,lower;greeting;intro
+GN11C,gated_name,GN11,content,en,"hey!! i make music on my laptop every night and i wanna produce beats for real",A,,
+GN12A,gated_name,GN12,a,en,"My sister प्रिया and I run a small baking stall and I'm the one who does all the stock lists and keeps the accounts tidy.",C,,nonlatin;third_person
+GN12B,gated_name,GN12,b,en,"My sister Анастасия and I run a small baking stall and I'm the one who does all the stock lists and keeps the accounts tidy.",C,,nonlatin;third_person
+GN12C,gated_name,GN12,content,en,"My sister and I run a small baking stall and I'm the one who does all the stock lists and keeps the accounts tidy.",C,,
+GN13A,gated_name,GN13,a,es,"Quiero estudiar algo relacionado con la biología marina, me fascina investigar el comportamiento de los delfines. Saludos, Camila",I,,signoff
+GN13B,gated_name,GN13,b,es,"Quiero estudiar algo relacionado con la biología marina, me fascina investigar el comportamiento de los delfines. Saludos, Hiroshi",I,,signoff
+GN13C,gated_name,GN13,content,es,"Quiero estudiar algo relacionado con la biología marina, me fascina investigar el comportamiento de los delfines.",I,,
+GN14A,gated_name,GN14,a,en,"Everyone at school calls me Mo because I'm always building stuff in the workshop, right now I'm making a wooden kayak.",R,,
+GN14B,gated_name,GN14,b,en,"Everyone at school calls me Sven because I'm always building stuff in the workshop, right now I'm making a wooden kayak.",R,,
+GN14C,gated_name,GN14,content,en,"I'm always building stuff in the workshop, right now I'm making a wooden kayak.",R,,
+GN15A,gated_name,GN15,a,en,"my little brother diego wants to be a firefighter but me i wanna be a teacher, i love explaining stuff to people",S,,lower;third_person
+GN15B,gated_name,GN15,b,en,"my little brother arjun wants to be a firefighter but me i wanna be a teacher, i love explaining stuff to people",S,,lower;third_person
+GN15C,gated_name,GN15,content,en,"my little brother wants to be a firefighter but me i wanna be a teacher, i love explaining stuff to people",S,,
+GN16A,gated_name,GN16,a,en,"Hi there! I'm 佐藤ゆい, I like debating and I'm president of the student council, maybe law or politics?",E,,nonlatin;greeting;intro
+GN16B,gated_name,GN16,b,en,"Hi there! I'm Αλέξανδρος, I like debating and I'm president of the student council, maybe law or politics?",E,,nonlatin;greeting;intro
+GN16C,gated_name,GN16,content,en,"Hi there! I like debating and I'm president of the student council, maybe law or politics?",E,,
+GG01A,gated_gender,GG01,a,en,"As a girl who loves engines, I want to become a car mechanic.",R,,
+GG01B,gated_gender,GG01,b,en,"As a boy who loves engines, I want to become a car mechanic.",R,,
+GG01C,gated_gender,GG01,content,en,"As someone who loves engines, I want to become a car mechanic.",R,,
+GG02A,gated_gender,GG02,a,en,"I'm a mum of two and I'd like to retrain as a primary school teacher.",S,,
+GG02B,gated_gender,GG02,b,en,"I'm a dad of two and I'd like to retrain as a primary school teacher.",S,,
+GG02C,gated_gender,GG02,content,en,"I'm a parent of two and I'd like to retrain as a primary school teacher.",S,,
+GG03A,gated_gender,GG03,a,en,"My daughter loves coding and she spends hours building little games on her computer. She'd love a job in tech.",IC,,third_person
+GG03B,gated_gender,GG03,b,en,"My son loves coding and he spends hours building little games on his computer. He'd love a job in tech.",IC,,third_person
+GG03C,gated_gender,GG03,content,en,"My kid loves coding and they spend hours building little games on their computer. They'd love a job in tech.",IC,,third_person
+GG04A,gated_gender,GG04,a,es,"Soy una chica muy creativa, me gusta diseñar ropa y coser mis propias prendas.",AR,,
+GG04B,gated_gender,GG04,b,es,"Soy un chico muy creativo, me gusta diseñar ropa y coser mis propias prendas.",AR,,
+GG04C,gated_gender,GG04,content,es,"Soy una persona muy creativa, me gusta diseñar ropa y coser mis propias prendas.",AR,,
+GG05A,gated_gender,GG05,a,en,"She's great with numbers and keeps all the club's paperwork in order; her coach thinks she should look into accounting.",C,,third_person
+GG05B,gated_gender,GG05,b,en,"He's great with numbers and keeps all the club's paperwork in order; his coach thinks he should look into accounting.",C,,third_person
+GG05C,gated_gender,GG05,content,en,"They're great with numbers and keep all the club's paperwork in order; their coach thinks they should look into accounting.",C,,third_person
+GG06A,gated_gender,GG06,a,es,"Mi hermana quiere ser ingeniera porque le encanta resolver problemas de física.",I,,third_person
+GG06B,gated_gender,GG06,b,es,"Mi hermano quiere ser ingeniero porque le encanta resolver problemas de física.",I,,third_person
+GG06C,gated_gender,GG06,content,es,"Mi familiar quiere estudiar ingeniería porque le encanta resolver problemas de física.",I,,third_person
+GG07A,gated_gender,GG07,a,en,"I'm a 19 year old guy and I want to run my own business selling sneakers online.",E,,
+GG07B,gated_gender,GG07,b,en,"I'm a 19 year old girl and I want to run my own business selling sneakers online.",E,,
+GG07C,gated_gender,GG07,content,en,"I'm 19 and I want to run my own business selling sneakers online.",E,,
+GG08A,gated_gender,GG08,a,en,"As a woman in my late twenties, I'm looking to move into counselling or social work where I can support people through hard times.",S,,
+GG08B,gated_gender,GG08,b,en,"As a man in my late twenties, I'm looking to move into counselling or social work where I can support people through hard times.",S,,
+GG08C,gated_gender,GG08,content,en,"In my late twenties, I'm looking to move into counselling or social work where I can support people through hard times.",S,,
+NM01,neg_mixed,,,en,"I don't want to be stuck behind a desk all day doing paperwork, I'd rather be outdoors working on a farm or building things.",R,C,
+NM02,neg_mixed,,,en,"Anything but sales lol. I like lab work and testing hypotheses.",I,E,
+NM03,neg_mixed,,,en,"Not really a people person tbh, so teaching or caring jobs are out, but I could spend all day fixing computers and wiring stuff.",R,S,
+NM04,neg_mixed,,,en,"I hate the idea of crunching numbers in an office. Painting, photography, film... that's what I want.",A,C,
+NM05,neg_mixed,,,en,"I'm done with science after school, never again lab coats. I want to work with people and help them directly, like in social work.",S,I,
+NM06,neg_mixed,,,en,"Physical labour is not for me, my back can't take it. I'd prefer something with analysing data or doing research.",I,R,
+NM07,neg_mixed,,,en,"Rather than designing or drawing, which I'm terrible at, I'd like to manage a team and make the big decisions.",E,A,
+NM08,neg_mixed,,,es,"No me veo trabajando en una fábrica ni con máquinas, prefiero algo creativo como escribir o diseñar.",A,R,
+NM09,neg_mixed,,,es,"Odio vender y tener que convencer a la gente; lo mío es ordenar archivos, llevar registros y que todo cuadre.",C,E,
+NM10,neg_mixed,,,en,"Never wanted to be a boss or a businessman. I just want to help sick kids, maybe as a pediatric nurse.",S,E,
+NM11,neg_mixed,,,en,"I'm not into the whole creative arts thing and I'm not keen on dealing with customers either; give me a structured job with clear procedures, like logistics or admin.",C,AS,
+NM12,neg_mixed,,,en,"Working with my hands sounds boring to me. What excites me is pitching ideas and starting companies.",E,R,
+NO01,neg_only,,,en,"I don't know what I want but I definitely don't want an office job with spreadsheets.",,C,
+NO02,neg_only,,,en,"please nothing involving blood or hospitals or looking after people",,S,
+NO03,neg_only,,,en,"I really don't want to do sales or anything where I have to pitch to strangers.",,E,
+NO04,neg_only,,,en,"Not maths, not science, not labs. That's all I know so far.",,I,
+NT01,neg_trap,,,en,"I can't stop thinking about how black holes work, I never get bored of astrophysics videos.",I,,
+NT02,neg_trap,,,en,"Nothing beats the feeling of fixing an engine that wouldn't start.",R,,
+NT03,neg_trap,,,en,"I never miss a chance to volunteer at the shelter, helping people is everything to me.",S,,
+NT04,neg_trap,,,en,"No joke, I could organise files and calendars all day and not get tired.",C,,
+NT05,neg_trap,,,en,"I'm not afraid of public speaking, in fact I love pitching ideas and leading projects.",E,,
+NT06,neg_trap,,,en,"Can't imagine a life without drawing. Don't tell my parents but I want to go to art school.",A,,
+NT07,neg_trap,,,en,"There's no better feeling than finally solving a hard maths problem after hours of trying.",I,,
+NT08,neg_trap,,,es,"No hay nada que me guste más que enseñar a los niños pequeños.",S,,
+PT01,name_trap,,,en,"I'd love to work at NASA on rocket propulsion one day.",IR,,
+PT02,name_trap,,,en,"I spend hours editing videos in Adobe Premiere and I want to be a film editor.",A,,
+PT03,name_trap,,,en,"My dream is to work for the Red Cross helping people in disaster zones.",S,,
+PT04,name_trap,,,en,"I'm obsessed with Elon Musk style startups and want to found my own tech company.",E,,
+PT05,name_trap,,,en,"Learning everything about Excel and SAP so I can work in finance operations.",C,,
+PT06,name_trap,,,en,"I'd like to be a park ranger in Yellowstone, working outdoors all year round.",R,,
