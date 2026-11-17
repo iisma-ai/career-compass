@@ -49,7 +49,8 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
   families; reproduces E4 (r_raw .949). Research-only parameters until blocker 2 clears. Protocol draft in `research/protocol/`.
 - E10 (ADR 0022): no gender-blind length rule closes the agreement gap (.042 → .030 at best). Exploratory: ~3/4 of it is
   answer composition (.011 after reweighting). 1.6(a) uses the answer-conditional gap, with the raw gap still reported (ADR 0023, owner); 1,000 per group (ADR 0024).
-  E11: full-data conditional gender gap .009–.011, but the stratified estimator is biased at n = 1,000 (ADR 0025) → E12.
+  E11/E12: the stratified estimator was biased at n = 1,000 (ADR 0025); regression adjustment (REG) is calibrated and
+  chosen (ADR 0026). Conditional gender gap .007–.009 (81% of the raw gap is answer composition).
 - Ethics review (2026-11-15): release blockers are attribution (done: README), privacy/legal design + DPIA,
   re-audited DIF on the final item set, a validated lost-user flow, and permission before shipping anything
   derived from OpenPsychometrics. Never quote r or match scores as accuracy.

@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "seed": 42,
+    "quick": false,
+    "R": 1000,
+    "grid": [
+      500,
+      1000,
+      2000
+    ],
+    "n_shown": 54230,
+    "runtime_s": 30.9
+  },
+  "gender": {
+    "groups": [
+      "female",
+      "male"
+    ],
+    "n_shown": [
+      36619,
+      17239
+    ],
+    "A3": {
+      "raw_gap": 0.0416,
+      "target": {
+        "REG": 0.009,
+        "FIX": 0.0137
+      },
+      "share_explained": {
+        "REG": 0.7829,
+        "FIX": 0.6701
+      },
+      "per_n": {
+        "500": {
+          "REG": {
+            "p_cleared_A": 0.755,
+            "p_cleared_B": 0.678,
+            "coverage90": 0.891,
+            "mean_bias": 0.0015,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 0.791,
+            "p_cleared_B": 0.63,
+            "coverage90": 0.9,
+            "mean_bias": -0.0002,
+            "share_samples_with_dropped_stratum": 0.526
+          }
+        },
+        "1000": {
+          "REG": {
+            "p_cleared_A": 0.98,
+            "p_cleared_B": 0.927,
+            "coverage90": 0.896,
+            "mean_bias": 0.0014,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 0.982,
+            "p_cleared_B": 0.904,
+            "coverage90": 0.891,
+            "mean_bias": -0.0003,
+            "share_samples_with_dropped_stratum": 0.176
+          }
+        },
+        "2000": {
+          "REG": {
+            "p_cleared_A": 1.0,
+            "p_cleared_B": 0.998,
+            "coverage90": 0.916,
+            "mean_bias": 0.0018,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 1.0,
+            "p_cleared_B": 0.993,
+            "coverage90": 0.918,
+            "mean_bias": 0.0001,
+            "share_samples_with_dropped_stratum": 0.021
+          }
+        }
+      }
+    },
+    "O10": {
+      "raw_gap": 0.0427,
+      "target": {
+        "REG": 0.0071,
+        "FIX": 0.0162
+      },
+      "share_explained": {
+        "REG": 0.8341,
+        "FIX": 0.6201
+      },
+      "per_n": {
+        "500": {
+          "REG": {
+            "p_cleared_A": 0.939,
+            "p_cleared_B": 0.894,
+            "coverage90": 0.898,
+            "mean_bias": 0.0013,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 0.929,
+            "p_cleared_B": 0.774,
+            "coverage90": 0.888,
+            "mean_bias": -0.0006,
+            "share_samples_with_dropped_stratum": 0.499
+          }
+        },
+        "1000": {
+          "REG": {
+            "p_cleared_A": 0.999,
+            "p_cleared_B": 0.991,
+            "coverage90": 0.91,
+            "mean_bias": 0.0018,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 0.999,
+            "p_cleared_B": 0.966,
+            "coverage90": 0.906,
+            "mean_bias": -0.0001,
+            "share_samples_with_dropped_stratum": 0.178
+          }
+        },
+        "2000": {
+          "REG": {
+            "p_cleared_A": 1.0,
+            "p_cleared_B": 1.0,
+            "coverage90": 0.915,
+            "mean_bias": 0.0015,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 1.0,
+            "p_cleared_B": 1.0,
+            "coverage90": 0.922,
+            "mean_bias": -0.0004,
+            "share_samples_with_dropped_stratum": 0.018
+          }
+        }
+      }
+    }
+  },
+  "age": {
+    "groups": [
+      "18-24",
+      "25+"
+    ],
+    "n_shown": [
+      24507,
+      29723
+    ],
+    "A3": {
+      "raw_gap": -0.0118,
+      "target": {
+        "REG": -0.0069,
+        "FIX": -0.0103
+      },
+      "share_explained": {
+        "REG": 0.4183,
+        "FIX": 0.127
+      },
+      "per_n": {
+        "500": {
+          "REG": {
+            "p_cleared_A": 0.818,
+            "p_cleared_B": 0.768,
+            "coverage90": 0.9,
+            "mean_bias": -0.0013,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 0.819,
+            "p_cleared_B": 0.715,
+            "coverage90": 0.905,
+            "mean_bias": -0.0009,
+            "share_samples_with_dropped_stratum": 0.174
+          }
+        },
+        "1000": {
+          "REG": {
+            "p_cleared_A": 0.997,
+            "p_cleared_B": 0.977,
+            "coverage90": 0.91,
+            "mean_bias": -0.0004,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 0.995,
+            "p_cleared_B": 0.959,
+            "coverage90": 0.91,
+            "mean_bias": -0.0005,
+            "share_samples_with_dropped_stratum": 0.009
+          }
+        },
+        "2000": {
+          "REG": {
+            "p_cleared_A": 1.0,
+            "p_cleared_B": 1.0,
+            "coverage90": 0.912,
+            "mean_bias": -0.0004,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 1.0,
+            "p_cleared_B": 0.999,
+            "coverage90": 0.921,
+            "mean_bias": -0.0002,
+            "share_samples_with_dropped_stratum": 0.0
+          }
+        }
+      }
+    },
+    "O10": {
+      "raw_gap": -0.0135,
+      "target": {
+        "REG": -0.0091,
+        "FIX": -0.0102
+      },
+      "share_explained": {
+        "REG": 0.3247,
+        "FIX": 0.2448
+      },
+      "per_n": {
+        "500": {
+          "REG": {
+            "p_cleared_A": 0.962,
+            "p_cleared_B": 0.924,
+            "coverage90": 0.892,
+            "mean_bias": 0.0004,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 0.959,
+            "p_cleared_B": 0.899,
+            "coverage90": 0.897,
+            "mean_bias": 0.0008,
+            "share_samples_with_dropped_stratum": 0.156
+          }
+        },
+        "1000": {
+          "REG": {
+            "p_cleared_A": 1.0,
+            "p_cleared_B": 0.998,
+            "coverage90": 0.919,
+            "mean_bias": 0.0002,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 0.998,
+            "p_cleared_B": 0.997,
+            "coverage90": 0.913,
+            "mean_bias": 0.0003,
+            "share_samples_with_dropped_stratum": 0.014
+          }
+        },
+        "2000": {
+          "REG": {
+            "p_cleared_A": 1.0,
+            "p_cleared_B": 1.0,
+            "coverage90": 0.914,
+            "mean_bias": -0.0004,
+            "share_samples_with_dropped_stratum": 0.0
+          },
+          "FIX": {
+            "p_cleared_A": 1.0,
+            "p_cleared_B": 1.0,
+            "coverage90": 0.909,
+            "mean_bias": -0.0003,
+            "share_samples_with_dropped_stratum": 0.0
+          }
+        }
+      }
+    }
+  },
+  "qualifying": [
+    "REG",
+    "FIX"
+  ],
+  "gender_share_explained_mean": {
+    "REG": 0.8085,
+    "FIX": 0.6451
+  },
+  "chosen": "REG",
+  "verdict": "chosen: REG"
+}

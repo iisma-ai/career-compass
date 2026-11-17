@@ -18,6 +18,8 @@
 | E8 pilot DIF power | min 300 per gender group; plan 400 | 0018 |
 | E9 study power | 1.6: 2,052/group; 1.5: 176/arm; 1.7: 90; gender agreement gap .044 | 0019 |
 | E10 gap mitigation | not viable (best .030); ~3/4 of gap is answer composition (exploratory) | 0022 |
+| E11 conditional-gap power | stratified estimator not calibrated | 0025 |
+| E12 conditional estimator | REG calibrated at 1,000/group; conditional gender gap .007–.009 | 0026 |
 
 ## Release blockers (ethics review 2026-11-15)
 - [x] O\*NET attribution (README)
@@ -42,8 +44,8 @@
 7. Sample sizes done (E9, ADR 0019). Owner decision: run 1.6 at 2,052 per group, or ~1,000 with a relaxed S-top
    precision bar. E10 done: not viable (ADR 0022). Owner chose the answer-conditional gap for 1.6(a) (ADR 0023); the 1.6
    pre-registration must recompute its sample size for that estimator. 1.6 runs at 1,000 per group (ADR 0024);
-   E11: power is fine at 1,000, but the stratified estimator is biased at pilot size (ADR 0025); E12 compares
-   fixed-estimand estimators. Full-data conditional gender gap .009–.011. C3 (extend to 40 items for flat profiles) is a candidate needing a live test.
+   E12 settled the estimator: regression adjustment (ADR 0026), calibrated at 1,000 per group. The 1.6
+   pre-registration can be written once the study exists. C3 (extend to 40 items for flat profiles) is a candidate needing a live test.
 8. v1 engine built (`src/career_compass/engine.py`, ADR 0020/0021): form, GRM-EAP, gate, unordered families; reproduces
    E4. Research-only parameters. Missing: diversity cap, thin-pool broadening, refine-to-30, explanation copy, lost-user
    flow, UI, hand-written family labels (1.4).

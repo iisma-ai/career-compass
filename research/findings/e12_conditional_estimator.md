@@ -35,3 +35,47 @@ Selection rule: an estimator QUALIFIES if, at n = 1000, coverage is in [.85, .95
 - **FIX's coarse strata adjust less completely than E11's 134 strata.** That trade-off is the reason for the
   selection rule.
 - **Replay data, self-selected sample** (as E8–E11).
+
+## Run notes
+- Smoke run then full run: 54,230 adults shown families, R = 1000, seed 42, 31 s. No changes after the
+  pre-registration commit.
+
+## Results
+**Full-data targets** (raw gap → conditional gap; share of raw gap explained):
+
+| Contrast, metric | Raw | REG | FIX |
+|---|---|---|---|
+| Gender A3 | .042 | **.009** (78%) | .014 (67%) |
+| Gender O10 | .043 | **.007** (83%) | .016 (62%) |
+| Age A3 | −.012 | −.007 (42%) | −.010 (13%) |
+| Age O10 | −.014 | −.009 (32%) | −.010 (24%) |
+
+**At 1,000 per group:** coverage of the 90% CI / P(cleared | target 0) / P(cleared | as observed) / mean bias.
+
+| Contrast, metric | REG | FIX |
+|---|---|---|
+| Gender A3 | .896 / .980 / .927 / +.001 | .891 / .982 / .904 / −.000 |
+| Gender O10 | .910 / .999 / .991 / +.002 | .906 / .999 / .966 / −.000 |
+| Age A3 | .910 / .997 / .977 / −.000 | .910 / .995 / .959 / −.001 |
+| Age O10 | .919 / 1.000 / .998 / +.000 | .913 / .998 / .997 / +.000 |
+
+FIX dropped a stratum (empty for one group) in 18% of gender samples at n = 1,000 (about 50% at n = 500). REG coverage
+is .89–.92 at every n in {500, 1000, 2000}. Full table in `e12_conditional_estimator.json`.
+
+## Verdict
+**Both estimators qualify. Chosen: REG** by the pre-registered rule, because it explains more of the raw gender gap
+(81% vs 65%, mean of A3 and O10).
+
+## Interpretation (ours)
+- Unlike E11's adaptive pooling, a fixed estimand gives calibrated CIs at 1,000 per group. So the owner's plan
+  (answer-conditional bar, 1,000 per group) is feasible with REG.
+- On this data the conditional gender gap is about .007–.009. If the pilot resembles it, 1.6(a) is expected to pass
+  (P ≥ .93 at 1,000 per group).
+- REG's quantity is a model-based adjustment: the gap among people with the same profile shape, elevation and
+  differentiation, under a quadratic linear model. The 1.6 report should also show the raw gap (already required by
+  ADR 0023) and FIX as a sensitivity check.
+
+## Caveats
+- Replay data, self-selected sample, model-defined estimand.
+- The 24-item profile used as covariate is the same profile whose agreement is measured, so the adjustment is for
+  "answers as scored", not for latent interests.

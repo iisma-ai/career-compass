@@ -163,6 +163,7 @@ judged mis-specified. The original verdict stands, and the discussion explains w
 | E9 | Sample sizes for milestones 1.5–1.7 | Planning result | 1.6: 2,052 per group (S-top precision; parity ≈ 580); 1.5: 176 per arm; 1.7: 90. Gender gap in 24-item vs full agreement .044 [.039, .049] | [e9](findings/e9_study_power.md), ADR 0019 |
 | E10 | Does a gender-blind form-length rule shrink the gender agreement gap to ≤ .02? | Not viable | Gap .042 → .030 at best (extend to 40 when flat; 26.9 items); 40 for all .040. Post-hoc: .011 after reweighting to a common profile-shape mix | [e10](findings/e10_gap_mitigation.md), ADR 0022 |
 | E11 | Is 1,000 per group enough for the answer-conditional parity test? | SE not calibrated (estimator problem) | Power ≥ .97 at 1,000, but gender coverage .81–.86 (adaptive pooling bias). Full-data conditional gender gap .009–.011 (≈ 75% of the raw gap explained) | [e11](findings/e11_conditional_gap_power.md), ADR 0025 |
+| E12 | Which conditional-gap estimator is calibrated at 1,000 per group? | Proven (REG chosen) | REG coverage .90–.92, power ≥ .98; conditional gender gap .007–.009 (81% of raw explained) | [e12](findings/e12_conditional_estimator.md), ADR 0026 |
 
 What this adds up to (*interpretation*):
 1. **Measurement is adequate.** Scales are reliable, the hexagon holds and 24 items track the full test closely (E1, E2, E4).
