@@ -70,6 +70,7 @@ Entries dated before 2026-11-15 22:00 were filled in afterwards from the git his
 | [0022](decisions/0022-e10-result-and-gap-definition.md) | E10 not viable; the 1.6(a) gap definition (raw vs answer-conditional) is the owner's decision | Accepted (open question) |
 | [0023](decisions/0023-answer-conditional-agreement-gap.md) | 1.6(a) bar uses the answer-conditional gap (pooled-mix standardisation); raw gap still reported | Accepted (owner) |
 | [0024](decisions/0024-fairness-audit-1000-per-group.md) | 1.6 fairness audit at 1,000 adults per group; S-top precision ±.045 | Accepted (owner) |
+| [0025](decisions/0025-e11-estimator-not-calibrated.md) | E11: stratified conditional-gap estimator not calibrated; compare fixed estimands in E12 | Accepted |
 
 ## Index of logs
 - [2026-11-14](log/2026-11-14.md) *(backfilled)*: scaffolding, data pipeline, E1–E2

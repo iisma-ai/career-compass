@@ -42,7 +42,8 @@
 7. Sample sizes done (E9, ADR 0019). Owner decision: run 1.6 at 2,052 per group, or ~1,000 with a relaxed S-top
    precision bar. E10 done: not viable (ADR 0022). Owner chose the answer-conditional gap for 1.6(a) (ADR 0023); the 1.6
    pre-registration must recompute its sample size for that estimator. 1.6 runs at 1,000 per group (ADR 0024);
-   E11 checks that this is enough for the conditional test. C3 (extend to 40 items for flat profiles) is a candidate needing a live test.
+   E11: power is fine at 1,000, but the stratified estimator is biased at pilot size (ADR 0025); E12 compares
+   fixed-estimand estimators. Full-data conditional gender gap .009–.011. C3 (extend to 40 items for flat profiles) is a candidate needing a live test.
 8. v1 engine built (`src/career_compass/engine.py`, ADR 0020/0021): form, GRM-EAP, gate, unordered families; reproduces
    E4. Research-only parameters. Missing: diversity cap, thin-pool broadening, refine-to-30, explanation copy, lost-user
    flow, UI, hand-written family labels (1.4).

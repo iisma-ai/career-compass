@@ -37,3 +37,46 @@ Verdict:       "adequate" / "not adequate (n needed = X)" / "SE not calibrated; 
 - **The SE ignores the randomness of the stratum weights and of the pooling.** Coverage checks how much that matters.
 - **The shift in scenario A is constant.** The real conditional gap may vary by stratum.
 - **Scenario B uses the full-data gap as the truth,** so its power depends on that point estimate.
+
+## Run notes
+- Smoke run then full run: 62,530 adults, 54,230 shown families, R = 1000, seed 42, 81 s. No changes after the
+  pre-registration commit.
+
+## Results
+**Full-data answer-conditional gaps (pooled-mix standardisation, ADR 0023; recomputation that ADR 0023 required):**
+
+| Contrast | Metric | Raw gap | Conditional gap (SE) | Share explained by profile shape | Strata |
+|---|---|---|---|---|---|
+| Gender (F − M) | top-3 families (A3) | .042 | **.009** (.003) | 77% | 134 |
+| Gender | top-10 overlap (O10) | .043 | **.011** (.002) | 74% | 134 |
+| Age (18–24 − 25+) | A3 | −.012 | −.012 (.002) | 3% | 140 |
+| Age | O10 | −.014 | −.010 (.002) | 27% | 140 |
+
+**Simulation (P(cleared) under A: true gap 0; under B: true gap as observed; coverage of the 90% CI under B):**
+
+| Contrast, metric | n = 500 A / B / cov | 750 | **1,000** | 1,500 | 2,000 |
+|---|---|---|---|---|---|
+| Gender A3 | .687 / .503 / .826 | .881 / .723 / .838 | **.972 / .871 / .863** | .998 / .982 / .905 | 1.000 / .997 / .906 |
+| Gender O10 | .754 / .492 / .702 | .946 / .751 / .752 | **.989 / .917 / .806** | 1.000 / .989 / .830 | 1.000 / .999 / .880 |
+| Age A3 | .820 / .684 / .910 | .947 / .870 / .893 | **.992 / .941 / .906** | .999 / .990 / .902 | 1.000 / .999 / .907 |
+| Age O10 | .937 / .885 / .901 | .993 / .962 / .875 | **1.000 / .993 / .916** | 1.000 / 1.000 / .903 | 1.000 / 1.000 / .895 |
+
+## Verdict
+**"SE not calibrated; not usable"** (pre-registered rule). At 1,000 per group, power in scenario A is ≥ .97 for all
+four tests, but coverage for gender O10 (.806) is below .85, and below .85 at every n up to 1,500.
+
+## Interpretation (ours)
+- **The low coverage is bias, not only a small SE.** It is confined to the gender contrast, where profile mixes differ
+  most, and it shrinks as n grows (.70 → .88). That pattern fits the adaptive pooling: at pilot size, sparse strata
+  are merged, so the sample estimate controls for profile shape more coarsely than the full-data estimate and is
+  pulled towards the raw gap. The age contrast, with similar mixes, is calibrated.
+- **So 1,000 per group is not shown to be inadequate; the ADR 0023 estimator is.** A fixed estimand that does not
+  change with sample size (e.g. regression adjustment on continuous profile-shape covariates, or fixed coarse strata
+  defined in advance with the full-data target on the same strata) should be compared in a new pre-registered
+  experiment (E12) before the 1.6 pre-registration.
+- The pooled-mix conditional gaps confirm E10's exploratory result: about three-quarters of the gender gap is profile
+  composition. The remaining conditional gaps, .009–.011, are well inside ±.05.
+
+## Caveats
+- As listed before the run. In addition, the "truth" for coverage is the full-data estimate with 134–140 strata. It is
+  itself only one definition of the conditional gap.

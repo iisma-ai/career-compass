@@ -1,4 +1,5 @@
 # 0023 — The 1.6(a) fairness bar uses the answer-conditional gap; the raw gap is still reported
+**Estimator details superseded by 0025** (strata and pooling); the choice of an answer-conditional bar stands.
 Date: 2026-11-17        Status: Accepted (owner's decision). Resolves the open question in ADR 0022.
 
 ## Context
