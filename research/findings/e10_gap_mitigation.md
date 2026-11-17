@@ -49,3 +49,56 @@ Success bar:   A condition among C1-C3 is a MITIGATION if, in the primary popula
   rates are reported so that this is visible.
 - **No causal claim:** the hypothesis about why the gap exists is not tested directly.
 - **Teens are a secondary, offline-only analysis.**
+
+## Run notes
+- Smoke run (`--quick`) then the full run: 62,530 adults (41,742 F, 20,347 M) and 13,059 teens, B = 1000, seed 42,
+  29 s. Nothing was changed between the pre-registration commit and the run.
+
+## Results (pre-registered)
+Adults; primary population = people shown families. Gap = F − M in top-3 family agreement with the 48-item reference.
+
+| Condition | Mean items (F / M) | Gate rate F / M | A3 F | A3 M | Gap [95% CI], primary | Gap, everyone |
+|---|---|---|---|---|---|---|
+| C0 24 for all | 24 | .123 / .153 | .677 | .635 | **.042** [.036, .047] | .054 |
+| C1 30 for all | 30 | .125 / .153 | .719 | .681 | .038 [.033, .043] | .050 |
+| C2 24 → 30 if diff < 1.5 | 25.1 (24.9 / 25.5) | .120 / .149 | .682 | .645 | .037 [.032, .042] | .048 |
+| C3 24 → 40 if diff < 1.5 | 26.9 (26.3 / 28.0) | .117 / .142 | .695 | .665 | **.030** [.025, .035] | .036 |
+| C4 40 for all (reference) | 40 | .126 / .147 | .801 | .761 | .040 [.036, .044] | .051 |
+
+![E10 gap by condition](e10_gap_mitigation.png)
+
+Extended under C2/C3: 14.4% of women and 25.0% of men (the rule is gender-blind; men's profiles are flatter more often).
+
+Teens (secondary, offline only): C0 gap .070 [.057, .081] → C3 .054 [.042, .066]; 40 for all .052.
+
+## Verdict
+**Not viable.** No condition reaches |gap| ≤ .02. C3 comes closest (.030) and raises both groups' agreement
+(F +.018, M +.029) for 2.9 extra items on average. Even 40 items for everyone leaves a .040 gap, so form length is
+not the main cause.
+
+## Post-hoc analyses (EXPLORATORY, not pre-registered; `e10_posthoc.py`, `e10_posthoc.json`)
+1. **Reference check.** With a 40-item reference (no excluded DIF items), the C0 gap is .037 [.032, .042] instead
+   of .042. The 40-vs-48 gap is .039. The excluded items explain only a small part.
+2. **Composition check.** Among people shown families, the C0 gap is .042. Reweighting men to women's distribution
+   of profile shape gives:
+   - by top-2 Holland code: .033;
+   - by top-2 code × differentiation band: **.011**.
+
+   For teens the gap falls from .070 to .023.
+
+   **Interpretation:** about three-quarters of the adult gap reflects *which* profiles men and women give, mainly
+   flatter and differently shaped ones, not different treatment of similar answers. With similar answers, agreement is
+   nearly equal. This fits the gender-blind design (ADR 0015): identical answers get identical results, and outcome
+   differences that follow from different answers remain, as with R-top exposure in E3. It is exploratory and
+   needs confirmation on an independent sample.
+
+## Caveats
+- Replay, not live; reference includes excluded items (bounded by post-hoc 1).
+- Reweighting controls only for the strata used; finer shape differences may explain more of the residual or less.
+- The .02 bar came from E9's power arithmetic for a raw-gap TOST. It isn't a normative fairness threshold.
+
+## Implications
+- No length-based mitigation reaches the 1.6(a) raw-gap bar. The bar's definition (raw vs answer-conditional gap) is
+  an owner decision before the 1.6 study is pre-registered (ADR 0022).
+- C3 is a candidate general improvement (higher agreement for everyone, smaller gap). Adopting it needs its own
+  decision and a live test, because the extra items for flat profiles are replay-based.

@@ -1,0 +1,441 @@
+{
+  "adults": {
+    "n": 62530,
+    "n_female": 41742,
+    "n_male": 20347,
+    "extended_share": {
+      "female": 0.1435,
+      "male": 0.2497
+    },
+    "C0": {
+      "mean_items": 24.0,
+      "mean_items_by_group": {
+        "female": 24.0,
+        "male": 24.0
+      },
+      "gate_rate": {
+        "female": 0.1227,
+        "male": 0.1527
+      },
+      "primary_shown": {
+        "A3": {
+          "female": 0.6768,
+          "male": 0.6352
+        },
+        "gap": 0.0416,
+        "gap_ci95": [
+          0.0364,
+          0.0465
+        ],
+        "n": [
+          36619,
+          17239
+        ]
+      },
+      "secondary_all": {
+        "A3": {
+          "female": 0.6614,
+          "male": 0.6077
+        },
+        "gap": 0.0537,
+        "gap_ci95": [
+          0.0487,
+          0.0584
+        ],
+        "n": [
+          41742,
+          20347
+        ]
+      }
+    },
+    "C1": {
+      "mean_items": 30.0,
+      "mean_items_by_group": {
+        "female": 30.0,
+        "male": 30.0
+      },
+      "gate_rate": {
+        "female": 0.1249,
+        "male": 0.1526
+      },
+      "primary_shown": {
+        "A3": {
+          "female": 0.7186,
+          "male": 0.681
+        },
+        "gap": 0.0376,
+        "gap_ci95": [
+          0.0328,
+          0.0427
+        ],
+        "n": [
+          36527,
+          17243
+        ]
+      },
+      "secondary_all": {
+        "A3": {
+          "female": 0.7042,
+          "male": 0.6538
+        },
+        "gap": 0.0504,
+        "gap_ci95": [
+          0.0457,
+          0.0547
+        ],
+        "n": [
+          41742,
+          20347
+        ]
+      }
+    },
+    "C2": {
+      "mean_items": 25.0692,
+      "mean_items_by_group": {
+        "female": 24.861,
+        "male": 25.4983
+      },
+      "gate_rate": {
+        "female": 0.1197,
+        "male": 0.1491
+      },
+      "primary_shown": {
+        "A3": {
+          "female": 0.6819,
+          "male": 0.6446
+        },
+        "gap": 0.0374,
+        "gap_ci95": [
+          0.0323,
+          0.0423
+        ],
+        "n": [
+          36744,
+          17313
+        ]
+      },
+      "secondary_all": {
+        "A3": {
+          "female": 0.6698,
+          "male": 0.6218
+        },
+        "gap": 0.048,
+        "gap_ci95": [
+          0.0434,
+          0.0528
+        ],
+        "n": [
+          41742,
+          20347
+        ]
+      }
+    },
+    "C3": {
+      "mean_items": 26.8512,
+      "mean_items_by_group": {
+        "female": 26.296,
+        "male": 27.9955
+      },
+      "gate_rate": {
+        "female": 0.1173,
+        "male": 0.1423
+      },
+      "primary_shown": {
+        "A3": {
+          "female": 0.6947,
+          "male": 0.6645
+        },
+        "gap": 0.0302,
+        "gap_ci95": [
+          0.0253,
+          0.0349
+        ],
+        "n": [
+          36847,
+          17451
+        ]
+      },
+      "secondary_all": {
+        "A3": {
+          "female": 0.6904,
+          "male": 0.6546
+        },
+        "gap": 0.0358,
+        "gap_ci95": [
+          0.0312,
+          0.0402
+        ],
+        "n": [
+          41742,
+          20347
+        ]
+      }
+    },
+    "C4": {
+      "mean_items": 40.0,
+      "mean_items_by_group": {
+        "female": 40.0,
+        "male": 40.0
+      },
+      "gate_rate": {
+        "female": 0.126,
+        "male": 0.1465
+      },
+      "primary_shown": {
+        "A3": {
+          "female": 0.8007,
+          "male": 0.7607
+        },
+        "gap": 0.04,
+        "gap_ci95": [
+          0.0356,
+          0.044
+        ],
+        "n": [
+          36481,
+          17366
+        ]
+      },
+      "secondary_all": {
+        "A3": {
+          "female": 0.7939,
+          "male": 0.7432
+        },
+        "gap": 0.0507,
+        "gap_ci95": [
+          0.0469,
+          0.0546
+        ],
+        "n": [
+          41742,
+          20347
+        ]
+      }
+    },
+    "decision": {
+      "verdict": "not viable",
+      "recommended": null,
+      "mitigations": []
+    }
+  },
+  "teens_secondary": {
+    "n": 13059,
+    "n_female": 9057,
+    "n_male": 3760,
+    "extended_share": {
+      "female": 0.1661,
+      "male": 0.3059
+    },
+    "C0": {
+      "mean_items": 24.0,
+      "mean_items_by_group": {
+        "female": 24.0,
+        "male": 24.0
+      },
+      "gate_rate": {
+        "female": 0.1648,
+        "male": 0.2207
+      },
+      "primary_shown": {
+        "A3": {
+          "female": 0.6714,
+          "male": 0.6019
+        },
+        "gap": 0.0695,
+        "gap_ci95": [
+          0.0573,
+          0.0807
+        ],
+        "n": [
+          7564,
+          2930
+        ]
+      },
+      "secondary_all": {
+        "A3": {
+          "female": 0.6511,
+          "male": 0.563
+        },
+        "gap": 0.088,
+        "gap_ci95": [
+          0.077,
+          0.1006
+        ],
+        "n": [
+          9057,
+          3760
+        ]
+      }
+    },
+    "C1": {
+      "mean_items": 30.0,
+      "mean_items_by_group": {
+        "female": 30.0,
+        "male": 30.0
+      },
+      "gate_rate": {
+        "female": 0.169,
+        "male": 0.2194
+      },
+      "primary_shown": {
+        "A3": {
+          "female": 0.7178,
+          "male": 0.651
+        },
+        "gap": 0.0668,
+        "gap_ci95": [
+          0.0547,
+          0.0783
+        ],
+        "n": [
+          7526,
+          2935
+        ]
+      },
+      "secondary_all": {
+        "A3": {
+          "female": 0.6998,
+          "male": 0.6131
+        },
+        "gap": 0.0867,
+        "gap_ci95": [
+          0.0769,
+          0.0975
+        ],
+        "n": [
+          9057,
+          3760
+        ]
+      }
+    },
+    "C2": {
+      "mean_items": 25.2295,
+      "mean_items_by_group": {
+        "female": 24.9964,
+        "male": 25.8351
+      },
+      "gate_rate": {
+        "female": 0.1605,
+        "male": 0.213
+      },
+      "primary_shown": {
+        "A3": {
+          "female": 0.6775,
+          "male": 0.6107
+        },
+        "gap": 0.0668,
+        "gap_ci95": [
+          0.055,
+          0.078
+        ],
+        "n": [
+          7603,
+          2959
+        ]
+      },
+      "secondary_all": {
+        "A3": {
+          "female": 0.6608,
+          "male": 0.5795
+        },
+        "gap": 0.0813,
+        "gap_ci95": [
+          0.0706,
+          0.0917
+        ],
+        "n": [
+          9057,
+          3760
+        ]
+      }
+    },
+    "C3": {
+      "mean_items": 27.2787,
+      "mean_items_by_group": {
+        "female": 26.657,
+        "male": 28.8936
+      },
+      "gate_rate": {
+        "female": 0.1604,
+        "male": 0.2125
+      },
+      "primary_shown": {
+        "A3": {
+          "female": 0.6929,
+          "male": 0.6387
+        },
+        "gap": 0.0542,
+        "gap_ci95": [
+          0.0424,
+          0.0657
+        ],
+        "n": [
+          7604,
+          2961
+        ]
+      },
+      "secondary_all": {
+        "A3": {
+          "female": 0.6871,
+          "male": 0.6276
+        },
+        "gap": 0.0595,
+        "gap_ci95": [
+          0.0488,
+          0.0705
+        ],
+        "n": [
+          9057,
+          3760
+        ]
+      }
+    },
+    "C4": {
+      "mean_items": 40.0,
+      "mean_items_by_group": {
+        "female": 40.0,
+        "male": 40.0
+      },
+      "gate_rate": {
+        "female": 0.1786,
+        "male": 0.2245
+      },
+      "primary_shown": {
+        "A3": {
+          "female": 0.8025,
+          "male": 0.7508
+        },
+        "gap": 0.0517,
+        "gap_ci95": [
+          0.042,
+          0.0609
+        ],
+        "n": [
+          7439,
+          2916
+        ]
+      },
+      "secondary_all": {
+        "A3": {
+          "female": 0.7949,
+          "male": 0.7245
+        },
+        "gap": 0.0705,
+        "gap_ci95": [
+          0.0611,
+          0.0797
+        ],
+        "n": [
+          9057,
+          3760
+        ]
+      }
+    }
+  },
+  "meta": {
+    "seed": 42,
+    "quick": false,
+    "B": 1000,
+    "runtime_s": 29.3
+  }
+}

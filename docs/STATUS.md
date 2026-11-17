@@ -17,6 +17,7 @@
 | E7c names v2 + negation | not viable (negation 4/12); names .906 met on blind set | 0016, 0017 |
 | E8 pilot DIF power | min 300 per gender group; plan 400 | 0018 |
 | E9 study power | 1.6: 2,052/group; 1.5: 176/arm; 1.7: 90; gender agreement gap .044 | 0019 |
+| E10 gap mitigation | not viable (best .030); ~3/4 of gap is answer composition (exploratory) | 0022 |
 
 ## Release blockers (ethics review 2026-11-15)
 - [x] O\*NET attribution (README)
@@ -39,7 +40,8 @@
    gender group, floor 300; items cleared by 90% CI inside ±.30). Next: psychometrician + counsellor review of the
    drafts.
 7. Sample sizes done (E9, ADR 0019). Owner decision: run 1.6 at 2,052 per group, or ~1,000 with a relaxed S-top
-   precision bar. Next experiment: E10, a gender-blind mitigation for the 24-item agreement gap (.044), using the v1 form.
+   precision bar. E10 done: not viable (ADR 0022). Owner decision: 1.6(a) bar on the raw gap or the answer-conditional gap
+   (recommended). C3 (extend to 40 items for flat profiles) is a candidate needing a live test.
 8. v1 engine built (`src/career_compass/engine.py`, ADR 0020/0021): form, GRM-EAP, gate, unordered families; reproduces
    E4. Research-only parameters. Missing: diversity cap, thin-pool broadening, refine-to-30, explanation copy, lost-user
    flow, UI, hand-written family labels (1.4).

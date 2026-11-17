@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "seed": 7,
+    "exploratory": true
+  },
+  "adults": {
+    "reference_check": {
+      "24_vs_40ref": {
+        "F": 0.7133,
+        "M": 0.6762,
+        "gap": 0.0372,
+        "gap_ci95": [
+          0.0322,
+          0.0419
+        ]
+      },
+      "24_vs_48ref": {
+        "F": 0.6768,
+        "M": 0.6352,
+        "gap": 0.0416,
+        "gap_ci95": [
+          0.0366,
+          0.047
+        ]
+      },
+      "40_vs_48ref": {
+        "F": 0.8008,
+        "M": 0.7615,
+        "gap": 0.0393,
+        "gap_ci95": [
+          0.0352,
+          0.0438
+        ]
+      }
+    },
+    "composition_check": {
+      "top2_code": {
+        "F": 0.6768,
+        "M_raw": 0.6352,
+        "M_reweighted": 0.644,
+        "gap_raw": 0.0416,
+        "gap_after_reweight": 0.0328,
+        "F_mass_covered": 1.0
+      },
+      "top2_code_x_differentiation": {
+        "F": 0.6768,
+        "M_raw": 0.6352,
+        "M_reweighted": 0.666,
+        "gap_raw": 0.0416,
+        "gap_after_reweight": 0.0108,
+        "F_mass_covered": 0.9999
+      }
+    }
+  },
+  "teens": {
+    "reference_check": {
+      "24_vs_40ref": {
+        "F": 0.7105,
+        "M": 0.6487,
+        "gap": 0.0618,
+        "gap_ci95": [
+          0.0504,
+          0.0741
+        ]
+      },
+      "24_vs_48ref": {
+        "F": 0.6714,
+        "M": 0.6019,
+        "gap": 0.0695,
+        "gap_ci95": [
+          0.0571,
+          0.081
+        ]
+      },
+      "40_vs_48ref": {
+        "F": 0.8039,
+        "M": 0.7469,
+        "gap": 0.057,
+        "gap_ci95": [
+          0.0461,
+          0.0671
+        ]
+      }
+    },
+    "composition_check": {
+      "top2_code": {
+        "F": 0.6714,
+        "M_raw": 0.6019,
+        "M_reweighted": 0.6204,
+        "gap_raw": 0.0695,
+        "gap_after_reweight": 0.051,
+        "F_mass_covered": 1.0
+      },
+      "top2_code_x_differentiation": {
+        "F": 0.6714,
+        "M_raw": 0.6019,
+        "M_reweighted": 0.648,
+        "gap_raw": 0.0695,
+        "gap_after_reweight": 0.0234,
+        "F_mass_covered": 0.9981
+      }
+    }
+  }
+}
