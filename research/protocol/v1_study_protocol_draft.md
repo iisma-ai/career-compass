@@ -19,7 +19,7 @@ calibrated, checked for fairness and tested for usefulness on consented particip
 | Study | Milestones | Design | Sample (from) |
 |---|---|---|---|
 | S1 Item pilot | 1.1, 1.2 | Online questionnaire: the 48 current items + 26 candidate items, random order | 400 per self-reported gender group (floor 300), plus others (E8, ADR 0018) |
-| S2 Fairness and usability | 1.3, 1.6, 1.7 | The v1 24-item form → career families; ratings of real vs shuffled families (subsample) | 1.6: 2,052 per group (or about 1,000 if the owner relaxes one precision bar; ADR 0019); 1.7: 90 within it (E9) |
+| S2 Fairness and usability | 1.3, 1.6, 1.7 | The v1 24-item form → career families; ratings of real vs shuffled families (subsample) | 1.6: 1,000 per group (owner decision; S-top precision ±.045; ADR 0024); 1.7: 90 within it (E9) |
 | S3 Lost-user trial | 1.5 | Randomised two-arm trial among people the gate flags: usual broad-families flow vs new flow | 176 per arm; about 2,640 screened (E9) |
 
 S2 must not start before E10, the gender-blind mitigation for the agreement gap (ADR 0019). S3 must not start before the
@@ -105,7 +105,7 @@ health data.
 
 ## 10. Decisions needed before submission
 1. Recruitment channels and payment.
-2. Whether 1.6 runs at 2,052 per group or about 1,000 (ADR 0019).
+2. ~~Whether 1.6 runs at 2,052 per group or about 1,000~~ Decided: 1,000 per group (ADR 0024).
 3. Hosting provider and region, retention period, withdrawal cut-off, small-cell suppression threshold.
 4. The career decision self-efficacy instrument (licence).
 5. Which ethics committee, and the institution that sponsors the research.
