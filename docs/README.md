@@ -72,3 +72,4 @@ Entries dated before 2026-11-15 22:00 were filled in afterwards from the git his
 - [2026-11-14](log/2026-11-14.md) *(backfilled)*: scaffolding, data pipeline, E1–E2
 - [2026-11-15](log/2026-11-15.md): E3–E7, ethics review, E6, uv migration, docs journal, E7b
 - [2026-11-16](log/2026-11-16.md): research dossier (RESEARCH, MODELS, ROADMAP), ethics review, rename to Career Compass, ADR 0015, E7c, item drafts, E8, E9, study protocol draft, v1 engine
+- [2026-11-17](log/2026-11-17.md): E10 gap mitigation
