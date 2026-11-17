@@ -14,10 +14,10 @@ Status labels:
 |---|---|---|---|---|
 | L1 | Item bank and questionnaire form | Specified (items need replacing before release) | `src/career_compass/engine.py` (`build_fixed_form`) | E1, E2, E4 |
 | L2 | User model: GRM + EAP profile estimate | Specified | `src/career_compass/engine.py` (v1; ADR 0020/0021), `research/feasibility/e4_cat_simulation.py` (research) | E4 |
-| L3 | Lost-user detection and flow | Trigger specified, flow is design only | `engine.gate` (trigger only) | E1, E4, E5 |
+| L3 | Lost-user detection and flow | Trigger specified, flow is design only | `engine.gate`, `assess` notices (trigger and wording flags only) | E1, E4, E5 |
 | L4 | Matching, families and re-ranking | Specified | `src/career_compass/matching.py`, `engine.recommend` | E3, E5 |
 | L5 | Free-text layer | Research-only | `src/career_compass/text_cues.py` (v2), `research/feasibility/e7*.py` | E7, E7b, E7c |
-| L6 | Explanations | Design | — | E2, E3 |
+| L6 | Explanations | Design (structured fields + draft copy in the local demo) | `engine.recommend`, `engine.prediger`, `demo.py` | E2, E3 |
 | L7 | Feedback learning | Not started (blocked by privacy design) | — | — |
 | L8 | Field-of-study prediction | Research-only (v3) | `research/feasibility/e6_major_prediction.py` | E6 |
 

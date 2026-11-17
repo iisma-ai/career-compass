@@ -132,6 +132,8 @@ notebooks/           exploration only — never the source of truth
 uv sync                                                     # create/update .venv from uv.lock
 uv run python -I research/feasibility/e4_cat_simulation.py  # run one experiment
 uv run ruff check .                                         # lint (format: uv run ruff format <file>)
+uv run pytest -q                                            # tests
+uv run python -I -m career_compass.demo                     # local research-only demo, http://127.0.0.1:8765
 uv add <package>                                            # add a dependency (pyproject + lock), then log it in docs/
 ```
 

@@ -272,6 +272,22 @@ def recommend(profile: Profile, cat: Catalogue, n_families: int = 3, n_examples:
 
 
 # ------------------------------------------------------------------------------------------------ pipeline
+def refine_form(bank: ItemBank) -> list[str]:
+    """Optional refine step (MODELS L1): the v1 form plus each scale's 5th item (30 items). Its first 24 items are
+    the v1 form, so the refine page only asks the 6 new items."""
+    return build_fixed_form(bank, per_scale=5)
+
+
+ANGLES = np.deg2rad(np.arange(6) * 60.0)  # R=0, I=60, A=120, S=180, E=240, C=300 (E2)
+
+
+def prediger(profile: Profile) -> tuple[float, float]:
+    """Angle projection of the shape onto the hexagon plane (MODELS L6, E2): (things_minus_people, ideas_minus_data).
+    For explanation wording only; never shown as a number."""
+    c = profile.raw - profile.raw.mean()
+    return float(c @ np.cos(ANGLES)), float(c @ np.sin(ANGLES))
+
+
 @dataclass(frozen=True)
 class Result:
     status: str  # "clear" | "mixed" | "lost"
@@ -280,6 +296,7 @@ class Result:
     notices: tuple[str, ...]
     research_only: bool
     profile: Profile | None = field(default=None, repr=False)  # internal; never rendered as scores (ADR 0006)
+    prediger_xy: tuple[float, float] | None = None  # internal, for explanation wording (L6)
 
 
 def assess(responses: Mapping[str, int], bank: ItemBank, cat: Catalogue,
@@ -297,5 +314,12 @@ def assess(responses: Mapping[str, int], bank: ItemBank, cat: Catalogue,
     prof = score(responses, bank)
     status = gate(prof)
     fams = [] if status == "lost" else recommend(prof, cat, job_zones=job_zones)
-    return Result(status=status, families=fams, top_types=prof.top_types(2), notices=NOTICES,
-                  research_only=bank.research_only, profile=prof)
+    notices = list(NOTICES)
+    if status == "mixed":
+        notices.append("mixed_profile")  # L3 soft gate: "your answers point in several directions"
+    if prof.elevation < GATE_ELEVATION:
+        notices.append("low_interest_talk_to_someone")  # L3 non-diagnostic line; counsellor review pending
+    if fams and not any(prof.top_types(1)[0] in f.family_types for f in fams):
+        notices.append("top_type_thin_pool")  # L4: few occupations peak on this type; explain why
+    return Result(status=status, families=fams, top_types=prof.top_types(2), notices=tuple(notices),
+                  research_only=bank.research_only, profile=prof, prediger_xy=prediger(prof))

@@ -46,7 +46,8 @@
    pre-registration must recompute its sample size for that estimator. 1.6 runs at 1,000 per group (ADR 0024);
    E12 settled the estimator: regression adjustment (ADR 0026), calibrated at 1,000 per group. The 1.6
    pre-registration can be written once the study exists. C3 (extend to 40 items for flat profiles) is a candidate needing a live test.
-8. v1 engine built (`src/career_compass/engine.py`, ADR 0020/0021): form, GRM-EAP, gate, unordered families; reproduces
-   E4. Research-only parameters. Missing: diversity cap, thin-pool broadening, refine-to-30, explanation copy, lost-user
-   flow, UI, hand-written family labels (1.4).
+8. v1 engine built (`src/career_compass/engine.py`, ADRs 0020, 0021, 0027): form, refine-to-30, GRM-EAP, gate, unordered
+   families, wording flags. Reproduces E4. Research-only parameters. Local review page: `uv run python -I -m
+   career_compass.demo` (127.0.0.1 only, stores nothing). Missing: the lost-user flow, counsellor-reviewed copy, family
+   labels (1.4) and help links.
 9. Study protocol draft for the ethics committee: `research/protocol/v1_study_protocol_draft.md` (owner decisions in §10).
