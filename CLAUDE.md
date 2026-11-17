@@ -48,7 +48,7 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
 - v1 engine `src/career_compass/engine.py` (ADR 0020/0021): balanced 4-per-scale form, GRM-EAP, gate, unordered
   families; reproduces E4 (r_raw .949). Research-only parameters until blocker 2 clears. Protocol draft in `research/protocol/`.
 - E10 (ADR 0022): no gender-blind length rule closes the agreement gap (.042 → .030 at best). Exploratory: ~3/4 of it is
-  answer composition (.011 after reweighting). Raw vs answer-conditional 1.6(a) bar is the owner's decision.
+  answer composition (.011 after reweighting). 1.6(a) uses the answer-conditional gap, with the raw gap still reported (ADR 0023, owner).
 - Ethics review (2026-11-15): release blockers are attribution (done: README), privacy/legal design + DPIA,
   re-audited DIF on the final item set, a validated lost-user flow, and permission before shipping anything
   derived from OpenPsychometrics. Never quote r or match scores as accuracy.

@@ -88,7 +88,8 @@ health data.
   - **Age DIF:** 18–24 vs 25+.
   - **Calibration:** GRM; per-scale α ≥ .80; 24-item vs 40-item profile r ≥ .95 (milestone 1.2).
 - **S2:**
-  - **1.6:** group parity tests (TOST ±.05) for top-3 family agreement and top-10 overlap; R-top and S-top exposure
+  - **1.6:** group parity tests (TOST ±.05) on the answer-conditional gap (groups standardised to the pooled
+    profile-shape mix; raw gap reported alongside; ADR 0023) for top-3 family agreement and top-10 overlap; R-top and S-top exposure
     by gender with CIs; gate rate by group.
   - **1.7:** paired ratings, real vs shuffled families; median completion time with a CI.
   - **1.3:** live vs simulated agreement.
