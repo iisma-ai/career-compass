@@ -48,6 +48,7 @@
    pre-registration can be written once the study exists. C3 (extend to 40 items for flat profiles) is a candidate needing a live test.
 8. v1 engine built (`src/career_compass/engine.py`, ADRs 0020, 0021, 0027): form, refine-to-30, GRM-EAP, gate, unordered
    families, wording flags. Reproduces E4. Research-only parameters. Local review page: `uv run python -I -m
-   career_compass.demo` (127.0.0.1 only, stores nothing). Missing: the lost-user flow, counsellor-reviewed copy, family
-   labels (1.4) and help links.
+   career_compass.demo` (127.0.0.1 only, stores nothing). Draft S3 lost-user arms (ADR 0028): "usual" broad families vs
+   "explore" (5 families across interest types, try-outs, a summary to take to a counsellor). Missing: counsellor
+   review of all copy, family labels (1.4), help links, scenario items, and the S3 trial itself.
 9. Study protocol draft for the ethics committee: `research/protocol/v1_study_protocol_draft.md` (owner decisions in §10).

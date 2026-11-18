@@ -50,6 +50,14 @@ NOTICE_TEXT = {  # DRAFT copy (honesty rules, RESEARCH §9); counsellor review p
     "top_type_thin_pool": "Few careers in this data centre on your strongest interest, so these groups also draw "
                           "on your other interests.",
 }
+TRY_OUTS = {  # DRAFT next steps for the explore arm (MODELS L3 "concrete next steps"); counsellor review pending
+    "R": "Try something hands-on: a repair, building or gardening workshop, or helping on a practical project.",
+    "I": "Try a puzzle you can dig into: a short online course, a science or coding club, or a small investigation.",
+    "A": "Try making something: a writing, drawing, music, design or photography project, even a small one.",
+    "S": "Try helping or teaching: volunteering, tutoring, mentoring or supporting someone with a task.",
+    "E": "Try leading or persuading: organising an event, selling something, or running a small group project.",
+    "C": "Try organising: keeping records for a club, planning a budget, or tidying up a messy process.",
+}
 ATTRIBUTION = ("This page includes information from the O*NET 31.0 Database by the U.S. Department of Labor, "
                "Employment and Training Administration (USDOL/ETA). Used under the CC BY 4.0 license "
                "(https://creativecommons.org/licenses/by/4.0/). O*NET is a trademark of USDOL/ETA. The Career Compass "
@@ -123,11 +131,17 @@ def render_form(form: list[str], texts: dict[str, str], hidden: dict[str, int] |
 def render_result(r: E.Result, answers: dict[str, int], can_refine: bool) -> str:
     notes = "".join(f"<p>{esc(NOTICE_TEXT[n])}</p>" for n in r.notices if n in NOTICE_TEXT
                     and n not in ("careers_worth_exploring",))
-    if r.status == "lost":
+    if r.status == "lost" and r.arm is None:
+        hid = "".join(f'<input type="hidden" name="{esc(k)}" value="{int(v)}">' for k, v in answers.items())
+        arms = "".join(
+            f'<form method="post" action="/result">{hid}<input type="hidden" name="arm" value="{a}">'
+            f'<button type="submit">{esc(lbl)}</button></form><p></p>'
+            for a, lbl in (("usual", "Study arm A: usual broad groups"), ("explore", "Study arm B: explore (draft)")))
         body = ("<h1>Your answers don't point one way yet</h1>"
                 "<p>That's common, and it's useful to know. Rather than guess, the best next step is to try a few "
                 "different things and talk them over with someone.</p>"
-                "<p class='muted'>[The guided flow for this case is still being designed and tested.]</p>")
+                "<p class='muted'>[Reviewer view. In the study (S3) one of these is assigned at random; the "
+                "person never chooses or sees both. ADR 0028.]</p>" + arms)
         return page(body + notes)
     mine = ", ".join(esc(TYPE_NAMES[t]) for t in r.top_types)
     fams = []
@@ -137,17 +151,40 @@ def render_result(r: E.Result, answers: dict[str, int], can_refine: bool) -> str
         shared = (f"It shares your interest in {esc(' and '.join(SHORT[t] for t in f.shared_types))} work."
                   if f.shared_types else "It draws on the overall pattern of your answers.")
         work = " and ".join(SHORT[t] for t in f.family_types)
+        try_out = (f"<p><b>Something to try:</b> {esc(TRY_OUTS[f.family_types[0]])}</p>"
+                   if r.arm == "explore" else "")
         fams.append(f'<div class="fam"><h3>{esc(f.label)} <small>and related careers</small></h3>'
-                    f"<p>This group is mostly {esc(work)} work. {shared}</p><ul>{ex}</ul></div>")
+                    f"<p>This group is mostly {esc(work)} work. {shared}</p><ul>{ex}</ul>{try_out}</div>")
     refine = ""
     if can_refine:
         hid = "".join(f'<input type="hidden" name="{esc(k)}" value="{int(v)}">' for k, v in answers.items())
         refine = (f'<form method="post" action="/refine">{hid}<button type="submit">'
                   f"Answer 6 more questions to sharpen this</button></form>")
+    if r.arm == "explore":
+        return page(render_explore(r, mine, fams, notes))
     body = (f"<h1>Careers worth exploring</h1><p>{esc(NOTICE_TEXT['careers_worth_exploring'])}</p>"
             f"<p>Your strongest interests: {mine}.</p>"
             f"<p class='muted'>These groups are in no particular order.</p>{''.join(fams)}{notes}{refine}")
     return page(body)
+
+
+def render_explore(r: E.Result, mine: str, fams: list[str], notes: str) -> str:
+    """Draft new lost-user flow (S3 arm B, ADR 0028): explicit uncertainty, a wider spread of groups, a try-out per
+    group and a plain summary the person can take to a counsellor. No numbers anywhere (ADR 0006)."""
+    summary = "\n".join([
+        "Career Compass summary (research draft)",
+        "My answers were fairly even across interest areas, so nothing stood out clearly yet.",
+        "Areas that came out slightly ahead: " + ", ".join(SHORT[t] for t in r.top_types) + ".",
+        "Career groups I was shown to explore: " + "; ".join(f.label for f in r.families) + ".",
+        "I'd like help choosing one or two things to try first.",
+    ])
+    return (f"<h1>Let's explore</h1><p>Your answers were fairly even, so we can't say yet which kind of work "
+            f"suits you best. That's common, and it often changes once you try a few things. Below are "
+            f"{len(r.families)} quite different groups, each with something small you could try.</p>"
+            f"<p>Areas that came out slightly ahead: {mine}. Treat this as a starting guess.</p>"
+            f"<p class='muted'>These groups are in no particular order.</p>{''.join(fams)}{notes}"
+            f"<h2>To take to a counsellor</h2><p class='muted'>Nothing is saved. Copy or print this if it helps.</p>"
+            f"<pre style='white-space:pre-wrap'>{esc(summary)}</pre>")
 
 
 def parse_answers(body: bytes, bank: E.ItemBank) -> tuple[dict[str, int], list[int] | None]:
@@ -161,6 +198,13 @@ def parse_answers(body: bytes, bank: E.ItemBank) -> tuple[dict[str, int], list[i
             ans[k] = x
     jz = sorted({int(z) for z in q.get("jz", []) if z in {"2", "3", "4", "5"}}) or None
     return ans, jz
+
+
+def parse_arm(body: bytes) -> str | None:
+    arm = parse_qs(body.decode("utf-8", errors="replace"), max_num_fields=100).get("arm", [None])[0]
+    if arm is not None and arm not in E.LOST_ARMS:
+        raise ValueError("unknown arm")
+    return arm
 
 
 class App:
@@ -181,7 +225,7 @@ class App:
                     new = [it for it in self.refine if it not in ans]
                     return 200, render_form(new, self.texts, hidden=ans, refine=True)
                 form = self.refine if all(it in ans for it in self.refine) else self.form
-                r = E.assess(ans, self.bank, self.cat, job_zones=jz, form=form)
+                r = E.assess(ans, self.bank, self.cat, job_zones=jz, form=form, lost_arm=parse_arm(body))
                 return 200, render_result(r, ans, can_refine=form is self.form)
             except (ValueError, KeyError):
                 return 400, page("<h1>Please answer every question</h1><p><a href='/'>Start again</a></p>")

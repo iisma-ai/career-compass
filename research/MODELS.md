@@ -14,7 +14,7 @@ Status labels:
 |---|---|---|---|---|
 | L1 | Item bank and questionnaire form | Specified (items need replacing before release) | `src/career_compass/engine.py` (`build_fixed_form`) | E1, E2, E4 |
 | L2 | User model: GRM + EAP profile estimate | Specified | `src/career_compass/engine.py` (v1; ADR 0020/0021), `research/feasibility/e4_cat_simulation.py` (research) | E4 |
-| L3 | Lost-user detection and flow | Trigger specified, flow is design only | `engine.gate`, `assess` notices (trigger and wording flags only) | E1, E4, E5 |
+| L3 | Lost-user detection and flow | Trigger specified, flow is design only | `engine.gate`, `assess` notices and `lost_arm` (draft S3 arms, ADR 0028) | E1, E4, E5 |
 | L4 | Matching, families and re-ranking | Specified | `src/career_compass/matching.py`, `engine.recommend` | E3, E5 |
 | L5 | Free-text layer | Research-only | `src/career_compass/text_cues.py` (v2), `research/feasibility/e7*.py` | E7, E7b, E7c |
 | L6 | Explanations | Design (structured fields + draft copy in the local demo) | `engine.recommend`, `engine.prediger`, `demo.py` | E2, E3 |
@@ -88,7 +88,7 @@ full-scale raw profile* p ∈ [1,5]^6 (used for matching), elevation and differe
   - Differentiation between 1.0 and 1.5 is a soft gate: show broad families with "your answers point in several directions".
   - Do **not** trigger on posterior SE (its correlation with list stability is only .11). ([e1](findings/e1_data_audit.md), [e4](findings/e4_cat_simulation.md),
     [e5](findings/e5_stability.md))
-- **Flow (design only, no evidence yet):**
+- **Flow (design only, no evidence yet; draft arms in code, ADR 0028):**
   - broader, scenario-based items, plus a "don't know / never tried" option;
   - a wider and more diverse set of families;
   - explicit uncertainty wording;

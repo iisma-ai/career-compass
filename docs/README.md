@@ -73,9 +73,11 @@ Entries dated before 2026-11-15 22:00 were filled in afterwards from the git his
 | [0025](decisions/0025-e11-estimator-not-calibrated.md) | E11: stratified conditional-gap estimator not calibrated; compare fixed estimands in E12 | Accepted |
 | [0026](decisions/0026-reg-conditional-gap-estimator.md) | 1.6(a) conditional gap estimated by regression adjustment (REG); 1,000 per group adequate | Accepted |
 | [0027](decisions/0027-local-research-demo.md) | Engine completions (refine step, notices, Prediger) and a local research-only demo page (stdlib) | Accepted |
+| [0028](decisions/0028-s3-lost-user-arms.md) | Draft engine and demo arms for the lost-user trial S3 (usual broad families vs explore) | Accepted |
 
 ## Index of logs
 - [2026-11-14](log/2026-11-14.md) *(backfilled)*: scaffolding, data pipeline, E1–E2
 - [2026-11-15](log/2026-11-15.md): E3–E7, ethics review, E6, uv migration, docs journal, E7b
 - [2026-11-16](log/2026-11-16.md): research dossier (RESEARCH, MODELS, ROADMAP), ethics review, rename to Career Compass, ADR 0015, E7c, item drafts, E8, E9, study protocol draft, v1 engine
 - [2026-11-17](log/2026-11-17.md): E10–E12, owner decisions on the fairness audit (ADRs 0022–0026), engine completions and local demo (0027)
+- [2026-11-18](log/2026-11-18.md): draft S3 lost-user arms (ADR 0028)

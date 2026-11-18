@@ -46,7 +46,7 @@ Feasibility experiments (details in the `feasibility-experiment` skill; results 
 - E9 study sizes (ADR 0019): 1.6 fairness audit 2,052 per group (parity alone ≈ 580), 1.5 176 per arm, 1.7 90. Men's
   24-item results agree less with the full test (gap .044 vs a .05 bar), so a gender-blind mitigation (E10) is needed first.
 - v1 engine `src/career_compass/engine.py` (ADR 0020/0021): balanced 4-per-scale form, GRM-EAP, gate, unordered
-  families; reproduces E4 (r_raw .949). Research-only parameters until blocker 2 clears. Protocol draft in `research/protocol/`.
+  families; reproduces E4 (r_raw .949). Draft S3 lost-user arms (`assess(lost_arm=...)`, ADR 0028). Research-only parameters until blocker 2 clears. Protocol draft in `research/protocol/`.
 - E10 (ADR 0022): no gender-blind length rule closes the agreement gap (.042 → .030 at best). Exploratory: ~3/4 of it is
   answer composition (.011 after reweighting). 1.6(a) uses the answer-conditional gap, with the raw gap still reported (ADR 0023, owner); 1,000 per group (ADR 0024).
   E11/E12: the stratified estimator was biased at n = 1,000 (ADR 0025); regression adjustment (REG) is calibrated and

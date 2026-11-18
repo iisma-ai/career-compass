@@ -23,7 +23,8 @@ calibrated, checked for fairness and tested for usefulness on consented particip
 | S3 Lost-user trial | 1.5 | Randomised two-arm trial among people the gate flags: usual broad-families flow vs new flow | 176 per arm; about 2,640 screened (E9) |
 
 S2 must not start before E10, the gender-blind mitigation for the agreement gap (ADR 0019). S3 must not start before the
-new lost-user flow exists and a counsellor has reviewed its content (blocker 4 and 7). Each study is pre-registered
+new lost-user flow exists and a counsellor has reviewed its content (blocker 4 and 7). Draft
+arms exist in the engine and the local demo (ADR 0028); counsellor review is pending. Each study is pre-registered
 (hypotheses, metrics and analysis) and committed before data collection starts (ADR 0003).
 
 ## 3. Participants

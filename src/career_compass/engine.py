@@ -46,6 +46,7 @@ NOTICES = (
     "us_occupational_data_onet",  # MODELS L6.4 + O*NET CC BY 4.0 attribution
     "human_help_links",  # MODELS L3, required on every result page
 )
+LOST_ARMS = ("usual", "explore")  # S3 trial arms for gated users (ROADMAP 1.5, ADR 0028)
 
 
 # ------------------------------------------------------------------------------------------------ item bank
@@ -238,29 +239,35 @@ class Family:
     job_zones: tuple[int, int]
 
 
-def recommend(profile: Profile, cat: Catalogue, n_families: int = 3, n_examples: int = 3,
-              job_zones: Sequence[int] | None = None) -> list[Family]:
-    """Top families by their best member's Pearson score (E5), returned UNORDERED (sorted by id, ADR 0006).
-    `job_zones` is the user's optional preparation filter; default = all (MODELS L4)."""
+def _ranked_families(profile: Profile, cat: Catalogue, job_zones: Sequence[int] | None) -> dict[int, list[int]]:
+    """Families in order of their best member's Pearson score (E5), each with its members in score order. Ties are
+    broken by catalogue order. Empty when the preparation filter leaves nothing."""
     mask = np.ones(len(cat.occ), bool) if job_zones is None else cat.occ.job_zone.isin(list(job_zones)).to_numpy()
     if not mask.any():
-        return []
+        return {}
     s = score_matrix(profile.raw[None, :], cat.occ)[0]
     s = np.where(mask, s, -np.inf)
-    fam_best = {}
-    for i in np.argsort(-(s - np.arange(len(s)) * 1e-12), kind="stable"):  # ties by catalogue order
+    fam_best: dict[int, list[int]] = {}
+    for i in np.argsort(-(s - np.arange(len(s)) * 1e-12), kind="stable"):
         if not np.isfinite(s[i]):
             break
         fam_best.setdefault(int(cat.family[i]), []).append(int(i))
-    chosen = list(fam_best)[:n_families]
+    return fam_best
+
+
+def _family_types(cat: Catalogue, f: int) -> list[str]:
+    fp = cat.family_profile(f)
+    return [SCALES[i] for i in np.argsort(-fp, kind="stable")[:2]]
+
+
+def _families(profile: Profile, cat: Catalogue, ranked: dict[int, list[int]], chosen: Sequence[int],
+              n_examples: int) -> list[Family]:
     mine = profile.top_types(2)
     out = []
-    for f in sorted(chosen):
-        members = fam_best[f][:n_examples]
-        ex = cat.occ.iloc[members][["code", "title", "job_zone"]]
+    for f in sorted(chosen):  # unordered: sorted by id, never by score (ADR 0006)
+        ex = cat.occ.iloc[ranked[f][:n_examples]][["code", "title", "job_zone"]]
         ex = ex.sort_values(["job_zone", "title"], kind="stable")
-        fp = cat.family_profile(f)
-        ftypes = [SCALES[i] for i in np.argsort(-fp, kind="stable")[:2]]
+        ftypes = _family_types(cat, f)
         jz = cat.occ.loc[cat.family == f, "job_zone"]
         out.append(Family(
             family_id=f, label=cat.label[f], label_is_placeholder=True,
@@ -269,6 +276,36 @@ def recommend(profile: Profile, cat: Catalogue, n_families: int = 3, n_examples:
             job_zones=(int(jz.min()), int(jz.max())),
         ))
     return out
+
+
+def recommend(profile: Profile, cat: Catalogue, n_families: int = 3, n_examples: int = 3,
+              job_zones: Sequence[int] | None = None) -> list[Family]:
+    """Top families by their best member's Pearson score (E5), returned UNORDERED (sorted by id, ADR 0006).
+    `job_zones` is the user's optional preparation filter; default = all (MODELS L4)."""
+    ranked = _ranked_families(profile, cat, job_zones)
+    return _families(profile, cat, ranked, list(ranked)[:n_families], n_examples)
+
+
+def explore_families(profile: Profile, cat: Catalogue, n_families: int = 5, n_examples: int = 3,
+                     job_zones: Sequence[int] | None = None) -> list[Family]:
+    """Wider, more varied set for flat profiles (MODELS L3, draft new-flow arm, ADR 0028). Walks families in score
+    order and takes one only if its strongest type isn't already covered, so the set spans up to `n_families`
+    different interest types. If fewer distinct types exist, the rest is filled in score order. Unordered."""
+    ranked = _ranked_families(profile, cat, job_zones)
+    chosen, seen = [], set()
+    for f in ranked:
+        lead = _family_types(cat, f)[0]
+        if lead not in seen:
+            chosen.append(f)
+            seen.add(lead)
+        if len(chosen) == n_families:
+            break
+    for f in ranked:
+        if len(chosen) == n_families:
+            break
+        if f not in chosen:
+            chosen.append(f)
+    return _families(profile, cat, ranked, chosen, n_examples)
 
 
 # ------------------------------------------------------------------------------------------------ pipeline
@@ -297,13 +334,19 @@ class Result:
     research_only: bool
     profile: Profile | None = field(default=None, repr=False)  # internal; never rendered as scores (ADR 0006)
     prediger_xy: tuple[float, float] | None = None  # internal, for explanation wording (L6)
+    arm: str | None = None  # S3 arm shown to a gated user ("usual" | "explore"); None = no families
 
 
 def assess(responses: Mapping[str, int], bank: ItemBank, cat: Catalogue,
-           job_zones: Sequence[int] | None = None, form: Sequence[str] | None = None) -> Result:
+           job_zones: Sequence[int] | None = None, form: Sequence[str] | None = None,
+           lost_arm: str | None = None) -> Result:
     """Full v1 flow for one person. Requires every item of the form to be answered, with at least
-    MIN_ANSWERS_PER_SCALE answers per scale. 'lost' returns no families: the lost-user flow (design only, MODELS L3)
-    takes over."""
+    MIN_ANSWERS_PER_SCALE answers per scale. By default 'lost' returns no families. For the S3 trial (ADR 0028),
+    `lost_arm` picks what a gated user sees: "usual" = the broad-families flow (3 families, as for a mixed profile),
+    "explore" = the draft new flow (5 families spanning different interest types). The arm is assigned by the study,
+    never from the person's answers or characteristics, and is ignored for non-gated users."""
+    if lost_arm is not None and lost_arm not in LOST_ARMS:
+        raise ValueError(f"lost_arm must be one of {LOST_ARMS}")
     form = list(form) if form is not None else build_fixed_form(bank)
     missing = [it for it in form if it not in responses]
     if missing:
@@ -313,13 +356,19 @@ def assess(responses: Mapping[str, int], bank: ItemBank, cat: Catalogue,
             raise ValueError(f"need at least {MIN_ANSWERS_PER_SCALE} answers on scale {letter}")
     prof = score(responses, bank)
     status = gate(prof)
-    fams = [] if status == "lost" else recommend(prof, cat, job_zones=job_zones)
+    arm = lost_arm if status == "lost" else None
+    if status != "lost" or arm == "usual":
+        fams = recommend(prof, cat, job_zones=job_zones)
+    elif arm == "explore":
+        fams = explore_families(prof, cat, job_zones=job_zones)
+    else:
+        fams = []
     notices = list(NOTICES)
-    if status == "mixed":
+    if status == "mixed" or arm is not None:
         notices.append("mixed_profile")  # L3 soft gate: "your answers point in several directions"
     if prof.elevation < GATE_ELEVATION:
         notices.append("low_interest_talk_to_someone")  # L3 non-diagnostic line; counsellor review pending
     if fams and not any(prof.top_types(1)[0] in f.family_types for f in fams):
         notices.append("top_type_thin_pool")  # L4: few occupations peak on this type; explain why
     return Result(status=status, families=fams, top_types=prof.top_types(2), notices=tuple(notices),
-                  research_only=bank.research_only, profile=prof, prediger_xy=prediger(prof))
+                  research_only=bank.research_only, profile=prof, prediger_xy=prediger(prof), arm=arm)

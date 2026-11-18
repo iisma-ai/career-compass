@@ -126,3 +126,42 @@ def test_codebook_parser(tmp_path):
     f.write_text("intro\nR1\tTest parts\nX9\tnope\nC8\tKeep records\n", encoding="utf-8")
     assert D.load_item_texts(f) == {"R1": "Test parts", "C8": "Keep records"}
     assert D.load_item_texts(tmp_path / "missing.txt") == {}
+
+
+# ------------------------------------------------------------------ S3 lost-user arms (ADR 0028)
+FLAT = dict.fromkeys("RIASEC", 3)
+
+
+@needs_data
+def test_lost_arms_in_engine(bank):
+    cat = E.Catalogue.load()
+    form = E.build_fixed_form(bank)
+    flat = answers(form, FLAT)
+    assert E.assess(flat, bank, cat).families == []
+    usual = E.assess(flat, bank, cat, lost_arm="usual")
+    explore = E.assess(flat, bank, cat, lost_arm="explore")
+    assert usual.status == explore.status == "lost"
+    assert len(usual.families) == 3 and len(explore.families) == 5
+    leads = [f.family_types[0] for f in explore.families]
+    assert len(set(leads)) == len(leads)  # one family per leading interest type
+    assert "mixed_profile" in explore.notices and "human_help_links" in explore.notices
+    assert explore.families == E.assess(flat, bank, cat, lost_arm="explore").families  # deterministic
+    clear = E.assess(answers(form, INVESTIGATIVE), bank, cat, lost_arm="explore")
+    assert clear.arm is None and len(clear.families) == 3  # arm only applies to gated users
+    with pytest.raises(ValueError):
+        E.assess(flat, bank, cat, lost_arm="other")
+
+
+@needs_data
+def test_lost_arm_pages(app):
+    flat = answers(app.form, FLAT)
+    code, page = app.handle("POST", "/result", urlencode(flat).encode())
+    assert code == 200 and page.count('name="arm"') == 2
+    code, page = app.handle("POST", "/result", urlencode({**flat, "arm": "explore"}).encode())
+    assert code == 200 and page.count('class="fam"') == 5 and page.count("Something to try") == 5
+    assert "To take to a counsellor" in page
+    assert not re.search(r"\d+\s?%|\br\s?=|score|rank", page, re.IGNORECASE)
+    code, page = app.handle("POST", "/result", urlencode({**flat, "arm": "usual"}).encode())
+    assert code == 200 and page.count('class="fam"') == 3 and "Something to try" not in page
+    assert "several directions" in page
+    assert app.handle("POST", "/result", urlencode({**flat, "arm": "x"}).encode())[0] == 400
